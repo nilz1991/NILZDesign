@@ -60,10 +60,12 @@ async function renderProjectsGrid(containerSelector, filterSelector) {
   if (!container) return;
   const projects  = await loadProjects();
 
+  const sorted = [...projects].sort((a, b) => (a.order ?? 99) - (b.order ?? 99));
+
   function render(filter) {
     const filtered = filter === 'All'
-      ? projects
-      : projects.filter(p => p.category === filter);
+      ? sorted
+      : sorted.filter(p => p.category === filter);
     container.innerHTML = filtered.map(p => projectCardHTML(p)).join('');
     if (window.__initFadeUps) window.__initFadeUps();
   }
