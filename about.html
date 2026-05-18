@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — NILZ Architecture & Interior Design Group</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ── Page hero ───────────────────────── -->
+  <section class="page-hero">
+    <img src="assets/images/project-2.jpg" alt="" class="page-hero__bg">
+    <div class="page-hero__content">
+      <span class="section-tag page-hero__tag">About NILZ</span>
+      <h1 class="page-hero__title display" data-cms="hero_title">Designing with purpose.<br>Building with integrity.</h1>
+    </div>
+  </section>
+
+  <!-- ── Bio ─────────────────────────────── -->
+  <section class="section section--white about-bio">
+    <div class="container about-bio__inner">
+      <div class="about-bio__photo fade-up">
+        <img src="assets/images/portrait.jpg" alt="Niloufar Zanjani" class="about-bio__img">
+        <div class="about-bio__stats">
+          <div class="stat-item"><span class="stat-number">13+</span><span class="stat-label">Years Experience</span></div>
+          <div class="stat-item"><span class="stat-number">OSE</span><span class="stat-label">Member</span></div>
+          <div class="stat-item"><span class="stat-number">M.Arch</span><span class="stat-label">Architecture</span></div>
+        </div>
+      </div>
+      <div class="about-bio__text">
+        <span class="section-tag">Our Story</span>
+        <p class="fade-up" data-cms="bio_1">I am Niloufar Zanjani, architect and interior designer with over 13 years of professional experience.</p>
+        <p class="fade-up delay-1" data-cms="bio_2">After a decade of design, construction supervision and project management, and three years of freelance practice in Oman, I now lead NILZ Architecture & Interior Design Group in Al Mouj, Muscat.</p>
+        <p class="fade-up delay-2" data-cms="bio_3">At NILZ, we believe quality of life is rooted in the spaces we inhabit.</p>
+        <div style="display:flex;gap:16px;margin-top:36px" class="fade-up delay-3">
+          <a href="services.html" class="btn btn--solid">Our Services</a>
+          <a href="contact.html" class="btn btn--outline">Contact</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Values ──────────────────────────── -->
+  <section class="section section--cream values-section">
+    <div class="container">
+      <span class="section-tag">Our Values</span>
+      <h2 class="section-title fade-up">What we stand for</h2>
+      <div class="values-grid" id="values-grid">
+        <!-- rendered by content.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Rotating 360° ───────────────────── -->
+  <div id="rotating-text-placeholder"></div>
+
+
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) window.netlifyIdentity.on("login", () => document.location.href = "/admin/");
+      });
+    }
+  </script>
+  <script type="module">
+    import { initHeader } from './js/components/header.js';
+    import { initFooter } from './js/components/footer.js';
+    import { initRotatingText } from './js/components/rotating-text.js';
+    import { loadSite, renderSiteContent } from './js/content.js';
+    import { init as initMain } from './js/main.js';
+
+    initHeader();
+    initFooter();
+    initRotatingText('#rotating-text-placeholder', {
+      tag:            "Let's Build Your Dream",
+      headline:       'Elevate Your',
+      headlineEm:     'Project.',
+      sub:            'Thirteen years of shaping spaces that work as beautifully as they look — because great design is both seen and felt.',
+      ctaLabel:       'Contact Us Today',
+      ctaHref:        'contact.html',
+      decorativeImage:'assets/images/line-art-hero.png',
+    });
+
+    // Render values from site.json
+    const site = await loadSite();
+    const values = site.about.values;
+    document.getElementById('values-grid').innerHTML = values.map(v => `
+      <div class="value-card fade-up">
+        <span class="value-number">${v.number}</span>
+        <h3 class="value-title">${v.title}</h3>
+        <p class="value-body">${v.body}</p>
+      </div>`).join('');
+
+    await renderSiteContent('about');
+    initMain();
+  </script>
+</body>
+</html>

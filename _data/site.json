@@ -1,0 +1,65 @@
+{
+  "home": {
+    "hero_headline": "Design Spaces.\nElevate Life.",
+    "hero_sub": "Architecture & Interior Design Group",
+    "about_tag": "About NILZ",
+    "about_quote": "Architecture should speak of its time and place, but yearn for timelessness.",
+    "about_body": "We are a team led by Niloufar Zanjani — architect and interior designer with over 13 years of professional experience across residential and commercial projects. Our approach bridges modern art and engineering precision, creating spaces that are as functional as they are beautiful.",
+    "marquee_text": "Architecture · Interior Design · Muscat · Oman · NILZ · "
+  },
+  "about": {
+    "hero_title": "Designing with purpose.\nBuilding with integrity.",
+    "bio_1": "I am Niloufar Zanjani, architect and interior designer with over 13 years of professional experience across residential and commercial projects. My approach bridges modern art and engineering precision — creating spaces that are as functional as they are beautiful.",
+    "bio_2": "After a decade of design, construction supervision and project management, and three years of freelance practice in Oman, I now lead NILZ Architecture & Interior Design Group in Al Mouj, Muscat — and hold membership in the Oman Society of Engineers.",
+    "bio_3": "At NILZ, we believe quality of life is rooted in the spaces we inhabit. We are committed to turning your vision into an enduring reality — through authentic materials, meticulous detail, and the latest in architectural knowledge.",
+    "values": [
+      { "number": "01", "title": "Contextual Design", "body": "We design with the surroundings in mind — creating spaces that feel rooted in place, culture, and natural light." },
+      { "number": "02", "title": "Timeless Aesthetics", "body": "Every detail is carefully considered to ensure longevity, elegance, and a visual language that transcends trends." },
+      { "number": "03", "title": "Functional Flow", "body": "From layout to circulation, we prioritise clarity and ease of use — shaping environments that support daily life intuitively." },
+      { "number": "04", "title": "Collaborative Process", "body": "We work closely with clients, engineers, and builders — ensuring every decision is aligned with the shared vision." }
+    ]
+  },
+  "services": {
+    "hero_title": "Architecture shaped by vision and detail.",
+    "intro": "We deliver thoughtful architectural solutions that solve complex challenges with clarity, creativity, and precision.",
+    "items": [
+      {
+        "number": "01",
+        "title": "Interior Design & Execution",
+        "body": "From concept to completion — expert supervision, workshop management, and intelligent material selection for spaces that exceed expectations.",
+        "image": "assets/images/service-01.jpg",
+        "tools": ["3ds Max", "V-Ray", "Corona Renderer", "Lumion", "Unreal Engine", "SketchUp"]
+      },
+      {
+        "number": "02",
+        "title": "Architectural Visualization",
+        "body": "Photorealistic renders, architectural animations, and cinematic simulations that bring your project to life before a single brick is laid.",
+        "image": "assets/images/service-02.jpg",
+        "tools": ["Unreal Engine", "Lumion", "3ds Max", "V-Ray"]
+      },
+      {
+        "number": "03",
+        "title": "Technical Design & BIM",
+        "body": "Precision technical drawings and Building Information Modeling using Revit and AutoCAD to ensure accuracy at every stage of your project.",
+        "image": "assets/images/service-03.jpg",
+        "tools": ["Revit", "AutoCAD", "SketchUp"]
+      }
+    ],
+    "process": [
+      { "number": "01", "title": "Vision & Scope", "body": "Every project begins with dialogue. We listen, define the brief, and understand the vision — setting the direction for everything that follows." },
+      { "number": "02", "title": "Planning", "body": "We study the location, light, landscape and context to create a concept that feels grounded and natural — both functionally and emotionally." },
+      { "number": "03", "title": "Designing", "body": "From massing to materials, we shape bold yet timeless spaces that balance aesthetics, purpose, and experience." },
+      { "number": "04", "title": "Final Step", "body": "Our team prepares precise drawings and documentation — collaborating with engineers and consultants to ensure feasibility and performance." }
+    ]
+  },
+  "contact": {
+    "hero_title": "Let's talk today.",
+    "hero_sub": "Whether you're starting a project or just exploring ideas, we'd love to hear from you.",
+    "phone": "+968 92315257",
+    "whatsapp": "https://api.whatsapp.com/send?phone=96892315257",
+    "instagram": "https://www.instagram.com/nilz_architecture.atelier",
+    "linkedin": "https://www.linkedin.com/in/niloufar-zanjani-2888a4271",
+    "facebook": "https://www.facebook.com/share/1Hh7Pq64TZ/?mibextid=wwXIfr",
+    "location": "Al Mouj Street, Muscat, Oman"
+  }
+}

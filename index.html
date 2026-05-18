@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NILZ — Architecture & Interior Design Group</title>
+  <meta name="description" content="Niloufar Zanjani — Architect & Interior Designer based in Muscat, Oman.">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="hero-page">
+
+  <!-- ── Hero ───────────────────────────── -->
+  <section id="hero" class="hero-section">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="assets/images/hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <p class="hero-eyebrow fade-up">NILZ — Muscat, Oman</p>
+      <h1 class="hero-headline display fade-up delay-1" data-cms="hero_headline">Design Spaces.<br>Elevate Life.</h1>
+      <p class="hero-sub fade-up delay-2" data-cms="hero_sub">Architecture &amp; Interior Design Group</p>
+      <div class="hero-actions fade-up delay-3">
+        <a href="projects.html" class="btn btn--gold">View Projects</a>
+        <a href="contact.html" class="btn btn--outline-light">Start a Project</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── Marquee ─────────────────────────── -->
+  <div class="marquee-track" aria-hidden="true">
+    <div class="marquee-inner">
+      <span>Architecture</span><span class="marquee-dot">·</span>
+      <span>Interior Design</span><span class="marquee-dot">·</span>
+      <span>Muscat</span><span class="marquee-dot">·</span>
+      <span>Oman</span><span class="marquee-dot">·</span>
+      <span>NILZ</span><span class="marquee-dot">·</span>
+      <span>13+ Years Experience</span><span class="marquee-dot">·</span>
+    </div>
+  </div>
+
+  <!-- ── About teaser ────────────────────── -->
+  <section class="section section--white about-teaser">
+    <div class="container about-teaser__inner">
+      <div class="about-teaser__left">
+        <span class="section-tag">About NILZ</span>
+        <h2 class="section-title fade-up" data-cms="about_quote">Architecture should speak of its time and place, but yearn for timelessness.</h2>
+        <div class="about-teaser__actions fade-up delay-1">
+          <a href="about.html" class="btn btn--solid">About Us</a>
+          <a href="contact.html" class="btn btn--outline">Contact</a>
+        </div>
+      </div>
+      <div class="about-teaser__right fade-up">
+        <p data-cms="about_body">We are a team led by Niloufar Zanjani — architect and interior designer with over 13 years of professional experience.</p>
+        <img src="assets/images/portrait.jpg" alt="Niloufar Zanjani" class="about-teaser__img">
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Stacked project cards ───────────── -->
+  <section class="section section--cream stacked-projects">
+    <div class="container">
+      <span class="section-tag">03 — Projects</span>
+      <h2 class="section-title fade-up">Selected <em>Work</em></h2>
+    </div>
+    <div id="home-projects" class="stacked-projects__list"></div>
+    <div class="container" style="text-align:center;margin-top:60px">
+      <a href="projects.html" class="btn btn--outline fade-up">View All Projects</a>
+    </div>
+  </section>
+
+  <!-- ── Rotating 360° ───────────────────── -->
+  <div id="rotating-text-placeholder"></div>
+
+
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) window.netlifyIdentity.on("login", () => document.location.href = "/admin/");
+      });
+    }
+  </script>
+  <script type="module">
+    import { initHeader } from './js/components/header.js';
+    import { initFooter } from './js/components/footer.js';
+    import { initRotatingText } from './js/components/rotating-text.js';
+    import { renderHomeProjects, renderSiteContent } from './js/content.js';
+    import { init as initMain } from './js/main.js';
+
+    initHeader();
+    initFooter();
+    initRotatingText('#rotating-text-placeholder', {
+      tag:            "Let's Build Your Dream",
+      headline:       'Elevate Your',
+      headlineEm:     'Project.',
+      sub:            'Architecture, interiors, landscape, and visualization — all under one roof, one vision, one team.',
+      ctaLabel:       'Contact Us Today',
+      ctaHref:        'contact.html',
+      decorativeImage:'assets/images/line-art-hero.png',
+    });
+    await renderHomeProjects('#home-projects');
+    await renderSiteContent('home');
+    initMain();
+  </script>
+</body>
+</html>

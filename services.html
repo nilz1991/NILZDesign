@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services — NILZ Architecture & Interior Design Group</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <section class="page-hero">
+    <img src="assets/images/services-hero.jpg" alt="" class="page-hero__bg">
+    <div class="page-hero__content">
+      <span class="section-tag page-hero__tag">02 — Services</span>
+      <h1 class="page-hero__title display" data-cms="hero_title">Architecture shaped by<br>vision and detail.</h1>
+    </div>
+  </section>
+
+  <!-- ── Services list ───────────────────── -->
+  <section class="section section--white">
+    <div class="container">
+      <p class="services-intro fade-up" data-cms="intro">We deliver thoughtful architectural solutions.</p>
+      <div id="services-list" class="services-list"></div>
+    </div>
+  </section>
+
+  <!-- ── How we work ─────────────────────── -->
+  <section class="section section--navy process-section">
+    <div class="container">
+      <span class="section-tag">How We Work</span>
+      <h2 class="section-title fade-up" style="color:var(--white);margin-bottom:60px">Build with intention.<br><em style="color:var(--gold)">Inspire for generations.</em></h2>
+      <div id="process-steps" class="process-grid"></div>
+      <div style="text-align:center;margin-top:60px" class="fade-up">
+        <a href="contact.html" class="btn btn--gold">Reach Out Now</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="rotating-text-placeholder"></div>
+
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) window.netlifyIdentity.on("login", () => document.location.href = "/admin/");
+      });
+    }
+  </script>
+  <script type="module">
+    import { initHeader } from './js/components/header.js';
+    import { initFooter } from './js/components/footer.js';
+    import { initRotatingText } from './js/components/rotating-text.js';
+    import { loadSite, renderSiteContent } from './js/content.js';
+    import { init as initMain } from './js/main.js';
+
+    initHeader();
+    initFooter();
+    initRotatingText('#rotating-text-placeholder', {
+      tag:            "Let's Build Your Dream",
+      headline:       'Elevate Your',
+      headlineEm:     'Project.',
+      sub:            'Every project managed start to finish — concept, drawings, execution, and final styling by the same team.',
+      ctaLabel:       'Contact Us Today',
+      ctaHref:        'contact.html',
+      decorativeImage:'assets/images/line-art-hero.png',
+    });
+
+    const site = await loadSite();
+    const { items, process } = site.services;
+
+    document.getElementById('services-list').innerHTML = items.map((s, i) => `
+      <div class="service-row fade-up ${i % 2 !== 0 ? 'service-row--reverse' : ''}">
+        <div class="service-row__img" style="background-image:url('${s.image}')"></div>
+        <div class="service-row__body">
+          <span class="service-row__num">${s.number}</span>
+          <h2 class="service-row__title">${s.title}</h2>
+          <p class="service-row__desc">${s.body}</p>
+          <div class="service-row__tools">
+            ${s.tools.map(t => `<span class="tool-tag">${t}</span>`).join('')}
+          </div>
+        </div>
+      </div>`).join('');
+
+    document.getElementById('process-steps').innerHTML = process.map(p => `
+      <div class="process-step fade-up">
+        <span class="process-num">${p.number}</span>
+        <h3 class="process-title">${p.title}</h3>
+        <p class="process-body">${p.body}</p>
+      </div>`).join('');
+
+    await renderSiteContent('services');
+    initMain();
+  </script>
+</body>
+</html>
