@@ -1,52 +1,54 @@
-[
-  {
-    "id": "master-bathroom",
-    "title": "Master Bathroom Transformation",
-    "category": "Interior Design",
-    "location": "Al Azaiba, Muscat — Oman",
-    "image": "assets/images/project-1.jpg",
-    "description": "A complete transformation combining marble, gold fixtures, and bespoke joinery. Every surface speaks to refined luxury and functional precision.",
-    "featured": true,
-    "order": 1
-  },
-  {
-    "id": "villa-facade",
-    "title": "Modern Villa Facade",
-    "category": "Architecture",
-    "location": "Muscat, Oman",
-    "image": "assets/images/project-2.jpg",
-    "description": "A warm, contemporary facade designed to harmonise with the Omani landscape while asserting a bold modern identity.",
-    "featured": true,
-    "order": 2
-  },
-  {
-    "id": "living-space",
-    "title": "Contemporary Living Space",
-    "category": "Interior Design",
-    "location": "Muscat, Oman",
-    "image": "assets/images/project-3.jpg",
-    "description": "Open-plan living redefined — clean lines, natural materials, and carefully considered light create a space that is calm and joyful.",
-    "featured": true,
-    "order": 3
-  },
-  {
-    "id": "terrace-pergola",
-    "title": "Outdoor Terrace & Pergola",
-    "category": "Landscape & Exterior",
-    "location": "Muscat, Oman",
-    "image": "assets/images/project-4.jpg",
-    "description": "An outdoor sanctuary that extends the living space — bespoke pergola structure, soft landscaping, and shaded seating areas.",
-    "featured": true,
-    "order": 4
-  },
-  {
-    "id": "master-bedroom",
-    "title": "Master Bedroom & Dressing Suite",
-    "category": "Interior Design",
-    "location": "Muscat, Oman",
-    "image": "assets/images/project-5.jpg",
-    "description": "A serene retreat designed around the client's daily ritual — generous proportions, integrated storage, and soft tonal palette.",
-    "featured": false,
-    "order": 5
-  }
-]
+{
+  "projects": [
+    {
+      "id": "master-bathroom",
+      "title": "Master Bathroom Transformation",
+      "category": "Interior Design",
+      "location": "Al Azaiba, Muscat — Oman",
+      "image": "assets/images/project-1.jpg",
+      "description": "A complete transformation combining marble, gold fixtures, and bespoke joinery. Every surface speaks to refined luxury and functional precision.",
+      "featured": true,
+      "order": 1
+    },
+    {
+      "id": "villa-facade",
+      "title": "Modern Villa Facade",
+      "category": "Architecture",
+      "location": "Muscat, Oman",
+      "image": "assets/images/project-2.jpg",
+      "description": "A warm, contemporary facade designed to harmonise with the Omani landscape while asserting a bold modern identity.",
+      "featured": true,
+      "order": 2
+    },
+    {
+      "id": "living-space",
+      "title": "Contemporary Living Space",
+      "category": "Interior Design",
+      "location": "Muscat, Oman",
+      "image": "assets/images/project-3.jpg",
+      "description": "Open-plan living redefined — clean lines, natural materials, and carefully considered light create a space that is calm and joyful.",
+      "featured": true,
+      "order": 3
+    },
+    {
+      "id": "terrace-pergola",
+      "title": "Outdoor Terrace & Pergola",
+      "category": "Landscape & Exterior",
+      "location": "Muscat, Oman",
+      "image": "assets/images/project-4.jpg",
+      "description": "An outdoor sanctuary that extends the living space — bespoke pergola structure, soft landscaping, and shaded seating areas.",
+      "featured": true,
+      "order": 4
+    },
+    {
+      "id": "master-bedroom",
+      "title": "Master Bedroom & Dressing Suite",
+      "category": "Interior Design",
+      "location": "Muscat, Oman",
+      "image": "assets/images/project-5.jpg",
+      "description": "A serene retreat designed around the client's daily ritual — generous proportions, integrated storage, and soft tonal palette.",
+      "featured": false,
+      "order": 5
+    }
+  ]
+}

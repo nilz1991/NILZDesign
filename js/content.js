@@ -1,14 +1,10 @@
-// W2/js/content.js
-// Fetches _data/projects.json and _data/site.json
-// Exposes loadProjects(), loadSite(), and render helpers
-
 let _projects = null;
 let _site     = null;
 
 async function loadProjects() {
   if (_projects) return _projects;
   const res = await fetch('_data/projects.json');
-  _projects = await res.json();
+  _projects = (await res.json()).projects;
   return _projects;
 }
 
@@ -69,7 +65,6 @@ async function renderProjectsGrid(containerSelector, filterSelector) {
       ? projects
       : projects.filter(p => p.category === filter);
     container.innerHTML = filtered.map(p => projectCardHTML(p)).join('');
-    // Re-init IntersectionObserver for newly added cards
     if (window.__initFadeUps) window.__initFadeUps();
   }
 
@@ -86,21 +81,35 @@ async function renderProjectsGrid(containerSelector, filterSelector) {
   }
 }
 
-// ── Render CMS-managed text fields ─────────
+// ── Render CMS-managed text and href fields ─
 async function renderSiteContent(pageKey) {
   const site = await loadSite();
   const data = site[pageKey];
   if (!data) return;
 
-  // Replace [data-cms="key"] elements with content from site.json
+  // [data-cms="key"] → innerHTML
   document.querySelectorAll('[data-cms]').forEach(el => {
     const key = el.dataset.cms;
-    if (data[key] !== undefined) {
-      if (typeof data[key] === 'string') {
-        el.innerHTML = data[key].replace(/\n/g, '<br>');
-      }
+    if (data[key] !== undefined && typeof data[key] === 'string') {
+      el.innerHTML = data[key].replace(/\n/g, '<br>');
     }
   });
+
+  // [data-cms-href="key"] → href attribute
+  document.querySelectorAll('[data-cms-href]').forEach(el => {
+    const key = el.dataset.cmsHref;
+    if (data[key] !== undefined && typeof data[key] === 'string') {
+      el.href = data[key];
+    }
+  });
+
+  // Phone tel: link — derive from phone field
+  if (data.phone) {
+    const telLink = document.querySelector('a[href^="tel:"][data-cms="phone"]');
+    if (telLink) {
+      telLink.href = 'tel:' + data.phone.replace(/\s/g, '');
+    }
+  }
 }
 
 export { loadProjects, loadSite, renderHomeProjects, renderProjectsGrid, renderSiteContent };

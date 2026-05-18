@@ -6,35 +6,104 @@ media_folder: "assets/images"
 public_folder: "assets/images"
 
 collections:
-  - name: "projects"
-    label: "Projects"
-    folder: "_data/projects"
-    create: true
-    slug: "{{slug}}"
-    format: "json"
-    extension: "json"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Category", name: "category", widget: "select",
-          options: ["Interior Design", "Architecture", "Landscape & Exterior", "Visualization"] }
-      - { label: "Location", name: "location", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Featured on Home", name: "featured", widget: "boolean", default: false }
-      - { label: "Sort Order", name: "order", widget: "number", default: 99 }
 
-  - name: "pages"
-    label: "Page Content"
+  # ── Projects ────────────────────────────────────────────────────────
+  - name: "data"
+    label: "Site Data"
     files:
-      - label: "Home Page"
-        name: "home"
+
+      - label: "Projects"
+        name: "projects"
+        file: "_data/projects.json"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            fields:
+              - {label: "ID", name: "id", widget: "string", hint: "URL slug e.g. master-bathroom"}
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options: ["Interior Design", "Architecture", "Landscape & Exterior", "Visualization"]
+              - {label: "Location", name: "location", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Featured on Home", name: "featured", widget: "boolean", default: false}
+              - {label: "Sort Order", name: "order", widget: "number", default: 99}
+
+      # ── All page content in one file ──────────────────────────────
+      - label: "Site Content"
+        name: "site"
         file: "_data/site.json"
         fields:
-          - label: "Home"
+
+          # Home
+          - label: "Home Page"
             name: "home"
             widget: "object"
             fields:
-              - { label: "Hero Headline", name: "hero_headline", widget: "string" }
-              - { label: "Hero Subtitle", name: "hero_sub", widget: "string" }
-              - { label: "About Quote", name: "about_quote", widget: "text" }
-              - { label: "About Body", name: "about_body", widget: "text" }
+              - {label: "Hero Headline", name: "hero_headline", widget: "string"}
+              - {label: "Hero Subtitle", name: "hero_sub", widget: "string"}
+              - {label: "About Tag", name: "about_tag", widget: "string"}
+              - {label: "About Quote", name: "about_quote", widget: "text"}
+              - {label: "About Body", name: "about_body", widget: "text"}
+              - {label: "Marquee Text", name: "marquee_text", widget: "string", hint: "Scrolling ticker — separate items with · "}
+
+          # About
+          - label: "About Page"
+            name: "about"
+            widget: "object"
+            fields:
+              - {label: "Hero Title", name: "hero_title", widget: "string"}
+              - {label: "Bio Paragraph 1", name: "bio_1", widget: "text"}
+              - {label: "Bio Paragraph 2", name: "bio_2", widget: "text"}
+              - {label: "Bio Paragraph 3", name: "bio_3", widget: "text"}
+              - label: "Values"
+                name: "values"
+                widget: "list"
+                fields:
+                  - {label: "Number", name: "number", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Body", name: "body", widget: "text"}
+
+          # Services
+          - label: "Services Page"
+            name: "services"
+            widget: "object"
+            fields:
+              - {label: "Hero Title", name: "hero_title", widget: "string"}
+              - {label: "Intro Text", name: "intro", widget: "text"}
+              - label: "Service Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Number", name: "number", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "body", widget: "text"}
+                  - {label: "Image", name: "image", widget: "image"}
+                  - label: "Tools"
+                    name: "tools"
+                    widget: "list"
+                    field: {label: "Tool", name: "tool", widget: "string"}
+              - label: "Process Steps"
+                name: "process"
+                widget: "list"
+                fields:
+                  - {label: "Number", name: "number", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Body", name: "body", widget: "text"}
+
+          # Contact
+          - label: "Contact Page"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "Hero Title", name: "hero_title", widget: "string"}
+              - {label: "Hero Subtitle", name: "hero_sub", widget: "string"}
+              - {label: "Phone", name: "phone", widget: "string", hint: "Display text e.g. +968 92315257"}
+              - {label: "WhatsApp Link", name: "whatsapp", widget: "string", hint: "Full URL"}
+              - {label: "Instagram URL", name: "instagram", widget: "string"}
+              - {label: "LinkedIn URL", name: "linkedin", widget: "string"}
+              - {label: "Facebook URL", name: "facebook", widget: "string"}
+              - {label: "Location", name: "location", widget: "string"}
