@@ -1,5 +1,5 @@
 [build]
-  publish = "W2"
+  publish = "."
 
 [[redirects]]
   from = "/admin"
