@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You — NILZ Architecture & Interior Design Group</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <section class="page-hero" style="min-height:100vh;display:flex;align-items:center;">
+    <img src="assets/images/project-3.jpg" alt="" class="page-hero__bg">
+    <div class="page-hero__content" style="text-align:center;max-width:600px;margin:0 auto;">
+      <span class="section-tag page-hero__tag">Message Received</span>
+      <h1 class="page-hero__title display" style="margin-bottom:24px">Thank you for<br><em>reaching out.</em></h1>
+      <p style="color:rgba(255,255,255,0.75);font-size:1.1rem;margin-bottom:40px;line-height:1.7;">
+        We've received your message and will get back to you within 1–2 business days.
+      </p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="index.html" class="btn btn--gold">Back to Home</a>
+        <a href="projects.html" class="btn btn--outline-light">View Our Work</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script type="module">
+    import { initHeader } from './js/components/header.js';
+    import { initFooter } from './js/components/footer.js';
+    initHeader();
+    initFooter();
+  </script>
+</body>
+</html>
