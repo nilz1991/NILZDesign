@@ -30,7 +30,6 @@ collections:
               - {label: "Description", name: "description", widget: "text"}
               - {label: "Image", name: "image", widget: "image"}
               - {label: "Featured on Home", name: "featured", widget: "boolean", default: false}
-              - {label: "Sort Order", name: "order", widget: "number", default: 99}
 
       # ── All page content in one file ──────────────────────────────
       - label: "Site Content"
