@@ -1,16 +1,6 @@
 {
   "projects": [
     {
-      "id": "master-bathroom",
-      "title": "Master Bathroom Transformation",
-      "category": "Interior Design",
-      "location": "Al Azaiba, Muscat — Oman",
-      "image": "assets/images/project-1.jpg",
-      "description": "A complete transformation combining marble, gold fixtures, and bespoke joinery. Every surface speaks to refined luxury and functional precision.",
-      "featured": true,
-      "order": 1
-    },
-    {
       "id": "villa-facade",
       "title": "Modern Villa Facade",
       "category": "Architecture",
@@ -49,6 +39,16 @@
       "description": "A serene retreat designed around the client's daily ritual — generous proportions, integrated storage, and soft tonal palette.",
       "featured": false,
       "order": 5
+    },
+    {
+      "id": "master-bathroom",
+      "title": "Master Bathroom Transformation",
+      "category": "Interior Design",
+      "location": "Al Azaiba, Muscat — Oman",
+      "image": "assets/images/project-1.jpg",
+      "description": "A complete transformation combining marble, gold fixtures, and bespoke joinery. Every surface speaks to refined luxury and functional precision.",
+      "featured": true,
+      "order": 1
     }
   ]
 }
