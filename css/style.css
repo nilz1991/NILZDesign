@@ -213,12 +213,22 @@ h1, h2, h3, h4 {
   color: var(--navy);
   border-color: var(--navy);
 }
-.header-burger { display: none; flex-direction: column; gap: 5px; padding: 4px; }
+.header-burger {
+  display: none; flex-direction: column; gap: 5px;
+  padding: 8px; border-radius: 8px;
+  background: rgba(0,0,0,0.18);
+  transition: background 0.3s;
+}
 .header-burger span {
   display: block; width: 24px; height: 2px;
   background: var(--white); transition: all 0.3s;
 }
+#site-header.scrolled .header-burger { background: transparent; }
 #site-header.scrolled .header-burger span { background: var(--navy); }
+
+/* When nav is open — burger sits on white overlay, so lines must be dark */
+.header-burger.open { background: transparent; }
+.header-burger.open span { background: var(--navy); }
 
 @media (max-width: 900px) {
   .header-nav { display: none; }
