@@ -108,10 +108,6 @@ function initProjectViewer(projects, gridEl) {
           <h2 class="pv__title"></h2>
           <p class="pv__loc"></p>
           <p class="pv__overview"></p>
-          <div class="pv__caption-wrap">
-            <span class="pv__caption-label">About this image</span>
-            <p class="pv__caption"></p>
-          </div>
           <div class="pv__counter"><span class="pv__current">1</span> / <span class="pv__total">1</span></div>
         </aside>
         <div class="pv__stage">
@@ -130,7 +126,6 @@ function initProjectViewer(projects, gridEl) {
     title:    overlay.querySelector('.pv__title'),
     loc:      overlay.querySelector('.pv__loc'),
     overview: overlay.querySelector('.pv__overview'),
-    caption:  overlay.querySelector('.pv__caption'),
     slides:   overlay.querySelector('.pv__slides'),
     dots:     overlay.querySelector('.pv__dots'),
     prev:     overlay.querySelector('.pv__nav--prev'),
@@ -145,7 +140,6 @@ function initProjectViewer(projects, gridEl) {
   function show(i) {
     index = (i + slides.length) % slides.length;
     els.slides.style.transform = `translateX(-${index * 100}%)`;
-    els.caption.textContent = slides[index].caption || '';
     els.current.textContent = index + 1;
     overlay.querySelectorAll('.pv__dot').forEach((d, di) =>
       d.classList.toggle('active', di === index));
@@ -162,10 +156,13 @@ function initProjectViewer(projects, gridEl) {
     els.overview.textContent = p.overview || p.description || '';
     els.total.textContent = slides.length;
 
-    els.slides.innerHTML = slides.map(s =>
+    els.slides.innerHTML = slides.map((s, i) =>
       `<div class="pv__slide">
-        <div class="pv__slide-bg" style="background-image:url('${s.image}')"></div>
         <div class="pv__slide-img" style="background-image:url('${s.image}')"></div>
+        <div class="pv__slide-text">
+          <span class="pv__slide-num">${String(i + 1).padStart(2, '0')}</span>
+          <p class="pv__slide-caption">${s.caption || ''}</p>
+        </div>
       </div>`).join('');
     els.dots.innerHTML = slides.map((_, i) =>
       `<button class="pv__dot ${i === 0 ? 'active' : ''}" data-i="${i}" aria-label="Slide ${i + 1}"></button>`).join('');
