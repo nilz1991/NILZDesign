@@ -21,7 +21,7 @@ function projectCardHTML(p) {
   return `
 <article class="project-card ${hasSlides ? 'project-card--clickable' : ''}" data-category="${p.category}" data-project-id="${p.id}">
   <div class="project-card__img" style="background-image:url('${p.image}')">
-    ${hasSlides ? `<span class="project-card__view">View Project<span class="project-card__view-icon">→</span></span>` : ''}
+    ${hasSlides ? `<span class="project-card__view">View Project Details<span class="project-card__view-icon">→</span></span>` : ''}
   </div>
   <div class="project-card__body">
     <span class="project-card__cat">${p.category}</span>

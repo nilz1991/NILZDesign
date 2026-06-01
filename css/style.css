@@ -900,7 +900,9 @@ h1, h2, h3, h4 {
 }
 .pv__slide {
   flex: 0 0 100%; height: 100%;
-  background-size: cover; background-position: center;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .pv__nav {
   position: absolute; top: 50%; transform: translateY(-50%);
