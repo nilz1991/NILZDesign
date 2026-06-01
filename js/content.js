@@ -163,7 +163,10 @@ function initProjectViewer(projects, gridEl) {
     els.total.textContent = slides.length;
 
     els.slides.innerHTML = slides.map(s =>
-      `<div class="pv__slide" style="background-image:url('${s.image}')"></div>`).join('');
+      `<div class="pv__slide">
+        <div class="pv__slide-bg" style="background-image:url('${s.image}')"></div>
+        <div class="pv__slide-img" style="background-image:url('${s.image}')"></div>
+      </div>`).join('');
     els.dots.innerHTML = slides.map((_, i) =>
       `<button class="pv__dot ${i === 0 ? 'active' : ''}" data-i="${i}" aria-label="Slide ${i + 1}"></button>`).join('');
     els.dots.querySelectorAll('.pv__dot').forEach(d =>
