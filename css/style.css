@@ -918,6 +918,13 @@ h1, h2, h3, h4 {
   line-height: 1; margin-bottom: 24px;
   display: block;
 }
+.pv__slide-overview {
+  font-family: var(--font-body);
+  font-size: 0.9rem; line-height: 1.8;
+  color: var(--gray);
+  padding-bottom: 22px; margin-bottom: 22px;
+  border-bottom: 1px solid rgba(27,43,75,0.12);
+}
 .pv__slide-caption {
   font-family: var(--font-display);
   font-style: italic;
@@ -949,22 +956,32 @@ h1, h2, h3, h4 {
 }
 .pv__dot.active { background: var(--gold); transform: scale(1.25); }
 
+/* Tablet / narrow desktop: navy panel on top, image + caption stay side by side */
 @media (max-width: 1024px) {
   .pv__panel { grid-template-columns: 1fr; grid-template-rows: auto 1fr; overflow-y: auto; }
-  .pv__info { padding: 56px 32px 28px; }
+  .pv__info { padding: 52px 32px 26px; }
+  .pv__slide-text { flex: 0 0 40%; padding: 48px 36px; }
+  .pv__slide-num { font-size: 2.2rem; }
+  .pv__slide-caption { font-size: 1.08rem; }
+  .pv__nav { width: 44px; height: 44px; font-size: 1.05rem; }
+  .pv__nav--next { right: 40%; }
+  .pv__dots { left: 30%; }
+  .pv__close { top: 14px; right: 16px; width: 40px; height: 40px; }
+}
+
+/* Phones: stack image over caption */
+@media (max-width: 600px) {
   .pv__slide { flex-direction: column; }
-  .pv__slide-img { padding: 24px; min-height: 46vh; }
+  .pv__slide-img { padding: 22px; min-height: 46vh; }
   .pv__slide-text {
     flex: none; border-left: none;
     border-top: 1px solid rgba(27,43,75,0.08);
-    padding: 28px 32px 40px; justify-content: flex-start;
+    padding: 26px 28px 40px; justify-content: flex-start;
   }
-  .pv__slide-num { font-size: 2rem; margin-bottom: 14px; }
-  .pv__slide-caption { font-size: 1.05rem; }
-  .pv__nav { width: 42px; height: 42px; font-size: 1rem; top: 23vh; }
-  .pv__nav--next { right: 22px; }
-  .pv__dots { bottom: auto; top: calc(46vh - 26px); left: 50%; }
-  .pv__close { top: 14px; right: 16px; width: 40px; height: 40px; }
+  .pv__slide-num { font-size: 1.9rem; margin-bottom: 12px; }
+  .pv__nav { top: 23vh; }
+  .pv__nav--next { right: 18px; }
+  .pv__dots { top: calc(46vh - 26px); left: 50%; }
 }
 
 /* ─── Contact page ───────────────────────── */

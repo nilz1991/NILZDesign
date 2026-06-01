@@ -107,7 +107,6 @@ function initProjectViewer(projects, gridEl) {
           <span class="pv__cat"></span>
           <h2 class="pv__title"></h2>
           <p class="pv__loc"></p>
-          <p class="pv__overview"></p>
           <div class="pv__counter"><span class="pv__current">1</span> / <span class="pv__total">1</span></div>
         </aside>
         <div class="pv__stage">
@@ -125,7 +124,6 @@ function initProjectViewer(projects, gridEl) {
     cat:      overlay.querySelector('.pv__cat'),
     title:    overlay.querySelector('.pv__title'),
     loc:      overlay.querySelector('.pv__loc'),
-    overview: overlay.querySelector('.pv__overview'),
     slides:   overlay.querySelector('.pv__slides'),
     dots:     overlay.querySelector('.pv__dots'),
     prev:     overlay.querySelector('.pv__nav--prev'),
@@ -153,14 +151,15 @@ function initProjectViewer(projects, gridEl) {
     els.cat.textContent = p.category;
     els.title.textContent = p.title;
     els.loc.textContent = p.location;
-    els.overview.textContent = p.overview || p.description || '';
     els.total.textContent = slides.length;
 
+    const overview = p.overview || p.description || '';
     els.slides.innerHTML = slides.map((s, i) =>
       `<div class="pv__slide">
         <div class="pv__slide-img" style="background-image:url('${s.image}')"></div>
         <div class="pv__slide-text">
           <span class="pv__slide-num">${String(i + 1).padStart(2, '0')}</span>
+          ${i === 0 && overview ? `<p class="pv__slide-overview">${overview}</p>` : ''}
           <p class="pv__slide-caption">${s.caption || ''}</p>
         </div>
       </div>`).join('');
