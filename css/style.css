@@ -805,6 +805,135 @@ h1, h2, h3, h4 {
 @media (max-width: 1100px) { .projects-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .projects-grid { grid-template-columns: 1fr; } }
 
+/* ─── Clickable project card hint ─────────── */
+.project-card--clickable { cursor: pointer; }
+.project-card__img { position: relative; }
+.project-card__view {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 16px 20px;
+  display: flex; align-items: center; gap: 8px;
+  font-size: 0.72rem; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--white);
+  background: linear-gradient(to top, rgba(27,43,75,0.85), transparent);
+  opacity: 0; transform: translateY(8px);
+  transition: opacity 0.35s var(--ease), transform 0.35s var(--ease);
+}
+.project-card--clickable:hover .project-card__view { opacity: 1; transform: translateY(0); }
+.project-card__view-icon { transition: transform 0.35s var(--ease); }
+.project-card--clickable:hover .project-card__view-icon { transform: translateX(5px); }
+
+/* ─── Project viewer overlay ──────────────── */
+.pv {
+  position: fixed; inset: 0; z-index: 2000;
+  background: rgba(15,23,40,0.6);
+  backdrop-filter: blur(6px);
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.4s var(--ease), visibility 0.4s var(--ease);
+}
+.pv.open { opacity: 1; visibility: visible; }
+.pv__panel {
+  position: absolute; inset: 0;
+  display: grid; grid-template-columns: 35% 65%;
+  background: var(--white);
+  transform: scale(0.98); opacity: 0;
+  transition: transform 0.45s var(--ease), opacity 0.45s var(--ease);
+}
+.pv.open .pv__panel { transform: scale(1); opacity: 1; }
+
+.pv__close {
+  position: absolute; top: 22px; right: 26px; z-index: 10;
+  width: 46px; height: 46px; border-radius: 50%;
+  background: rgba(255,255,255,0.9); color: var(--navy);
+  font-size: 1.6rem; line-height: 1; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.3s, transform 0.3s;
+}
+.pv__close:hover { background: var(--gold); color: var(--white); transform: rotate(90deg); }
+
+.pv__info {
+  padding: 70px 50px 50px;
+  display: flex; flex-direction: column;
+  overflow-y: auto;
+  background: var(--cream);
+}
+.pv__cat {
+  font-size: 0.7rem; font-weight: 500;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 14px;
+}
+.pv__title {
+  font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+  line-height: 1.15; margin-bottom: 10px;
+}
+.pv__loc {
+  font-size: 0.85rem; color: var(--gray);
+  margin-bottom: 26px;
+}
+.pv__overview {
+  font-size: 0.95rem; line-height: 1.8; color: var(--navy);
+  padding-bottom: 26px; margin-bottom: 26px;
+  border-bottom: 1px solid rgba(27,43,75,0.12);
+}
+.pv__caption-label {
+  font-size: 0.65rem; font-weight: 500;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--gold); display: block; margin-bottom: 10px;
+}
+.pv__caption {
+  font-size: 0.92rem; line-height: 1.75; color: var(--gray);
+}
+.pv__counter {
+  margin-top: auto; padding-top: 30px;
+  font-size: 0.85rem; letter-spacing: 0.1em; color: var(--navy);
+}
+.pv__current { color: var(--gold); font-weight: 600; }
+
+.pv__stage {
+  position: relative; overflow: hidden;
+  background: var(--navy);
+}
+.pv__slides {
+  display: flex; height: 100%;
+  transition: transform 0.55s var(--ease);
+}
+.pv__slide {
+  flex: 0 0 100%; height: 100%;
+  background-size: cover; background-position: center;
+}
+.pv__nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 54px; height: 54px; border-radius: 50%;
+  background: rgba(255,255,255,0.9); color: var(--navy);
+  font-size: 1.3rem; cursor: pointer; z-index: 5;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.3s, color 0.3s;
+}
+.pv__nav:hover { background: var(--gold); color: var(--white); }
+.pv__nav--prev { left: 24px; }
+.pv__nav--next { right: 24px; }
+.pv__dots {
+  position: absolute; bottom: 24px; left: 50%;
+  transform: translateX(-50%);
+  display: flex; gap: 10px; z-index: 5;
+}
+.pv__dot {
+  width: 9px; height: 9px; border-radius: 50%;
+  background: rgba(255,255,255,0.45); cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+.pv__dot.active { background: var(--gold); transform: scale(1.25); }
+
+@media (max-width: 860px) {
+  .pv__panel { grid-template-columns: 1fr; grid-template-rows: 45% 55%; }
+  .pv__stage { grid-row: 1; }
+  .pv__info { grid-row: 2; padding: 32px 26px; }
+  .pv__counter { padding-top: 18px; }
+  .pv__nav { width: 44px; height: 44px; font-size: 1.1rem; }
+  .pv__close { top: 14px; right: 16px; width: 40px; height: 40px; }
+}
+
 /* ─── Contact page ───────────────────────── */
 .contact-inner {
   display: grid;

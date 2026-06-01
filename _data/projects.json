@@ -8,7 +8,26 @@
       "image": "assets/images/project-2.jpg",
       "description": "A warm, contemporary facade designed to harmonise with the Omani landscape while asserting a bold modern identity.",
       "featured": true,
-      "order": 2
+      "order": 2,
+      "overview": "A contemporary two-storey villa defined by clean cubic volumes and a warm, tactile material palette. The facade balances bold modern geometry with the soft tones of the Omani landscape — microcement surfaces in off-white and warm beige, framed by dark aluminium and recessed linear lighting that brings the architecture to life after dusk.",
+      "slides": [
+        {
+          "image": "assets/images/projects/villa-facade/01.jpg",
+          "caption": "The villa at dusk — interlocking cubic volumes wrapped in warm microcement, where concealed linear LED lighting traces the architecture and gives the facade a quiet, glowing presence against the evening sky."
+        },
+        {
+          "image": "assets/images/projects/villa-facade/02.jpg",
+          "caption": "A study in detail: the crisp meeting of off-white and warm beige microcement, dark aluminium window frames, and a recessed linear light that washes warmth down the soffit."
+        },
+        {
+          "image": "assets/images/projects/villa-facade/03.jpg",
+          "caption": "The material story — microcement in off-white and warm beige, paired with dark aluminium framing and glass. Each surface was chosen to age gracefully and sit in harmony with its surroundings."
+        },
+        {
+          "image": "assets/images/projects/villa-facade/04.jpg",
+          "caption": "The full material language of the project: warm beige microcement, dark aluminium frames, advanced clear glazing, and linear LED lighting — assembled into a facade that is both timeless and unmistakably modern."
+        }
+      ]
     },
     {
       "id": "living-space",
