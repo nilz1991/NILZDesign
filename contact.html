@@ -26,8 +26,9 @@
       <!-- Form -->
       <div class="contact-form-wrap fade-up">
         <h2 class="contact-form__title">Apply for a collaboration</h2>
-        <form class="contact-form" name="contact" method="POST" data-netlify="true" action="/thank-you">
-          <input type="hidden" name="form-name" value="contact">
+        <form class="contact-form" name="contact" method="POST" action="https://formsubmit.co/niloofar.zanjanii22@gmail.com">
+          <input type="hidden" name="_next" value="https://nilzdesign.com/thank-you">
+          <input type="hidden" name="_captcha" value="false">
           <div class="form-row">
             <div class="form-group">
               <label for="name">Your name</label>
@@ -95,14 +96,6 @@
     </div>
   </section>
 
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) window.netlifyIdentity.on("login", () => document.location.href = "/admin/");
-      });
-    }
-  </script>
   <script type="module">
     import { initHeader } from './js/components/header.js';
     import { initFooter } from './js/components/footer.js';
