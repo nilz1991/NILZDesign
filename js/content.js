@@ -171,13 +171,13 @@ function initProjectViewer(projects, gridEl) {
     show(0);
     overlay.classList.add('open');
     overlay.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('modal-open');
   }
 
   function close() {
     overlay.classList.remove('open');
     overlay.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
+    document.body.classList.remove('modal-open');
   }
 
   // Card clicks (delegated)
