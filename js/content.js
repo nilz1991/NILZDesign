@@ -17,11 +17,10 @@ async function loadSite() {
 
 // ── Project card HTML ──────────────────────
 function projectCardHTML(p) {
-  const hasSlides = Array.isArray(p.slides) && p.slides.length > 0;
   return `
-<article class="project-card ${hasSlides ? 'project-card--clickable' : ''}" data-category="${p.category}" data-project-id="${p.id}">
+<a class="project-card project-card--clickable" href="project.html?id=${p.id}" data-category="${p.category}">
   <div class="project-card__img" style="background-image:url('${p.image}')">
-    ${hasSlides ? `<span class="project-card__view">View Project Details<span class="project-card__view-icon">→</span></span>` : ''}
+    <span class="project-card__view">View Project Details<span class="project-card__view-icon">→</span></span>
   </div>
   <div class="project-card__body">
     <span class="project-card__cat">${p.category}</span>
@@ -29,7 +28,7 @@ function projectCardHTML(p) {
     <p class="project-card__loc">${p.location}</p>
     <p class="project-card__desc">${p.description}</p>
   </div>
-</article>`;
+</a>`;
 }
 
 // ── Stacked project card (home page) ───────
@@ -83,14 +82,12 @@ async function renderProjectsGrid(containerSelector, filterSelector) {
     });
   }
 
-  // Open project overlay on card click
-  initProjectViewer(projects, container);
 }
 
 /* ════════════════════════════════════════════
-   Full-screen project viewer (overlay slideshow)
+   (Project detail is handled by project.html)
    ════════════════════════════════════════════ */
-function initProjectViewer(projects, gridEl) {
+function _unused_initProjectViewer(projects, gridEl) {
   const byId = Object.fromEntries(projects.map(p => [p.id, p]));
 
   // Build overlay DOM once
