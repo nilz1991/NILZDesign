@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Villa Facade — NILZ</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── Project Detail Page ─────────────────── */
+
+    .pd-hero {
+      height: 100svh;
+      min-height: 600px;
+      position: relative;
+      overflow: hidden;
+      background: var(--navy);
+      display: flex;
+      align-items: flex-end;
+    }
+    .pd-hero__bg {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      opacity: 0.65;
+    }
+    .pd-hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top,
+        rgba(27,43,75,0.92) 0%,
+        rgba(27,43,75,0.35) 55%,
+        transparent 100%);
+    }
+    .pd-hero__content {
+      position: relative;
+      z-index: 1;
+      padding: var(--section-pad) var(--pad);
+      width: 100%;
+      max-width: calc(var(--max-w) + var(--pad) * 2);
+      margin: 0 auto;
+    }
+    .pd-hero__back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.5);
+      margin-bottom: 32px;
+      transition: color 0.3s;
+    }
+    .pd-hero__back:hover { color: var(--gold); }
+    .pd-hero__cat {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 16px;
+    }
+    .pd-hero__title {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      font-weight: 500;
+      line-height: 1.1;
+      color: var(--white);
+      margin-bottom: 18px;
+    }
+    .pd-hero__loc {
+      color: rgba(255,255,255,0.55);
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+    }
+
+    /* ── Overview strip ──────────────────────── */
+    .pd-overview {
+      background: var(--white);
+      padding: clamp(56px, 7vw, 100px) 0;
+    }
+    .pd-overview__inner {
+      max-width: 820px;
+    }
+    .pd-overview__label {
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 20px;
+    }
+    .pd-overview__text {
+      font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+      line-height: 1.9;
+      color: var(--gray);
+    }
+
+    /* ── Section ─────────────────────────────── */
+    .pd-section {
+      padding: clamp(64px, 8vw, 120px) 0;
+      border-top: 1px solid rgba(27,43,75,0.1);
+    }
+    .pd-section--alt { background: var(--cream); }
+
+    .pd-section__header {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      align-items: start;
+      gap: 0 40px;
+      margin-bottom: 56px;
+    }
+    .pd-section__num {
+      font-family: var(--font-display);
+      font-size: clamp(4rem, 6vw, 6rem);
+      font-weight: 500;
+      color: rgba(27,43,75,0.08);
+      line-height: 1;
+      grid-row: span 2;
+      padding-top: 6px;
+    }
+    .pd-section__title {
+      font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+      color: var(--navy);
+      margin-bottom: 14px;
+    }
+    .pd-section__desc {
+      font-size: 1rem;
+      color: var(--gray);
+      line-height: 1.85;
+      max-width: 700px;
+    }
+
+    /* ── Renders ─────────────────────────────── */
+    .pd-renders {
+      display: grid;
+      gap: 20px;
+    }
+    .pd-renders--1 { grid-template-columns: 1fr; }
+    .pd-renders--2 { grid-template-columns: 1fr 1fr; }
+    .pd-renders--3 { grid-template-columns: 1fr 1fr; }
+    .pd-renders--3 .pd-render:first-child { grid-column: span 2; }
+
+    .pd-render { margin: 0; }
+    .pd-render__img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+      border-radius: var(--radius);
+    }
+    .pd-renders--1 .pd-render__img { aspect-ratio: 21/9; }
+
+    .pd-render__caption {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-top: 16px;
+      padding-left: 18px;
+      border-left: 2px solid var(--gold);
+    }
+    .pd-render__caption p {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 0.97rem;
+      color: var(--gray);
+      line-height: 1.65;
+    }
+
+    /* ── Back to projects CTA ────────────────── */
+    .pd-back-strip {
+      background: var(--navy);
+      padding: clamp(64px, 8vw, 100px) 0;
+      text-align: center;
+    }
+    .pd-back-strip h2 {
+      color: var(--white);
+      font-size: clamp(1.8rem, 3.5vw, 3rem);
+      margin-bottom: 12px;
+    }
+    .pd-back-strip h2 em { font-style: italic; color: var(--gold); }
+    .pd-back-strip p {
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 40px;
+      font-size: 1rem;
+    }
+
+    /* ── Responsive ──────────────────────────── */
+    @media (max-width: 900px) {
+      .pd-section__header { grid-template-columns: 1fr; }
+      .pd-section__num { display: none; }
+      .pd-renders--2,
+      .pd-renders--3 { grid-template-columns: 1fr; }
+      .pd-renders--3 .pd-render:first-child { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Hero ──────────────────────────────── -->
+  <section class="pd-hero">
+    <img src="assets/images/projects/villa-facade/01.jpg" alt="Modern Villa Facade" class="pd-hero__bg">
+    <div class="pd-hero__overlay"></div>
+    <div class="pd-hero__content">
+      <a href="projects.html" class="pd-hero__back">← All Projects</a>
+      <span class="pd-hero__cat">Architecture</span>
+      <h1 class="pd-hero__title">Modern Villa Facade</h1>
+      <p class="pd-hero__loc">Muscat, Oman</p>
+    </div>
+  </section>
+
+  <!-- ── Overview ──────────────────────────── -->
+  <section class="pd-overview">
+    <div class="container">
+      <div class="pd-overview__inner">
+        <span class="pd-overview__label">Project Overview</span>
+        <p class="pd-overview__text">
+          A contemporary two-storey villa defined by clean cubic volumes and a warm, tactile material palette.
+          The facade balances bold modern geometry with the soft tones of the Omani landscape — microcement surfaces
+          in off-white and warm beige, framed by dark aluminium and recessed linear lighting that brings the
+          architecture to life after dusk.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 01 — Concept & Massing
+       ══════════════════════════════════════════ -->
+  <section class="pd-section">
+    <div class="container">
+
+      <div class="pd-section__header">
+        <span class="pd-section__num">01</span>
+        <h2 class="pd-section__title">Concept & Massing</h2>
+        <p class="pd-section__desc">
+          The design emerges from a study of the Omani vernacular — interlocking cubic volumes that create
+          shadow and depth in the harsh afternoon sun. Each form was positioned deliberately to frame internal
+          courtyards and capture the prevailing breeze, balancing openness with the need for privacy and shade.
+        </p>
+      </div>
+
+      <div class="pd-renders pd-renders--2">
+        <figure class="pd-render">
+          <img class="pd-render__img" src="assets/images/projects/villa-facade/01.jpg" alt="Villa at dusk">
+          <div class="pd-render__caption">
+            <p>The villa at dusk — interlocking cubic volumes wrapped in warm microcement, where concealed linear LED lighting traces the architecture.</p>
+          </div>
+        </figure>
+        <figure class="pd-render">
+          <img class="pd-render__img" src="assets/images/projects/villa-facade/02.jpg" alt="Detail view">
+          <div class="pd-render__caption">
+            <p>A study in detail: the crisp meeting of off-white and warm beige microcement, dark aluminium window frames, and a recessed linear light.</p>
+          </div>
+        </figure>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 02 — Material Language
+       ══════════════════════════════════════════ -->
+  <section class="pd-section pd-section--alt">
+    <div class="container">
+
+      <div class="pd-section__header">
+        <span class="pd-section__num">02</span>
+        <h2 class="pd-section__title">Material Language</h2>
+        <p class="pd-section__desc">
+          Every material was selected for its ability to age gracefully in the Omani climate. Microcement in
+          two tones — off-white and warm beige — forms the primary skin, while dark aluminium frames define
+          the apertures with precision. Advanced clear glazing maximises daylight without sacrificing thermal performance.
+        </p>
+      </div>
+
+      <div class="pd-renders pd-renders--1">
+        <figure class="pd-render">
+          <img class="pd-render__img" src="assets/images/projects/villa-facade/03.jpg" alt="Material palette">
+          <div class="pd-render__caption">
+            <p>The material story — microcement in off-white and warm beige, paired with dark aluminium framing and glass. Each surface was chosen to age gracefully and sit in harmony with its surroundings.</p>
+          </div>
+        </figure>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SECTION 03 — Night Presence
+       ══════════════════════════════════════════ -->
+  <section class="pd-section">
+    <div class="container">
+
+      <div class="pd-section__header">
+        <span class="pd-section__num">03</span>
+        <h2 class="pd-section__title">Night Presence</h2>
+        <p class="pd-section__desc">
+          Concealed linear LED lighting was integrated into every horizontal soffit, transforming the facade
+          after dusk. The lighting traces the geometry of the volumes, creating a warm, glowing presence that
+          reads as unmistakably modern yet quietly restrained — a signature that makes the villa recognisable
+          at any hour.
+        </p>
+      </div>
+
+      <div class="pd-renders pd-renders--1">
+        <figure class="pd-render">
+          <img class="pd-render__img" src="assets/images/projects/villa-facade/04.jpg" alt="Night view">
+          <div class="pd-render__caption">
+            <p>The full material language of the project: warm beige microcement, dark aluminium frames, advanced clear glazing, and linear LED lighting — assembled into a facade that is both timeless and unmistakably modern.</p>
+          </div>
+        </figure>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Back strip ─────────────────────────── -->
+  <section class="pd-back-strip">
+    <div class="container">
+      <h2>See more <em>work</em></h2>
+      <p>Explore the full portfolio across architecture, interior design, and landscape.</p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+        <a href="projects.html" class="btn btn--gold">All Projects</a>
+        <a href="contact.html" class="btn btn--outline-light">Start a Project</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="module">
+    import { initHeader } from './js/components/header.js';
+    import { initFooter } from './js/components/footer.js';
+    import { init as initMain } from './js/main.js';
+    initHeader();
+    initFooter();
+    initMain();
+  </script>
+</body>
+</html>
