@@ -62,35 +62,50 @@
       "description": "An industrial-modern headquarters for MERJAS — open collaborative zones, private offices, and warm material accents within a raw, refined shell.",
       "featured": true,
       "order": 3,
-      "overview": "A complete office and workspace design for MERJAS, balancing an industrial architectural language with warmth and brand identity. Exposed metal-grid ceilings, microcement walls, and black-steel glazing are softened by warm timber, integrated planting, and curated lighting — organised into clear zones for management, accounting, conferencing, open work, lounge, and a coffee bar.",
-      "slides": [
+      "overview": "A complete office and workspace design for MERJAS, balancing an industrial architectural language with warmth and brand identity. Exposed metal-grid ceilings, microcement walls, and black-steel glazing are softened by warm timber, integrated planting, and curated lighting — organised into clear zones for management, open work, a coffee bar, and a branded reception lounge.",
+      "sections": [
         {
-          "image": "assets/images/projects/office-workspace/01.jpg",
-          "caption": "The open office and meeting zone — an industrial metal-grid ceiling and black-steel glass partitions wrap warm timber desks, balanced by soft, considered task lighting."
+          "title": "Reception & Lounge",
+          "description": "The arrival experience sets the tone — an industrial-luxe lounge carrying the MERJAS identity, with warm accent lighting, microcement walls, and bespoke crate seating that nods directly to the brand's world.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/06.jpg", "caption": "The MERJAS lounge — brand signage, warm accent lighting, and bespoke crate seating that ties the space to the company's identity." }
+          ]
         },
         {
-          "image": "assets/images/projects/office-workspace/02.jpg",
-          "caption": "A private management office framed in black-steel glazing, with warm timber joinery and the MERJAS identity set into a microcement feature wall."
+          "title": "Open Office & Meeting",
+          "description": "At the heart of the plan, a glass-framed meeting volume sits within the open office. The metal-grid ceiling and black-steel partitions define the space, while warm timber and soft task lighting keep it inviting.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/01.jpg", "caption": "The open office and meeting zone — an industrial metal-grid ceiling and black-steel glass partitions wrap warm timber desks, balanced by soft, considered task lighting." }
+          ]
         },
         {
-          "image": "assets/images/projects/office-workspace/03.jpg",
-          "caption": "The open workspace — paired timber desks, ergonomic seating, and integrated planting bring warmth and life to the raw industrial shell."
+          "title": "Management Office",
+          "description": "A private office for leadership, framed in black-steel glazing for transparency without losing focus. Warm timber joinery and the brand identity set into a microcement wall give the room quiet authority.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/02.jpg", "caption": "A private management office framed in black-steel glazing, with warm timber joinery and the MERJAS identity set into a microcement feature wall." }
+          ]
         },
         {
-          "image": "assets/images/projects/office-workspace/04.jpg",
-          "caption": "Rows of collaborative desks anchored by a central planted spine, lit evenly beneath the exposed metal-grid ceiling."
+          "title": "Open Workspace",
+          "description": "The team works across paired timber desks with ergonomic seating, organised around a central planted spine that brings life and air to the raw industrial shell.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/03.jpg", "caption": "The open workspace — paired timber desks, ergonomic seating, and integrated planting bring warmth to the raw industrial shell." },
+            { "image": "assets/images/projects/office-workspace/04.jpg", "caption": "Rows of collaborative desks anchored by a central planted spine, lit evenly beneath the exposed metal-grid ceiling." }
+          ]
         },
         {
-          "image": "assets/images/projects/office-workspace/05.jpg",
-          "caption": "The coffee bar and informal meeting zone — a long communal table beneath cascading pendant lights, set against concrete and open shelving."
+          "title": "Coffee Bar",
+          "description": "An informal zone for breaks and casual meetings — a long communal table beneath cascading pendant lights, set against concrete walls and open shelving.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/05.jpg", "caption": "The coffee bar and informal meeting zone — a long communal table beneath cascading pendant lights, set against concrete and open shelving." }
+          ]
         },
         {
-          "image": "assets/images/projects/office-workspace/06.jpg",
-          "caption": "The MERJAS lounge — an industrial-luxe statement with brand signage, warm accent lighting, and bespoke crate seating that nods to the company's identity."
-        },
-        {
-          "image": "assets/images/projects/office-workspace/00.jpg",
-          "caption": "The full floor plan — eight clearly defined zones: management and accounting offices, conference room, open office area, secretary station, lounge, coffee bar, and restroom."
+          "title": "Floor Plan",
+          "description": "The full layout resolves into eight clearly defined zones, each shaped around how the team actually moves and works through the day.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/00.jpg", "caption": "The full floor plan — management and accounting offices, conference room, open office area, secretary station, lounge, coffee bar, and restroom." }
+          ]
         }
       ]
     },
