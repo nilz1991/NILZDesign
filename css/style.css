@@ -1208,6 +1208,19 @@ a.contact-info__value:hover { color: var(--gold); }
   cursor: zoom-in;
 }
 
+/* Renders flagged fit:contain — shown complete inline, not full-bleed, not zoomable */
+.pd-render--contain { padding: 0 var(--pad); }
+.pd-render--contain .pd-render__img {
+  width: auto;
+  max-width: min(100%, 1100px);
+  height: auto;
+  max-height: 85vh;
+  object-fit: contain;
+  margin: 0 auto;
+  cursor: default;
+  border-radius: var(--radius);
+}
+
 .pd-render__caption {
   margin-top: 18px;
   padding-left: 18px;

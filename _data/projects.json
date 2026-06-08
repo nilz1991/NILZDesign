@@ -104,7 +104,7 @@
           "title": "Floor Plan",
           "description": "The full layout resolves into eight clearly defined zones, each shaped around how the team actually moves and works through the day.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/00.png", "caption": "The full floor plan — management and accounting offices, conference room, open office area, secretary station, lounge, coffee bar, and restroom." }
+            { "image": "assets/images/projects/office-workspace/00.png", "fit": "contain", "caption": "The full floor plan — management and accounting offices, conference room, open office area, secretary station, lounge, coffee bar, and restroom." }
           ]
         }
       ]

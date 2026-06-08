@@ -89,11 +89,14 @@
     document.getElementById('pd-sections').innerHTML = sections.map((sec, i) => {
       const altClass  = i % 2 === 1 ? 'pd-section--alt' : '';
 
-      const rendersHTML = sec.renders.map(r => `
-        <figure class="pd-render">
-          <img class="pd-render__img" src="${r.image}" alt="${(r.caption || '').replace(/"/g, '&quot;')}" loading="lazy">
+      const rendersHTML = sec.renders.map(r => {
+        const contain = r.fit === 'contain';
+        return `
+        <figure class="pd-render ${contain ? 'pd-render--contain' : ''}">
+          <img class="pd-render__img" src="${r.image}" alt="${(r.caption || '').replace(/"/g, '&quot;')}" loading="lazy"${contain ? ' data-nozoom="1"' : ''}>
           ${r.caption ? `<div class="container"><figcaption class="pd-render__caption"><p>${r.caption}</p></figcaption></div>` : ''}
-        </figure>`).join('');
+        </figure>`;
+      }).join('');
 
       return `
       <section class="pd-section ${altClass}">
@@ -118,8 +121,10 @@
     const lbImg = lb.querySelector('img');
     const openLb  = (src) => { lbImg.src = src; lb.classList.add('open'); document.body.classList.add('modal-open'); };
     const closeLb = () => { lb.classList.remove('open'); document.body.classList.remove('modal-open'); };
-    document.querySelectorAll('.pd-render__img').forEach(img =>
-      img.addEventListener('click', () => openLb(img.src)));
+    document.querySelectorAll('.pd-render__img').forEach(img => {
+      if (img.dataset.nozoom) return;
+      img.addEventListener('click', () => openLb(img.src));
+    });
     lb.addEventListener('click', closeLb);
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLb(); });
 
