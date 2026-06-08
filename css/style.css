@@ -1196,21 +1196,18 @@ a.contact-info__value:hover { color: var(--gold); }
 }
 
 /* Renders grid */
-.pd-renders { display: grid; gap: 20px; }
-.pd-renders--1 { grid-template-columns: 1fr; }
-.pd-renders--2 { grid-template-columns: 1fr 1fr; }
-.pd-renders--3 { grid-template-columns: 1fr 1fr; }
-.pd-renders--3 .pd-render:first-child { grid-column: span 2; }
+.pd-renders { display: flex; flex-direction: column; gap: 48px; }
 
 .pd-render { margin: 0; }
 .pd-render__img {
-  width: 100%;
-  aspect-ratio: 16/9;
-  background-size: cover;
-  background-position: center;
+  display: block;
+  max-width: 100%;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
   border-radius: var(--radius);
 }
-.pd-renders--1 .pd-render__img { aspect-ratio: 21/9; }
 
 .pd-render__caption {
   margin-top: 16px;

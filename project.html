@@ -93,7 +93,7 @@
 
       const rendersHTML = sec.renders.map(r => `
         <figure class="pd-render">
-          <div class="pd-render__img" style="background-image:url('${r.image}')"></div>
+          <img class="pd-render__img" src="${r.image}" alt="${(r.caption || '').replace(/"/g, '&quot;')}" loading="lazy">
           ${r.caption ? `<div class="pd-render__caption"><p>${r.caption}</p></div>` : ''}
         </figure>`).join('');
 
