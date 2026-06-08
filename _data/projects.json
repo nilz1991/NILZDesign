@@ -59,16 +59,16 @@
       "category": "Interior Design",
       "location": "Muscat, Oman",
       "image": "assets/images/projects/office-workspace/01.jpg",
-      "description": "An industrial-modern headquarters for MERJAS — open collaborative zones, private offices, and warm material accents within a raw, refined shell.",
+      "description": "An industrial-style headquarters for MERJAS, a cargo, shipping and import–export company — open work zones, private offices, and a branded reception within a raw, utilitarian shell.",
       "featured": true,
       "order": 3,
-      "overview": "A complete office and workspace design for MERJAS, balancing an industrial architectural language with warmth and brand identity. Exposed metal-grid ceilings, microcement walls, and black-steel glazing are softened by warm timber, integrated planting, and curated lighting — organised into clear zones for management, open work, a coffee bar, and a branded reception lounge.",
+      "overview": "A complete office and workspace design for MERJAS, a cargo, shipping and import–export company. The scheme leans fully into an industrial language — exposed metal-grid ceilings, microcement walls, black-steel glazing, and freight-inspired details that speak directly to the company's logistics world — softened just enough by warm timber, integrated planting, and curated lighting across zones for management, open work, a coffee bar, and reception.",
       "sections": [
         {
           "title": "Reception & Lounge",
-          "description": "The arrival experience sets the tone — an industrial-luxe lounge carrying the MERJAS identity, with warm accent lighting, microcement walls, and bespoke crate seating that nods directly to the brand's world.",
+          "description": "The arrival experience sets the tone — a raw, industrial reception carrying the MERJAS identity, with warm accent lighting, microcement walls, and bespoke crate-and-pallet seating that nods directly to the company's cargo and freight world.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/06.jpg", "caption": "The MERJAS lounge — brand signage, warm accent lighting, and bespoke crate seating that ties the space to the company's identity." }
+            { "image": "assets/images/projects/office-workspace/06.jpg", "caption": "The MERJAS reception — brand signage, warm accent lighting, and crate-and-pallet seating that ties the space to the company's cargo and shipping identity." }
           ]
         },
         {
