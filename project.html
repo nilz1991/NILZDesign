@@ -87,14 +87,12 @@
          }));
 
     document.getElementById('pd-sections').innerHTML = sections.map((sec, i) => {
-      const count     = sec.renders.length;
-      const gridMod   = `pd-renders--${Math.min(count, 3)}`;
       const altClass  = i % 2 === 1 ? 'pd-section--alt' : '';
 
       const rendersHTML = sec.renders.map(r => `
         <figure class="pd-render">
           <img class="pd-render__img" src="${r.image}" alt="${(r.caption || '').replace(/"/g, '&quot;')}" loading="lazy">
-          ${r.caption ? `<div class="pd-render__caption"><p>${r.caption}</p></div>` : ''}
+          ${r.caption ? `<div class="container"><figcaption class="pd-render__caption"><p>${r.caption}</p></figcaption></div>` : ''}
         </figure>`).join('');
 
       return `
@@ -107,10 +105,23 @@
               ${sec.description ? `<p class="pd-section__desc fade-up delay-1">${sec.description}</p>` : ''}
             </div>
           </div>
-          <div class="pd-renders ${gridMod} fade-up">${rendersHTML}</div>
         </div>
+        <div class="pd-renders fade-up">${rendersHTML}</div>
       </section>`;
     }).join('');
+
+    // Lightbox — click any render to view it complete
+    const lb = document.createElement('div');
+    lb.className = 'pd-lightbox';
+    lb.innerHTML = `<button class="pd-lightbox__close" aria-label="Close">&times;</button><img alt="">`;
+    document.body.appendChild(lb);
+    const lbImg = lb.querySelector('img');
+    const openLb  = (src) => { lbImg.src = src; lb.classList.add('open'); document.body.classList.add('modal-open'); };
+    const closeLb = () => { lb.classList.remove('open'); document.body.classList.remove('modal-open'); };
+    document.querySelectorAll('.pd-render__img').forEach(img =>
+      img.addEventListener('click', () => openLb(img.src)));
+    lb.addEventListener('click', closeLb);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLb(); });
 
     initMain();
   </script>
