@@ -58,15 +58,39 @@
       "title": "Office and Work Space Design",
       "category": "Interior Design",
       "location": "Muscat, Oman",
-      "image": "assets/images/project-3.jpg",
-      "description": "Open-plan living redefined — clean lines, natural materials, and carefully considered light create a space that is calm and joyful.",
+      "image": "assets/images/projects/office-workspace/01.jpg",
+      "description": "An industrial-modern headquarters for MERJAS — open collaborative zones, private offices, and warm material accents within a raw, refined shell.",
       "featured": true,
       "order": 3,
-      "overview": "Open-plan living redefined — clean lines, natural materials, and carefully considered light create a space that is calm and joyful. Every element was selected for its ability to contribute to a sense of ease and warmth.",
+      "overview": "A complete office and workspace design for MERJAS, balancing an industrial architectural language with warmth and brand identity. Exposed metal-grid ceilings, microcement walls, and black-steel glazing are softened by warm timber, integrated planting, and curated lighting — organised into clear zones for management, accounting, conferencing, open work, lounge, and a coffee bar.",
       "slides": [
         {
-          "image": "assets/images/project-3.jpg",
-          "caption": "A contemporary open-plan living space where natural materials and measured light come together to create a calm, joyful atmosphere."
+          "image": "assets/images/projects/office-workspace/01.jpg",
+          "caption": "The open office and meeting zone — an industrial metal-grid ceiling and black-steel glass partitions wrap warm timber desks, balanced by soft, considered task lighting."
+        },
+        {
+          "image": "assets/images/projects/office-workspace/02.jpg",
+          "caption": "A private management office framed in black-steel glazing, with warm timber joinery and the MERJAS identity set into a microcement feature wall."
+        },
+        {
+          "image": "assets/images/projects/office-workspace/03.jpg",
+          "caption": "The open workspace — paired timber desks, ergonomic seating, and integrated planting bring warmth and life to the raw industrial shell."
+        },
+        {
+          "image": "assets/images/projects/office-workspace/04.jpg",
+          "caption": "Rows of collaborative desks anchored by a central planted spine, lit evenly beneath the exposed metal-grid ceiling."
+        },
+        {
+          "image": "assets/images/projects/office-workspace/05.jpg",
+          "caption": "The coffee bar and informal meeting zone — a long communal table beneath cascading pendant lights, set against concrete and open shelving."
+        },
+        {
+          "image": "assets/images/projects/office-workspace/06.jpg",
+          "caption": "The MERJAS lounge — an industrial-luxe statement with brand signage, warm accent lighting, and bespoke crate seating that nods to the company's identity."
+        },
+        {
+          "image": "assets/images/projects/office-workspace/00.jpg",
+          "caption": "The full floor plan — eight clearly defined zones: management and accounting offices, conference room, open office area, secretary station, lounge, coffee bar, and restroom."
         }
       ]
     },
