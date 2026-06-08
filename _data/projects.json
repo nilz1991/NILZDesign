@@ -65,10 +65,11 @@
       "overview": "A complete office and workspace design for MERJAS, a cargo, shipping and import–export company. The scheme leans fully into an industrial language — exposed metal-grid ceilings, microcement walls, black-steel glazing, and freight-inspired details that speak directly to the company's logistics world — softened just enough by warm timber, integrated planting, and curated lighting across zones for management, open work, a coffee bar, and reception.",
       "sections": [
         {
-          "title": "Reception & Lounge",
-          "description": "The arrival experience sets the tone — a raw, industrial reception carrying the MERJAS identity, with warm accent lighting, microcement walls, and bespoke crate-and-pallet seating that nods directly to the company's cargo and freight world.",
+          "title": "Open Workspace",
+          "description": "The team works across paired timber desks with ergonomic seating, organised around a central planted spine that brings life and air to the raw industrial shell.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/06.jpg", "caption": "The MERJAS reception — brand signage, warm accent lighting, and crate-and-pallet seating that ties the space to the company's cargo and shipping identity." }
+            { "image": "assets/images/projects/office-workspace/03.jpg", "caption": "The open workspace — paired timber desks, ergonomic seating, and integrated planting bring warmth to the raw industrial shell." },
+            { "image": "assets/images/projects/office-workspace/04.jpg", "caption": "Rows of collaborative desks anchored by a central planted spine, lit evenly beneath the exposed metal-grid ceiling." }
           ]
         },
         {
@@ -86,11 +87,10 @@
           ]
         },
         {
-          "title": "Open Workspace",
-          "description": "The team works across paired timber desks with ergonomic seating, organised around a central planted spine that brings life and air to the raw industrial shell.",
+          "title": "Reception & Lounge",
+          "description": "The arrival experience sets the tone — a raw, industrial reception carrying the MERJAS identity, with warm accent lighting, microcement walls, and bespoke crate-and-pallet seating that nods directly to the company's cargo and freight world.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/03.jpg", "caption": "The open workspace — paired timber desks, ergonomic seating, and integrated planting bring warmth to the raw industrial shell." },
-            { "image": "assets/images/projects/office-workspace/04.jpg", "caption": "Rows of collaborative desks anchored by a central planted spine, lit evenly beneath the exposed metal-grid ceiling." }
+            { "image": "assets/images/projects/office-workspace/06.jpg", "caption": "The MERJAS reception — brand signage, warm accent lighting, and crate-and-pallet seating that ties the space to the company's cargo and shipping identity." }
           ]
         },
         {
