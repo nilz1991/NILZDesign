@@ -1218,7 +1218,7 @@ a.contact-info__value:hover { color: var(--gold); }
   object-fit: contain;
   margin: 0 auto;
   cursor: default;
-  border-radius: var(--radius);
+  border-radius: 0;
 }
 
 .pd-render__caption {
