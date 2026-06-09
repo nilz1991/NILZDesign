@@ -6,7 +6,7 @@
       "category": "Interior Design",
       "location": "Muscat, Oman",
       "image": "assets/images/projects/office-workspace/madineh/01.jpg",
-      "description": "Industrial-style office and workspace designs for MERJAS across multiple Muscat locations — explore each project individually."
+      "description": "Office and workspace designs for MERJAS across multiple Muscat locations — from a refined modern scheme to a raw industrial one. Explore each project individually."
     }
   ],
   "projects": [
@@ -70,60 +70,60 @@
       "category": "Interior Design",
       "location": "Al-Ozaiba, Muscat — Oman",
       "image": "assets/images/projects/office-workspace/al-ozaiba/02.jpg",
-      "description": "An industrial-style headquarters for MERJAS, a cargo, shipping and import–export company — branded reception, open work zones, and a brighter executive suite within a raw, utilitarian shell.",
+      "description": "A sleek, modern headquarters for MERJAS in Al-Ozaiba — a refined monochrome palette of black, white and grey, glass-walled offices, backlit display niches, and soft velvet seating threaded with greenery.",
       "featured": false,
       "order": 2,
-      "overview": "An office and workspace design for MERJAS, a cargo, shipping and import–export company, at its Al-Ozaiba headquarters. The scheme leans into an industrial language — exposed metal-grid ceilings, microcement walls, black-steel glazing, and freight-inspired details — softened by warm timber, integrated planting, and curated lighting across reception, open work, management, a coffee bar, and a brighter executive suite.",
+      "overview": "An office and workspace design for MERJAS at its Al-Ozaiba location, in a refined modern language. A disciplined palette of black, white and grey is paired with slim black-framed glass partitions, backlit display niches, recessed linear lighting, and soft velvet furniture — with greenery threading through executive offices, meeting rooms, and bright open work zones.",
       "sections": [
         {
-          "title": "Reception & Lounge",
-          "description": "A raw, industrial reception carrying the MERJAS identity, with warm accent lighting, microcement walls, and bespoke crate-and-pallet seating that nods to the company's cargo and freight world.",
+          "title": "Executive Office",
+          "description": "A private executive office in a refined monochrome palette, where a sculptural black desk meets backlit display niches and soft velvet seating beneath recessed linear light.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/06.jpg", "caption": "The MERJAS reception — brand signage, warm accent lighting, and crate-and-pallet seating that ties the space to the company's cargo and shipping identity." }
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/01.jpg", "caption": "The executive office — a sculptural black desk, warm backlit display niches, and rounded velvet armchairs set against crisp white joinery and grey tile." }
           ]
         },
         {
-          "title": "Open Office & Meeting",
-          "description": "A glass-framed meeting volume sits within the open office, defined by the metal-grid ceiling and black-steel partitions, kept inviting by warm timber and soft task lighting.",
+          "title": "Private Office",
+          "description": "A glass-walled private office framed in slim black steel, balancing transparency with focus.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/01.jpg", "caption": "The open office and meeting zone — an industrial metal-grid ceiling and black-steel glass partitions wrap warm timber desks, balanced by soft, considered task lighting." }
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/02.jpg", "caption": "A private office read through black-framed glass — modern joinery, warm backlit shelving, and velvet tub chairs over polished grey tile." }
           ]
         },
         {
-          "title": "Management Office",
-          "description": "A private office for leadership, framed in black-steel glazing for transparency, with warm timber joinery and the brand identity set into a microcement wall.",
+          "title": "Boardroom",
+          "description": "The boardroom, anchored by a long meeting table and grey velvet seating beneath crisp linear lighting.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/02.jpg", "caption": "A private management office framed in black-steel glazing, with warm timber joinery and the MERJAS identity set into a microcement feature wall." }
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/04.jpg", "caption": "The boardroom — a long table framed by grey velvet chairs, a wall-mounted screen, and backlit display shelving under sweeping lines of linear light." }
+          ]
+        },
+        {
+          "title": "Meeting Room",
+          "description": "A second meeting setting where parallel lines of linear light draw the eye across the ceiling toward soft greenery and a dark glazed wall.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/05.jpg", "caption": "A meeting table beneath dramatic parallel lines of linear light, softened by greenery against a dark glazed backdrop." }
           ]
         },
         {
           "title": "Open Workspace",
-          "description": "Paired timber desks and ergonomic seating organised around a central planted spine that brings life and air to the raw industrial shell.",
+          "description": "Open work zones in crisp white and black, with suspended planters and backlit niches keeping the modern palette bright and calm.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/03.jpg", "caption": "The open workspace — paired timber desks, ergonomic seating, and integrated planting bring warmth to the raw industrial shell." },
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/04.jpg", "caption": "Rows of collaborative desks anchored by a central planted spine, lit evenly beneath the exposed metal-grid ceiling." }
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/03.jpg", "caption": "The open workspace — clean white desks with slim black frames and iMacs, lit by a floating planter that threads greenery through the space." },
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/06.jpg", "caption": "Workstations arranged in pairs beneath floating planters, balancing white surfaces, black detailing, and grey tile." }
           ]
         },
         {
-          "title": "Coffee Bar",
-          "description": "An informal zone for breaks and casual meetings — a long communal table beneath cascading pendant lights, set against concrete and open shelving.",
+          "title": "Workstations",
+          "description": "A brighter workstation zone opening to floor-to-ceiling glazing and city views.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/05.jpg", "caption": "The coffee bar and informal meeting zone — a long communal table beneath cascading pendant lights, set against concrete and open shelving." }
-          ]
-        },
-        {
-          "title": "Executive Suite",
-          "description": "A lighter, calmer counterpoint to the industrial floor — crisp white desks and suspended planters set against floor-to-ceiling glazing with city views.",
-          "renders": [
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/07.jpg", "caption": "The executive suite lifts the palette to white and steel — clean desks and suspended planters beside floor-to-ceiling glazing with city views." },
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/08.jpg", "caption": "A focused workstation framed by greenery and natural light, balancing the building's industrial character with calm and clarity." }
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/07.jpg", "caption": "A bright workstation zone — white desks and suspended greenery set against floor-to-ceiling glazing with city views." },
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/08.jpg", "caption": "A focused single workstation framed by natural light and greenery — calm, minimal, and modern." }
           ]
         },
         {
           "title": "Floor Plan",
           "description": "The full layout of the Al-Ozaiba office and its zones.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/00.png", "fit": "contain", "caption": "The full floor plan — management and accounting offices, conference room, open office area, secretary station, lounge, coffee bar, and restroom." }
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/00.png", "fit": "contain", "caption": "The full floor plan of the Al-Ozaiba office — executive and private offices, boardroom, meeting room, open workspace, and service zones." }
           ]
         }
       ]
