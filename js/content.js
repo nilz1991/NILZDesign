@@ -1,11 +1,19 @@
-let _projects = null;
-let _site     = null;
+let _data = null;
+let _site = null;
+
+async function loadData() {
+  if (_data) return _data;
+  const res = await fetch('_data/projects.json');
+  _data = await res.json();
+  return _data;
+}
 
 async function loadProjects() {
-  if (_projects) return _projects;
-  const res = await fetch('_data/projects.json');
-  _projects = (await res.json()).projects;
-  return _projects;
+  return (await loadData()).projects;
+}
+
+async function loadCollections() {
+  return (await loadData()).collections || [];
 }
 
 async function loadSite() {
@@ -15,20 +23,30 @@ async function loadSite() {
   return _site;
 }
 
-// ── Project card HTML ──────────────────────
-function projectCardHTML(p) {
+// ── Project / collection card HTML ─────────
+function gridCardHTML(item) {
   return `
-<a class="project-card project-card--clickable" href="project.html?id=${p.id}" data-category="${p.category}">
-  <div class="project-card__img" style="background-image:url('${p.image}')">
-    <span class="project-card__view">View Project Details<span class="project-card__view-icon">→</span></span>
+<a class="project-card project-card--clickable" href="${item.href}" data-category="${item.category}">
+  <div class="project-card__img" style="background-image:url('${item.image}')">
+    ${item.badge ? `<span class="project-card__badge">${item.badge}</span>` : ''}
+    <span class="project-card__view">${item.cta || 'View Project Details'}<span class="project-card__view-icon">→</span></span>
   </div>
   <div class="project-card__body">
-    <span class="project-card__cat">${p.category}</span>
-    <h3 class="project-card__title">${p.title}</h3>
-    <p class="project-card__loc">${p.location}</p>
-    <p class="project-card__desc">${p.description}</p>
+    <span class="project-card__cat">${item.category}</span>
+    <h3 class="project-card__title">${item.title}</h3>
+    <p class="project-card__loc">${item.location || ''}</p>
+    <p class="project-card__desc">${item.description}</p>
   </div>
 </a>`;
+}
+
+// Normalize a project into a grid item (links to its detail page)
+function projectToItem(p) {
+  return {
+    href: `project.html?id=${p.id}`,
+    image: p.image, category: p.category, title: p.title,
+    location: p.location, description: p.description,
+  };
 }
 
 // ── Stacked project card (home page) ───────
@@ -56,17 +74,38 @@ async function renderHomeProjects(containerSelector) {
   container.innerHTML = featured.map((p, i) => stackedCardHTML(p, i)).join('');
 }
 
-// ── Render projects grid with filter ───────
+// ── Render projects grid (collections collapse into one card) ───────
 async function renderProjectsGrid(containerSelector, filterSelector) {
   const container = document.querySelector(containerSelector);
   if (!container) return;
-  const projects  = await loadProjects();
+  const data = await loadData();
+  const projects = data.projects;
+  const collections = data.collections || [];
+
+  // Build items in project order; members of a collection collapse to one card.
+  const seen = new Set();
+  const items = [];
+  for (const p of projects) {
+    if (p.collection) {
+      if (seen.has(p.collection)) continue;
+      seen.add(p.collection);
+      const col = collections.find(c => c.id === p.collection);
+      if (!col) continue;
+      const count = projects.filter(x => x.collection === p.collection).length;
+      items.push({
+        href: `collection.html?id=${col.id}`,
+        image: col.image, category: col.category, title: col.title,
+        location: col.location, description: col.description,
+        badge: `${count} Projects`, cta: 'View Collection',
+      });
+    } else {
+      items.push(projectToItem(p));
+    }
+  }
 
   function render(filter) {
-    const filtered = filter === 'All'
-      ? projects
-      : projects.filter(p => p.category === filter);
-    container.innerHTML = filtered.map(p => projectCardHTML(p)).join('');
+    const filtered = filter === 'All' ? items : items.filter(it => it.category === filter);
+    container.innerHTML = filtered.map(gridCardHTML).join('');
     if (window.__initFadeUps) window.__initFadeUps();
   }
 
@@ -81,7 +120,18 @@ async function renderProjectsGrid(containerSelector, filterSelector) {
       });
     });
   }
+}
 
+// ── Render a collection page (cards for the collection's projects) ──
+async function renderCollection(collectionId, containerSelector) {
+  const container = document.querySelector(containerSelector);
+  if (!container) return null;
+  const data = await loadData();
+  const col = (data.collections || []).find(c => c.id === collectionId);
+  const members = data.projects.filter(p => p.collection === collectionId);
+  container.innerHTML = members.map(p => gridCardHTML(projectToItem(p))).join('');
+  if (window.__initFadeUps) window.__initFadeUps();
+  return col;
 }
 
 /* ════════════════════════════════════════════
@@ -229,4 +279,4 @@ async function renderSiteContent(pageKey) {
   }
 }
 
-export { loadProjects, loadSite, renderHomeProjects, renderProjectsGrid, renderSiteContent };
+export { loadData, loadProjects, loadCollections, loadSite, renderHomeProjects, renderProjectsGrid, renderCollection, renderSiteContent };

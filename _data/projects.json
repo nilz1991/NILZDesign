@@ -1,4 +1,14 @@
 {
+  "collections": [
+    {
+      "id": "office",
+      "title": "Office & Work Space Design",
+      "category": "Interior Design",
+      "location": "Muscat, Oman",
+      "image": "assets/images/projects/office-workspace/al-ozaiba/01.jpg",
+      "description": "Industrial-style office and workspace designs for MERJAS across multiple Muscat locations — explore each project individually."
+    }
+  ],
   "projects": [
     {
       "id": "villa-facade",
@@ -54,120 +64,123 @@
       ]
     },
     {
-      "id": "living-space",
-      "title": "Office and Work Space Design",
+      "id": "office-al-ozaiba",
+      "collection": "office",
+      "title": "Al-Ozaiba Office",
       "category": "Interior Design",
-      "location": "Muscat, Oman",
+      "location": "Al-Ozaiba, Muscat — Oman",
       "image": "assets/images/projects/office-workspace/al-ozaiba/01.jpg",
-      "description": "Two industrial-style headquarters for MERJAS, a cargo, shipping and import–export company — one in Al-Ozaiba and one in Madinat Sultan Qaboos, Muscat.",
-      "featured": true,
-      "order": 3,
-      "overview": "A pair of office and workspace designs for MERJAS, a cargo, shipping and import–export company, across two Muscat locations. Both lean into an industrial language — exposed metal-grid ceilings, microcement walls, black-steel glazing, and freight-inspired details that speak to the company's logistics world — softened by warm timber, integrated planting, and curated lighting.",
-      "locations": [
+      "description": "An industrial-style headquarters for MERJAS, a cargo, shipping and import–export company — branded reception, open work zones, and a brighter executive suite within a raw, utilitarian shell.",
+      "featured": false,
+      "order": 2,
+      "overview": "An office and workspace design for MERJAS, a cargo, shipping and import–export company, at its Al-Ozaiba headquarters. The scheme leans into an industrial language — exposed metal-grid ceilings, microcement walls, black-steel glazing, and freight-inspired details — softened by warm timber, integrated planting, and curated lighting across reception, open work, management, a coffee bar, and a brighter executive suite.",
+      "sections": [
         {
-          "name": "Al-Ozaiba Office",
-          "description": "The Al-Ozaiba headquarters moves from a branded, freight-inspired reception through open work zones into a brighter executive suite — industrial throughout, warmed by timber and greenery.",
-          "sections": [
-            {
-              "title": "Reception & Lounge",
-              "description": "A raw, industrial reception carrying the MERJAS identity, with warm accent lighting, microcement walls, and bespoke crate-and-pallet seating that nods to the company's cargo and freight world.",
-              "renders": [
-                { "image": "assets/images/projects/office-workspace/al-ozaiba/06.jpg", "caption": "The MERJAS reception — brand signage, warm accent lighting, and crate-and-pallet seating that ties the space to the company's cargo and shipping identity." }
-              ]
-            },
-            {
-              "title": "Open Office & Meeting",
-              "description": "A glass-framed meeting volume sits within the open office, defined by the metal-grid ceiling and black-steel partitions, kept inviting by warm timber and soft task lighting.",
-              "renders": [
-                { "image": "assets/images/projects/office-workspace/al-ozaiba/01.jpg", "caption": "The open office and meeting zone — an industrial metal-grid ceiling and black-steel glass partitions wrap warm timber desks, balanced by soft, considered task lighting." }
-              ]
-            },
-            {
-              "title": "Management Office",
-              "description": "A private office for leadership, framed in black-steel glazing for transparency, with warm timber joinery and the brand identity set into a microcement wall.",
-              "renders": [
-                { "image": "assets/images/projects/office-workspace/al-ozaiba/02.jpg", "caption": "A private management office framed in black-steel glazing, with warm timber joinery and the MERJAS identity set into a microcement feature wall." }
-              ]
-            },
-            {
-              "title": "Open Workspace",
-              "description": "Paired timber desks and ergonomic seating organised around a central planted spine that brings life and air to the raw industrial shell.",
-              "renders": [
-                { "image": "assets/images/projects/office-workspace/al-ozaiba/03.jpg", "caption": "The open workspace — paired timber desks, ergonomic seating, and integrated planting bring warmth to the raw industrial shell." },
-                { "image": "assets/images/projects/office-workspace/al-ozaiba/04.jpg", "caption": "Rows of collaborative desks anchored by a central planted spine, lit evenly beneath the exposed metal-grid ceiling." }
-              ]
-            },
-            {
-              "title": "Coffee Bar",
-              "description": "An informal zone for breaks and casual meetings — a long communal table beneath cascading pendant lights, set against concrete and open shelving.",
-              "renders": [
-                { "image": "assets/images/projects/office-workspace/al-ozaiba/05.jpg", "caption": "The coffee bar and informal meeting zone — a long communal table beneath cascading pendant lights, set against concrete and open shelving." }
-              ]
-            },
-            {
-              "title": "Executive Suite",
-              "description": "A lighter, calmer counterpoint to the industrial floor — crisp white desks and suspended planters set against floor-to-ceiling glazing with city views.",
-              "renders": [
-                { "image": "assets/images/projects/office-workspace/al-ozaiba/07.jpg", "caption": "The executive suite lifts the palette to white and steel — clean desks and suspended planters beside floor-to-ceiling glazing with city views." },
-                { "image": "assets/images/projects/office-workspace/al-ozaiba/08.jpg", "caption": "A focused workstation framed by greenery and natural light, balancing the building's industrial character with calm and clarity." }
-              ]
-            },
-            {
-              "title": "Floor Plan",
-              "description": "The full layout of the Al-Ozaiba office and its zones.",
-              "renders": [
-                { "image": "assets/images/projects/office-workspace/al-ozaiba/00.png", "fit": "contain", "caption": "The full floor plan — management and accounting offices, conference room, open office area, secretary station, lounge, coffee bar, and restroom." }
-              ]
-            }
+          "title": "Reception & Lounge",
+          "description": "A raw, industrial reception carrying the MERJAS identity, with warm accent lighting, microcement walls, and bespoke crate-and-pallet seating that nods to the company's cargo and freight world.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/06.jpg", "caption": "The MERJAS reception — brand signage, warm accent lighting, and crate-and-pallet seating that ties the space to the company's cargo and shipping identity." }
           ]
         },
         {
-          "name": "Madinat Sultan Qaboos Office",
-          "description": "The Madinat Sultan Qaboos office carries the same industrial identity — black-steel glazing, metal-grid ceilings, and freight-inspired details across reception, management, and open work.",
-          "sections": [
-            {
-              "title": "Reception & Lounge",
-              "description": "A bold, atmospheric reception under warm and red accent lighting, with the MERJAS identity, crate seating, and a freight-inspired tyre table that speaks to the company's cargo world.",
-              "renders": [
-                { "image": "assets/images/projects/office-workspace/madineh/06.jpg", "caption": "The reception — MERJAS branding under warm and red accent lighting, with crate seating and a tyre table that ties directly to the company's cargo identity." }
-              ]
-            },
-            {
-              "title": "Open Office & Meeting",
-              "description": "A glass-walled meeting volume floating within the open office, defined by the industrial metal-grid ceiling and warmed by timber.",
-              "renders": [
-                { "image": "assets/images/projects/office-workspace/madineh/01.jpg", "caption": "A glass-walled meeting volume within the open office, defined by the industrial metal-grid ceiling and warm timber." }
-              ]
-            },
-            {
-              "title": "Management Office",
-              "description": "The management office behind black-steel glazing — warm timber desks, the MERJAS identity, and considered storage.",
-              "renders": [
-                { "image": "assets/images/projects/office-workspace/madineh/02.jpg", "caption": "The management office behind black-steel glazing, with warm timber desks, the MERJAS identity, and integrated storage." }
-              ]
-            },
-            {
-              "title": "Open Workspace",
-              "description": "Paired timber desks and ergonomic seating beneath the exposed metal-grid ceiling, anchored by a central planted spine.",
-              "renders": [
-                { "image": "assets/images/projects/office-workspace/madineh/03.jpg", "caption": "The open workspace — paired timber desks and ergonomic seating beneath the exposed metal-grid ceiling." },
-                { "image": "assets/images/projects/office-workspace/madineh/04.jpg", "caption": "Collaborative desks anchored by a central planted spine, bringing greenery into the raw industrial shell." }
-              ]
-            },
-            {
-              "title": "Coffee Bar",
-              "description": "An informal break and meeting zone — a long communal table beneath pendant lights, set against concrete and open shelving.",
-              "renders": [
-                { "image": "assets/images/projects/office-workspace/madineh/05.jpg", "caption": "The coffee bar and informal meeting zone — a long communal table beneath pendant lights, set against concrete and open shelving." }
-              ]
-            },
-            {
-              "title": "Floor Plan",
-              "description": "The full layout of the Madinat Sultan Qaboos office and its zones.",
-              "renders": [
-                { "image": "assets/images/projects/office-workspace/madineh/00.png", "fit": "contain", "caption": "The full floor plan of the Madinat Sultan Qaboos office — reception, management, open work, meeting, coffee bar, and service zones." }
-              ]
-            }
+          "title": "Open Office & Meeting",
+          "description": "A glass-framed meeting volume sits within the open office, defined by the metal-grid ceiling and black-steel partitions, kept inviting by warm timber and soft task lighting.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/01.jpg", "caption": "The open office and meeting zone — an industrial metal-grid ceiling and black-steel glass partitions wrap warm timber desks, balanced by soft, considered task lighting." }
+          ]
+        },
+        {
+          "title": "Management Office",
+          "description": "A private office for leadership, framed in black-steel glazing for transparency, with warm timber joinery and the brand identity set into a microcement wall.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/02.jpg", "caption": "A private management office framed in black-steel glazing, with warm timber joinery and the MERJAS identity set into a microcement feature wall." }
+          ]
+        },
+        {
+          "title": "Open Workspace",
+          "description": "Paired timber desks and ergonomic seating organised around a central planted spine that brings life and air to the raw industrial shell.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/03.jpg", "caption": "The open workspace — paired timber desks, ergonomic seating, and integrated planting bring warmth to the raw industrial shell." },
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/04.jpg", "caption": "Rows of collaborative desks anchored by a central planted spine, lit evenly beneath the exposed metal-grid ceiling." }
+          ]
+        },
+        {
+          "title": "Coffee Bar",
+          "description": "An informal zone for breaks and casual meetings — a long communal table beneath cascading pendant lights, set against concrete and open shelving.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/05.jpg", "caption": "The coffee bar and informal meeting zone — a long communal table beneath cascading pendant lights, set against concrete and open shelving." }
+          ]
+        },
+        {
+          "title": "Executive Suite",
+          "description": "A lighter, calmer counterpoint to the industrial floor — crisp white desks and suspended planters set against floor-to-ceiling glazing with city views.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/07.jpg", "caption": "The executive suite lifts the palette to white and steel — clean desks and suspended planters beside floor-to-ceiling glazing with city views." },
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/08.jpg", "caption": "A focused workstation framed by greenery and natural light, balancing the building's industrial character with calm and clarity." }
+          ]
+        },
+        {
+          "title": "Floor Plan",
+          "description": "The full layout of the Al-Ozaiba office and its zones.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/00.png", "fit": "contain", "caption": "The full floor plan — management and accounting offices, conference room, open office area, secretary station, lounge, coffee bar, and restroom." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "office-madinat",
+      "collection": "office",
+      "title": "Madinat Sultan Qaboos Office",
+      "category": "Interior Design",
+      "location": "Madinat Sultan Qaboos, Muscat — Oman",
+      "image": "assets/images/projects/office-workspace/madineh/06.jpg",
+      "description": "A second industrial headquarters for MERJAS — black-steel glazing, metal-grid ceilings, and freight-inspired details across reception, management, and open work.",
+      "featured": false,
+      "order": 3,
+      "overview": "An office and workspace design for MERJAS, a cargo, shipping and import–export company, at its Madinat Sultan Qaboos location. It carries the same industrial identity as the Al-Ozaiba headquarters — black-steel glazing, exposed metal-grid ceilings, and freight-inspired details — across reception, open work, management, and a coffee bar.",
+      "sections": [
+        {
+          "title": "Reception & Lounge",
+          "description": "A bold, atmospheric reception under warm and red accent lighting, with the MERJAS identity, crate seating, and a freight-inspired tyre table that speaks to the company's cargo world.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/madineh/06.jpg", "caption": "The reception — MERJAS branding under warm and red accent lighting, with crate seating and a tyre table that ties directly to the company's cargo identity." }
+          ]
+        },
+        {
+          "title": "Open Office & Meeting",
+          "description": "A glass-walled meeting volume floating within the open office, defined by the industrial metal-grid ceiling and warmed by timber.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/madineh/01.jpg", "caption": "A glass-walled meeting volume within the open office, defined by the industrial metal-grid ceiling and warm timber." }
+          ]
+        },
+        {
+          "title": "Management Office",
+          "description": "The management office behind black-steel glazing — warm timber desks, the MERJAS identity, and considered storage.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/madineh/02.jpg", "caption": "The management office behind black-steel glazing, with warm timber desks, the MERJAS identity, and integrated storage." }
+          ]
+        },
+        {
+          "title": "Open Workspace",
+          "description": "Paired timber desks and ergonomic seating beneath the exposed metal-grid ceiling, anchored by a central planted spine.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/madineh/03.jpg", "caption": "The open workspace — paired timber desks and ergonomic seating beneath the exposed metal-grid ceiling." },
+            { "image": "assets/images/projects/office-workspace/madineh/04.jpg", "caption": "Collaborative desks anchored by a central planted spine, bringing greenery into the raw industrial shell." }
+          ]
+        },
+        {
+          "title": "Coffee Bar",
+          "description": "An informal break and meeting zone — a long communal table beneath pendant lights, set against concrete and open shelving.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/madineh/05.jpg", "caption": "The coffee bar and informal meeting zone — a long communal table beneath pendant lights, set against concrete and open shelving." }
+          ]
+        },
+        {
+          "title": "Floor Plan",
+          "description": "The full layout of the Madinat Sultan Qaboos office and its zones.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/madineh/00.png", "fit": "contain", "caption": "The full floor plan of the Madinat Sultan Qaboos office — reception, management, open work, meeting, coffee bar, and service zones." }
           ]
         }
       ]
