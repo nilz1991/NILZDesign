@@ -1162,6 +1162,29 @@ a.contact-info__value:hover { color: var(--gold); }
 }
 
 /* Sections */
+/* Location group heading (when a project has multiple locations) */
+.pd-locationhead {
+  background: var(--navy);
+  color: var(--white);
+  padding: clamp(56px,7vw,96px) 0;
+  text-align: center;
+}
+.pd-locationhead__label {
+  font-family: var(--font-body);
+  font-size: 0.72rem; font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold); display: block; margin-bottom: 16px;
+}
+.pd-locationhead__name {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  color: var(--white); margin-bottom: 18px;
+}
+.pd-locationhead__desc {
+  font-size: 1rem; line-height: 1.85;
+  color: rgba(255,255,255,0.72);
+  max-width: 720px; margin: 0 auto;
+}
+
 .pd-section {
   padding: clamp(64px,8vw,120px) 0;
   border-top: 1px solid rgba(27,43,75,0.1);

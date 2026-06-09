@@ -78,17 +78,14 @@
     // Overview
     document.getElementById('pd-overview-text').textContent = p.overview || p.description;
 
-    // Sections — use explicit sections if present, otherwise one section per slide
-    const sections = p.sections
-      || (p.slides || []).map((s, i) => ({
-           title: `View ${String(i + 1).padStart(2, '0')}`,
-           description: '',
-           renders: [s]
-         }));
+    // Structure: locations[] → sections[] → renders[].
+    // Back-compat: a flat sections[] or slides[] becomes a single unnamed location.
+    const locations = p.locations
+      || [{ name: null, description: '', sections: (p.sections
+          || (p.slides || []).map((s, i) => ({ title: `View ${String(i + 1).padStart(2, '0')}`, description: '', renders: [s] }))) }];
 
-    document.getElementById('pd-sections').innerHTML = sections.map((sec, i) => {
-      const altClass  = i % 2 === 1 ? 'pd-section--alt' : '';
-
+    const renderSection = (sec, i) => {
+      const altClass = i % 2 === 1 ? 'pd-section--alt' : '';
       const rendersHTML = sec.renders.map(r => {
         const contain = r.fit === 'contain';
         return `
@@ -97,7 +94,6 @@
           ${r.caption ? `<div class="container"><figcaption class="pd-render__caption"><p>${r.caption}</p></figcaption></div>` : ''}
         </figure>`;
       }).join('');
-
       return `
       <section class="pd-section ${altClass}">
         <div class="container">
@@ -111,6 +107,18 @@
         </div>
         <div class="pd-renders fade-up">${rendersHTML}</div>
       </section>`;
+    };
+
+    document.getElementById('pd-sections').innerHTML = locations.map(loc => {
+      const header = loc.name ? `
+        <div class="pd-locationhead fade-up">
+          <div class="container">
+            <span class="pd-locationhead__label">Location</span>
+            <h2 class="pd-locationhead__name">${loc.name}</h2>
+            ${loc.description ? `<p class="pd-locationhead__desc">${loc.description}</p>` : ''}
+          </div>
+        </div>` : '';
+      return header + loc.sections.map((sec, i) => renderSection(sec, i)).join('');
     }).join('');
 
     // Lightbox — click any render to view it complete
