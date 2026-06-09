@@ -68,8 +68,8 @@
     // Page title
     document.title = `${p.title} — NILZ`;
 
-    // Hero
-    const heroImg = (p.slides && p.slides[0]) ? p.slides[0].image : p.image;
+    // Hero — explicit p.hero wins, else first slide, else card image
+    const heroImg = p.hero || ((p.slides && p.slides[0]) ? p.slides[0].image : p.image);
     document.getElementById('pd-hero-bg').style.backgroundImage = `url('${heroImg}')`;
     document.getElementById('pd-hero-cat').textContent  = p.category;
     document.getElementById('pd-hero-title').textContent = p.title;
