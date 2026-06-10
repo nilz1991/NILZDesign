@@ -1245,6 +1245,16 @@ a.contact-info__value:hover { color: var(--gold); }
   cursor: zoom-in;
 }
 
+/* Animated floor plan with top-view people */
+.pd-render--plananim { padding: 0 var(--pad); text-align: center; }
+.pd-plan-people {
+  display: block;
+  margin: 0 auto;
+  width: min(100%, 1100px);
+  aspect-ratio: 600 / 435;
+  height: auto;
+}
+
 /* Renders flagged fit:contain — shown complete inline, not full-bleed, not zoomable */
 .pd-render--contain { padding: 0 var(--pad); }
 .pd-render--contain .pd-render__img {
