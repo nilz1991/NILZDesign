@@ -76,54 +76,48 @@
       "overview": "An office and workspace design for a commercial trading company at its Al-Ozaiba location, in a refined modern language. A disciplined palette of black, white and grey is paired with slim black-framed glass partitions, backlit display niches, recessed linear lighting, and soft velvet furniture — with greenery threading through executive offices, meeting rooms, and bright open work zones.",
       "sections": [
         {
-          "title": "Executive Office",
-          "description": "A private executive office in a refined monochrome palette, where a sculptural black desk meets backlit display niches and soft velvet seating beneath recessed linear light.",
+          "title": "Management Office",
+          "description": "The leadership office — glazed in slim black steel and lined with a full-height white lacquer shelving wall, private and calm yet visually connected to the workspace beyond.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/01.jpg", "caption": "The executive office — a sculptural black desk, warm backlit display niches, and rounded velvet armchairs set against crisp white joinery and grey tile." }
-          ]
-        },
-        {
-          "title": "Private Office",
-          "description": "A glass-walled private office framed in slim black steel, balancing transparency with focus.",
-          "renders": [
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/02.jpg", "caption": "A private office read through black-framed glass — modern joinery, warm backlit shelving, and velvet tub chairs over polished grey tile." }
-          ]
-        },
-        {
-          "title": "Boardroom",
-          "description": "The boardroom, anchored by a long meeting table and grey velvet seating beneath crisp linear lighting.",
-          "renders": [
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/04.jpg", "caption": "The boardroom — a long table framed by grey velvet chairs, a wall-mounted screen, and backlit display shelving under sweeping lines of linear light." }
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/01.jpg", "caption": "A sculptural black-steel desk on a slim frame floats above large-format grey porcelain tile, while a full-height white matte-lacquer shelving wall wraps the room. Warm backlit niches, carved into the white volume in a deliberate rhythm of large and small voids, display objects and soften the monochrome palette, and rounded grey-velvet armchairs add comfort for informal discussion. Recessed linear LED and concealed cove lighting keep the ceiling clean, while slim linear slot diffusers integrate the air-conditioning invisibly into the joinery lines — essential for steady comfort in Muscat's climate." },
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/02.jpg", "caption": "Seen through its slim black-framed glass wall, the office balances transparency with focus — the glazing keeps the room connected to the workspace while containing sound and giving privacy. The composition of the white shelving — flush push-to-open storage paired with open, warm-lit niches — hides clutter and keeps a calm, gallery-like backdrop, with velvet tub chairs over polished grey tile. Cove and linear lighting wash the surfaces evenly, and concealed ducting with linear diffusers ventilates the enclosed room without breaking the clean ceiling plane." }
           ]
         },
         {
           "title": "Meeting Room",
-          "description": "A second meeting setting where parallel lines of linear light draw the eye across the ceiling toward soft greenery and a dark glazed wall.",
+          "description": "A focused meeting room arranged around a long table facing a presentation wall, framed by the project's signature backlit shelving.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/05.jpg", "caption": "A meeting table beneath dramatic parallel lines of linear light, softened by greenery against a dark glazed backdrop." }
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/04.jpg", "caption": "A long table framed by grey-velvet chairs faces a wall-mounted screen for presentations, with the white display shelving returning behind as a backlit backdrop — its rhythm of niches breaking the solid volume to give the room depth. Sweeping parallel lines of recessed linear light run the length of the ceiling, lighting the table evenly and reinforcing the geometry, while integrated linear air diffusers sit within the same ceiling lines to ventilate the enclosed space quietly. The disciplined palette of black steel, white lacquer, grey tile and velvet keeps the setting calm and professional." }
+          ]
+        },
+        {
+          "title": "Conference Room",
+          "description": "The project's most dramatic space, where parallel runs of linear light give the conference room scale and a sense of movement.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/05.jpg", "caption": "Multiple parallel runs of linear light sweep across the ceiling and down toward a dark glazed wall, giving the room scale and motion. The long conference table seats a full team, softened by greenery and the warm glow of the backlit shelving, while the dark glass partition provides acoustic and visual separation from the open office without losing a sense of openness. The grey tile, black steel and white joinery palette is held throughout, and linear diffusers integrated into the lighting grid maintain even, quiet climate control for longer meetings." }
           ]
         },
         {
           "title": "Open Workspace",
-          "description": "Open work zones in crisp white and black, with suspended planters and backlit niches keeping the modern palette bright and calm.",
+          "description": "The open office area at the heart of the plan — clean white desks, a floating green spine, and glare-free linear light.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/03.jpg", "caption": "The open workspace — clean white desks with slim black frames and iMacs, lit by a floating planter that threads greenery through the space." },
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/06.jpg", "caption": "Workstations arranged in pairs beneath floating planters, balancing white surfaces, black detailing, and grey tile." }
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/03.jpg", "caption": "Clean white desks with slim black-steel frames each pair with an iMac and a grey-velvet task chair. A floating planter box, threaded with linear light and trailing greenery, hovers over the desks to bring nature into the workspace and visually lower the tall ceiling. White lacquer storage and warm-lit niches line the walls to keep paperwork hidden and the floor uncluttered, tied together by large-format grey tile. Recessed linear lighting provides glare-free task light, while concealed slot diffusers deliver even airflow across the open volume." }
           ]
         },
         {
           "title": "Workstations",
-          "description": "A brighter workstation zone opening to floor-to-ceiling glazing and city views.",
+          "description": "Workstations laid out in facing pairs and brighter clusters, opening to floor-to-ceiling glazing and city views.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/07.jpg", "caption": "A bright workstation zone — white desks and suspended greenery set against floor-to-ceiling glazing with city views." },
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/08.jpg", "caption": "A focused single workstation framed by natural light and greenery — calm, minimal, and modern." }
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/06.jpg", "caption": "Workstations arranged in facing pairs beneath the floating green spine, where white desktops, black framing and grey tile keep the look crisp and ordered; the planting and warm niche light prevent the monochrome scheme from feeling cold." },
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/07.jpg", "caption": "A brighter workstation cluster opens to floor-to-ceiling glazing with city views, the white desks and suspended greenery lifting the palette and flooding the area with daylight — daylight that also reduces reliance on artificial light." },
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/08.jpg", "caption": "A single focused workstation framed by glass, natural light and greenery — calm, minimal and modern, designed for deep, undistracted work." }
           ]
         },
         {
           "title": "Floor Plan",
-          "description": "The full layout of the Al-Ozaiba office and its zones.",
+          "description": "Four clear zones within a compact 8.65 × 8.12 m footprint — private rooms to the left, storage across the top, and the open office filling the larger right-hand volume.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/00.png", "fit": "contain", "caption": "The full floor plan of the Al-Ozaiba office — executive and private offices, boardroom, meeting room, open workspace, and service zones." }
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/00.png", "fit": "contain", "caption": "The plan organises the office into four zones: (1) Management Office and (2) Conference Room as private cellular rooms along the left edge, (3) an Open Random Storage strip across the top, and (4) the main Open Office Area filling the right-hand volume. The workstations sit in two facing rows of four — eight desks in total — separated by a central planted spine that doubles as a green divider and a light source, maximising daylight, encouraging collaboration, and keeping circulation simple." }
           ]
         }
       ]
