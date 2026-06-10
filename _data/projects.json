@@ -98,16 +98,10 @@
           ]
         },
         {
-          "title": "Open Workspace",
-          "description": "The open office area at the heart of the plan — clean white desks, a floating green spine, and glare-free linear light.",
-          "renders": [
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/03.jpg", "caption": "Clean white desks with slim black-steel frames each pair with an iMac and a grey-velvet task chair. A floating planter box, threaded with linear light and trailing greenery, hovers over the desks to bring nature into the workspace and visually lower the tall ceiling. White lacquer storage and warm-lit niches line the walls to keep paperwork hidden and the floor uncluttered, tied together by large-format grey tile. Recessed linear lighting provides glare-free task light, while concealed slot diffusers deliver even airflow across the open volume." }
-          ]
-        },
-        {
           "title": "Workstations",
-          "description": "Workstations laid out in facing pairs and brighter clusters, opening to floor-to-ceiling glazing and city views.",
+          "description": "The open office area at the heart of the plan — workstations laid out in facing rows around a floating green spine, with brighter clusters opening to floor-to-ceiling glazing and city views.",
           "renders": [
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/03.jpg", "caption": "Clean white desks with slim black-steel frames each pair with an iMac and a grey-velvet task chair. A floating planter box, threaded with linear light and trailing greenery, hovers over the desks to bring nature into the workspace and visually lower the tall ceiling. White lacquer storage and warm-lit niches line the walls to keep paperwork hidden and the floor uncluttered, tied together by large-format grey tile. Recessed linear lighting provides glare-free task light, while concealed slot diffusers deliver even airflow across the open volume." },
             { "image": "assets/images/projects/office-workspace/al-ozaiba/06.jpg", "caption": "Workstations arranged in facing pairs beneath the floating green spine, where white desktops, black framing and grey tile keep the look crisp and ordered; the planting and warm niche light prevent the monochrome scheme from feeling cold." },
             { "image": "assets/images/projects/office-workspace/al-ozaiba/07.jpg", "caption": "A brighter workstation cluster opens to floor-to-ceiling glazing with city views, the white desks and suspended greenery lifting the palette and flooding the area with daylight — daylight that also reduces reliance on artificial light." },
             { "image": "assets/images/projects/office-workspace/al-ozaiba/08.jpg", "caption": "A single focused workstation framed by glass, natural light and greenery — calm, minimal and modern, designed for deep, undistracted work." }
