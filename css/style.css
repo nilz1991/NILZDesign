@@ -1317,7 +1317,12 @@ a.contact-info__value:hover { color: var(--gold); }
 
 @media (max-width: 900px) {
   .pd-section__header { grid-template-columns: 1fr; }
-  .pd-section__num { display: none; }
+  .pd-section__num {
+    font-size: 2rem;
+    color: var(--gold);
+    padding-top: 0;
+    margin-bottom: 6px;
+  }
   .pd-renders--2,
   .pd-renders--3 { grid-template-columns: 1fr; }
   .pd-renders--3 .pd-render:first-child { grid-column: span 1; }
