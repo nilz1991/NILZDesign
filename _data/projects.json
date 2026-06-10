@@ -162,7 +162,7 @@
           "title": "Floor Plan",
           "description": "The full layout of the Madinat Sultan Qaboos office and its zones.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/madineh/00.png", "fit": "contain", "overlay": "people", "caption": "The full floor plan of the Madinat Sultan Qaboos office — reception, management, open work, meeting, coffee bar, and service zones. The figures show how the team moves through and uses each space." }
+            { "image": "assets/images/projects/office-workspace/madineh/00.png", "fit": "contain", "caption": "The full floor plan of the Madinat Sultan Qaboos office — reception, management, open work, meeting, coffee bar, and service zones." }
           ]
         }
       ]
