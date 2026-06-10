@@ -84,16 +84,10 @@
           ]
         },
         {
-          "title": "Meeting Room",
-          "description": "A focused meeting room arranged around a long table facing a presentation wall, framed by the project's signature backlit shelving.",
-          "renders": [
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/04.jpg", "caption": "A long table framed by grey-velvet chairs faces a wall-mounted screen for presentations, with the white display shelving returning behind as a backlit backdrop — its rhythm of niches breaking the solid volume to give the room depth. Sweeping parallel lines of recessed linear light run the length of the ceiling, lighting the table evenly and reinforcing the geometry, while integrated linear air diffusers sit within the same ceiling lines to ventilate the enclosed space quietly. The disciplined palette of black steel, white lacquer, grey tile and velvet keeps the setting calm and professional." }
-          ]
-        },
-        {
           "title": "Conference Room",
-          "description": "The project's most dramatic space, where parallel runs of linear light give the conference room scale and a sense of movement.",
+          "description": "The conference room — the project's most dramatic space, where sweeping parallel runs of linear light give a long meeting table scale and movement, framed by the signature backlit shelving and a dark glazed wall.",
           "renders": [
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/04.jpg", "caption": "A long table framed by grey-velvet chairs faces a wall-mounted screen for presentations, with the white display shelving returning behind as a backlit backdrop — its rhythm of niches breaking the solid volume to give the room depth. Sweeping parallel lines of recessed linear light run the length of the ceiling, lighting the table evenly and reinforcing the geometry, while integrated linear air diffusers sit within the same ceiling lines to ventilate the enclosed space quietly. The disciplined palette of black steel, white lacquer, grey tile and velvet keeps the setting calm and professional." },
             { "image": "assets/images/projects/office-workspace/al-ozaiba/05.jpg", "caption": "Multiple parallel runs of linear light sweep across the ceiling and down toward a dark glazed wall, giving the room scale and motion. The long conference table seats a full team, softened by greenery and the warm glow of the backlit shelving, while the dark glass partition provides acoustic and visual separation from the open office without losing a sense of openness. The grey tile, black steel and white joinery palette is held throughout, and linear diffusers integrated into the lighting grid maintain even, quiet climate control for longer meetings." }
           ]
         },
