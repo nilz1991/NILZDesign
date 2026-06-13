@@ -12,11 +12,11 @@
   "projects": [
     {
       "id": "villa-facade",
-      "title": "Interior Design & Space Planning",
+      "title": "Residential Design",
       "category": "Interior Design",
       "location": "Muscat, Oman",
       "image": "assets/images/project-2.jpg",
-      "description": "Designing elegant and functional spaces that enhance everyday living through thoughtful planning and refined details.",
+      "description": "Villa and Apartment Design",
       "featured": true,
       "order": 2,
       "overview": "A contemporary two-storey villa defined by clean cubic volumes and a warm, tactile material palette. The facade balances bold modern geometry with the soft tones of the Omani landscape — microcement surfaces in off-white and warm beige, framed by dark aluminium and recessed linear lighting that brings the architecture to life after dusk.",
