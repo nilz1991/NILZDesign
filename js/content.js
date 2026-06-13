@@ -57,9 +57,9 @@ function stackedCardHTML(p, idx) {
   <div class="stack-card__img" style="background-image:url('${p.image}')"></div>
   <div class="stack-card__body">
     <span class="section-tag">${p.category}</span>
-    <h2 class="stack-card__title">${p.title}</h2>
+    <h2 class="stack-card__title">${p.homeTitle || p.title}</h2>
     <p class="stack-card__loc">${p.location}</p>
-    <p class="stack-card__desc">${p.description}</p>
+    <p class="stack-card__desc">${p.homeDescription || p.description}</p>
     <a href="projects.html" class="btn btn--outline" style="margin-top:28px">Explore Projects</a>
   </div>
 </div>`;
