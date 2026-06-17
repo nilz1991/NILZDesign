@@ -72,6 +72,68 @@
       ]
     },
     {
+      "id": "residential-muscat-hills",
+      "collection": "residential",
+      "title": "Muscat Hills Apartment",
+      "category": "Interior Design",
+      "location": "Muscat Hills, Muscat — Oman",
+      "image": "assets/images/projects/residential/muscat-hills/03.jpg",
+      "description": "A compact Muscat Hills apartment designed for efficient, optimised living — integrated storage, multi-functional joinery, and a warm, tailored material palette.",
+      "featured": false,
+      "order": 3,
+      "overview": "A compact apartment in Muscat Hills, planned to make the most of a limited footprint. Every zone earns its place through efficient layouts, integrated storage, and multi-functional joinery — an open living and dining flow in warm taupe and dark herringbone wood, a tailored, moody master suite, and a compact bathroom and balcony that feel generous despite their size.",
+      "sections": [
+        {
+          "title": "Entrance",
+          "description": "A welcoming, space-efficient entry.",
+          "renders": [
+            { "image": "assets/images/projects/residential/muscat-hills/01.jpg", "caption": "A built-in bench with concealed shoe storage and a warm oak top doubles as a seat for putting on shoes, set against a fluted white panel and a vertical garden and washed in soft linear light — a compact, practical welcome." }
+          ]
+        },
+        {
+          "title": "Dining",
+          "description": "A dining zone within the open plan.",
+          "renders": [
+            { "image": "assets/images/projects/residential/muscat-hills/02.jpg", "caption": "The dining area sits inside the open living plan — a round table with soft taupe chairs beside the window, keeping circulation easy and the small footprint feeling open and generous." }
+          ]
+        },
+        {
+          "title": "Living Room",
+          "description": "A cosy, uncluttered living zone.",
+          "renders": [
+            { "image": "assets/images/projects/residential/muscat-hills/03.jpg", "caption": "A low, modular L-shaped taupe sofa is tucked into a backlit recess around a small walnut coffee table — a space-saving arrangement that keeps the open plan calm and uncluttered." },
+            { "image": "assets/images/projects/residential/muscat-hills/04.jpg", "caption": "The media wall pairs a slim wall-mounted TV on a warm microcement panel with a floating storage console below; beside it, a warm wood-lined niche with trailing greenery softens the composition and conceals services." }
+          ]
+        },
+        {
+          "title": "Bedroom",
+          "description": "A tailored, moody master suite.",
+          "renders": [
+            { "image": "assets/images/projects/residential/muscat-hills/05.jpg", "caption": "The bed sits against a fluted headboard wall layered in grey and warm timber, flanked by chrome sphere pendants and black-gloss floating nightstands — a tailored, masculine composition." },
+            { "image": "assets/images/projects/residential/muscat-hills/06.jpg", "caption": "A smoked-glass sliding wardrobe with internal LED lighting lines one wall, keeping clothing storage generous yet visually quiet in the compact room." },
+            { "image": "assets/images/projects/residential/muscat-hills/07.jpg", "caption": "Opposite the bed, a slim TV floats on a warm-lit console while a sculptural red lounge chair adds a bold accent and a quiet reading corner by the window." },
+            { "image": "assets/images/projects/residential/muscat-hills/08.jpg", "caption": "A bedside detail — a black-gloss nightstand on a slim chrome frame, a sphere reading light, and playful figurines against the fluted headboard." },
+            { "image": "assets/images/projects/residential/muscat-hills/09.jpg", "caption": "A floating black dressing table with a large mirror and adjustable reading lights carves a compact vanity into the bedroom wall, using every surface efficiently." },
+            { "image": "assets/images/projects/residential/muscat-hills/10.jpg", "caption": "The red lounge chair and a tulip side table form a sunlit reading spot beside the floor-to-ceiling glazing." }
+          ]
+        },
+        {
+          "title": "Bathroom",
+          "description": "A compact bathroom organised for efficiency.",
+          "renders": [
+            { "image": "assets/images/projects/residential/muscat-hills/11.jpg", "caption": "A walk-in shower with recessed niches, a wall-hung toilet on a stone feature panel, and a floating fluted-wood vanity with a stone top, brass fittings, and a backlit round mirror — warm materials and smart planning in a small footprint." }
+          ]
+        },
+        {
+          "title": "Balcony",
+          "description": "A small outdoor retreat.",
+          "renders": [
+            { "image": "assets/images/projects/residential/muscat-hills/12.jpg", "caption": "A small balcony turned into a green retreat — artificial turf, potted planting, a woven accent chair, and a warm timber-slatted pergola framing the Muscat Hills view." }
+          ]
+        }
+      ]
+    },
+    {
       "id": "office-al-ozaiba",
       "collection": "office",
       "title": "Al-Ozaiba Office",
