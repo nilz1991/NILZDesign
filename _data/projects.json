@@ -1,6 +1,14 @@
 {
   "collections": [
     {
+      "id": "residential",
+      "title": "Residential Design",
+      "category": "Interior Design",
+      "location": "Muscat, Oman",
+      "image": "assets/images/projects/residential/al-ansab/06.jpg",
+      "description": "Villa and Apartment Design"
+    },
+    {
       "id": "office",
       "title": "Office & Work Space Design",
       "category": "Interior Design",
@@ -12,55 +20,53 @@
   "projects": [
     {
       "id": "villa-facade",
-      "title": "Residential Design",
+      "collection": "residential",
+      "title": "Al Ansab Villa",
       "category": "Interior Design",
-      "location": "Muscat, Oman",
-      "image": "assets/images/project-2.jpg",
-      "description": "Villa and Apartment Design",
+      "location": "Al Ansab, Muscat — Oman",
+      "image": "assets/images/projects/residential/al-ansab/01.jpg",
+      "description": "A warm, contemporary family villa in Al Ansab — natural materials, soft curves, and statement lighting across living, dining, and a formal majlis.",
       "homeTitle": "Interior Design & Space Planning",
       "homeDescription": "Designing elegant and functional spaces that enhance everyday living through thoughtful planning and refined details.",
       "featured": true,
       "order": 2,
-      "overview": "A contemporary two-storey villa defined by clean cubic volumes and a warm, tactile material palette. The facade balances bold modern geometry with the soft tones of the Omani landscape — microcement surfaces in off-white and warm beige, framed by dark aluminium and recessed linear lighting that brings the architecture to life after dusk.",
-      "slides": [
-        {
-          "image": "assets/images/projects/villa-facade/01.jpg",
-          "caption": "The villa at dusk — interlocking cubic volumes wrapped in warm microcement, where concealed linear LED lighting traces the architecture and gives the facade a quiet, glowing presence against the evening sky."
-        },
-        {
-          "image": "assets/images/projects/villa-facade/02.jpg",
-          "caption": "A study in detail: the crisp meeting of off-white and warm beige microcement, dark aluminium window frames, and a recessed linear light that washes warmth down the soffit."
-        },
-        {
-          "image": "assets/images/projects/villa-facade/03.jpg",
-          "caption": "The material story — microcement in off-white and warm beige, paired with dark aluminium framing and glass. Each surface was chosen to age gracefully and sit in harmony with its surroundings."
-        },
-        {
-          "image": "assets/images/projects/villa-facade/04.jpg",
-          "caption": "The full material language of the project: warm beige microcement, dark aluminium frames, advanced clear glazing, and linear LED lighting — assembled into a facade that is both timeless and unmistakably modern."
-        }
-      ],
+      "overview": "A warm, contemporary family villa in Al Ansab where grand scale meets intimacy. The interiors rest on a palette of natural materials — light oak, travertine, polished porcelain, and book-matched marble — softened by bouclé and velvet and warmed by sculptural brass lighting. Spaces flow openly from a welcoming entrance hall through living and dining to a formal majlis, balancing relaxed family life with refined hosting.",
       "sections": [
         {
-          "title": "Concept & Massing",
-          "description": "The design emerges from a study of the Omani vernacular — interlocking cubic volumes that create shadow and depth in the harsh afternoon sun. Each form was positioned deliberately to frame internal courtyards and capture the prevailing breeze, balancing openness with the need for privacy and shade.",
+          "title": "Entrance & Hall",
+          "description": "The arrival sequence, setting the villa's warm and material-rich tone.",
           "renders": [
-            { "image": "assets/images/projects/villa-facade/01.jpg", "caption": "The villa at dusk — interlocking cubic volumes wrapped in warm microcement, where concealed linear LED lighting traces the architecture and gives the facade a quiet, glowing presence against the evening sky." },
-            { "image": "assets/images/projects/villa-facade/02.jpg", "caption": "A study in detail: the crisp meeting of off-white and warm beige microcement, dark aluminium window frames, and a recessed linear light that washes warmth down the soffit." }
+            { "image": "assets/images/projects/residential/al-ansab/01.jpg", "caption": "A double-height entrance hall wrapped in light oak veneer, with a book-matched marble console, abstract art, and a bronze figure lending a calm, gallery-like quality. Large-format polished porcelain floors and a soft hand-knotted rug keep it grounded and family-friendly, while reeded-glass doors filter daylight from the rooms beyond. Warm recessed and track lighting wash the timber and stone for an inviting first impression." }
           ]
         },
         {
-          "title": "Material Language",
-          "description": "Every material was selected for its ability to age gracefully in the Omani climate. Microcement in two tones — off-white and warm beige — forms the primary skin, while dark aluminium frames define the apertures with precision. Advanced clear glazing maximises daylight without sacrificing thermal performance.",
+          "title": "Living Room",
+          "description": "An open, serene living space oriented to the garden.",
           "renders": [
-            { "image": "assets/images/projects/villa-facade/03.jpg", "caption": "The material story — microcement in off-white and warm beige, paired with dark aluminium framing and glass. Each surface was chosen to age gracefully and sit in harmony with its surroundings." }
+            { "image": "assets/images/projects/residential/al-ansab/02.jpg", "caption": "A low, modular bouclé sofa and rounded armchairs gather around organic travertine tables on a soft, line-drawn rug, framed by floor-to-ceiling sheers that diffuse the garden light. A sculptural brass linear chandelier anchors the seating, while a tonal palette of cream, sand, and warm white on polished porcelain keeps the room calm, tactile, and effortlessly elegant — natural materials chosen to feel soft underfoot and timeless to the eye." }
           ]
         },
         {
-          "title": "Night Presence",
-          "description": "Concealed linear LED lighting was integrated into every horizontal soffit, transforming the facade after dusk. The lighting traces the geometry of the volumes, creating a warm, glowing presence that reads as unmistakably modern yet quietly restrained.",
+          "title": "Stairs",
+          "description": "A sculptural stair that doubles as the villa's centrepiece.",
           "renders": [
-            { "image": "assets/images/projects/villa-facade/04.jpg", "caption": "The full material language of the project: warm beige microcement, dark aluminium frames, advanced clear glazing, and linear LED lighting — assembled into a facade that is both timeless and unmistakably modern." }
+            { "image": "assets/images/projects/residential/al-ansab/03.jpg", "caption": "The staircase rises against a curved, fluted feature wall embedded with pin-points of warm light, framed by a slim brass-and-glass balustrade. A sculptural bonsai in a sunken garden brings nature indoors, while bouclé swivel chairs, a green-marble table, and a walnut-and-bouclé bench create a quiet lounge at its foot. Soft, layered lighting turns the whole composition into a glowing focal point after dusk — the concept of a stair conceived as sculpture rather than mere circulation." }
+          ]
+        },
+        {
+          "title": "Dining",
+          "description": "A refined dining room for everyday meals and gatherings.",
+          "renders": [
+            { "image": "assets/images/projects/residential/al-ansab/04.jpg", "caption": "An oval travertine table paired with cognac-leather chairs on dark timber frames, beneath a cascading spiral chandelier." },
+            { "image": "assets/images/projects/residential/al-ansab/05.jpg", "caption": "Seen across the family table, the dining room layers light oak paneling with backlit display niches, reeded-glass screens, and a statement fringe chandelier in brushed brass. Warm leather, stone, and timber sit against polished porcelain floors, while concealed cove and track lighting keep the mood soft — natural, tactile materials composed for both quiet family dinners and larger gatherings." }
+          ]
+        },
+        {
+          "title": "Majlis",
+          "description": "The formal majlis, the villa's most ceremonial space for receiving guests.",
+          "renders": [
+            { "image": "assets/images/projects/residential/al-ansab/06.jpg", "caption": "A symmetrical majlis with quilted white sofas, rust-velvet armchairs, and green-marble tables arranged for conversation and hospitality." },
+            { "image": "assets/images/projects/residential/al-ansab/07.jpg", "caption": "The majlis is the villa's grandest gesture — book-matched marble with gold veining sweeps across the floor beneath a dramatic cascading brass chandelier. Quilted sofas and rust-velvet armchairs sit within light oak paneling and warm backlit niches, framed by sheer-draped glazing, while magnetic track lighting and vertical wall sconces give the room a refined, hotel-like sense of occasion. The concept: a ceremonial heart that elevates the Omani tradition of hosting through rich, natural materials and theatrical light." }
           ]
         }
       ]
