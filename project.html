@@ -89,7 +89,7 @@
       const rendersHTML = sec.renders.map(r => {
         const contain = r.fit === 'contain';
         return `
-        <figure class="pd-render ${contain ? 'pd-render--contain' : ''}">
+        <figure class="pd-render fade-up ${contain ? 'pd-render--contain' : ''}">
           <img class="pd-render__img" src="${r.image}" alt="${(r.caption || '').replace(/"/g, '&quot;')}" loading="lazy"${contain ? ' data-nozoom="1"' : ''}>
           ${r.caption ? `<div class="container"><figcaption class="pd-render__caption"><p>${r.caption}</p></figcaption></div>` : ''}
         </figure>`;
@@ -105,7 +105,7 @@
             </div>
           </div>
         </div>
-        <div class="pd-renders fade-up">${rendersHTML}</div>
+        <div class="pd-renders">${rendersHTML}</div>
       </section>`;
     };
 
