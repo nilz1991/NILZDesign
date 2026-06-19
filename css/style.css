@@ -1251,13 +1251,14 @@ a.contact-info__value:hover { color: var(--gold); }
   width: 40px; height: 40px;
   display: flex; align-items: center; justify-content: center;
   border-radius: 50%;
-  background: rgba(27,43,75,0.5);
+  background: rgba(27,43,75,0.62);
   color: #fff;
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(255,255,255,0.35);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.28);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   pointer-events: none;
-  opacity: 0.9;
+  opacity: 0.92;
   transition: opacity 0.3s var(--ease), background 0.3s var(--ease), transform 0.3s var(--ease);
 }
 .pd-render:hover .pd-zoom-badge {
@@ -1265,8 +1266,16 @@ a.contact-info__value:hover { color: var(--gold); }
   background: var(--gold);
   transform: scale(1.08);
 }
+/* Touch devices have no hover — keep the badge solid gold and always visible */
+@media (hover: none) {
+  .pd-zoom-badge {
+    opacity: 1;
+    background: var(--gold);
+    border-color: rgba(255,255,255,0.6);
+  }
+}
 @media (max-width: 600px) {
-  .pd-zoom-badge { top: 14px; right: 14px; width: 34px; height: 34px; }
+  .pd-zoom-badge { top: 14px; right: 14px; width: 36px; height: 36px; }
 }
 .pd-render__img {
   display: block;
