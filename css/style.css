@@ -1266,28 +1266,16 @@ a.contact-info__value:hover { color: var(--gold); }
   background: var(--gold);
   transform: scale(1.08);
 }
-.pd-zoom-badge__label {
-  display: none;
-  font: 600 0.72rem/1 var(--font-body);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: #fff;
-  white-space: nowrap;
-}
-/* Touch devices have no hover — show a clear labelled gold pill, always visible */
+/* Touch devices have no hover — keep the badge solid gold and always visible */
 @media (hover: none) {
   .pd-zoom-badge {
-    top: 14px; right: 14px;
-    width: auto; height: auto;
-    border-radius: 999px;
-    padding: 9px 15px;
-    gap: 7px;
     opacity: 1;
     background: var(--gold);
-    border-color: rgba(255,255,255,0.55);
+    border-color: rgba(255,255,255,0.6);
   }
-  .pd-zoom-badge svg { width: 15px; height: 15px; }
-  .pd-zoom-badge__label { display: inline; }
+}
+@media (max-width: 600px) {
+  .pd-zoom-badge { top: 14px; right: 14px; width: 36px; height: 36px; }
 }
 .pd-render__img {
   display: block;
