@@ -70,7 +70,9 @@
 
     // Hero — explicit p.hero wins, else first slide, else card image
     const heroImg = p.hero || ((p.slides && p.slides[0]) ? p.slides[0].image : p.image);
-    document.getElementById('pd-hero-bg').style.backgroundImage = `url('${heroImg}')`;
+    const heroBg = document.getElementById('pd-hero-bg');
+    heroBg.style.backgroundImage = `url('${heroImg}')`;
+    if (p.heroFit === 'contain') heroBg.classList.add('pd-hero__bg--contain');
     document.getElementById('pd-hero-cat').textContent  = p.category;
     document.getElementById('pd-hero-title').textContent = p.title;
     document.getElementById('pd-hero-loc').textContent  = p.location;
