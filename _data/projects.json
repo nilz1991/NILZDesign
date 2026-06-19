@@ -252,36 +252,36 @@
           "title": "Architectural Drawings",
           "description": "",
           "renders": [
-            { "image": "assets/images/projects/plans-details/01.jpg", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Site Plan</span>Villa position on the plot, setbacks, road/lane widths, and area statement — the basis for permits." },
-            { "image": "assets/images/projects/plans-details/02.jpg", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Ground Floor Plan</span>Ground level layout, parking, entrances, and door/window schedule." },
-            { "image": "assets/images/projects/plans-details/03.jpg", "fit": "contain", "caption": "<span class=\"pd-draw-title\">First Floor Plan</span>Bedrooms, baths, and terraces layout." },
-            { "image": "assets/images/projects/plans-details/04.jpg", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Pent &amp; Roof Floor Plan</span>Penthouse/roof level with general notes &amp; specifications." },
-            { "image": "assets/images/projects/plans-details/05.jpg", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Rear Elevation</span>Rear facade with levels and detail." },
-            { "image": "assets/images/projects/plans-details/06.jpg", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Left Side Elevation</span>Side facade, massing, projections, and finishes." },
-            { "image": "assets/images/projects/plans-details/07.jpg", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Front Elevation</span>Main facade: levels, openings, and materials." },
-            { "image": "assets/images/projects/plans-details/08.jpg", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Sections (A-A &amp; B-B)</span>Vertical cuts: floor heights, stairs, and level relationships." }
+            { "image": "assets/images/projects/plans-details/01.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Site Plan</span>Villa position on the plot, setbacks, road/lane widths, and area statement — the basis for permits." },
+            { "image": "assets/images/projects/plans-details/02.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Ground Floor Plan</span>Ground level layout, parking, entrances, and door/window schedule." },
+            { "image": "assets/images/projects/plans-details/03.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">First Floor Plan</span>Bedrooms, baths, and terraces layout." },
+            { "image": "assets/images/projects/plans-details/04.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Pent &amp; Roof Floor Plan</span>Penthouse/roof level with general notes &amp; specifications." },
+            { "image": "assets/images/projects/plans-details/05.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Rear Elevation</span>Rear facade with levels and detail." },
+            { "image": "assets/images/projects/plans-details/06.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Left Side Elevation</span>Side facade, massing, projections, and finishes." },
+            { "image": "assets/images/projects/plans-details/07.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Front Elevation</span>Main facade: levels, openings, and materials." },
+            { "image": "assets/images/projects/plans-details/08.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Sections (A-A &amp; B-B)</span>Vertical cuts: floor heights, stairs, and level relationships." }
           ]
         },
         {
           "title": "Structural Drawings",
           "description": "",
           "renders": [
-            { "image": "assets/images/projects/plans-details/09.jpg", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Pent Floor Roof Layout</span>Roof framing and beam/slab reinforcement schedules." },
-            { "image": "assets/images/projects/plans-details/10.jpg", "fit": "contain", "caption": "<span class=\"pd-draw-title\">First Floor Roof Layout</span>First-floor roof framing and hidden beam details." },
-            { "image": "assets/images/projects/plans-details/11.jpg", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Ground Floor Roof Layout</span>Ground-floor roof framing." },
-            { "image": "assets/images/projects/plans-details/12.jpg", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Plinth Beam Layout</span>Plinth beam grid and schedule." },
-            { "image": "assets/images/projects/plans-details/13.jpg", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Foundation Layout</span>Footing positions/sizes, footing &amp; strap-beam schedules." },
-            { "image": "assets/images/projects/plans-details/14.jpg", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Column Layout (Axis)</span>Columns on grid with sections &amp; reinforcement." }
+            { "image": "assets/images/projects/plans-details/09.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Pent Floor Roof Layout</span>Roof framing and beam/slab reinforcement schedules." },
+            { "image": "assets/images/projects/plans-details/10.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">First Floor Roof Layout</span>First-floor roof framing and hidden beam details." },
+            { "image": "assets/images/projects/plans-details/11.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Ground Floor Roof Layout</span>Ground-floor roof framing." },
+            { "image": "assets/images/projects/plans-details/12.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Plinth Beam Layout</span>Plinth beam grid and schedule." },
+            { "image": "assets/images/projects/plans-details/13.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Foundation Layout</span>Footing positions/sizes, footing &amp; strap-beam schedules." },
+            { "image": "assets/images/projects/plans-details/14.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Column Layout (Axis)</span>Columns on grid with sections &amp; reinforcement." }
           ]
         },
         {
           "title": "Details & Services",
           "description": "",
           "renders": [
-            { "image": "assets/images/projects/plans-details/15.jpg", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Compound Wall &amp; Gate Details</span>Boundary wall, gates, and wall footing." },
-            { "image": "assets/images/projects/plans-details/16.jpg", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Footing &amp; Column Details</span>Typical footing/column/plinth reinforcement." },
-            { "image": "assets/images/projects/plans-details/17.jpg", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Slab, Beam &amp; Staircase Details</span>Typical slab/beam/cantilever/stair reinforcement." },
-            { "image": "assets/images/projects/plans-details/18.jpg", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Holding Tank &amp; Compound Details</span>Water tank, manholes, and drainage chambers." }
+            { "image": "assets/images/projects/plans-details/15.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Compound Wall &amp; Gate Details</span>Boundary wall, gates, and wall footing." },
+            { "image": "assets/images/projects/plans-details/16.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Footing &amp; Column Details</span>Typical footing/column/plinth reinforcement." },
+            { "image": "assets/images/projects/plans-details/17.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Slab, Beam &amp; Staircase Details</span>Typical slab/beam/cantilever/stair reinforcement." },
+            { "image": "assets/images/projects/plans-details/18.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Holding Tank &amp; Compound Details</span>Water tank, manholes, and drainage chambers." }
           ]
         }
       ]
