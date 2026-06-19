@@ -88,9 +88,11 @@
       const altClass = i % 2 === 1 ? 'pd-section--alt' : '';
       const rendersHTML = sec.renders.map(r => {
         const contain = r.fit === 'contain';
+        const drawing = r.fit === 'drawing';
+        const altText = (r.caption || '').replace(/<[^>]*>/g, '').replace(/"/g, '&quot;');
         return `
-        <figure class="pd-render ${contain ? 'pd-render--contain' : ''}">
-          <img class="pd-render__img" src="${r.image}" alt="${(r.caption || '').replace(/"/g, '&quot;')}" loading="lazy"${contain ? ' data-nozoom="1"' : ''}>
+        <figure class="pd-render ${contain ? 'pd-render--contain' : ''}${drawing ? 'pd-render--drawing' : ''}">
+          <img class="pd-render__img" src="${r.image}" alt="${altText}" loading="lazy"${contain ? ' data-nozoom="1"' : ''}>
           ${r.caption ? `<div class="container"><figcaption class="pd-render__caption"><p>${r.caption}</p></figcaption></div>` : ''}
         </figure>`;
       }).join('');
