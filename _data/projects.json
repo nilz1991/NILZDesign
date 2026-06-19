@@ -243,7 +243,6 @@
       "category": "Engineering & Technical Drawings",
       "location": "Muscat, Oman",
       "image": "assets/images/projects/plans-details/hero.jpg",
-      "heroFit": "contain",
       "description": "Precise technical and working drawings — plans, sections, and construction details that turn design intent into accurate, buildable documentation.",
       "featured": true,
       "order": 4,
