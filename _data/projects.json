@@ -335,22 +335,12 @@
       "sections": [
         {
           "title": "Artistic Renders",
-          "description": "Photorealistic colour renders — deep teal panelling, mustard velvet, brass lighting, and carefully styled detail.",
+          "description": "Each scene rendered in rich photographic colour — hover or tap to gently fade it into its monochrome mood study.",
           "renders": [
-            { "image": "assets/images/projects/visualization/01.jpg", "caption": "A deep-teal lounge wrapped in classic panelling — a mustard velvet sofa, sculptural brass lighting, and an editorial art grid under warm, directional light." },
-            { "image": "assets/images/projects/visualization/03.jpg", "caption": "A closer study of the seating — velvet, timber, and curated styling caught in soft, raking light." },
-            { "image": "assets/images/projects/visualization/05.jpg", "caption": "A sculptural timber sideboard against fluted panelling, framed by a bold portrait and a pair of matched armchairs." },
-            { "image": "assets/images/projects/visualization/07.jpg", "caption": "A low, intimate angle — foreground props leading the eye through the depth of the composition." }
-          ]
-        },
-        {
-          "title": "Mood Studies",
-          "description": "The same scenes rendered in monochrome — reading form, contrast, and light without the distraction of colour.",
-          "renders": [
-            { "image": "assets/images/projects/visualization/02.jpg", "caption": "The lounge as a monochrome study — form, contrast, and light, stripped of colour." },
-            { "image": "assets/images/projects/visualization/04.jpg", "caption": "A tonal study of the seating detail, where texture and shadow take the lead." },
-            { "image": "assets/images/projects/visualization/06.jpg", "caption": "The sideboard scene in greyscale — emphasising rhythm, depth, and balance." },
-            { "image": "assets/images/projects/visualization/08.jpg", "caption": "A dramatic black-and-white take on the foreground composition." }
+            { "fit": "flip", "images": ["assets/images/projects/visualization/01.jpg", "assets/images/projects/visualization/02.jpg"], "caption": "A deep-teal lounge wrapped in classic panelling — mustard velvet, sculptural brass lighting, and an editorial art grid. <span class=\"pd-draw-title\">Hover / tap to fade to black &amp; white</span>" },
+            { "fit": "flip", "images": ["assets/images/projects/visualization/03.jpg", "assets/images/projects/visualization/04.jpg"], "caption": "A closer study of the seating — velvet, timber, and curated styling in soft, raking light. <span class=\"pd-draw-title\">Hover / tap to fade to black &amp; white</span>" },
+            { "fit": "flip", "images": ["assets/images/projects/visualization/05.jpg", "assets/images/projects/visualization/06.jpg"], "caption": "A sculptural timber sideboard against fluted panelling, framed by a bold portrait and matched armchairs. <span class=\"pd-draw-title\">Hover / tap to fade to black &amp; white</span>" },
+            { "fit": "flip", "images": ["assets/images/projects/visualization/07.jpg", "assets/images/projects/visualization/08.jpg"], "caption": "A low, intimate angle — foreground props leading the eye through the depth of the composition. <span class=\"pd-draw-title\">Hover / tap to fade to black &amp; white</span>" }
           ]
         }
       ]

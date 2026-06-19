@@ -88,12 +88,7 @@
 
     const renderSection = (sec, i) => {
       const altClass = i % 2 === 1 ? 'pd-section--alt' : '';
-      const rendersHTML = sec.renders.map(r => {
-        const contain = r.fit === 'contain';
-        const drawing = r.fit === 'drawing';
-        const zoomable = !contain;
-        const altText = (r.caption || '').replace(/<[^>]*>/g, '').replace(/"/g, '&quot;');
-        const zoomBadge = zoomable ? `
+      const zoomBadge = `
           <span class="pd-zoom-badge" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <polyline points="15 3 21 3 21 9"></polyline>
@@ -101,12 +96,40 @@
               <line x1="21" y1="3" x2="14" y2="10"></line>
               <line x1="3" y1="21" x2="10" y2="14"></line>
             </svg>
-          </span>` : '';
+          </span>`;
+      const rendersHTML = sec.renders.map(r => {
+        const contain = r.fit === 'contain';
+        const drawing = r.fit === 'drawing';
+        const flip = r.fit === 'flip';
+        const altText = (r.caption || '').replace(/<[^>]*>/g, '').replace(/"/g, '&quot;');
+        const caption = r.caption ? `<div class="container"><figcaption class="pd-render__caption"><p>${r.caption}</p></figcaption></div>` : '';
+        if (flip) {
+          const [colorSrc, bwSrc] = r.images || [];
+          const swapBadge = `
+            <span class="pd-zoom-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="17 1 21 5 17 9"></polyline>
+                <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                <polyline points="7 23 3 19 7 15"></polyline>
+                <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+              </svg>
+            </span>`;
+          return `
+          <figure class="pd-render pd-render--flip">
+            <div class="pd-flip" tabindex="0" role="button" aria-label="Toggle colour and black & white">
+              <img class="pd-render__img pd-flip__img pd-flip__img--color" src="${colorSrc}" alt="${altText}" loading="lazy" data-nozoom="1">
+              <img class="pd-render__img pd-flip__img pd-flip__img--bw" src="${bwSrc}" alt="${altText}" loading="lazy" data-nozoom="1">
+              ${swapBadge}
+            </div>
+            ${caption}
+          </figure>`;
+        }
+        const zoomable = !contain;
         return `
         <figure class="pd-render ${contain ? 'pd-render--contain' : ''}${drawing ? 'pd-render--drawing' : ''}">
           <img class="pd-render__img" src="${r.image}" alt="${altText}" loading="lazy"${contain ? ' data-nozoom="1"' : ' title="View full image"'}>
-          ${zoomBadge}
-          ${r.caption ? `<div class="container"><figcaption class="pd-render__caption"><p>${r.caption}</p></figcaption></div>` : ''}
+          ${zoomable ? zoomBadge : ''}
+          ${caption}
         </figure>`;
       }).join('');
       return `
@@ -150,6 +173,14 @@
     });
     lb.addEventListener('click', closeLb);
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLb(); });
+
+    // Flip renders — tap / click cross-fades colour ↔ black & white (hover handles desktop)
+    document.querySelectorAll('.pd-flip').forEach(el => {
+      el.addEventListener('click', () => el.classList.toggle('is-flipped'));
+      el.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.classList.toggle('is-flipped'); }
+      });
+    });
 
     initMain();
   </script>
