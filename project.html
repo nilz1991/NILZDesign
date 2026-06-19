@@ -105,21 +105,19 @@
         const caption = r.caption ? `<div class="container"><figcaption class="pd-render__caption"><p>${r.caption}</p></figcaption></div>` : '';
         if (flip) {
           const [colorSrc, bwSrc] = r.images || [];
-          const swapBadge = `
-            <span class="pd-zoom-badge" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="17 1 21 5 17 9"></polyline>
-                <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
-                <polyline points="7 23 3 19 7 15"></polyline>
-                <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
-              </svg>
-            </span>`;
           return `
           <figure class="pd-render pd-render--flip">
-            <div class="pd-flip" tabindex="0" role="button" aria-label="Toggle colour and black & white">
-              <img class="pd-render__img pd-flip__img pd-flip__img--color" src="${colorSrc}" alt="${altText}" loading="lazy" data-nozoom="1">
+            <div class="pd-flip">
               <img class="pd-render__img pd-flip__img pd-flip__img--bw" src="${bwSrc}" alt="${altText}" loading="lazy" data-nozoom="1">
-              ${swapBadge}
+              <img class="pd-render__img pd-flip__img pd-flip__img--color" src="${colorSrc}" alt="${altText}" loading="lazy" data-nozoom="1">
+              <button class="pd-zoom-badge pd-flip__toggle" type="button" aria-label="Switch colour / black & white">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="17 1 21 5 17 9"></polyline>
+                  <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                  <polyline points="7 23 3 19 7 15"></polyline>
+                  <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                </svg>
+              </button>
             </div>
             ${caption}
           </figure>`;
@@ -174,11 +172,14 @@
     lb.addEventListener('click', closeLb);
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLb(); });
 
-    // Flip renders — tap / click cross-fades colour ↔ black & white (hover handles desktop)
-    document.querySelectorAll('.pd-flip').forEach(el => {
-      el.addEventListener('click', () => el.classList.toggle('is-flipped'));
-      el.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); el.classList.toggle('is-flipped'); }
+    // Flip renders — arrow button cross-fades B&W ↔ colour; clicking the image opens the lightbox
+    document.querySelectorAll('.pd-flip').forEach(flip => {
+      const toggle   = flip.querySelector('.pd-flip__toggle');
+      const colorImg = flip.querySelector('.pd-flip__img--color');
+      const bwImg    = flip.querySelector('.pd-flip__img--bw');
+      toggle.addEventListener('click', (e) => { e.stopPropagation(); flip.classList.toggle('is-flipped'); });
+      flip.addEventListener('click', () => {
+        openLb(flip.classList.contains('is-flipped') ? colorImg.src : bwImg.src);
       });
     });
 
