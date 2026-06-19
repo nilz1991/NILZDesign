@@ -1241,7 +1241,33 @@ a.contact-info__value:hover { color: var(--gold); }
 /* Renders grid */
 .pd-renders { display: flex; flex-direction: column; gap: 72px; }
 
-.pd-render { margin: 0; }
+.pd-render { margin: 0; position: relative; }
+
+/* Affordance — marks an image that opens to full view on click */
+.pd-zoom-badge {
+  position: absolute;
+  top: 18px; right: 18px;
+  z-index: 2;
+  width: 40px; height: 40px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: rgba(27,43,75,0.5);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.3);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  pointer-events: none;
+  opacity: 0.9;
+  transition: opacity 0.3s var(--ease), background 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.pd-render:hover .pd-zoom-badge {
+  opacity: 1;
+  background: var(--gold);
+  transform: scale(1.08);
+}
+@media (max-width: 600px) {
+  .pd-zoom-badge { top: 14px; right: 14px; width: 34px; height: 34px; }
+}
 .pd-render__img {
   display: block;
   width: 100%;

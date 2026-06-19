@@ -91,10 +91,21 @@
       const rendersHTML = sec.renders.map(r => {
         const contain = r.fit === 'contain';
         const drawing = r.fit === 'drawing';
+        const zoomable = !contain;
         const altText = (r.caption || '').replace(/<[^>]*>/g, '').replace(/"/g, '&quot;');
+        const zoomBadge = zoomable ? `
+          <span class="pd-zoom-badge" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <polyline points="9 21 3 21 3 15"></polyline>
+              <line x1="21" y1="3" x2="14" y2="10"></line>
+              <line x1="3" y1="21" x2="10" y2="14"></line>
+            </svg>
+          </span>` : '';
         return `
         <figure class="pd-render ${contain ? 'pd-render--contain' : ''}${drawing ? 'pd-render--drawing' : ''}">
-          <img class="pd-render__img" src="${r.image}" alt="${altText}" loading="lazy"${contain ? ' data-nozoom="1"' : ''}>
+          <img class="pd-render__img" src="${r.image}" alt="${altText}" loading="lazy"${contain ? ' data-nozoom="1"' : ' title="View full image"'}>
+          ${zoomBadge}
           ${r.caption ? `<div class="container"><figcaption class="pd-render__caption"><p>${r.caption}</p></figcaption></div>` : ''}
         </figure>`;
       }).join('');
