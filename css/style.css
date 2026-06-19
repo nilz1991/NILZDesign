@@ -1250,7 +1250,7 @@ a.contact-info__value:hover { color: var(--gold); }
   width: 100%; height: 100%;
   object-fit: cover;
 }
-.pd-flip__img--color { opacity: 0; transition: opacity 1.2s var(--ease); }
+.pd-flip__img--color { opacity: 0; transition: opacity 1.6s ease-in-out; }
 .pd-flip.is-flipped .pd-flip__img--color { opacity: 1; }
 .pd-flip .pd-flip__toggle { pointer-events: auto; cursor: pointer; }
 

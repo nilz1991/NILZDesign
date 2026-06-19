@@ -172,8 +172,9 @@
     lb.addEventListener('click', closeLb);
     document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLb(); });
 
-    // Flip renders — arrow button cross-fades B&W ↔ colour; clicking the image opens the lightbox
-    document.querySelectorAll('.pd-flip').forEach(flip => {
+    // Flip renders — auto-fade B&W → colour when scrolled into view; arrow toggles manually; image opens the lightbox
+    const flips = document.querySelectorAll('.pd-flip');
+    flips.forEach(flip => {
       const toggle   = flip.querySelector('.pd-flip__toggle');
       const colorImg = flip.querySelector('.pd-flip__img--color');
       const bwImg    = flip.querySelector('.pd-flip__img--bw');
@@ -182,6 +183,16 @@
         openLb(flip.classList.contains('is-flipped') ? colorImg.src : bwImg.src);
       });
     });
+    if ('IntersectionObserver' in window) {
+      const flipObserver = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('is-flipped'); flipObserver.unobserve(e.target); }
+        });
+      }, { threshold: 0.5 });
+      flips.forEach(flip => flipObserver.observe(flip));
+    } else {
+      flips.forEach(flip => flip.classList.add('is-flipped'));
+    }
 
     initMain();
   </script>
