@@ -188,7 +188,7 @@
         entries.forEach(e => {
           if (e.isIntersecting) { e.target.classList.add('is-flipped'); flipObserver.unobserve(e.target); }
         });
-      }, { threshold: 0.5 });
+      }, { threshold: 0, rootMargin: '-25% 0px -25% 0px' });
       flips.forEach(flip => flipObserver.observe(flip));
     } else {
       flips.forEach(flip => flip.classList.add('is-flipped'));
