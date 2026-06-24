@@ -68,6 +68,15 @@
             { "image": "assets/images/projects/residential/al-ansab/06.jpg", "caption": "A symmetrical majlis with quilted white sofas, rust-velvet armchairs, and green-marble tables arranged for conversation and hospitality." },
             { "image": "assets/images/projects/residential/al-ansab/07.jpg", "caption": "The majlis is the villa's grandest gesture — book-matched marble with gold veining sweeps across the floor beneath a dramatic cascading brass chandelier. Quilted sofas and rust-velvet armchairs sit within light oak paneling and warm backlit niches, framed by sheer-draped glazing, while magnetic track lighting and vertical wall sconces give the room a refined, hotel-like sense of occasion. The concept: a ceremonial heart that elevates the Omani tradition of hosting through rich, natural materials and theatrical light." }
           ]
+        },
+        {
+          "title": "Garden & Pool",
+          "description": "The villa's outdoor realm — a landscaped courtyard, lap pool, and shaded terraces designed for the Omani climate.",
+          "renders": [
+            { "image": "assets/images/projects/residential/al-ansab/08.jpg", "caption": "A landscaped courtyard frames a linear lap pool, with mature palms and layered planting set against crisp white volumes. Large-format stone paving — striped with bands of lawn — runs from a covered terrace to the water's edge, durable and cool underfoot in the Omani climate." },
+            { "image": "assets/images/projects/residential/al-ansab/09.jpg", "caption": "A timber-battened pergola shades an outdoor lounge of woven seating around a sculptural table, with an olive tree in a raised planter. The slatted oak filters harsh sun while keeping the terrace open and breezy, extending the living spaces outdoors." },
+            { "image": "assets/images/projects/residential/al-ansab/10.jpg", "caption": "Sun loungers and a parasol line the poolside, screened by a planted boundary wall and palms for privacy. Honed stone paving and the reflective pool keep the courtyard calm and cool — an everyday retreat within the home." }
+          ]
         }
       ]
     },
