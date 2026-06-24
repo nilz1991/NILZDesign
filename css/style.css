@@ -1246,30 +1246,29 @@ a.contact-info__value:hover { color: var(--gold); }
   transition: background 0.3s var(--ease), transform 0.3s var(--ease);
 }
 .pd-toc-fab:hover,
-.pd-toc--open .pd-toc-fab { background: var(--navy); }
-.pd-toc--open .pd-toc-fab { transform: rotate(180deg); }
+.pd-toc:focus-within .pd-toc-fab { background: var(--navy); }
 
 /* Glassy staggered menu */
 .pd-toc-menu {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 8px;
+  gap: 7px;
   pointer-events: none;
 }
 .pd-toc:hover .pd-toc-menu,
-.pd-toc--open .pd-toc-menu { pointer-events: auto; }
+.pd-toc:focus-within .pd-toc-menu { pointer-events: auto; }
 .pd-toc-menu__item {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 10px 18px;
+  gap: 9px;
+  padding: 7px 14px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.14);
-  backdrop-filter: blur(14px) saturate(150%);
-  -webkit-backdrop-filter: blur(14px) saturate(150%);
-  border: 1px solid rgba(255,255,255,0.4);
-  box-shadow: 0 6px 22px rgba(0,0,0,0.16);
+  background: rgba(255,255,255,0.07);
+  backdrop-filter: blur(22px) saturate(170%);
+  -webkit-backdrop-filter: blur(22px) saturate(170%);
+  border: 1px solid rgba(255,255,255,0.45);
+  box-shadow: 0 6px 22px rgba(0,0,0,0.14);
   color: var(--navy);
   white-space: nowrap;
   opacity: 0;
@@ -1277,7 +1276,7 @@ a.contact-info__value:hover { color: var(--gold); }
   transition: opacity 0.28s var(--ease), transform 0.28s var(--ease), background 0.25s var(--ease), color 0.25s var(--ease);
 }
 .pd-toc:hover .pd-toc-menu__item,
-.pd-toc--open .pd-toc-menu__item {
+.pd-toc:focus-within .pd-toc-menu__item {
   opacity: 1;
   transform: none;
   transition-delay: calc(var(--i) * 45ms);
@@ -1290,13 +1289,13 @@ a.contact-info__value:hover { color: var(--gold); }
 .pd-toc-menu__num {
   font-family: var(--font-display);
   font-style: italic;
-  font-size: 0.95rem;
-  color: var(--gold);
+  font-size: 0.72rem;
+  color: inherit;
+  opacity: 0.7;
 }
-.pd-toc-menu__item:hover .pd-toc-menu__num { color: #fff; }
 .pd-toc-menu__title {
   font-family: var(--font-display);
-  font-size: 0.98rem;
+  font-size: 0.78rem;
 }
 @media (max-width: 600px) { .pd-toc-fab { width: 46px; height: 46px; } }
 .pd-contents:empty { margin: 0; padding: 0; border: 0; }
