@@ -88,6 +88,17 @@
     import { renderHomeProjects, renderSiteContent } from './js/content.js';
     import { init as initMain } from './js/main.js';
 
+    // Hero video — best-effort autoplay with fallback for mobile / in-app browsers
+    const heroVid = document.querySelector('.hero-video');
+    if (heroVid) {
+      heroVid.muted = true;
+      const playVid = () => { const p = heroVid.play(); if (p && p.catch) p.catch(() => {}); };
+      playVid();
+      heroVid.addEventListener('canplay', playVid, { once: true });
+      ['touchstart', 'pointerdown', 'click', 'scroll'].forEach(ev =>
+        document.addEventListener(ev, playVid, { once: true, passive: true }));
+    }
+
     initHeader();
     initFooter();
     initRotatingText('#rotating-text-placeholder', {
