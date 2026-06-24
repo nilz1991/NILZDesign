@@ -1245,8 +1245,6 @@ a.contact-info__value:hover { color: var(--gold); }
   box-shadow: 0 8px 24px rgba(0,0,0,0.22);
   transition: background 0.3s var(--ease), transform 0.3s var(--ease);
 }
-.pd-toc-fab:hover,
-.pd-toc:focus-within .pd-toc-fab,
 .pd-toc--open .pd-toc-fab { background: var(--navy); }
 
 /* Glassy staggered menu */
@@ -1257,8 +1255,6 @@ a.contact-info__value:hover { color: var(--gold); }
   gap: 7px;
   pointer-events: none;
 }
-.pd-toc:hover .pd-toc-menu,
-.pd-toc:focus-within .pd-toc-menu,
 .pd-toc--open .pd-toc-menu { pointer-events: auto; }
 .pd-toc-menu__item {
   display: flex;
@@ -1277,12 +1273,23 @@ a.contact-info__value:hover { color: var(--gold); }
   transform: translateY(10px) scale(0.95);
   transition: opacity 0.28s var(--ease), transform 0.28s var(--ease), background 0.25s var(--ease), color 0.25s var(--ease);
 }
-.pd-toc:hover .pd-toc-menu__item,
-.pd-toc:focus-within .pd-toc-menu__item,
 .pd-toc--open .pd-toc-menu__item {
   opacity: 1;
   transform: none;
   transition-delay: calc(var(--i) * 45ms);
+}
+/* Desktop (hover-capable) — reveal on hover/focus too */
+@media (hover: hover) {
+  .pd-toc:hover .pd-toc-fab,
+  .pd-toc:focus-within .pd-toc-fab { background: var(--navy); }
+  .pd-toc:hover .pd-toc-menu,
+  .pd-toc:focus-within .pd-toc-menu { pointer-events: auto; }
+  .pd-toc:hover .pd-toc-menu__item,
+  .pd-toc:focus-within .pd-toc-menu__item {
+    opacity: 1;
+    transform: none;
+    transition-delay: calc(var(--i) * 45ms);
+  }
 }
 .pd-toc-menu__item:hover {
   background: var(--gold);
