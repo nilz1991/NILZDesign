@@ -1246,7 +1246,8 @@ a.contact-info__value:hover { color: var(--gold); }
   transition: background 0.3s var(--ease), transform 0.3s var(--ease);
 }
 .pd-toc-fab:hover,
-.pd-toc:focus-within .pd-toc-fab { background: var(--navy); }
+.pd-toc:focus-within .pd-toc-fab,
+.pd-toc--open .pd-toc-fab { background: var(--navy); }
 
 /* Glassy staggered menu */
 .pd-toc-menu {
@@ -1257,7 +1258,8 @@ a.contact-info__value:hover { color: var(--gold); }
   pointer-events: none;
 }
 .pd-toc:hover .pd-toc-menu,
-.pd-toc:focus-within .pd-toc-menu { pointer-events: auto; }
+.pd-toc:focus-within .pd-toc-menu,
+.pd-toc--open .pd-toc-menu { pointer-events: auto; }
 .pd-toc-menu__item {
   display: flex;
   align-items: center;
@@ -1276,7 +1278,8 @@ a.contact-info__value:hover { color: var(--gold); }
   transition: opacity 0.28s var(--ease), transform 0.28s var(--ease), background 0.25s var(--ease), color 0.25s var(--ease);
 }
 .pd-toc:hover .pd-toc-menu__item,
-.pd-toc:focus-within .pd-toc-menu__item {
+.pd-toc:focus-within .pd-toc-menu__item,
+.pd-toc--open .pd-toc-menu__item {
   opacity: 1;
   transform: none;
   transition-delay: calc(var(--i) * 45ms);

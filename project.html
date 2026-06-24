@@ -197,7 +197,16 @@
         </button>`;
       document.body.appendChild(toc);
       const tocFab = toc.querySelector('.pd-toc-fab');
-      tocFab.addEventListener('click', () => contentsEl.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+      tocFab.addEventListener('click', (e) => {
+        if (window.matchMedia('(hover: none)').matches) {
+          e.stopPropagation();
+          toc.classList.toggle('pd-toc--open');            // touch: tap opens the menu
+        } else {
+          contentsEl.scrollIntoView({ behavior: 'smooth', block: 'start' }); // desktop: jump to contents
+        }
+      });
+      toc.querySelectorAll('.pd-toc-menu__item').forEach(a => a.addEventListener('click', () => toc.classList.remove('pd-toc--open')));
+      document.addEventListener('click', (e) => { if (!toc.contains(e.target)) toc.classList.remove('pd-toc--open'); });
       const toggleFab = () => toc.classList.toggle('pd-toc--show', contentsEl.getBoundingClientRect().bottom < -40);
       window.addEventListener('scroll', toggleFab, { passive: true });
       toggleFab();
