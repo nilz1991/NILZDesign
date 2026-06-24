@@ -287,38 +287,30 @@
       ]
     },
     {
-      "id": "master-bedroom",
+      "id": "master-suite",
       "collection": "residential",
-      "title": "Master Bedroom & Dressing Suite",
-      "category": "Interior Design",
-      "location": "Muscat, Oman",
-      "image": "assets/images/project-5.jpg",
-      "description": "A serene retreat designed around the client's daily ritual — generous proportions, integrated storage, and soft tonal palette.",
-      "featured": false,
-      "order": 5,
-      "overview": "A serene retreat designed entirely around the client's daily ritual. Generous proportions, fully integrated storage, and a carefully considered soft tonal palette come together to create a bedroom and dressing suite that feels effortlessly calm.",
-      "slides": [
-        {
-          "image": "assets/images/project-5.jpg",
-          "caption": "Master bedroom and dressing suite — generous proportions, integrated joinery, and a soft tonal palette crafted around the client's daily ritual."
-        }
-      ]
-    },
-    {
-      "id": "master-bathroom",
-      "collection": "residential",
-      "title": "Master Bathroom Transformation",
+      "title": "Master Suite Design — Al Ozaiba Villa",
       "category": "Interior Design",
       "location": "Al Azaiba, Muscat — Oman",
-      "image": "assets/images/project-1.jpg",
-      "description": "A complete transformation combining marble, gold fixtures, and bespoke joinery. Every surface speaks to refined luxury and functional precision.",
+      "image": "assets/images/project-5.jpg",
+      "description": "A complete master suite for the Al Ozaiba villa — bedroom, dressing area, and ensuite bathroom designed as one calm, cohesive retreat.",
       "featured": false,
-      "order": 1,
-      "overview": "A complete bathroom transformation that marries marble surfaces, brushed gold fixtures, and bespoke joinery into a single coherent language. Every finish was chosen to speak of refined luxury while remaining entirely functional in daily use.",
-      "slides": [
+      "order": 5,
+      "overview": "A complete master suite for the Al Ozaiba villa, designed as a single, cohesive retreat. The bedroom and dressing area are built around the client's daily ritual — generous proportions, fully integrated joinery, and a soft tonal palette — flowing into an ensuite bathroom of marble, brushed gold fixtures, and bespoke detailing. Bedroom and bathroom share one material language, refined and functional throughout.",
+      "sections": [
         {
-          "image": "assets/images/project-1.jpg",
-          "caption": "A master bathroom transformation — marble, brushed gold fixtures, and bespoke joinery combined into a space of refined luxury and functional precision."
+          "title": "Bedroom & Dressing Suite",
+          "description": "A serene retreat shaped around the client's daily ritual.",
+          "renders": [
+            { "image": "assets/images/project-5.jpg", "caption": "Master bedroom and dressing suite — generous proportions, integrated joinery, and a soft tonal palette." }
+          ]
+        },
+        {
+          "title": "Ensuite Bathroom",
+          "description": "The suite's ensuite — marble, brushed gold, and bespoke joinery in the same material language.",
+          "renders": [
+            { "image": "assets/images/project-1.jpg", "caption": "The ensuite bathroom — marble surfaces, brushed gold fixtures, and bespoke joinery, refined and functional." }
+          ]
         }
       ]
     },
