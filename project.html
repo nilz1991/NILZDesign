@@ -34,6 +34,9 @@
     </div>
   </section>
 
+  <!-- Contents / index (injected when 2+ sections) -->
+  <div class="container"><div id="pd-contents" class="pd-contents"></div></div>
+
   <!-- Sections (injected) -->
   <div id="pd-sections"></div>
 
@@ -86,7 +89,7 @@
       || [{ name: null, description: '', sections: (p.sections
           || (p.slides || []).map((s, i) => ({ title: `View ${String(i + 1).padStart(2, '0')}`, description: '', renders: [s] }))) }];
 
-    const renderSection = (sec, i) => {
+    const renderSection = (sec, i, id) => {
       const altClass = i % 2 === 1 ? 'pd-section--alt' : '';
       const zoomBadge = `
           <span class="pd-zoom-badge" aria-hidden="true">
@@ -131,7 +134,7 @@
         </figure>`;
       }).join('');
       return `
-      <section class="pd-section ${altClass}">
+      <section id="${id}" class="pd-section ${altClass}">
         <div class="container">
           <div class="pd-section__header">
             <span class="pd-section__num">${String(i + 1).padStart(2, '0')}</span>
@@ -145,6 +148,8 @@
       </section>`;
     };
 
+    let secId = 0;
+    const contents = [];
     document.getElementById('pd-sections').innerHTML = locations.map(loc => {
       const header = loc.name ? `
         <div class="pd-locationhead fade-up">
@@ -154,8 +159,28 @@
             ${loc.description ? `<p class="pd-locationhead__desc">${loc.description}</p>` : ''}
           </div>
         </div>` : '';
-      return header + loc.sections.map((sec, i) => renderSection(sec, i)).join('');
+      if (loc.name) contents.push({ type: 'loc', name: loc.name });
+      return header + loc.sections.map((sec, i) => {
+        secId += 1;
+        const id = `sec-${secId}`;
+        contents.push({ type: 'sec', id, num: String(i + 1).padStart(2, '0'), title: sec.title });
+        return renderSection(sec, i, id);
+      }).join('');
     }).join('');
+
+    // Contents / index — listed before the project imagery (only when there are 2+ sections)
+    const sectionCount = contents.filter(c => c.type === 'sec').length;
+    const contentsEl = document.getElementById('pd-contents');
+    if (contentsEl && sectionCount >= 2) {
+      contentsEl.innerHTML = `
+        <span class="pd-contents__label">Contents</span>
+        <nav class="pd-contents__list">
+          ${contents.map(c => c.type === 'loc'
+            ? `<span class="pd-contents__loc">${c.name}</span>`
+            : `<a class="pd-contents__item" href="#${c.id}"><span class="pd-contents__num">${c.num}</span><span class="pd-contents__title">${c.title}</span></a>`
+          ).join('')}
+        </nav>`;
+    }
 
     // Lightbox — click any render to view it complete
     const lb = document.createElement('div');
