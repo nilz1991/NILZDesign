@@ -25,24 +25,31 @@
     "items": [
       {
         "number": "01",
-        "title": "Interior Design & Execution",
-        "body": "From concept to completion — expert supervision, workshop management, and intelligent material selection for spaces that exceed expectations.",
+        "title": "Vision & Scope",
+        "body": "Every project begins with dialogue. We listen, define the brief, and understand your vision — setting the direction for everything that follows.",
         "image": "assets/images/service-01.jpg",
-        "tools": ["3ds Max", "V-Ray", "Corona Renderer", "Lumion", "Unreal Engine", "SketchUp"]
+        "tools": []
       },
       {
         "number": "02",
-        "title": "Architectural Visualization",
-        "body": "Photorealistic renders, architectural animations, and cinematic simulations that bring your project to life before a single brick is laid.",
+        "title": "Planning",
+        "body": "We study the location, light, landscape, and context to shape a concept that feels grounded and natural — both functionally and emotionally.",
         "image": "assets/images/service-02.jpg",
-        "tools": ["Unreal Engine", "Lumion", "3ds Max", "V-Ray"]
+        "tools": []
       },
       {
         "number": "03",
-        "title": "Technical Design & BIM",
-        "body": "Precision technical drawings and Building Information Modeling using Revit and AutoCAD to ensure accuracy at every stage of your project.",
+        "title": "Designing",
+        "body": "From massing to materials, we craft bold yet timeless spaces that balance aesthetics, purpose, and lived experience.",
         "image": "assets/images/service-03.jpg",
-        "tools": ["Revit", "AutoCAD", "SketchUp"]
+        "tools": []
+      },
+      {
+        "number": "04",
+        "title": "Final Step",
+        "body": "Our team prepares precise drawings and documentation — collaborating with engineers and consultants to ensure feasibility, performance, and a flawless build.",
+        "image": "assets/images/services-hero.jpg",
+        "tools": []
       }
     ],
     "process": [
