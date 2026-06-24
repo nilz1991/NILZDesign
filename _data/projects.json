@@ -292,24 +292,38 @@
       "title": "Master Suite Design — Al Ozaiba Villa",
       "category": "Interior Design",
       "location": "Al Azaiba, Muscat — Oman",
-      "image": "assets/images/project-5.jpg",
-      "description": "A complete master suite for the Al Ozaiba villa — bedroom, dressing area, and ensuite bathroom designed as one calm, cohesive retreat.",
+      "image": "assets/images/projects/residential/master-suite/01.jpg",
+      "description": "A complete master suite for a villa in Al Ozaiba — bedroom, walk-in dressing room, and onyx-clad ensuite designed as one calm, cohesive retreat.",
       "featured": false,
       "order": 5,
-      "overview": "A complete master suite for the Al Ozaiba villa, designed as a single, cohesive retreat. The bedroom and dressing area are built around the client's daily ritual — generous proportions, fully integrated joinery, and a soft tonal palette — flowing into an ensuite bathroom of marble, brushed gold fixtures, and bespoke detailing. Bedroom and bathroom share one material language, refined and functional throughout.",
+      "overview": "A complete master suite for a villa in Al Ozaiba, Muscat, designed as a single, cohesive retreat. A warm ivory-and-champagne palette runs from the bedroom and reading nook through a generous walk-in dressing room and into an onyx-clad ensuite. Natural marble and onyx, brushed brass, fluted oak, and large-format porcelain were chosen to be as durable and easy to maintain as they are beautiful.",
       "sections": [
         {
-          "title": "Bedroom & Dressing Suite",
-          "description": "A serene retreat shaped around the client's daily ritual.",
+          "title": "Rest Area & Closet",
+          "description": "The sleeping, seating, and dressing zone — shown in purple on the floor plan.",
           "renders": [
-            { "image": "assets/images/project-5.jpg", "caption": "Master bedroom and dressing suite — generous proportions, integrated joinery, and a soft tonal palette." }
+            { "image": "assets/images/projects/residential/master-suite/01.jpg", "caption": "A classic-contemporary bedroom in ivory and champagne. Fluted gypsum panelling and an upholstered headboard wall soften acoustics, while large-format polished porcelain floors — durable and low-maintenance — are warmed by a hand-knotted wool rug beneath a sculptural crystal chandelier." },
+            { "image": "assets/images/projects/residential/master-suite/02.jpg", "caption": "A quiet reading nook with curved camel-velvet tub chairs framed by classic mouldings and reeded panels. Brass bubble sconces give a soft, layered glow; the velvet-and-brass palette is hard-wearing and timeless." },
+            { "image": "assets/images/projects/residential/master-suite/03.jpg", "caption": "The seating corner opens to the dressing room through a floor-to-ceiling bronze mirror, visually enlarging the suite and carrying daylight deeper inside. Tactile bouclé and velvet keep the mood restful." },
+            { "image": "assets/images/projects/residential/master-suite/04.jpg", "caption": "A curved, backlit dressing island in soft lacquer and brushed brass anchors the walk-in closet. Warm LED-lit open shelving displays edited pieces, while a calacatta-look quartz top resists stains and daily wear." },
+            { "image": "assets/images/projects/residential/master-suite/05.jpg", "caption": "A full walk-in wardrobe with bronze-glass fronts and warm oak interiors. Integrated linear lighting makes everything easy to find; glass and lacquer surfaces wipe clean and stay dust-free." },
+            { "image": "assets/images/projects/residential/master-suite/06.jpg", "caption": "A transitional vanity-console in ivory lacquer topped with book-matched calacatta viola marble and framed by fluted oak. The sealed natural stone resists moisture, pairing beauty with practicality at the suite's threshold." }
           ]
         },
         {
-          "title": "Ensuite Bathroom",
-          "description": "The suite's ensuite — marble, brushed gold, and bespoke joinery in the same material language.",
+          "title": "Bathroom",
+          "description": "The ensuite bathroom — shown in green on the floor plan.",
           "renders": [
-            { "image": "assets/images/project-1.jpg", "caption": "The ensuite bathroom — marble surfaces, brushed gold fixtures, and bespoke joinery, refined and functional." }
+            { "image": "assets/images/projects/residential/master-suite/07.jpg", "caption": "The ensuite centres on a sculptural freestanding tub against a book-matched onyx feature wall, backlit to reveal its translucency. Honed marble and sealed onyx handle water beautifully, while brushed-brass fixtures resist tarnishing in humid conditions." },
+            { "image": "assets/images/projects/residential/master-suite/08.jpg", "caption": "Twin oval brass mirrors over an onyx vanity with a backlit stone shelf. The warm marble and brushed-gold tapware are hard-wearing and easy to clean, while concealed lighting flatters daily grooming." },
+            { "image": "assets/images/projects/residential/master-suite/09.jpg", "caption": "A walk-in glass shower and wall-hung WC set against continuous onyx keep the wet zone open and easy to maintain. Large-format polished slabs minimise grout lines for hygiene, and the glass screen keeps the room bright and seamless." }
+          ]
+        },
+        {
+          "title": "Floor Plan",
+          "description": "The layout of the master suite and its zones.",
+          "renders": [
+            { "image": "assets/images/projects/residential/master-suite/10.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Floor Plan — Master Suite</span>1 · <span style=\"color:#6fbf73;font-weight:600\">Green</span> — Bathroom &nbsp;·&nbsp; 2 · <span style=\"color:#b07fd8;font-weight:600\">Purple</span> — Rest area &amp; closet room" }
           ]
         }
       ]
