@@ -180,6 +180,22 @@
             : `<a class="pd-contents__item" href="#${c.id}"><span class="pd-contents__num">${c.num}</span><span class="pd-contents__title">${c.title}</span></a>`
           ).join('')}
         </nav>`;
+
+      // Floating button — jump back to the contents from anywhere
+      const tocFab = document.createElement('button');
+      tocFab.className = 'pd-toc-fab';
+      tocFab.type = 'button';
+      tocFab.title = 'Back to contents';
+      tocFab.setAttribute('aria-label', 'Back to contents');
+      tocFab.innerHTML = `
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="19" x2="12" y2="6"></line><polyline points="5 13 12 6 19 13"></polyline>
+        </svg>`;
+      document.body.appendChild(tocFab);
+      tocFab.addEventListener('click', () => contentsEl.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+      const toggleFab = () => tocFab.classList.toggle('pd-toc-fab--show', contentsEl.getBoundingClientRect().bottom < -40);
+      window.addEventListener('scroll', toggleFab, { passive: true });
+      toggleFab();
     }
 
     // Lightbox — click any render to view it complete
