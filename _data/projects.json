@@ -318,13 +318,6 @@
             { "image": "assets/images/projects/residential/master-suite/08.jpg", "caption": "Twin oval brass mirrors over an onyx vanity with a backlit stone shelf. The warm marble and brushed-gold tapware are hard-wearing and easy to clean, while concealed lighting flatters daily grooming." },
             { "image": "assets/images/projects/residential/master-suite/09.jpg", "caption": "A walk-in glass shower and wall-hung WC set against continuous onyx keep the wet zone open and easy to maintain. Large-format polished slabs minimise grout lines for hygiene, and the glass screen keeps the room bright and seamless." }
           ]
-        },
-        {
-          "title": "Floor Plan",
-          "description": "The layout of the master suite and its zones.",
-          "renders": [
-            { "image": "assets/images/projects/residential/master-suite/10.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Floor Plan — Master Suite</span>1 · <span style=\"color:#6fbf73;font-weight:600\">Green</span> — Bathroom &nbsp;·&nbsp; 2 · <span style=\"color:#b07fd8;font-weight:600\">Purple</span> — Rest area &amp; closet room" }
-          ]
         }
       ]
     },
