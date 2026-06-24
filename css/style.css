@@ -525,6 +525,7 @@ h1, h2, h3, h4 {
   border-radius: 20px;
   aspect-ratio: 3/4;
   object-fit: cover;
+  object-position: center bottom;
 }
 @media (max-width: 900px) {
   .about-teaser__inner { grid-template-columns: 1fr; gap: 48px; }
