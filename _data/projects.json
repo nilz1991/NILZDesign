@@ -288,6 +288,7 @@
     },
     {
       "id": "master-bedroom",
+      "collection": "residential",
       "title": "Master Bedroom & Dressing Suite",
       "category": "Interior Design",
       "location": "Muscat, Oman",
@@ -305,12 +306,13 @@
     },
     {
       "id": "master-bathroom",
+      "collection": "residential",
       "title": "Master Bathroom Transformation",
       "category": "Interior Design",
       "location": "Al Azaiba, Muscat — Oman",
       "image": "assets/images/project-1.jpg",
       "description": "A complete transformation combining marble, gold fixtures, and bespoke joinery. Every surface speaks to refined luxury and functional precision.",
-      "featured": true,
+      "featured": false,
       "order": 1,
       "overview": "A complete bathroom transformation that marries marble surfaces, brushed gold fixtures, and bespoke joinery into a single coherent language. Every finish was chosen to speak of refined luxury while remaining entirely functional in daily use.",
       "slides": [
