@@ -581,6 +581,7 @@ h1, h2, h3, h4 {
   border-radius: 20px;
   aspect-ratio: 3/4;
   object-fit: cover;
+  object-position: center bottom;
   margin-bottom: 32px;
 }
 .about-bio__stats {
