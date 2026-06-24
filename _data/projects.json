@@ -330,6 +330,45 @@
       ]
     },
     {
+      "id": "afkhami-villa",
+      "collection": "residential",
+      "title": "Villa Afkhami",
+      "category": "Interior Design",
+      "location": "Muscat, Oman",
+      "image": "assets/images/projects/residential/afkhami-villa/01.jpg",
+      "description": "A monochrome, minimalist villa — crisp white architecture, black marble floors, and graphic black-and-white art, opening onto serene planted courtyards.",
+      "overview": "A minimalist family villa composed almost entirely in black and white. Crisp handle-less joinery and luminous large-format marble meet dramatic black stone floors, while bold abstract artworks give each room a strong graphic identity. The calm, monochrome interior opens through full-height glazing onto planted courtyards and a shaded roof terrace — a restrained palette built on durable, low-maintenance natural materials.",
+      "sections": [
+        {
+          "title": "Living Areas",
+          "description": "Open, gallery-like living spaces in white and black marble, defined by graphic art and sculptural lighting.",
+          "renders": [
+            { "image": "assets/images/projects/residential/afkhami-villa/01.jpg", "caption": "An open, gallery-like living room in crisp white with luminous marble floors. Low white sofas and slim-framed armchairs sit beneath a sculptural pendant, while bold black-and-white artworks and an olive tree add graphic contrast — polished large-format marble keeps the floor bright and easy to maintain." },
+            { "image": "assets/images/projects/residential/afkhami-villa/02.jpg", "caption": "A bright sitting area opens to the garden through full-height steel-framed glazing. A built-in matte-white display wall softened with greenery frames white linen seating over honed black marble — a calm palette built on durable natural stone." },
+            { "image": "assets/images/projects/residential/afkhami-villa/03.jpg", "caption": "A relaxed family lounge anchored by a grey sectional and a floating black media console. A diptych of brushed black-and-white art and a large portrait give the white walls a strong graphic identity, balanced by warm marble underfoot." }
+          ]
+        },
+        {
+          "title": "Kitchen & Dining",
+          "description": "Handle-less white kitchen and dining set against dramatic black marble.",
+          "renders": [
+            { "image": "assets/images/projects/residential/afkhami-villa/04.jpg", "caption": "An open-plan kitchen wrapped in white with a dramatic black marble backsplash and floor. A sculptural linear pendant defines the breakfast bar while concealed handle-less cabinetry keeps the lines pure — hard-wearing stone and lacquer chosen for low-maintenance daily use." },
+            { "image": "assets/images/projects/residential/afkhami-villa/05.jpg", "caption": "A refined dining space set against a charcoal display niche and lit by sheer-filtered daylight. The black marble floor grounds pale upholstered chairs and a minimal table — a restrained, monochrome composition." },
+            { "image": "assets/images/projects/residential/afkhami-villa/06.jpg", "caption": "The kitchen reads as a sculptural threshold between the dark marble service zone and the bright white living beyond. Integrated appliances, a black stone counter, and bar seating make it as functional as it is graphic." }
+          ]
+        },
+        {
+          "title": "Courtyard & Terrace",
+          "description": "Planted courtyards and a shaded roof terrace that extend the home outdoors.",
+          "renders": [
+            { "image": "assets/images/projects/residential/afkhami-villa/07.jpg", "caption": "A private courtyard with a compact plunge pool, mature trees, and outdoor seating, framed by the villa's two-storey glazed facade — an intimate green retreat carved into the home." },
+            { "image": "assets/images/projects/residential/afkhami-villa/08.jpg", "caption": "Stepped white terraces descend to the plunge pool, a single tree casting soft shadows across the rendered walls — minimalism extended to the outdoors." },
+            { "image": "assets/images/projects/residential/afkhami-villa/09.jpg", "caption": "A shaded roof terrace under a timber-battened pergola, with board-formed concrete walls, integrated planting, and an outdoor dining set — a textural, sunlit counterpoint to the monochrome interior." }
+          ]
+        }
+      ]
+    },
+    {
       "id": "visualization",
       "title": "Architectural Visualization & Animation",
       "category": "Visualization & Animation",
