@@ -667,7 +667,12 @@ h1, h2, h3, h4 {
 }
 .service-row--reverse { direction: rtl; }
 .service-row--reverse > * { direction: ltr; }
-.service-row__img { background-size: cover; background-position: center; }
+.service-row__img {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #f1ece2;
+}
 .service-row__body {
   padding: clamp(40px, 5vw, 80px);
   display: flex;
