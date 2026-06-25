@@ -125,6 +125,31 @@
             ${caption}
           </figure>`;
         }
+        if (r.video) {
+          return `
+          <figure class="pd-render pd-render--video">
+            <video class="pd-render__video" src="${r.video}" autoplay muted loop playsinline controls preload="metadata"></video>
+            ${caption}
+          </figure>`;
+        }
+        if (r.fit === 'gallery') {
+          const slides = (r.images || []).map((src, k) =>
+            `<img class="pd-render__img pd-gallery__img${k === 0 ? ' is-active' : ''}" src="${src}" alt="${altText}" loading="lazy" data-nozoom="1">`
+          ).join('');
+          const dots = (r.images || []).map((_, k) =>
+            `<button class="pd-gallery__dot${k === 0 ? ' is-active' : ''}" type="button" aria-label="Slide ${k + 1}"></button>`
+          ).join('');
+          return `
+          <figure class="pd-render pd-render--gallery">
+            <div class="pd-gallery">
+              ${slides}
+              <button class="pd-gallery__nav pd-gallery__nav--prev" type="button" aria-label="Previous">&#8249;</button>
+              <button class="pd-gallery__nav pd-gallery__nav--next" type="button" aria-label="Next">&#8250;</button>
+              <div class="pd-gallery__dots">${dots}</div>
+            </div>
+            ${caption}
+          </figure>`;
+        }
         const zoomable = !contain;
         return `
         <figure class="pd-render ${contain ? 'pd-render--contain' : ''}${drawing ? 'pd-render--drawing' : ''}">
@@ -256,6 +281,22 @@
     } else {
       flips.forEach(flip => flip.classList.add('is-flipped'));
     }
+
+    // Gallery renders — page through images with a cross-fade
+    document.querySelectorAll('.pd-gallery').forEach(g => {
+      const imgs = [...g.querySelectorAll('.pd-gallery__img')];
+      const dots = [...g.querySelectorAll('.pd-gallery__dot')];
+      let idx = 0;
+      const show = (n) => {
+        idx = (n + imgs.length) % imgs.length;
+        imgs.forEach((im, i) => im.classList.toggle('is-active', i === idx));
+        dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
+      };
+      g.querySelector('.pd-gallery__nav--prev').addEventListener('click', (e) => { e.stopPropagation(); show(idx - 1); });
+      g.querySelector('.pd-gallery__nav--next').addEventListener('click', (e) => { e.stopPropagation(); show(idx + 1); });
+      dots.forEach((d, i) => d.addEventListener('click', (e) => { e.stopPropagation(); show(i); }));
+      imgs.forEach(im => im.addEventListener('click', () => openLb(imgs[idx].src)));
+    });
 
     initMain();
   </script>

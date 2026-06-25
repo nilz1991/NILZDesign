@@ -383,12 +383,25 @@
       "sections": [
         {
           "title": "Artistic Renders",
-          "description": "Each scene rendered in rich photographic colour — hover or tap to gently fade it into its monochrome mood study.",
+          "description": "A series of photographic interior studies — page through the collection with the arrows.",
           "renders": [
-            { "fit": "flip", "images": ["assets/images/projects/visualization/01.jpg", "assets/images/projects/visualization/02.jpg"], "caption": "A deep-teal lounge wrapped in classic panelling — mustard velvet, sculptural brass lighting, and an editorial art grid." },
-            { "fit": "flip", "images": ["assets/images/projects/visualization/03.jpg", "assets/images/projects/visualization/04.jpg"], "caption": "A closer study of the seating — velvet, timber, and curated styling in soft, raking light." },
-            { "fit": "flip", "images": ["assets/images/projects/visualization/05.jpg", "assets/images/projects/visualization/06.jpg"], "caption": "A sculptural timber sideboard against fluted panelling, framed by a bold portrait and matched armchairs." },
-            { "fit": "flip", "images": ["assets/images/projects/visualization/07.jpg", "assets/images/projects/visualization/08.jpg"], "caption": "A low, intimate angle — foreground props leading the eye through the depth of the composition." }
+            { "fit": "gallery", "images": [
+              "assets/images/projects/visualization/01.jpg",
+              "assets/images/projects/visualization/02.jpg",
+              "assets/images/projects/visualization/03.jpg",
+              "assets/images/projects/visualization/04.jpg",
+              "assets/images/projects/visualization/05.jpg",
+              "assets/images/projects/visualization/06.jpg",
+              "assets/images/projects/visualization/07.jpg",
+              "assets/images/projects/visualization/08.jpg"
+            ], "caption": "A modular boutique-hotel interior — deep teal panelling, mustard velvet, sculptural brass lighting, and dramatic monochrome studies. Page through the full set with the arrows." }
+          ]
+        },
+        {
+          "title": "Animation",
+          "description": "A cinematic walkthrough rendered in Lumion.",
+          "renders": [
+            { "video": "assets/images/projects/visualization/hero.mp4", "caption": "A cinematic walkthrough, animated and rendered in Lumion — bringing light, materials, and space to life in motion. <span class=\"pd-draw-title\">Al Mouj, Muscat</span>" }
           ]
         }
       ]
