@@ -1221,8 +1221,7 @@ a.contact-info__value:hover { color: var(--gold); }
 /* Contents / index — listed before the project imagery */
 .pd-contents {
   margin: clamp(8px,3vw,32px) 0 clamp(24px,5vw,56px);
-  padding-bottom: clamp(24px,5vw,48px);
-  border-bottom: 1px solid rgba(27,43,75,0.12);
+  padding-bottom: clamp(12px,3vw,28px);
   scroll-margin-top: 90px;
 }
 
@@ -1332,7 +1331,6 @@ a.contact-info__value:hover { color: var(--gold); }
   align-items: baseline;
   gap: 14px;
   padding: 11px 0;
-  border-bottom: 1px solid rgba(27,43,75,0.08);
   transition: color 0.25s var(--ease);
 }
 .pd-contents__item:hover { color: var(--gold); }
