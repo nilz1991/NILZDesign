@@ -245,14 +245,53 @@
       toggleFab();
     }
 
-    // Lightbox — click any render to view it complete
+    // Lightbox — click any render to view it complete, with 3-step targeted zoom
+    const magInSvg = `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>`;
+    const magOutSvg = `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>`;
     const lb = document.createElement('div');
     lb.className = 'pd-lightbox';
-    lb.innerHTML = `<button class="pd-lightbox__close" aria-label="Close">&times;</button><img alt="">`;
+    lb.innerHTML = `
+      <div class="pd-lightbox__bar">
+        <button class="pd-lightbox__btn pd-lightbox__zoomout" type="button" aria-label="Zoom out">${magOutSvg}</button>
+        <button class="pd-lightbox__btn pd-lightbox__zoomin" type="button" aria-label="Zoom in">${magInSvg}</button>
+        <button class="pd-lightbox__btn pd-lightbox__close" type="button" aria-label="Close">&times;</button>
+      </div>
+      <img alt="">`;
     document.body.appendChild(lb);
     const lbImg = lb.querySelector('img');
-    const openLb  = (src) => { lbImg.src = src; lb.classList.add('open'); document.body.classList.add('modal-open'); };
+
+    // Zoom: level 0 (fit) → 3 steps, anchored to the clicked point (targeted, not centred)
+    const zScales = [1, 1.6, 2.3, 3];
+    let zLevel = 0, zX = 50, zY = 50;
+    const applyZoom = () => {
+      lbImg.style.transformOrigin = `${zX}% ${zY}%`;
+      lbImg.style.transform = `scale(${zScales[zLevel]})`;
+      lbImg.style.cursor = zLevel >= zScales.length - 1 ? 'zoom-out' : 'zoom-in';
+    };
+    const resetZoom = () => { zLevel = 0; zX = 50; zY = 50; applyZoom(); };
+    const openLb  = (src) => { lbImg.src = src; resetZoom(); lb.classList.add('open'); document.body.classList.add('modal-open'); };
     const closeLb = () => { lb.classList.remove('open'); document.body.classList.remove('modal-open'); };
+
+    // Click on the image: zoom one step toward that point; after the last step, reset
+    lbImg.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (zLevel >= zScales.length - 1) { resetZoom(); return; }
+      zX = (e.offsetX / lbImg.clientWidth) * 100;
+      zY = (e.offsetY / lbImg.clientHeight) * 100;
+      zLevel += 1;
+      applyZoom();
+    });
+    lb.querySelector('.pd-lightbox__zoomin').addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (zLevel < zScales.length - 1) { zLevel += 1; applyZoom(); }
+    });
+    lb.querySelector('.pd-lightbox__zoomout').addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (zLevel > 0) { zLevel -= 1; if (zLevel === 0) { zX = 50; zY = 50; } applyZoom(); }
+    });
+    lb.querySelector('.pd-lightbox__bar').addEventListener('click', (e) => e.stopPropagation());
+    lb.querySelector('.pd-lightbox__close').addEventListener('click', closeLb);
+
     document.querySelectorAll('.pd-render__img').forEach(img => {
       if (img.dataset.nozoom) return;
       img.addEventListener('click', () => openLb(img.src));
