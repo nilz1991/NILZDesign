@@ -27,28 +27,28 @@
         "number": "01",
         "title": "Vision & Scope",
         "body": "Every project begins with dialogue. We listen, define the brief, and understand your vision — setting the direction for everything that follows.",
-        "image": "assets/images/services/service-01.jpg",
+        "image": "assets/images/services/service-01.png",
         "tools": []
       },
       {
         "number": "02",
         "title": "Planning",
         "body": "We study the location, light, landscape, and context to shape a concept that feels grounded and natural — both functionally and emotionally.",
-        "image": "assets/images/services/service-02.jpg",
+        "image": "assets/images/services/service-02.png",
         "tools": []
       },
       {
         "number": "03",
         "title": "Designing",
         "body": "From massing to materials, we craft bold yet timeless spaces that balance aesthetics, purpose, and lived experience.",
-        "image": "assets/images/services/service-03.jpg",
+        "image": "assets/images/services/service-03.png",
         "tools": []
       },
       {
         "number": "04",
         "title": "Final Step",
         "body": "Our team prepares precise drawings and documentation — collaborating with engineers and consultants to ensure feasibility, performance, and a flawless build.",
-        "image": "assets/images/services/service-04.jpg",
+        "image": "assets/images/services/service-04.png",
         "tools": []
       }
     ],

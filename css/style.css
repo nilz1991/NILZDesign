@@ -663,7 +663,6 @@ h1, h2, h3, h4 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: 480px;
-  border-top: 1px solid rgba(27,43,75,0.1);
 }
 .service-row--reverse { direction: rtl; }
 .service-row--reverse > * { direction: ltr; }
@@ -671,7 +670,6 @@ h1, h2, h3, h4 {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #f1ece2;
 }
 .service-row__body {
   padding: clamp(40px, 5vw, 80px);
