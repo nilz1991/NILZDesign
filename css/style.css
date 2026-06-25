@@ -454,6 +454,10 @@ h1, h2, h3, h4 {
 }
 .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
 .hero-actions .btn { min-width: 200px; justify-content: center; }
+@media (max-width: 600px) {
+  .hero-actions { width: 100%; }
+  .hero-actions .btn { flex: 1 1 100%; min-width: 0; }
+}
 .hero-scroll-hint {
   position: absolute;
   bottom: 40px;
