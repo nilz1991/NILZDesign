@@ -1543,6 +1543,8 @@ a.contact-info__value:hover { color: var(--gold); }
   object-fit: contain; border-radius: 4px;
   box-shadow: 0 20px 60px rgba(0,0,0,0.5);
   cursor: zoom-in;
+  transform-origin: 0 0;
+  touch-action: none;
   transition: transform 0.35s var(--ease);
   will-change: transform;
 }

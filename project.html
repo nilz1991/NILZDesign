@@ -260,35 +260,62 @@
     document.body.appendChild(lb);
     const lbImg = lb.querySelector('img');
 
-    // Zoom: level 0 (fit) → 3 steps, anchored to the clicked point (targeted, not centred)
+    // Zoom (3 steps, targeted to the click point) + drag-to-pan when zoomed
     const zScales = [1, 1.6, 2.3, 3];
-    let zLevel = 0, zX = 50, zY = 50;
-    const applyZoom = () => {
-      lbImg.style.transformOrigin = `${zX}% ${zY}%`;
-      lbImg.style.transform = `scale(${zScales[zLevel]})`;
-      lbImg.style.cursor = zLevel >= zScales.length - 1 ? 'zoom-out' : 'zoom-in';
+    let zLevel = 0, tx = 0, ty = 0;
+    const curScale = () => zScales[zLevel];
+    const clampPan = () => {
+      const s = curScale();
+      tx = Math.min(0, Math.max(lbImg.clientWidth * (1 - s), tx));
+      ty = Math.min(0, Math.max(lbImg.clientHeight * (1 - s), ty));
     };
-    const resetZoom = () => { zLevel = 0; zX = 50; zY = 50; applyZoom(); };
+    const updateCursor = () => { lbImg.style.cursor = zLevel > 0 ? 'grab' : 'zoom-in'; };
+    const applyTransform = () => {
+      lbImg.style.transformOrigin = '0 0';
+      lbImg.style.transform = `translate(${tx}px, ${ty}px) scale(${curScale()})`;
+      updateCursor();
+    };
+    const resetZoom = () => { zLevel = 0; tx = 0; ty = 0; applyTransform(); };
+    const zoomStep = (lx, ly, dir) => {
+      const sOld = curScale();
+      if (dir > 0) { if (zLevel >= zScales.length - 1) { resetZoom(); return; } zLevel += 1; }
+      else { if (zLevel <= 0) return; zLevel -= 1; }
+      const sNew = curScale();
+      if (zLevel === 0) { tx = 0; ty = 0; }
+      else { tx += lx * (sOld - sNew); ty += ly * (sOld - sNew); clampPan(); }
+      applyTransform();
+    };
+
     const openLb  = (src) => { lbImg.src = src; resetZoom(); lb.classList.add('open'); document.body.classList.add('modal-open'); };
     const closeLb = () => { lb.classList.remove('open'); document.body.classList.remove('modal-open'); };
 
-    // Click on the image: zoom one step toward that point; after the last step, reset
-    lbImg.addEventListener('click', (e) => {
-      e.stopPropagation();
-      if (zLevel >= zScales.length - 1) { resetZoom(); return; }
-      zX = (e.offsetX / lbImg.clientWidth) * 100;
-      zY = (e.offsetY / lbImg.clientHeight) * 100;
-      zLevel += 1;
-      applyZoom();
+    // Pointer: drag to pan (when zoomed); a tap with no drag zooms toward that point
+    let down = false, moved = false, sx = 0, sy = 0, sTx = 0, sTy = 0;
+    lbImg.addEventListener('pointerdown', (e) => {
+      e.preventDefault();
+      down = true; moved = false; sx = e.clientX; sy = e.clientY; sTx = tx; sTy = ty;
+      try { lbImg.setPointerCapture(e.pointerId); } catch (_) {}
+      if (zLevel > 0) lbImg.style.cursor = 'grabbing';
     });
-    lb.querySelector('.pd-lightbox__zoomin').addEventListener('click', (e) => {
-      e.stopPropagation();
-      if (zLevel < zScales.length - 1) { zLevel += 1; applyZoom(); }
+    lbImg.addEventListener('pointermove', (e) => {
+      if (!down) return;
+      const dx = e.clientX - sx, dy = e.clientY - sy;
+      if (Math.abs(dx) > 4 || Math.abs(dy) > 4) moved = true;
+      if (zLevel > 0 && moved) { lbImg.style.transition = 'none'; tx = sTx + dx; ty = sTy + dy; clampPan(); applyTransform(); lbImg.style.cursor = 'grabbing'; }
     });
-    lb.querySelector('.pd-lightbox__zoomout').addEventListener('click', (e) => {
-      e.stopPropagation();
-      if (zLevel > 0) { zLevel -= 1; if (zLevel === 0) { zX = 50; zY = 50; } applyZoom(); }
-    });
+    const endDrag = (e) => {
+      if (!down) return; down = false;
+      try { lbImg.releasePointerCapture(e.pointerId); } catch (_) {}
+      lbImg.style.transition = '';
+      if (!moved) zoomStep(e.offsetX, e.offsetY, 1);
+      updateCursor();
+    };
+    lbImg.addEventListener('pointerup', endDrag);
+    lbImg.addEventListener('pointercancel', endDrag);
+    lbImg.addEventListener('click', (e) => e.stopPropagation());
+
+    lb.querySelector('.pd-lightbox__zoomin').addEventListener('click', (e) => { e.stopPropagation(); zoomStep(lbImg.clientWidth / 2, lbImg.clientHeight / 2, 1); });
+    lb.querySelector('.pd-lightbox__zoomout').addEventListener('click', (e) => { e.stopPropagation(); zoomStep(lbImg.clientWidth / 2, lbImg.clientHeight / 2, -1); });
     lb.querySelector('.pd-lightbox__bar').addEventListener('click', (e) => e.stopPropagation());
     lb.querySelector('.pd-lightbox__close').addEventListener('click', closeLb);
 
