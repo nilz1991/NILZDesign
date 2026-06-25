@@ -1231,6 +1231,7 @@ a.contact-info__value:hover { color: var(--gold); }
   flex-direction: column;
   align-items: flex-end;
   gap: 12px;
+  pointer-events: none;
   opacity: 0; visibility: hidden; transform: translateY(12px);
   transition: opacity 0.3s var(--ease), transform 0.3s var(--ease), visibility 0.3s;
 }
@@ -1243,6 +1244,7 @@ a.contact-info__value:hover { color: var(--gold); }
   color: #fff;
   display: flex; align-items: center; justify-content: center;
   box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+  pointer-events: auto;
   transition: background 0.3s var(--ease), transform 0.3s var(--ease);
 }
 .pd-toc--open .pd-toc-fab { background: var(--navy); }
@@ -1277,19 +1279,6 @@ a.contact-info__value:hover { color: var(--gold); }
   opacity: 1;
   transform: none;
   transition-delay: calc(var(--i) * 45ms);
-}
-/* Desktop (hover-capable) — reveal on hover/focus too */
-@media (hover: hover) {
-  .pd-toc:hover .pd-toc-fab,
-  .pd-toc:focus-within .pd-toc-fab { background: var(--navy); }
-  .pd-toc:hover .pd-toc-menu,
-  .pd-toc:focus-within .pd-toc-menu { pointer-events: auto; }
-  .pd-toc:hover .pd-toc-menu__item,
-  .pd-toc:focus-within .pd-toc-menu__item {
-    opacity: 1;
-    transform: none;
-    transition-delay: calc(var(--i) * 45ms);
-  }
 }
 .pd-toc-menu__item:hover {
   background: var(--gold);

@@ -197,16 +197,24 @@
         </button>`;
       document.body.appendChild(toc);
       const tocFab = toc.querySelector('.pd-toc-fab');
-      tocFab.addEventListener('click', (e) => {
-        if (window.matchMedia('(hover: none)').matches) {
-          e.stopPropagation();
-          toc.classList.toggle('pd-toc--open');            // touch: tap opens the menu
-        } else {
-          contentsEl.scrollIntoView({ behavior: 'smooth', block: 'start' }); // desktop: jump to contents
-        }
+      const tocMenu = toc.querySelector('.pd-toc-menu');
+      const isTouch = () => window.matchMedia('(hover: none)').matches;
+      const openMenu  = () => { clearTimeout(toc._t); toc.classList.add('pd-toc--open'); };
+      const closeMenu = () => { clearTimeout(toc._t); toc.classList.remove('pd-toc--open'); };
+      const scheduleClose = () => { clearTimeout(toc._t); toc._t = setTimeout(closeMenu, 160); };
+      // Desktop: hover the arrow (or menu) reveals; leaving closes
+      [tocFab, tocMenu].forEach(el => {
+        el.addEventListener('mouseenter', () => { if (!isTouch()) openMenu(); });
+        el.addEventListener('mouseleave', () => { if (!isTouch()) scheduleClose(); });
       });
-      toc.querySelectorAll('.pd-toc-menu__item').forEach(a => a.addEventListener('click', () => toc.classList.remove('pd-toc--open')));
-      document.addEventListener('click', (e) => { if (!toc.contains(e.target)) toc.classList.remove('pd-toc--open'); });
+      // Tap the arrow: touch → toggle menu; desktop → jump to contents
+      tocFab.addEventListener('click', (e) => {
+        if (isTouch()) { e.stopPropagation(); toc.classList.toggle('pd-toc--open'); }
+        else { contentsEl.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+      // Selecting an item closes the menu; tapping anywhere else closes it too
+      tocMenu.querySelectorAll('.pd-toc-menu__item').forEach(a => a.addEventListener('click', closeMenu));
+      document.addEventListener('click', (e) => { if (!toc.contains(e.target)) closeMenu(); });
       const toggleFab = () => toc.classList.toggle('pd-toc--show', contentsEl.getBoundingClientRect().bottom < -40);
       window.addEventListener('scroll', toggleFab, { passive: true });
       toggleFab();
