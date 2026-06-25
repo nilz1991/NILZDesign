@@ -369,6 +369,34 @@
       ]
     },
     {
+      "id": "barzegari-villa",
+      "collection": "residential",
+      "title": "Barzegari Villa",
+      "category": "Interior Design",
+      "location": "Muscat, Oman",
+      "image": "assets/images/projects/residential/barzegari-villa/04.jpg",
+      "description": "A warm, contemporary family villa — natural oak, travertine, and soft bouclé define an open-plan living, dining, and kitchen sequence bathed in daylight.",
+      "overview": "A warm, contemporary family villa built around a single open-plan volume. Natural oak veneer, travertine and book-matched marble, and soft bouclé in calm neutral tones flow from the living and lounge through to the kitchen and dining — all grounded by large-format porcelain and washed in daylight. A restrained, tactile palette chosen to feel both timeless and effortlessly liveable.",
+      "sections": [
+        {
+          "title": "Living Areas",
+          "description": "Calm, light-filled living and lounge spaces in warm oak and soft neutrals.",
+          "renders": [
+            { "image": "assets/images/projects/residential/barzegari-villa/02.jpg", "caption": "A serene living room in soft beige and natural oak, framed by floor-to-ceiling sheers that diffuse the daylight. Bouclé armchairs and a low sofa gather around a marble-topped table, with a textured plaster artwork and a timber console adding warmth and tactility." },
+            { "image": "assets/images/projects/residential/barzegari-villa/03.jpg", "caption": "A quiet reading lounge anchored by a built-in oak grid shelf and rounded bouclé chairs, lit by a brick-walled light well behind floor-to-ceiling glazing. The pared-back palette and natural materials keep the space restful and timeless." }
+          ]
+        },
+        {
+          "title": "Kitchen & Dining",
+          "description": "An open-plan kitchen and dining heart wrapped in natural wood and stone.",
+          "renders": [
+            { "image": "assets/images/projects/residential/barzegari-villa/01.jpg", "caption": "An open-plan kitchen in warm oak veneer with a book-matched marble backsplash and a generous island that doubles as a casual dining table. Handle-less cabinetry and concealed appliances keep the lines clean, while integrated lighting and durable large-format porcelain make it as practical as it is calm." },
+            { "image": "assets/images/projects/residential/barzegari-villa/04.jpg", "caption": "The heart of the home — living, dining, and kitchen flow together around a sculptural oak feature volume. A consistent palette of warm wood, travertine, and soft neutrals over polished porcelain ties the whole open plan into one calm, light-filled space." }
+          ]
+        }
+      ]
+    },
+    {
       "id": "visualization",
       "title": "Architectural Visualization & Animation",
       "category": "Visualization & Animation",
