@@ -65,17 +65,16 @@
     </div>
   </section>
 
-  <!-- ── Stacked project cards ───────────── -->
-  <section class="section section--cream stacked-projects">
+  <!-- ── Services ─────────────────────────── -->
+  <section class="section section--cream" id="services">
     <div class="container">
-      <span class="section-tag">Expertise</span>
+      <span class="section-tag">Services</span>
       <h2 class="section-title fade-up">What I <em>Do</em></h2>
+      <p class="services-intro fade-up" id="home-services-intro"></p>
+      <div id="services-list" class="services-list"></div>
+      <img class="services-closing fade-up" src="assets/images/services/service-05.webp" alt="Site handover — villa & pool complex" loading="lazy">
     </div>
-    <div id="home-projects" class="stacked-projects__list"></div>
     <div id="home-software" class="home-software"></div>
-    <div class="container" style="text-align:center;margin-top:60px">
-      <a href="projects.html" class="btn btn--outline fade-up">View All Projects</a>
-    </div>
   </section>
 
   <!-- ── Rotating 360° ───────────────────── -->
@@ -86,7 +85,7 @@
     import { initHeader } from './js/components/header.js';
     import { initFooter } from './js/components/footer.js';
     import { initRotatingText } from './js/components/rotating-text.js';
-    import { renderHomeProjects, renderHomeSoftware, renderSiteContent } from './js/content.js';
+    import { loadSite, renderHomeSoftware, renderSiteContent } from './js/content.js';
     import { init as initMain } from './js/main.js';
 
     // Hero video — best-effort autoplay with fallback for mobile / in-app browsers
@@ -111,7 +110,19 @@
       ctaHref:        'contact.html',
       decorativeImage:'assets/images/line-art-hero.png',
     });
-    await renderHomeProjects('#home-projects');
+    const site = await loadSite();
+    const introEl = document.getElementById('home-services-intro');
+    if (introEl) introEl.textContent = site.services.intro;
+    document.getElementById('services-list').innerHTML = site.services.items.map((s, i) => `
+      <div class="service-row fade-up ${i % 2 !== 0 ? 'service-row--reverse' : ''}">
+        <img class="service-row__img" src="${s.image}" alt="${s.title}" loading="lazy">
+        <div class="service-row__body">
+          <span class="service-row__num">${s.number}</span>
+          <h2 class="service-row__title">${s.title}</h2>
+          <p class="service-row__desc">${s.body}</p>
+          ${s.tools && s.tools.length ? `<div class="service-row__tools">${s.tools.map(t => `<span class="tool-tag">${t}</span>`).join('')}</div>` : ''}
+        </div>
+      </div>`).join('');
     await renderHomeSoftware('#home-software');
     await renderSiteContent('home');
     initMain();

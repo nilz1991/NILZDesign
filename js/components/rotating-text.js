@@ -8,7 +8,7 @@ export function initRotatingText(targetSelector = '#rotating-text-placeholder', 
     headlineEm     = 'Every discipline.',
     sub            = 'Architecture, interiors, landscape, and visualization — all under one roof, one vision, one team.',
     ctaLabel       = 'Explore Our Services',
-    ctaHref        = 'services.html',
+    ctaHref        = 'index.html#services',
     decorativeImage = null,
   } = opts;
 

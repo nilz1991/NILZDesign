@@ -32,9 +32,9 @@ export function initFooter() {
       <h4 class="footer-heading">Navigate</h4>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
+        <li><a href="index.html#services">Services</a></li>
         <li><a href="projects.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
@@ -43,10 +43,10 @@ export function initFooter() {
     <div class="footer-col">
       <h4 class="footer-heading">Services</h4>
       <ul>
-        <li><a href="services.html">Interior Design</a></li>
-        <li><a href="services.html">Architecture</a></li>
-        <li><a href="services.html">Landscape &amp; Exterior</a></li>
-        <li><a href="services.html">Visualization</a></li>
+        <li><a href="index.html#services">Interior Design</a></li>
+        <li><a href="index.html#services">Architecture</a></li>
+        <li><a href="index.html#services">Landscape &amp; Exterior</a></li>
+        <li><a href="index.html#services">Visualization</a></li>
       </ul>
     </div>
 

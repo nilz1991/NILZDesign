@@ -10,7 +10,6 @@ export function initHeader() {
 
   const pages = [
     { href: 'index.html',    label: 'Home' },
-    { href: 'services.html', label: 'Services' },
     { href: 'projects.html', label: 'Projects' },
     { href: 'about.html',    label: 'About' },
     { href: 'contact.html',  label: 'Contact' },
