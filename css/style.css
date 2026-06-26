@@ -732,6 +732,22 @@ h1, h2, h3, h4 {
 .process-title { color: var(--white); font-size: 1.1rem; margin-bottom: 12px; }
 .process-body { color: rgba(255,255,255,0.6); font-size: 0.92rem; line-height: 1.75; }
 
+.services-closing {
+  display: block;
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  margin: clamp(24px,5vw,64px) auto 0;
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0, #000 13%, #000 87%, transparent 100%),
+    linear-gradient(to bottom, transparent 0, #000 13%, #000 87%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(to right, transparent 0, #000 13%, #000 87%, transparent 100%),
+    linear-gradient(to bottom, transparent 0, #000 13%, #000 87%, transparent 100%);
+  mask-composite: intersect;
+}
+
 @media (max-width: 1100px) { .process-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 900px) {
   .service-row, .service-row--reverse { grid-template-columns: 1fr; direction: ltr; min-height: 0; }
