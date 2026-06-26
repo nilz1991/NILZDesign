@@ -5,7 +5,17 @@
     "about_tag": "About NILZ",
     "about_quote": "Architecture should speak of its time and place, but yearn for timelessness.",
     "about_body": "We are a team led by Niloufar Zanjani — architect and interior designer with over 13 years of professional experience across residential and commercial projects. Our approach bridges modern art and engineering precision, creating spaces that are as functional as they are beautiful.",
-    "marquee_text": "Architecture · Interior Design · Muscat · Oman · NILZ · "
+    "marquee_text": "Architecture · Interior Design · Muscat · Oman · NILZ · ",
+    "software_label": "Software & Tools",
+    "software": [
+      { "use": "Interior Design", "names": ["3ds Max"] },
+      { "use": "Render Engines", "names": ["Corona", "V-Ray"] },
+      { "use": "Post-production", "names": ["Photoshop"] },
+      { "use": "Characters", "names": ["AI"] },
+      { "use": "Modeling", "names": ["SketchUp"] },
+      { "use": "Technical & Engineering Drawings", "names": ["AutoCAD", "Revit"] },
+      { "use": "Animation & Visualization", "names": ["Unreal Engine", "Lumion", "Chaos Vantage"] }
+    ]
   },
   "about": {
     "hero_title": "Designing with purpose.\nBuilding with integrity.",

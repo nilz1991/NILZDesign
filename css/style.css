@@ -569,6 +569,50 @@ h1, h2, h3, h4 {
   margin-bottom: 16px;
 }
 .stack-card__desc { color: var(--gray); line-height: 1.8; }
+.home-software { margin-top: clamp(50px, 6vw, 90px); }
+.home-software__label { display: block; text-align: center; margin-bottom: 30px; }
+.home-software__grid {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1040px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+}
+.home-software__item {
+  flex: 0 0 auto;
+  width: calc(25% - 14px);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+  text-align: center;
+  border: 1px solid rgba(27, 43, 75, 0.14);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.5);
+}
+.home-software__use {
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.home-software__name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--navy);
+}
+@media (max-width: 900px) {
+  .home-software__item { width: calc(33.333% - 10px); }
+}
+@media (max-width: 600px) {
+  .home-software__grid { gap: 8px; }
+  .home-software__item { width: calc(50% - 8px); padding: 10px 10px; }
+  .home-software__name { font-size: 0.78rem; }
+}
 @media (max-width: 900px) {
   .stack-card, .stack-card--reverse { grid-template-columns: 1fr; direction: ltr; }
   .stack-card__img { min-height: 300px; }

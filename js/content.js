@@ -71,6 +71,26 @@ async function renderHomeProjects(containerSelector) {
   container.innerHTML = featured.map((p, i) => stackedCardHTML(p, i)).join('');
 }
 
+// ── Render home software / tools strip ──────
+async function renderHomeSoftware(containerSelector) {
+  const container = document.querySelector(containerSelector);
+  if (!container) return;
+  const site = await loadSite();
+  const list = (site.home && site.home.software) || [];
+  if (!list.length) { container.innerHTML = ''; return; }
+  const label = (site.home && site.home.software_label) || 'Software & Tools';
+  container.innerHTML = `
+    <div class="container">
+      <span class="section-tag home-software__label">${label}</span>
+      <ul class="home-software__grid">
+        ${list.map(s => `<li class="home-software__item">
+          <span class="home-software__use">${s.use}</span>
+          <span class="home-software__name">${(s.names || [s.name]).join(' · ')}</span>
+        </li>`).join('')}
+      </ul>
+    </div>`;
+}
+
 // ── Render projects grid (collections collapse into one card) ───────
 async function renderProjectsGrid(containerSelector, filterSelector) {
   const container = document.querySelector(containerSelector);
@@ -276,4 +296,4 @@ async function renderSiteContent(pageKey) {
   }
 }
 
-export { loadData, loadProjects, loadCollections, loadSite, renderHomeProjects, renderProjectsGrid, renderCollection, renderSiteContent };
+export { loadData, loadProjects, loadCollections, loadSite, renderHomeProjects, renderHomeSoftware, renderProjectsGrid, renderCollection, renderSiteContent };
