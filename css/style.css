@@ -734,8 +734,7 @@ h1, h2, h3, h4 {
 
 @media (max-width: 1100px) { .process-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 900px) {
-  .service-row, .service-row--reverse { grid-template-columns: 1fr; direction: ltr; }
-  .service-row__img { min-height: 280px; }
+  .service-row, .service-row--reverse { grid-template-columns: 1fr; direction: ltr; min-height: 0; }
   .process-grid { grid-template-columns: 1fr; }
 }
 
