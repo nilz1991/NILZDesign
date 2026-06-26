@@ -76,6 +76,7 @@
     const heroBg = document.getElementById('pd-hero-bg');
     heroBg.style.backgroundImage = `url('${heroImg}')`;
     if (p.heroFit === 'contain') heroBg.classList.add('pd-hero__bg--contain');
+    if (p.heroPos) heroBg.style.backgroundPosition = p.heroPos;
     document.getElementById('pd-hero-cat').textContent  = p.category;
     document.getElementById('pd-hero-title').textContent = p.title;
     document.getElementById('pd-hero-loc').textContent  = p.location;
