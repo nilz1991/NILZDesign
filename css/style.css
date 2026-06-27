@@ -1790,8 +1790,10 @@ html.lang-ar .service-row--reverse { direction: rtl; }
 html.lang-ar .service-row--reverse > * { direction: ltr; }
 html.lang-ar .service-row__body { direction: rtl; text-align: right; }
 
-/* Phone/WhatsApp numbers must keep left-to-right digit order even in RTL */
-.contact-num { direction: ltr; unicode-bidi: embed; display: inline-block; }
+/* Phone/WhatsApp numbers must keep left-to-right order even in RTL.
+   bidi-override locks the visual order to the logical order, so the country
+   code (+968) never detaches and the segments never swap. */
+.contact-num { direction: ltr; unicode-bidi: bidi-override; display: inline-block; }
 @media (max-width: 768px) {
   html[dir="rtl"] .pd-zoom-badge { right: auto; left: 14px; }
 }
