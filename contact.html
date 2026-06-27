@@ -1,14 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('nilz_lang');if(l==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl';document.documentElement.classList.add('lang-ar');}}catch(e){}</script>
   <title>Contact — NILZ Architecture & Interior Design Group</title>
   <link rel="icon" type="image/png" href="assets/images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=4">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&family=Tajawal:wght@300;400;500;700&family=El+Messiri:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=7">
   <script src="js/analytics.js" defer></script>
 </head>
 <body>
@@ -16,7 +17,7 @@
   <section class="page-hero">
     <img src="assets/images/project-3.jpg" alt="" class="page-hero__bg">
     <div class="page-hero__content">
-      <span class="section-tag page-hero__tag">Contact</span>
+      <span class="section-tag page-hero__tag" data-i18n="tag.contact">Contact</span>
       <h1 class="page-hero__title display" data-cms="hero_title">Let's talk today.</h1>
       <p style="color:rgba(255,255,255,0.65);font-size:1.1rem;margin-top:16px;max-width:500px" data-cms="hero_sub">Whether you're starting a project or just exploring ideas, we'd love to hear from you.</p>
     </div>
@@ -26,62 +27,62 @@
     <div class="container contact-inner">
       <!-- Form -->
       <div class="contact-form-wrap fade-up">
-        <h2 class="contact-form__title">Apply for a collaboration</h2>
+        <h2 class="contact-form__title" data-i18n="contact.form_title">Apply for a collaboration</h2>
         <form class="contact-form" name="contact" method="POST" action="https://formsubmit.co/niloofar.zanjani22@gmail.com">
           <input type="hidden" name="_next" value="https://nilzdesign.com/thank-you">
           <input type="hidden" name="_captcha" value="false">
           <div class="form-row">
             <div class="form-group">
-              <label for="name">Your name</label>
-              <input type="text" id="name" name="name" required placeholder="Niloufar Zanjani">
+              <label for="name" data-i18n="form.name">Your name</label>
+              <input type="text" id="name" name="name" required placeholder="Niloufar Zanjani" data-i18n-ph="form.ph_name">
             </div>
             <div class="form-group">
-              <label for="email">Your email</label>
-              <input type="email" id="email" name="email" required placeholder="hello@nilz.com">
+              <label for="email" data-i18n="form.email">Your email</label>
+              <input type="email" id="email" name="email" required placeholder="hello@nilz.com" data-i18n-ph="form.ph_email">
             </div>
           </div>
           <div class="form-row">
             <div class="form-group">
-              <label for="phone">Your phone</label>
-              <input type="tel" id="phone" name="phone" placeholder="+968 9xxx xxxx">
+              <label for="phone" data-i18n="form.phone">Your phone</label>
+              <input type="tel" id="phone" name="phone" placeholder="+968 9xxx xxxx" data-i18n-ph="form.ph_phone">
             </div>
             <div class="form-group">
-              <label for="company">Your company</label>
-              <input type="text" id="company" name="company" placeholder="Optional">
+              <label for="company" data-i18n="form.company">Your company</label>
+              <input type="text" id="company" name="company" placeholder="Optional" data-i18n-ph="form.ph_company">
             </div>
           </div>
           <div class="form-group">
-            <label for="message">Your message</label>
-            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project..."></textarea>
+            <label for="message" data-i18n="form.message">Your message</label>
+            <textarea id="message" name="message" rows="5" required placeholder="Tell us about your project..." data-i18n-ph="form.ph_message"></textarea>
           </div>
           <div class="form-group">
-            <label>What solution do you need?</label>
+            <label data-i18n="form.solution_label">What solution do you need?</label>
             <div class="form-checks">
-              <label class="check-label"><input type="checkbox" name="type" value="House"> House</label>
-              <label class="check-label"><input type="checkbox" name="type" value="Office"> Office</label>
-              <label class="check-label"><input type="checkbox" name="type" value="Interior Design"> Interior Design</label>
-              <label class="check-label"><input type="checkbox" name="type" value="Other"> Other</label>
+              <label class="check-label"><input type="checkbox" name="type" value="House"> <span data-i18n="form.opt_house">House</span></label>
+              <label class="check-label"><input type="checkbox" name="type" value="Office"> <span data-i18n="form.opt_office">Office</span></label>
+              <label class="check-label"><input type="checkbox" name="type" value="Interior Design"> <span data-i18n="form.opt_interior">Interior Design</span></label>
+              <label class="check-label"><input type="checkbox" name="type" value="Other"> <span data-i18n="form.opt_other">Other</span></label>
             </div>
           </div>
-          <button type="submit" class="btn btn--solid" style="width:100%;justify-content:center;padding:18px">Submit</button>
+          <button type="submit" class="btn btn--solid" style="width:100%;justify-content:center;padding:18px" data-i18n="btn.submit">Submit</button>
         </form>
       </div>
       <!-- Info -->
       <div class="contact-info fade-up delay-1">
         <div class="contact-info__item">
-          <span class="contact-info__label">Phone</span>
+          <span class="contact-info__label" data-i18n="info.phone">Phone</span>
           <a href="tel:+96899009464" class="contact-info__value" data-cms="phone">+968 99009464</a>
         </div>
         <div class="contact-info__item">
-          <span class="contact-info__label">WhatsApp</span>
+          <span class="contact-info__label" data-i18n="info.whatsapp">WhatsApp</span>
           <a href="https://api.whatsapp.com/send?phone=96892315257" data-cms-href="whatsapp" target="_blank" rel="noopener" class="contact-info__value">+968 92315257</a>
         </div>
         <div class="contact-info__item">
-          <span class="contact-info__label">Location</span>
-          <span class="contact-info__value">Al Mouj Street, Muscat<br>Oman</span>
+          <span class="contact-info__label" data-i18n="info.location">Location</span>
+          <span class="contact-info__value" data-i18n="info.location_value">Al Mouj Street, Muscat<br>Oman</span>
         </div>
         <div class="contact-info__item">
-          <span class="contact-info__label">Follow Us</span>
+          <span class="contact-info__label" data-i18n="info.follow">Follow Us</span>
           <div class="contact-socials">
             <a href="https://api.whatsapp.com/send?phone=96892315257" data-cms-href="whatsapp" target="_blank" rel="noopener" class="contact-social-link" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -106,10 +107,13 @@
     import { initFooter } from './js/components/footer.js';
     import { renderSiteContent } from './js/content.js';
     import { init as initMain } from './js/main.js';
+    import { initI18n, applyStatic } from './js/i18n.js';
 
+    await initI18n();
     initHeader();
     initFooter();
     await renderSiteContent('contact');
+    applyStatic();
     initMain();
   </script>
 </body>

@@ -205,7 +205,7 @@ h1, h2, h3, h4 {
 /* ── Nav links ─────────────────────────────
    Default = white (all pages have a dark hero behind transparent header).
    Scrolled = navy (white header background). */
-.header-nav { margin-left: auto; }
+.header-nav { margin-inline-start: auto; }
 .header-nav ul { display: flex; gap: 40px; }
 .header-nav a {
   font-family: var(--font-body);
@@ -224,7 +224,7 @@ h1, h2, h3, h4 {
 
 /* ── CTA button + burger ────────────────── */
 .header-cta {
-  margin-left: 24px;
+  margin-inline-start: 24px;
   padding: 10px 22px;
   font-size: 0.72rem;
   color: var(--white);
@@ -248,6 +248,7 @@ h1, h2, h3, h4 {
   .header-nav { display: none; }
   .header-nav.open {
     display: flex;
+    flex-direction: column;
     position: fixed;
     inset: 0;
     background: var(--white);
@@ -258,7 +259,7 @@ h1, h2, h3, h4 {
   .header-nav.open ul { flex-direction: column; align-items: center; gap: 32px; }
   .header-nav.open a { font-size: 1.5rem; letter-spacing: 0.1em; color: var(--navy); }
   .header-cta { display: none; }
-  .header-burger { display: flex; margin-left: auto; z-index: 101; }
+  .header-burger { display: flex; margin-inline-start: auto; z-index: 101; }
 }
 
 /* ─── Footer ─────────────────────────────── */
@@ -1687,3 +1688,89 @@ a.contact-info__value:hover { color: var(--gold); }
   .pd-renders--3 { grid-template-columns: 1fr; }
   .pd-renders--3 .pd-render:first-child { grid-column: span 1; }
 }
+
+/* ═══════════════════════════════════════════
+   Bilingual — Arabic typography + RTL + language switch
+   ═══════════════════════════════════════════ */
+
+/* Arabic fonts swap in via the font-family tokens when <html> is Arabic */
+html.lang-ar {
+  --font-display: 'El Messiri', 'Playfair Display', serif;
+  --font-body:    'Tajawal', 'DM Sans', sans-serif;
+}
+/* Arabic reads better with a little more leading and no letter-spacing/uppercase */
+html.lang-ar body { line-height: 1.85; }
+html.lang-ar .header-nav a,
+html.lang-ar .section-tag,
+html.lang-ar .hero-eyebrow,
+html.lang-ar .btn,
+html.lang-ar .filter-btn,
+html.lang-ar .footer-heading,
+html.lang-ar .pd-overview__label,
+html.lang-ar .pd-contents__label,
+html.lang-ar .pd-locationhead__label,
+html.lang-ar .contact-info__label,
+html.lang-ar .home-software__use {
+  letter-spacing: 0;
+  text-transform: none;
+}
+/* Playfair italics don't exist in El Messiri — keep emphasis upright but gold */
+html.lang-ar em { font-style: normal; }
+
+/* ── Language switch (EN | العربية) ── */
+.lang-switch { display: inline-flex; align-items: center; gap: 9px; }
+.lang-switch__btn {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  opacity: 0.65;
+  transition: opacity 0.25s, color 0.25s;
+}
+.lang-switch__btn:hover { opacity: 1; }
+.lang-switch__btn.is-active { opacity: 1; color: var(--gold); font-weight: 700; }
+.lang-switch__sep { color: rgba(255,255,255,0.4); font-size: 0.8rem; }
+#site-header.scrolled .lang-switch__btn { color: var(--navy); }
+#site-header.scrolled .lang-switch__btn.is-active { color: var(--gold); }
+#site-header.scrolled .lang-switch__sep { color: rgba(27,43,75,0.3); }
+
+.lang-switch--desktop { margin-inline-start: 22px; }
+.lang-switch--mobile  { display: none; }
+
+@media (max-width: 900px) {
+  /* Compact switch lives in the top bar, next to the burger, so it's visible on arrival */
+  .lang-switch--desktop {
+    display: inline-flex;
+    margin-inline-start: auto;
+    gap: 7px;
+  }
+  .lang-switch--desktop .lang-switch__btn { font-size: 0.82rem; }
+  .header-burger { margin-inline-start: 14px; }
+  /* When the full-screen menu is open, hide the top-bar switch (keep its space so the
+     burger stays put) and show the in-menu switch instead */
+  .header-nav.open ~ .lang-switch--desktop { visibility: hidden; }
+  .lang-switch--mobile {
+    display: inline-flex;
+    margin-top: 36px;
+    gap: 14px;
+  }
+  .lang-switch--mobile .lang-switch__btn { color: var(--navy); font-size: 1.2rem; }
+  .lang-switch--mobile .lang-switch__sep { color: rgba(27,43,75,0.3); font-size: 1.2rem; }
+}
+
+/* ── RTL mirroring for the handful of physically-positioned elements ── */
+html[dir="rtl"] .hero-scroll-hint { right: auto; left: var(--pad); }
+html[dir="rtl"] .project-card__badge { left: auto; right: 14px; }
+html[dir="rtl"] .statement-body { padding-right: 0; padding-left: 20px; }
+html[dir="rtl"] .pd-render__caption {
+  padding-left: 0; padding-right: 18px;
+  border-left: none; border-right: 2px solid var(--gold);
+}
+html[dir="rtl"] .pd-zoom-badge { right: auto; left: 18px; }
+html[dir="rtl"] .pd-toc { right: auto; left: clamp(16px,3vw,32px); }
+html[dir="rtl"] .pd-lightbox__bar { right: auto; left: 24px; }
+@media (max-width: 768px) {
+  html[dir="rtl"] .pd-zoom-badge { right: auto; left: 14px; }
+}
+

@@ -5,7 +5,7 @@
       "name": "NILZ Website",
       "runtimeExecutable": "C:\\Program Files\\Adobe\\Adobe Photoshop 2023\\node.exe",
       "runtimeArgs": ["serve.js"],
-      "port": 3000
+      "autoPort": true
     }
   ]
 }

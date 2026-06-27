@@ -1,14 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('nilz_lang');if(l==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl';document.documentElement.classList.add('lang-ar');}}catch(e){}</script>
   <title>Thank You — NILZ Architecture & Interior Design Group</title>
   <link rel="icon" type="image/png" href="assets/images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=4">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&family=Tajawal:wght@300;400;500;700&family=El+Messiri:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=7">
   <script src="js/analytics.js" defer></script>
 </head>
 <body>
@@ -16,14 +17,14 @@
   <section class="page-hero" style="min-height:100vh;display:flex;align-items:center;">
     <img src="assets/images/project-3.jpg" alt="" class="page-hero__bg">
     <div class="page-hero__content" style="text-align:center;max-width:600px;margin:0 auto;">
-      <span class="section-tag page-hero__tag">Message Received</span>
-      <h1 class="page-hero__title display" style="margin-bottom:24px">Thank you for<br><em>reaching out.</em></h1>
-      <p style="color:rgba(255,255,255,0.75);font-size:1.1rem;margin-bottom:40px;line-height:1.7;">
+      <span class="section-tag page-hero__tag" data-i18n="thanks.tag">Message Received</span>
+      <h1 class="page-hero__title display" style="margin-bottom:24px" data-i18n="thanks.title">Thank you for<br><em>reaching out.</em></h1>
+      <p style="color:rgba(255,255,255,0.75);font-size:1.1rem;margin-bottom:40px;line-height:1.7;" data-i18n="thanks.body">
         We've received your message and will get back to you within 1–2 business days.
       </p>
       <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-        <a href="index.html" class="btn btn--gold">Back to Home</a>
-        <a href="projects.html" class="btn btn--outline-light">View Our Work</a>
+        <a href="index.html" class="btn btn--gold" data-i18n="thanks.home">Back to Home</a>
+        <a href="projects.html" class="btn btn--outline-light" data-i18n="thanks.work">View Our Work</a>
       </div>
     </div>
   </section>
@@ -31,8 +32,11 @@
   <script type="module">
     import { initHeader } from './js/components/header.js';
     import { initFooter } from './js/components/footer.js';
+    import { initI18n, applyStatic } from './js/i18n.js';
+    await initI18n();
     initHeader();
     initFooter();
+    applyStatic();
   </script>
 </body>
 </html>

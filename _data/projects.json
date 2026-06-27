@@ -3,18 +3,26 @@
     {
       "id": "residential",
       "title": "Residential Design",
+      "title_ar": "التصميم السكني",
       "category": "Interior Design",
+      "category_ar": "التصميم الداخلي",
       "location": "Muscat, Oman",
+      "location_ar": "مسقط، عُمان",
       "image": "assets/images/projects/residential/al-ansab/06.jpg",
-      "description": "Full-home interiors for villas and apartments across Muscat — from grand family villas to compact, optimised living. Each project is shaped in natural materials and warm, tailored detail. Explore each individually."
+      "description": "Full-home interiors for villas and apartments across Muscat — from grand family villas to compact, optimised living. Each project is shaped in natural materials and warm, tailored detail. Explore each individually.",
+      "description_ar": "تصاميم داخلية متكاملة للفلل والشقق في أنحاء مسقط — من الفلل العائلية الفخمة إلى المساحات الصغيرة المُحكَمة. صِيغ كل مشروع بمواد طبيعية وتفاصيل دافئة مُفصّلة بعناية. تصفّح كلًّا منها على حدة."
     },
     {
       "id": "office",
       "title": "Commercial & Office Space Design",
+      "title_ar": "تصميم المساحات التجارية والمكتبية",
       "category": "Interior Design",
+      "category_ar": "التصميم الداخلي",
       "location": "Muscat, Oman",
+      "location_ar": "مسقط، عُمان",
       "image": "assets/images/projects/office-workspace/madineh/01.jpg",
-      "description": "Office and workspace designs across multiple Muscat locations — from a refined modern scheme to a raw industrial one. Explore each project individually."
+      "description": "Office and workspace designs across multiple Muscat locations — from a refined modern scheme to a raw industrial one. Explore each project individually.",
+      "description_ar": "تصاميم مكاتب ومساحات عمل في مواقع متعددة بمسقط — من طرازٍ عصري راقٍ إلى آخر صناعي خام. تصفّح كل مشروع على حدة."
     }
   ],
   "projects": [
@@ -22,60 +30,79 @@
       "id": "villa-facade",
       "collection": "residential",
       "title": "Al Ansab Villa",
+      "title_ar": "فيلا الأنصب",
       "category": "Interior Design",
+      "category_ar": "التصميم الداخلي",
       "location": "Al Ansab, Muscat — Oman",
+      "location_ar": "الأنصب، مسقط — عُمان",
       "image": "assets/images/projects/residential/al-ansab/03.jpg",
       "description": "A warm, contemporary family villa in Al Ansab where grand scale meets everyday intimacy. Natural materials — light oak, travertine, book-matched marble, and polished porcelain — are softened by bouclé, velvet, and sculptural brass lighting. Spaces flow openly from a double-height entrance hall through the living and dining areas to a formal majlis, balancing relaxed family life with refined hosting.",
+      "description_ar": "فيلا عائلية معاصرة دافئة في الأنصب، يلتقي فيها اتساع المقياس بحميمية الحياة اليومية. تُلطّف المواد الطبيعية — البلوط الفاتح والترافرتين والرخام المتناظر والبورسلان المصقول — بأقمشة البوكليه والمخمل وإضاءة نحاسية نحتية. تنساب المساحات بانفتاح من بهو مدخلٍ مزدوج الارتفاع عبر مناطق الجلوس والطعام وصولًا إلى مجلسٍ رسمي، موازنةً بين حياة عائلية مريحة واستضافةٍ راقية.",
       "homeTitle": "Architecture & Interior Design",
+      "homeTitle_ar": "العمارة والتصميم الداخلي",
       "homeDescription": "Full-scope design — from architecture and facades to warm, functional interiors.",
+      "homeDescription_ar": "تصميم متكامل النطاق — من العمارة والواجهات إلى تصميم داخلي دافئ وعملي.",
       "featured": true,
       "order": 2,
       "overview": "A warm, contemporary family villa in Al Ansab where grand scale meets intimacy. The interiors rest on a palette of natural materials — light oak, travertine, polished porcelain, and book-matched marble — softened by bouclé and velvet and warmed by sculptural brass lighting. Spaces flow openly from a welcoming entrance hall through living and dining to a formal majlis, balancing relaxed family life with refined hosting.",
+      "overview_ar": "فيلا عائلية معاصرة دافئة في الأنصب، يلتقي فيها اتساع المقياس بالحميمية. تقوم المساحات الداخلية على لوحةٍ من المواد الطبيعية — البلوط الفاتح والترافرتين والبورسلان المصقول والرخام المتناظر — تُلطّفها أقمشة البوكليه والمخمل وتُدفئها إضاءة نحاسية نحتية. تنساب المساحات بانفتاح من بهو مدخلٍ مُرحِّب عبر الجلوس والطعام إلى مجلسٍ رسمي، موازنةً بين حياة عائلية مريحة واستضافةٍ راقية.",
       "sections": [
         {
           "title": "Entrance & Hall",
+          "title_ar": "المدخل والبهو",
           "description": "The arrival sequence, setting the villa's warm and material-rich tone.",
+          "description_ar": "تسلسل الوصول الذي يرسم نبرة الفيلا الدافئة الغنية بموادها.",
           "renders": [
-            { "image": "assets/images/projects/residential/al-ansab/01.jpg", "caption": "A double-height entrance hall wrapped in light oak veneer, with a book-matched marble console, abstract art, and a bronze figure lending a calm, gallery-like quality. Large-format polished porcelain floors and a soft hand-knotted rug keep it grounded and family-friendly, while reeded-glass doors filter daylight from the rooms beyond. Warm recessed and track lighting wash the timber and stone for an inviting first impression." }
+            { "image": "assets/images/projects/residential/al-ansab/01.jpg", "caption": "A double-height entrance hall wrapped in light oak veneer, with a book-matched marble console, abstract art, and a bronze figure lending a calm, gallery-like quality. Large-format polished porcelain floors and a soft hand-knotted rug keep it grounded and family-friendly, while reeded-glass doors filter daylight from the rooms beyond. Warm recessed and track lighting wash the timber and stone for an inviting first impression.", "caption_ar": "بهو مدخلٍ مزدوج الارتفاع يكسوه قشرة البلوط الفاتح، مع طاولة من الرخام المتناظر ولوحةٍ تجريدية وتمثالٍ برونزي يمنح المكان هدوءًا أشبه بالمعارض الفنية. تحافظ أرضيات البورسلان المصقول كبيرة المقاس وسجادة يدوية ناعمة على طابعٍ متّزن مناسب للعائلة، بينما تُرشّح أبواب الزجاج المضلّع ضوء النهار من الغرف المجاورة. وتغمر الإضاءة الدافئة الغائرة والمسارية الخشبَ والحجرَ لتترك انطباعًا أوّلَ مُرحِّبًا." }
           ]
         },
         {
           "title": "Living Room",
+          "title_ar": "غرفة المعيشة",
           "description": "An open, serene living space oriented to the garden.",
+          "description_ar": "مساحة معيشة منفتحة وهادئة موجّهة نحو الحديقة.",
           "renders": [
-            { "image": "assets/images/projects/residential/al-ansab/02.jpg", "caption": "A low, modular bouclé sofa and rounded armchairs gather around organic travertine tables on a soft, line-drawn rug, framed by floor-to-ceiling sheers that diffuse the garden light. A sculptural brass linear chandelier anchors the seating, while a tonal palette of cream, sand, and warm white on polished porcelain keeps the room calm, tactile, and effortlessly elegant — natural materials chosen to feel soft underfoot and timeless to the eye." }
+            { "image": "assets/images/projects/residential/al-ansab/02.jpg", "caption": "A low, modular bouclé sofa and rounded armchairs gather around organic travertine tables on a soft, line-drawn rug, framed by floor-to-ceiling sheers that diffuse the garden light. A sculptural brass linear chandelier anchors the seating, while a tonal palette of cream, sand, and warm white on polished porcelain keeps the room calm, tactile, and effortlessly elegant — natural materials chosen to feel soft underfoot and timeless to the eye.", "caption_ar": "أريكة بوكليه منخفضة ومتعددة الوحدات وكراسٍ مستديرة تتحلّق حول طاولات ترافرتين عضوية الشكل فوق سجادة ناعمة برسومٍ خطّية، تؤطّرها ستائر شفّافة ممتدّة من الأرض إلى السقف تنشر ضوء الحديقة. تتوسّط الجلسةَ ثُريّا نحاسية خطّية نحتية، فيما تُبقي لوحة ألوان متدرّجة من الكريمي والرملي والأبيض الدافئ فوق البورسلان المصقول الغرفةَ هادئةً ومحسوسةً وأنيقةً بعفوية — مواد طبيعية اختيرت لتكون ناعمة تحت القدم وخالدة في العين." }
           ]
         },
         {
           "title": "Stairs",
+          "title_ar": "الدرج",
           "description": "A sculptural stair that doubles as the villa's centrepiece.",
+          "description_ar": "درجٌ نحتي يتحوّل إلى تحفة الفيلا المركزية.",
           "renders": [
-            { "image": "assets/images/projects/residential/al-ansab/03.jpg", "caption": "The staircase rises against a curved, fluted feature wall embedded with pin-points of warm light, framed by a slim brass-and-glass balustrade. A sculptural bonsai in a sunken garden brings nature indoors, while bouclé swivel chairs, a green-marble table, and a walnut-and-bouclé bench create a quiet lounge at its foot. Soft, layered lighting turns the whole composition into a glowing focal point after dusk — the concept of a stair conceived as sculpture rather than mere circulation." }
+            { "image": "assets/images/projects/residential/al-ansab/03.jpg", "caption": "The staircase rises against a curved, fluted feature wall embedded with pin-points of warm light, framed by a slim brass-and-glass balustrade. A sculptural bonsai in a sunken garden brings nature indoors, while bouclé swivel chairs, a green-marble table, and a walnut-and-bouclé bench create a quiet lounge at its foot. Soft, layered lighting turns the whole composition into a glowing focal point after dusk — the concept of a stair conceived as sculpture rather than mere circulation.", "caption_ar": "يرتفع الدرج أمام جدارٍ مميّز منحنٍ ومضلّع مرصّع بنقاطٍ من الضوء الدافئ، يؤطّره درابزين رفيع من النحاس والزجاج. تجلب شجرة بونساي نحتية في حديقةٍ غائرة الطبيعةَ إلى الداخل، فيما تُشكّل كراسٍ دوّارة من البوكليه وطاولة من الرخام الأخضر ومقعد من الجوز والبوكليه جلسةً هادئة عند قدمه. وتحوّل الإضاءة الناعمة المتدرّجة التكوينَ بأكمله إلى نقطة جذبٍ متوهّجة بعد الغسق — وفق مفهومٍ يرى الدرج نحتًا لا مجرد ممرٍّ للحركة." }
           ]
         },
         {
           "title": "Dining",
+          "title_ar": "غرفة الطعام",
           "description": "A refined dining room for everyday meals and gatherings.",
+          "description_ar": "غرفة طعام راقية للوجبات اليومية والتجمّعات.",
           "renders": [
-            { "image": "assets/images/projects/residential/al-ansab/04.jpg", "caption": "An oval travertine table paired with cognac-leather chairs on dark timber frames, beneath a cascading spiral chandelier." },
-            { "image": "assets/images/projects/residential/al-ansab/05.jpg", "caption": "Seen across the family table, the dining room layers light oak paneling with backlit display niches, reeded-glass screens, and a statement fringe chandelier in brushed brass. Warm leather, stone, and timber sit against polished porcelain floors, while concealed cove and track lighting keep the mood soft — natural, tactile materials composed for both quiet family dinners and larger gatherings." }
+            { "image": "assets/images/projects/residential/al-ansab/04.jpg", "caption": "An oval travertine table paired with cognac-leather chairs on dark timber frames, beneath a cascading spiral chandelier.", "caption_ar": "طاولة ترافرتين بيضوية مع كراسٍ من الجلد بلون الكونياك على هياكل خشبية داكنة، تحت ثُريّا حلزونية متدلّية." },
+            { "image": "assets/images/projects/residential/al-ansab/05.jpg", "caption": "Seen across the family table, the dining room layers light oak paneling with backlit display niches, reeded-glass screens, and a statement fringe chandelier in brushed brass. Warm leather, stone, and timber sit against polished porcelain floors, while concealed cove and track lighting keep the mood soft — natural, tactile materials composed for both quiet family dinners and larger gatherings.", "caption_ar": "تُرى غرفة الطعام عبر طاولة العائلة وهي تُراكِم ألواح البلوط الفاتح مع كوّاتٍ عرضية مُضاءة من الخلف وحواجز من الزجاج المضلّع وثُريّا مميّزة بأهدابٍ من النحاس المصقول. يجتمع الجلد والحجر والخشب الدافئ فوق أرضيات البورسلان المصقول، بينما تُبقي الإضاءة الخفية في الكورنيش والمسارية الأجواءَ ناعمة — مواد طبيعية محسوسة صِيغت لتلائم عشاءات العائلة الهادئة والتجمّعات الأكبر معًا." }
           ]
         },
         {
           "title": "Majlis",
+          "title_ar": "المجلس",
           "description": "The formal majlis, the villa's most ceremonial space for receiving guests.",
+          "description_ar": "المجلس الرسمي، أكثر مساحات الفيلا احتفاءً لاستقبال الضيوف.",
           "renders": [
-            { "image": "assets/images/projects/residential/al-ansab/06.jpg", "caption": "A symmetrical majlis with quilted white sofas, rust-velvet armchairs, and green-marble tables arranged for conversation and hospitality." },
-            { "image": "assets/images/projects/residential/al-ansab/07.jpg", "caption": "The majlis is the villa's grandest gesture — book-matched marble with gold veining sweeps across the floor beneath a dramatic cascading brass chandelier. Quilted sofas and rust-velvet armchairs sit within light oak paneling and warm backlit niches, framed by sheer-draped glazing, while magnetic track lighting and vertical wall sconces give the room a refined, hotel-like sense of occasion. The concept: a ceremonial heart that elevates the Omani tradition of hosting through rich, natural materials and theatrical light." }
+            { "image": "assets/images/projects/residential/al-ansab/06.jpg", "caption": "A symmetrical majlis with quilted white sofas, rust-velvet armchairs, and green-marble tables arranged for conversation and hospitality.", "caption_ar": "مجلس متناظر بأرائك بيضاء مبطّنة وكراسٍ من المخمل بلون الصدأ وطاولات من الرخام الأخضر، مرتّبة للحديث والضيافة." },
+            { "image": "assets/images/projects/residential/al-ansab/07.jpg", "caption": "The majlis is the villa's grandest gesture — book-matched marble with gold veining sweeps across the floor beneath a dramatic cascading brass chandelier. Quilted sofas and rust-velvet armchairs sit within light oak paneling and warm backlit niches, framed by sheer-draped glazing, while magnetic track lighting and vertical wall sconces give the room a refined, hotel-like sense of occasion. The concept: a ceremonial heart that elevates the Omani tradition of hosting through rich, natural materials and theatrical light.", "caption_ar": "المجلس هو أعظم لمسات الفيلا — يمتدّ على الأرض رخامٌ متناظر بعروقٍ ذهبية تحت ثُريّا نحاسية متدلّية آسرة. تجلس الأرائك المبطّنة وكراسي المخمل بلون الصدأ ضمن ألواح البلوط الفاتح وكوّاتٍ دافئة مُضاءة من الخلف، تؤطّرها واجهات زجاجية بستائر شفّافة، بينما تمنح الإضاءة المسارية المغناطيسية والإضاءات الجدارية العمودية الغرفةَ حسًّا راقيًا بالمناسبة أشبه بالفنادق. والمفهوم: قلبٌ احتفائي يُعلي تقليد الضيافة العُماني عبر مواد طبيعية غنية وضوءٍ مسرحي." }
           ]
         },
         {
           "title": "Garden & Pool",
+          "title_ar": "الحديقة والمسبح",
           "description": "The villa's outdoor realm — a landscaped courtyard, lap pool, and shaded terraces designed for the Omani climate.",
+          "description_ar": "فضاء الفيلا الخارجي — فناء منسّق ومسبح سباحة وشرفات مظلّلة صُمّمت لتلائم المناخ العُماني.",
           "renders": [
-            { "image": "assets/images/projects/residential/al-ansab/08.jpg", "caption": "A landscaped courtyard frames a linear lap pool, with mature palms and layered planting set against crisp white volumes. Large-format stone paving — striped with bands of lawn — runs from a covered terrace to the water's edge, durable and cool underfoot in the Omani climate." },
-            { "image": "assets/images/projects/residential/al-ansab/09.jpg", "caption": "A timber-battened pergola shades an outdoor lounge of woven seating around a sculptural table, with an olive tree in a raised planter. The slatted oak filters harsh sun while keeping the terrace open and breezy, extending the living spaces outdoors." },
-            { "image": "assets/images/projects/residential/al-ansab/10.jpg", "caption": "Sun loungers and a parasol line the poolside, screened by a planted boundary wall and palms for privacy. Honed stone paving and the reflective pool keep the courtyard calm and cool — an everyday retreat within the home." }
+            { "image": "assets/images/projects/residential/al-ansab/08.jpg", "caption": "A landscaped courtyard frames a linear lap pool, with mature palms and layered planting set against crisp white volumes. Large-format stone paving — striped with bands of lawn — runs from a covered terrace to the water's edge, durable and cool underfoot in the Omani climate.", "caption_ar": "فناء منسّق يؤطّر مسبح سباحةٍ خطّيًا، مع نخيلٍ وارف وزراعةٍ متدرّجة أمام كتلٍ بيضاء صافية. يمتدّ بلاطٌ حجري كبير المقاس — تتخلّله أشرطة من العشب — من شرفةٍ مُسقوفة إلى حافة الماء، متينٌ وبارد تحت القدم في المناخ العُماني." },
+            { "image": "assets/images/projects/residential/al-ansab/09.jpg", "caption": "A timber-battened pergola shades an outdoor lounge of woven seating around a sculptural table, with an olive tree in a raised planter. The slatted oak filters harsh sun while keeping the terrace open and breezy, extending the living spaces outdoors.", "caption_ar": "تُظلّل عريشة بشرائح خشبية جلسةً خارجية من مقاعد منسوجة حول طاولةٍ نحتية، مع شجرة زيتون في حوضٍ مرتفع. تُرشّح شرائح البلوط الشمس الحارقة وتُبقي الشرفة منفتحة ومنعشة، ممتدّةً بمساحات المعيشة إلى الخارج." },
+            { "image": "assets/images/projects/residential/al-ansab/10.jpg", "caption": "Sun loungers and a parasol line the poolside, screened by a planted boundary wall and palms for privacy. Honed stone paving and the reflective pool keep the courtyard calm and cool — an everyday retreat within the home.", "caption_ar": "تصطفّ كراسي الاسترخاء ومظلّة عند حافة المسبح، يحجبها جدار حدودي مزروع ونخيلٌ للخصوصية. يُبقي البلاط الحجري المصقول والمسبح العاكس الفناءَ هادئًا وباردًا — ملاذٌ يومي داخل المنزل." }
           ]
         }
       ]
@@ -84,60 +111,77 @@
       "id": "residential-muscat-hills",
       "collection": "residential",
       "title": "Muscat Hills Apartment",
+      "title_ar": "شقة مرتفعات مسقط",
       "category": "Interior Design",
+      "category_ar": "التصميم الداخلي",
       "location": "Muscat Hills, Muscat — Oman",
+      "location_ar": "مرتفعات مسقط، مسقط — عُمان",
       "image": "assets/images/projects/residential/muscat-hills/03.jpg",
       "description": "A compact Muscat Hills apartment designed for efficient, optimised living — integrated storage, multi-functional joinery, and a warm, tailored material palette.",
+      "description_ar": "شقة مدمجة في مرتفعات مسقط صُمّمت لحياةٍ عملية مُحكَمة — تخزين مدمج ونجارة متعددة الوظائف ولوحة مواد دافئة مُفصّلة بعناية.",
       "featured": false,
       "order": 3,
       "overview": "A compact apartment in Muscat Hills, planned to make the most of a limited footprint. Every zone earns its place through efficient layouts, integrated storage, and multi-functional joinery — an open living and dining flow in warm taupe and dark herringbone wood, a tailored, moody master suite, and a compact bathroom and balcony that feel generous despite their size.",
+      "overview_ar": "شقة مدمجة في مرتفعات مسقط، خُطّطت للاستفادة القصوى من مساحةٍ محدودة. تستحقّ كل منطقة مكانها عبر توزيعاتٍ عملية وتخزينٍ مدمج ونجارة متعددة الوظائف — انسياب مفتوح للمعيشة والطعام بلون التوب الدافئ وخشبٍ داكن بنمط عظم السمكة، وجناح رئيسي مُفصّل ذي طابعٍ هادئ، وحمّام وشرفة مدمجَين يبدوان رحبَين رغم صِغرهما.",
       "sections": [
         {
           "title": "Entrance",
+          "title_ar": "المدخل",
           "description": "A welcoming, space-efficient entry.",
+          "description_ar": "مدخلٌ مُرحِّب يستثمر المساحة بكفاءة.",
           "renders": [
-            { "image": "assets/images/projects/residential/muscat-hills/01.jpg", "caption": "A built-in bench with concealed shoe storage and a warm oak top doubles as a seat for putting on shoes, set against a fluted white panel and a vertical garden and washed in soft linear light — a compact, practical welcome." }
+            { "image": "assets/images/projects/residential/muscat-hills/01.jpg", "caption": "A built-in bench with concealed shoe storage and a warm oak top doubles as a seat for putting on shoes, set against a fluted white panel and a vertical garden and washed in soft linear light — a compact, practical welcome.", "caption_ar": "مقعد مدمج بتخزينٍ خفي للأحذية وسطحٍ من البلوط الدافئ يصلح أيضًا للجلوس عند ارتداء الحذاء، أمام لوحٍ أبيض مضلّع وحديقةٍ عمودية، تغمره إضاءة خطّية ناعمة — ترحيبٌ مدمج وعملي." }
           ]
         },
         {
           "title": "Dining",
+          "title_ar": "الطعام",
           "description": "A dining zone within the open plan.",
+          "description_ar": "منطقة طعام ضمن المخطط المفتوح.",
           "renders": [
-            { "image": "assets/images/projects/residential/muscat-hills/02.jpg", "caption": "The dining area sits inside the open living plan — a round table with soft taupe chairs beside the window, keeping circulation easy and the small footprint feeling open and generous." }
+            { "image": "assets/images/projects/residential/muscat-hills/02.jpg", "caption": "The dining area sits inside the open living plan — a round table with soft taupe chairs beside the window, keeping circulation easy and the small footprint feeling open and generous.", "caption_ar": "تقع منطقة الطعام داخل مخطط المعيشة المفتوح — طاولة مستديرة بكراسٍ ناعمة بلون التوب بجانب النافذة، تُبقي الحركة سلسة والمساحة الصغيرة منفتحةً ورحبة." }
           ]
         },
         {
           "title": "Living Room",
+          "title_ar": "غرفة المعيشة",
           "description": "A cosy, uncluttered living zone.",
+          "description_ar": "منطقة معيشة دافئة وخالية من الفوضى.",
           "renders": [
-            { "image": "assets/images/projects/residential/muscat-hills/03.jpg", "caption": "A low, modular L-shaped taupe sofa is tucked into a backlit recess around a small walnut coffee table — a space-saving arrangement that keeps the open plan calm and uncluttered." },
-            { "image": "assets/images/projects/residential/muscat-hills/04.jpg", "caption": "The media wall pairs a slim wall-mounted TV on a warm microcement panel with a floating storage console below; beside it, a warm wood-lined niche with trailing greenery softens the composition and conceals services." }
+            { "image": "assets/images/projects/residential/muscat-hills/03.jpg", "caption": "A low, modular L-shaped taupe sofa is tucked into a backlit recess around a small walnut coffee table — a space-saving arrangement that keeps the open plan calm and uncluttered.", "caption_ar": "أريكة منخفضة متعددة الوحدات على شكل حرف L بلون التوب تنزوي في كوّةٍ مُضاءة من الخلف حول طاولة قهوةٍ صغيرة من الجوز — ترتيبٌ موفّر للمساحة يُبقي المخطط المفتوح هادئًا ومرتّبًا." },
+            { "image": "assets/images/projects/residential/muscat-hills/04.jpg", "caption": "The media wall pairs a slim wall-mounted TV on a warm microcement panel with a floating storage console below; beside it, a warm wood-lined niche with trailing greenery softens the composition and conceals services.", "caption_ar": "يجمع جدار الوسائط بين تلفازٍ نحيل مُعلّق على لوحٍ دافئ من الميكروسمنت وطاولة تخزينٍ طافية أسفله؛ وإلى جانبه كوّة مبطّنة بالخشب الدافئ بنباتاتٍ متدلّية تُلطّف التكوين وتُخفي الخدمات." }
           ]
         },
         {
           "title": "Bedroom",
+          "title_ar": "غرفة النوم",
           "description": "A tailored, moody master suite.",
+          "description_ar": "جناح رئيسي مُفصّل ذو طابعٍ هادئ غامق.",
           "renders": [
-            { "image": "assets/images/projects/residential/muscat-hills/05.jpg", "caption": "The bed sits against a fluted headboard wall layered in grey and warm timber, flanked by chrome sphere pendants and black-gloss floating nightstands — a tailored, masculine composition." },
-            { "image": "assets/images/projects/residential/muscat-hills/06.jpg", "caption": "A smoked-glass sliding wardrobe with internal LED lighting lines one wall, keeping clothing storage generous yet visually quiet in the compact room." },
-            { "image": "assets/images/projects/residential/muscat-hills/07.jpg", "caption": "Opposite the bed, a slim TV floats on a warm-lit console while a sculptural red lounge chair adds a bold accent and a quiet reading corner by the window." },
-            { "image": "assets/images/projects/residential/muscat-hills/08.jpg", "caption": "A bedside detail — a black-gloss nightstand on a slim chrome frame, a sphere reading light, and playful figurines against the fluted headboard." },
-            { "image": "assets/images/projects/residential/muscat-hills/09.jpg", "caption": "A floating black dressing table with a large mirror and adjustable reading lights carves a compact vanity into the bedroom wall, using every surface efficiently." },
-            { "image": "assets/images/projects/residential/muscat-hills/10.jpg", "caption": "The red lounge chair and a tulip side table form a sunlit reading spot beside the floor-to-ceiling glazing." }
+            { "image": "assets/images/projects/residential/muscat-hills/05.jpg", "caption": "The bed sits against a fluted headboard wall layered in grey and warm timber, flanked by chrome sphere pendants and black-gloss floating nightstands — a tailored, masculine composition.", "caption_ar": "يستند السرير إلى جدار مسند مضلّع متدرّج بالرمادي والخشب الدافئ، تكتنفه معلّقات كرويّة من الكروم وطاولات جانبية طافية لمّاعة سوداء — تكوينٌ مُفصّل ذو طابعٍ رجولي." },
+            { "image": "assets/images/projects/residential/muscat-hills/06.jpg", "caption": "A smoked-glass sliding wardrobe with internal LED lighting lines one wall, keeping clothing storage generous yet visually quiet in the compact room.", "caption_ar": "خزانة ملابس منزلقة من الزجاج المدخّن بإضاءة LED داخلية تكسو أحد الجدران، فتُبقي تخزين الملابس وفيرًا وهادئًا بصريًا في الغرفة المدمجة." },
+            { "image": "assets/images/projects/residential/muscat-hills/07.jpg", "caption": "Opposite the bed, a slim TV floats on a warm-lit console while a sculptural red lounge chair adds a bold accent and a quiet reading corner by the window.", "caption_ar": "قبالة السرير، يطفو تلفازٌ نحيل على طاولةٍ ذات إضاءة دافئة، فيما يضيف كرسي استرخاءٍ أحمر نحتي لمسةً جريئة وركن قراءةٍ هادئًا عند النافذة." },
+            { "image": "assets/images/projects/residential/muscat-hills/08.jpg", "caption": "A bedside detail — a black-gloss nightstand on a slim chrome frame, a sphere reading light, and playful figurines against the fluted headboard.", "caption_ar": "تفصيلٌ بجانب السرير — طاولة جانبية لمّاعة سوداء على هيكلٍ نحيل من الكروم، ومصباح قراءةٍ كروي، وتماثيل صغيرة مرحة أمام المسند المضلّع." },
+            { "image": "assets/images/projects/residential/muscat-hills/09.jpg", "caption": "A floating black dressing table with a large mirror and adjustable reading lights carves a compact vanity into the bedroom wall, using every surface efficiently.", "caption_ar": "طاولة زينةٍ سوداء طافية بمرآةٍ كبيرة وإضاءات قراءةٍ قابلة للتعديل تنحت ركنًا مدمجًا للزينة في جدار الغرفة، مستثمرةً كل سطحٍ بكفاءة." },
+            { "image": "assets/images/projects/residential/muscat-hills/10.jpg", "caption": "The red lounge chair and a tulip side table form a sunlit reading spot beside the floor-to-ceiling glazing.", "caption_ar": "يُشكّل كرسي الاسترخاء الأحمر وطاولة جانبية على هيئة زهرة التوليب ركن قراءةٍ تغمره الشمس بجانب الواجهة الزجاجية الممتدّة من الأرض إلى السقف." }
           ]
         },
         {
           "title": "Bathroom",
+          "title_ar": "الحمّام",
           "description": "A compact bathroom organised for efficiency.",
+          "description_ar": "حمّام مدمج منظّم بكفاءة.",
           "renders": [
-            { "image": "assets/images/projects/residential/muscat-hills/11.jpg", "caption": "A walk-in shower with recessed niches, a wall-hung toilet on a stone feature panel, and a floating fluted-wood vanity with a stone top, brass fittings, and a backlit round mirror — warm materials and smart planning in a small footprint." }
+            { "image": "assets/images/projects/residential/muscat-hills/11.jpg", "caption": "A walk-in shower with recessed niches, a wall-hung toilet on a stone feature panel, and a floating fluted-wood vanity with a stone top, brass fittings, and a backlit round mirror — warm materials and smart planning in a small footprint.", "caption_ar": "دُش بمدخلٍ مباشر بكوّاتٍ غائرة، ومرحاضٌ معلّق على لوحٍ حجري مميّز، وطاولة غسيلٍ طافية من الخشب المضلّع بسطحٍ حجري وتجهيزاتٍ نحاسية ومرآةٍ مستديرة مُضاءة من الخلف — مواد دافئة وتخطيطٌ ذكي في مساحةٍ صغيرة." }
           ]
         },
         {
           "title": "Balcony",
+          "title_ar": "الشرفة",
           "description": "A small outdoor retreat.",
+          "description_ar": "ملاذٌ خارجي صغير.",
           "renders": [
-            { "image": "assets/images/projects/residential/muscat-hills/12.jpg", "caption": "A small balcony turned into a green retreat — artificial turf, potted planting, a woven accent chair, and a warm timber-slatted pergola framing the Muscat Hills view." }
+            { "image": "assets/images/projects/residential/muscat-hills/12.jpg", "caption": "A small balcony turned into a green retreat — artificial turf, potted planting, a woven accent chair, and a warm timber-slatted pergola framing the Muscat Hills view.", "caption_ar": "شرفة صغيرة تحوّلت إلى ملاذٍ أخضر — عشبٌ صناعي ونباتاتٌ في أصص وكرسي منسوج مميّز وعريشة بشرائح خشبية دافئة تؤطّر إطلالة مرتفعات مسقط." }
           ]
         }
       ]
@@ -146,45 +190,58 @@
       "id": "office-al-ozaiba",
       "collection": "office",
       "title": "Al-Ozaiba Office",
+      "title_ar": "مكتب العذيبة",
       "category": "Interior Design",
+      "category_ar": "التصميم الداخلي",
       "location": "Al-Ozaiba, Muscat — Oman",
+      "location_ar": "العذيبة، مسقط — عُمان",
       "image": "assets/images/projects/office-workspace/al-ozaiba/02.jpg",
       "description": "A sleek, modern headquarters for a commercial trading company in Al-Ozaiba — a refined monochrome palette of black, white and grey, glass-walled offices, backlit display niches, and soft velvet seating threaded with greenery.",
+      "description_ar": "مقرٌّ عصري أنيق لشركة تجارية في العذيبة — لوحة أحادية راقية من الأسود والأبيض والرمادي، ومكاتب بجدرانٍ زجاجية، وكوّات عرضٍ مُضاءة من الخلف، ومقاعد مخمل ناعمة تتخلّلها المساحات الخضراء.",
       "featured": false,
       "order": 2,
       "overview": "An office and workspace design for a commercial trading company at its Al-Ozaiba location, in a refined modern language. A disciplined palette of black, white and grey is paired with slim black-framed glass partitions, backlit display niches, recessed linear lighting, and soft velvet furniture — with greenery threading through executive offices, meeting rooms, and bright open work zones.",
+      "overview_ar": "تصميم مكتبٍ ومساحة عملٍ لشركة تجارية في موقعها بالعذيبة، بلغةٍ عصرية راقية. تقترن لوحة منضبطة من الأسود والأبيض والرمادي بقواطع زجاجية بإطاراتٍ سوداء نحيلة، وكوّات عرضٍ مُضاءة من الخلف، وإضاءة خطّية غائرة، وأثاثٍ مخملي ناعم — مع مساحاتٍ خضراء تتخلّل المكاتب التنفيذية وغرف الاجتماعات ومناطق العمل المفتوحة المُشرقة.",
       "sections": [
         {
           "title": "Management Office",
+          "title_ar": "مكتب الإدارة",
           "description": "The leadership office — glazed in slim black steel and lined with a full-height white lacquer shelving wall, private and calm yet visually connected to the workspace beyond.",
+          "description_ar": "مكتب القيادة — محاطٌ بزجاجٍ بإطارات فولاذية سوداء نحيلة ومبطّن بجدار رفوفٍ أبيض لمّاع بكامل الارتفاع، خاصٌّ وهادئ لكنه متّصل بصريًا بمساحة العمل خلفه.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/01.jpg", "caption": "The leadership office — a sculptural black-steel desk against a full-height white lacquer shelving wall." },
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/02.jpg", "caption": "Seen through its slim black-framed glass wall, the management office balances transparency with privacy. A sculptural black-steel desk sits over large-format grey porcelain tile, wrapped by a full-height white matte-lacquer shelving wall whose warm backlit niches — set in a rhythm of large and small voids — display objects, while flush push-to-open storage hides clutter behind a calm, gallery-like backdrop. Rounded grey-velvet seating adds comfort for informal discussion, recessed linear LED and concealed cove lighting keep the ceiling clean, and slim linear slot diffusers integrate the air-conditioning invisibly into the joinery lines — essential for steady comfort in Muscat's climate." }
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/01.jpg", "caption": "The leadership office — a sculptural black-steel desk against a full-height white lacquer shelving wall.", "caption_ar": "مكتب القيادة — مكتبٌ نحتي من الفولاذ الأسود أمام جدار رفوفٍ أبيض لمّاع بكامل الارتفاع." },
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/02.jpg", "caption": "Seen through its slim black-framed glass wall, the management office balances transparency with privacy. A sculptural black-steel desk sits over large-format grey porcelain tile, wrapped by a full-height white matte-lacquer shelving wall whose warm backlit niches — set in a rhythm of large and small voids — display objects, while flush push-to-open storage hides clutter behind a calm, gallery-like backdrop. Rounded grey-velvet seating adds comfort for informal discussion, recessed linear LED and concealed cove lighting keep the ceiling clean, and slim linear slot diffusers integrate the air-conditioning invisibly into the joinery lines — essential for steady comfort in Muscat's climate.", "caption_ar": "يُرى مكتب الإدارة عبر جداره الزجاجي ذي الإطار الأسود النحيل، موازنًا بين الشفافية والخصوصية. يستقرّ مكتبٌ نحتي من الفولاذ الأسود فوق بلاط بورسلان رمادي كبير المقاس، يُحيط به جدار رفوفٍ أبيض مطفأ اللمعان بكامل الارتفاع، تعرض كوّاته الدافئة المُضاءة من الخلف — الموزّعة بإيقاعٍ من الفراغات الكبيرة والصغيرة — مقتنياتٍ، بينما يُخفي تخزينٌ بفتحٍ بالضغط الفوضى خلف خلفيةٍ هادئة أشبه بالمعارض. تضيف جلسة من المخمل الرمادي المستدير راحةً للنقاش غير الرسمي، وتُبقي إضاءة LED الخطّية الغائرة وإضاءة الكورنيش الخفية السقفَ نظيفًا، وتدمج فتحات تهويةٍ خطّية نحيلة التكييفَ بخفاءٍ ضمن خطوط النجارة — وهو أمرٌ أساسي لراحةٍ ثابتة في مناخ مسقط." }
           ]
         },
         {
           "title": "Conference Room",
+          "title_ar": "قاعة الاجتماعات",
           "description": "The conference room — the project's most dramatic space, where sweeping parallel runs of linear light give a long meeting table scale and movement, framed by the signature backlit shelving and a dark glazed wall.",
+          "description_ar": "قاعة الاجتماعات — أكثر مساحات المشروع تأثيرًا، حيث تمنح خطوط الإضاءة المتوازية الممتدّة طاولةَ الاجتماع الطويلة مقياسًا وحركة، يؤطّرها جدار الرفوف المميّز المُضاء من الخلف وجدار زجاجي داكن.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/04.jpg", "caption": "A long meeting table facing a presentation wall, framed by the backlit white shelving." },
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/05.jpg", "caption": "The conference room is the project's most dramatic space, where multiple parallel runs of recessed linear light sweep across the ceiling toward a dark glazed wall, giving scale and a sense of movement. A long table seats the full team, framed by grey-velvet chairs and a wall-mounted screen, with the white display shelving returning behind as a backlit backdrop whose niches give the room depth. The dark glass partition provides acoustic and visual separation from the open office without losing openness, and linear air diffusers integrated into the same lighting lines keep climate control even and quiet for longer meetings — all in the disciplined palette of black steel, white lacquer, grey tile and velvet." }
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/04.jpg", "caption": "A long meeting table facing a presentation wall, framed by the backlit white shelving.", "caption_ar": "طاولة اجتماعٍ طويلة تواجه جدار عرضٍ تقديمي، يؤطّرها جدار الرفوف الأبيض المُضاء من الخلف." },
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/05.jpg", "caption": "The conference room is the project's most dramatic space, where multiple parallel runs of recessed linear light sweep across the ceiling toward a dark glazed wall, giving scale and a sense of movement. A long table seats the full team, framed by grey-velvet chairs and a wall-mounted screen, with the white display shelving returning behind as a backlit backdrop whose niches give the room depth. The dark glass partition provides acoustic and visual separation from the open office without losing openness, and linear air diffusers integrated into the same lighting lines keep climate control even and quiet for longer meetings — all in the disciplined palette of black steel, white lacquer, grey tile and velvet.", "caption_ar": "قاعة الاجتماعات أكثر مساحات المشروع تأثيرًا، حيث تمتدّ خطوطٌ متوازية متعددة من الإضاءة الخطّية الغائرة عبر السقف نحو جدارٍ زجاجي داكن، فتمنح المكان مقياسًا وإحساسًا بالحركة. تتّسع طاولة طويلة للفريق بأكمله، تؤطّرها كراسي المخمل الرمادي وشاشة معلّقة على الجدار، فيما يعود جدار الرفوف الأبيض خلفها كخلفيةٍ مُضاءة تمنح كوّاتُها الغرفةَ عمقًا. ويوفّر القاطع الزجاجي الداكن فصلًا صوتيًا وبصريًا عن المكتب المفتوح دون فقدان الانفتاح، وتُبقي فتحات التهوية الخطّية المدمجة في خطوط الإضاءة نفسها التكييفَ متوازنًا وهادئًا للاجتماعات الأطول — وكل ذلك ضمن اللوحة المنضبطة من الفولاذ الأسود واللاكيه الأبيض والبلاط الرمادي والمخمل." }
           ]
         },
         {
           "title": "Workstations",
+          "title_ar": "محطّات العمل",
           "description": "The open office area at the heart of the plan — workstations laid out in facing rows around a floating green spine, with brighter clusters opening to floor-to-ceiling glazing and city views.",
+          "description_ar": "منطقة المكتب المفتوح في قلب المخطط — محطّات عملٍ موزّعة في صفوفٍ متقابلة حول عمودٍ أخضر طافٍ، مع تجمّعاتٍ أكثر إشراقًا تنفتح على واجهاتٍ زجاجية ممتدّة وإطلالاتٍ على المدينة.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/03.jpg", "caption": "The open workspace — white desks with slim black-steel frames and iMacs beneath a floating green planter." },
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/06.jpg", "caption": "Workstations in facing pairs, kept crisp and ordered in white, black and grey." },
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/07.jpg", "caption": "A brighter cluster opening to floor-to-ceiling glazing with city views." },
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/08.jpg", "caption": "Across the open office, clean white desks with slim black-steel frames pair with grey-velvet task chairs in two facing rows. Floating planter boxes threaded with linear light bring greenery in and visually lower the tall ceiling, while white lacquer storage and warm-lit niches keep the floor uncluttered over large-format grey tile. Recessed linear lighting gives glare-free task light, concealed slot diffusers deliver even airflow, and the brighter clusters open to floor-to-ceiling glazing and city views — calm, minimal and modern throughout." }
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/03.jpg", "caption": "The open workspace — white desks with slim black-steel frames and iMacs beneath a floating green planter.", "caption_ar": "مساحة العمل المفتوحة — مكاتب بيضاء بهياكل فولاذية سوداء نحيلة وأجهزة iMac تحت حوض نباتاتٍ أخضر طافٍ." },
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/06.jpg", "caption": "Workstations in facing pairs, kept crisp and ordered in white, black and grey.", "caption_ar": "محطّات عملٍ في أزواجٍ متقابلة، نظيفة ومرتّبة بالأبيض والأسود والرمادي." },
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/07.jpg", "caption": "A brighter cluster opening to floor-to-ceiling glazing with city views.", "caption_ar": "تجمّعٌ أكثر إشراقًا ينفتح على واجهةٍ زجاجية ممتدّة من الأرض إلى السقف بإطلالةٍ على المدينة." },
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/08.jpg", "caption": "Across the open office, clean white desks with slim black-steel frames pair with grey-velvet task chairs in two facing rows. Floating planter boxes threaded with linear light bring greenery in and visually lower the tall ceiling, while white lacquer storage and warm-lit niches keep the floor uncluttered over large-format grey tile. Recessed linear lighting gives glare-free task light, concealed slot diffusers deliver even airflow, and the brighter clusters open to floor-to-ceiling glazing and city views — calm, minimal and modern throughout.", "caption_ar": "عبر المكتب المفتوح، تقترن مكاتب بيضاء نظيفة بهياكل فولاذية سوداء نحيلة بكراسي عملٍ من المخمل الرمادي في صفّين متقابلين. تجلب صناديق نباتاتٍ طافية تتخلّلها إضاءة خطّية المساحاتِ الخضراءَ وتُخفّض السقف العالي بصريًا، بينما تُبقي خزائن اللاكيه الأبيض والكوّات الدافئة الإضاءة الأرضيةَ خاليةً من الفوضى فوق بلاطٍ رمادي كبير المقاس. تمنح الإضاءة الخطّية الغائرة ضوء عملٍ خاليًا من الوهج، وتوفّر فتحات التهوية الخفية تدفّقًا متوازنًا للهواء، وتنفتح التجمّعات الأكثر إشراقًا على واجهاتٍ زجاجية وإطلالاتٍ على المدينة — هدوءٌ وبساطةٌ وحداثة في كل مكان." }
           ]
         },
         {
           "title": "Floor Plan",
+          "title_ar": "المخطط الأفقي",
           "description": "Four clear zones within a compact 8.65 × 8.12 m footprint — private rooms to the left, storage across the top, and the open office filling the larger right-hand volume.",
+          "description_ar": "أربع مناطق واضحة ضمن مساحةٍ مدمجة قياسها ٨٫٦٥ × ٨٫١٢ م — غرفٌ خاصة إلى اليسار، وتخزينٌ على طول الأعلى، ومكتبٌ مفتوح يملأ الكتلة الأكبر إلى اليمين.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/al-ozaiba/00.png", "fit": "contain", "caption": "The plan organises the office into four zones within a compact 8.65 × 8.12 m footprint — private rooms to the left, storage across the top, and the open office filling the larger right-hand volume, with eight workstations in two facing rows around a central planted spine.<br><br>1. Management Office — a private leadership office with lounge seating for informal meetings.<br>2. Conference Room — a formal meeting room for the full team, with a display wall and linear lighting.<br>3. Open Random Storage — a flexible storage strip for filing and equipment, kept out of sight.<br>4. Open Office Area — the main team workspace, with eight workstations arranged around the green spine." }
+            { "image": "assets/images/projects/office-workspace/al-ozaiba/00.png", "fit": "contain", "caption": "The plan organises the office into four zones within a compact 8.65 × 8.12 m footprint — private rooms to the left, storage across the top, and the open office filling the larger right-hand volume, with eight workstations in two facing rows around a central planted spine.<br><br>1. Management Office — a private leadership office with lounge seating for informal meetings.<br>2. Conference Room — a formal meeting room for the full team, with a display wall and linear lighting.<br>3. Open Random Storage — a flexible storage strip for filing and equipment, kept out of sight.<br>4. Open Office Area — the main team workspace, with eight workstations arranged around the green spine.", "caption_ar": "يُنظّم المخطط المكتب في أربع مناطق ضمن مساحةٍ مدمجة قياسها ٨٫٦٥ × ٨٫١٢ م — غرفٌ خاصة إلى اليسار، وتخزينٌ على طول الأعلى، ومكتبٌ مفتوح يملأ الكتلة الأكبر إلى اليمين، مع ثماني محطّات عملٍ في صفّين متقابلين حول عمودٍ أخضر مركزي.<br><br>١. مكتب الإدارة — مكتب قيادةٍ خاص بجلسةٍ مريحة للاجتماعات غير الرسمية.<br>٢. قاعة الاجتماعات — غرفة اجتماعاتٍ رسمية للفريق بأكمله، بجدار عرضٍ وإضاءة خطّية.<br>٣. تخزينٌ مفتوح مرن — شريط تخزينٍ مرن للملفات والمعدّات، بعيدٌ عن الأنظار.<br>٤. منطقة المكتب المفتوح — مساحة عمل الفريق الرئيسية، بثماني محطّات عملٍ مرتّبة حول العمود الأخضر." }
           ]
         }
       ]
@@ -193,55 +250,72 @@
       "id": "office-madinat",
       "collection": "office",
       "title": "Madinat Sultan Qaboos Office",
+      "title_ar": "مكتب مدينة السلطان قابوس",
       "category": "Interior Design",
+      "category_ar": "التصميم الداخلي",
       "location": "Madinat Sultan Qaboos, Muscat — Oman",
+      "location_ar": "مدينة السلطان قابوس، مسقط — عُمان",
       "image": "assets/images/projects/office-workspace/madineh/03.jpg",
       "description": "A second industrial headquarters for MERJAS — black-steel glazing, metal-grid ceilings, and freight-inspired details across reception, management, and open work.",
+      "description_ar": "مقرٌّ صناعي ثانٍ لشركة مرجاس — زجاجٌ بإطارات فولاذية سوداء، وأسقفٌ بشبكاتٍ معدنية، وتفاصيل مستوحاة من عالم الشحن في الاستقبال والإدارة ومناطق العمل المفتوحة.",
       "featured": false,
       "order": 3,
       "overview": "An office and workspace design for MERJAS, a cargo, shipping and import–export company, at its Madinat Sultan Qaboos location. It carries the same industrial identity as the Al-Ozaiba headquarters — black-steel glazing, exposed metal-grid ceilings, and freight-inspired details — across reception, open work, management, and a coffee bar.",
+      "overview_ar": "تصميم مكتبٍ ومساحة عملٍ لشركة مرجاس، المتخصّصة في الشحن والنقل والاستيراد والتصدير، في موقعها بمدينة السلطان قابوس. يحمل الهويةَ الصناعية ذاتها لمقرّ العذيبة — زجاجٌ بإطارات فولاذية سوداء، وأسقفٌ مكشوفة بشبكاتٍ معدنية، وتفاصيل مستوحاة من عالم الشحن — عبر الاستقبال والعمل المفتوح والإدارة وركن القهوة.",
       "sections": [
         {
           "title": "Reception & Lounge",
+          "title_ar": "الاستقبال والصالة",
           "description": "A bold, atmospheric reception under warm and red accent lighting, with the MERJAS identity, crate seating, and a freight-inspired tyre table that speaks to the company's cargo world.",
+          "description_ar": "استقبالٌ جريء مفعمٌ بالأجواء تحت إضاءةٍ دافئة وحمراء مميّزة، مع هوية مرجاس، ومقاعد على هيئة صناديق شحن، وطاولةٍ من الإطارات مستوحاة من عالم البضائع تعبّر عن مجال الشركة.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/madineh/06.jpg", "caption": "The reception — MERJAS branding under warm and red accent lighting, with crate seating and a tyre table that ties directly to the company's cargo identity." }
+            { "image": "assets/images/projects/office-workspace/madineh/06.jpg", "caption": "The reception — MERJAS branding under warm and red accent lighting, with crate seating and a tyre table that ties directly to the company's cargo identity.", "caption_ar": "الاستقبال — هوية مرجاس تحت إضاءةٍ دافئة وحمراء مميّزة، مع مقاعد على هيئة صناديق شحن وطاولةٍ من الإطارات تربط مباشرةً بهوية الشركة في مجال البضائع." }
           ]
         },
         {
           "title": "Open Office & Meeting",
+          "title_ar": "المكتب المفتوح والاجتماعات",
           "description": "A glass-walled meeting volume floating within the open office, defined by the industrial metal-grid ceiling and warmed by timber.",
+          "description_ar": "كتلة اجتماعاتٍ بجدرانٍ زجاجية تطفو داخل المكتب المفتوح، يحدّدها السقف الصناعي بشبكته المعدنية ويُدفئها الخشب.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/madineh/01.jpg", "caption": "A glass-walled meeting volume within the open office, defined by the industrial metal-grid ceiling and warm timber." }
+            { "image": "assets/images/projects/office-workspace/madineh/01.jpg", "caption": "A glass-walled meeting volume within the open office, defined by the industrial metal-grid ceiling and warm timber.", "caption_ar": "كتلة اجتماعاتٍ بجدرانٍ زجاجية داخل المكتب المفتوح، يحدّدها السقف الصناعي بشبكته المعدنية والخشب الدافئ." }
           ]
         },
         {
           "title": "Management Office",
+          "title_ar": "مكتب الإدارة",
           "description": "The management office behind black-steel glazing — warm timber desks, the MERJAS identity, and considered storage.",
+          "description_ar": "مكتب الإدارة خلف زجاجٍ بإطارات فولاذية سوداء — مكاتب من الخشب الدافئ، وهوية مرجاس، وتخزينٌ مدروس.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/madineh/02.jpg", "caption": "The management office behind black-steel glazing, with warm timber desks, the MERJAS identity, and integrated storage." }
+            { "image": "assets/images/projects/office-workspace/madineh/02.jpg", "caption": "The management office behind black-steel glazing, with warm timber desks, the MERJAS identity, and integrated storage.", "caption_ar": "مكتب الإدارة خلف زجاجٍ بإطارات فولاذية سوداء، مع مكاتب من الخشب الدافئ، وهوية مرجاس، وتخزينٍ مدمج." }
           ]
         },
         {
           "title": "Open Workspace",
+          "title_ar": "مساحة العمل المفتوحة",
           "description": "Paired timber desks and ergonomic seating beneath the exposed metal-grid ceiling, anchored by a central planted spine.",
+          "description_ar": "مكاتب خشبية مزدوجة ومقاعد مريحة تحت السقف المكشوف بشبكته المعدنية، يثبّتها عمودٌ أخضر مركزي.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/madineh/03.jpg", "caption": "The open workspace — paired timber desks and ergonomic seating beneath the exposed metal-grid ceiling." },
-            { "image": "assets/images/projects/office-workspace/madineh/04.jpg", "caption": "Collaborative desks anchored by a central planted spine, bringing greenery into the raw industrial shell." }
+            { "image": "assets/images/projects/office-workspace/madineh/03.jpg", "caption": "The open workspace — paired timber desks and ergonomic seating beneath the exposed metal-grid ceiling.", "caption_ar": "مساحة العمل المفتوحة — مكاتب خشبية مزدوجة ومقاعد مريحة تحت السقف المكشوف بشبكته المعدنية." },
+            { "image": "assets/images/projects/office-workspace/madineh/04.jpg", "caption": "Collaborative desks anchored by a central planted spine, bringing greenery into the raw industrial shell.", "caption_ar": "مكاتب تعاونية يثبّتها عمودٌ أخضر مركزي، يجلب المساحات الخضراء إلى الهيكل الصناعي الخام." }
           ]
         },
         {
           "title": "Coffee Bar",
+          "title_ar": "ركن القهوة",
           "description": "An informal break and meeting zone — a long communal table beneath pendant lights, set against concrete and open shelving.",
+          "description_ar": "منطقة استراحةٍ ولقاءٍ غير رسمية — طاولة جماعية طويلة تحت إضاءاتٍ متدلّية، أمام الخرسانة والرفوف المفتوحة.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/madineh/05.jpg", "caption": "The coffee bar and informal meeting zone — a long communal table beneath pendant lights, set against concrete and open shelving." }
+            { "image": "assets/images/projects/office-workspace/madineh/05.jpg", "caption": "The coffee bar and informal meeting zone — a long communal table beneath pendant lights, set against concrete and open shelving.", "caption_ar": "ركن القهوة ومنطقة اللقاء غير الرسمية — طاولة جماعية طويلة تحت إضاءاتٍ متدلّية، أمام الخرسانة والرفوف المفتوحة." }
           ]
         },
         {
           "title": "Floor Plan",
+          "title_ar": "المخطط الأفقي",
           "description": "The full layout of the Madinat Sultan Qaboos office and its zones.",
+          "description_ar": "التوزيع الكامل لمكتب مدينة السلطان قابوس ومناطقه.",
           "renders": [
-            { "image": "assets/images/projects/office-workspace/madineh/00.png", "fit": "contain", "caption": "The full floor plan of the Madinat Sultan Qaboos office — reception, management, open work, meeting, coffee bar, and service zones." }
+            { "image": "assets/images/projects/office-workspace/madineh/00.png", "fit": "contain", "caption": "The full floor plan of the Madinat Sultan Qaboos office — reception, management, open work, meeting, coffee bar, and service zones.", "caption_ar": "المخطط الأفقي الكامل لمكتب مدينة السلطان قابوس — الاستقبال والإدارة والعمل المفتوح والاجتماعات وركن القهوة ومناطق الخدمات." }
           ]
         }
       ]
@@ -249,50 +323,60 @@
     {
       "id": "terrace-pergola",
       "title": "Plans & Details",
+      "title_ar": "المخططات والتفاصيل",
       "category": "Engineering & Technical Drawings",
+      "category_ar": "الرسومات الهندسية والفنية",
       "location": "Muscat, Oman",
+      "location_ar": "مسقط، عُمان",
       "image": "assets/images/projects/plans-details/card.webp",
       "description": "Precise technical and working drawings — plans, sections, and construction details that turn design intent into accurate, buildable documentation.",
+      "description_ar": "رسوماتٌ فنية وتنفيذية دقيقة — مخططات ومقاطع وتفاصيل إنشائية تحوّل فكرة التصميم إلى وثائق دقيقة قابلة للبناء.",
       "homeTitle": "Plans & Technical Drawings",
+      "homeTitle_ar": "المخططات والرسومات الفنية",
       "homeDescription": "Precise plans, sections, and details that turn a design into buildable documentation.",
+      "homeDescription_ar": "مخططات ومقاطع وتفاصيل دقيقة تحوّل التصميم إلى وثائق قابلة للبناء.",
       "featured": true,
       "order": 4,
       "overview": "A complete set of architectural, structural, and detail drawings that translate design intent into precise, buildable documentation — from site plan and elevations through to foundation, framing, and construction details.",
+      "overview_ar": "مجموعة كاملة من الرسومات المعمارية والإنشائية والتفصيلية تترجم فكرة التصميم إلى وثائق دقيقة قابلة للبناء — من مخطط الموقع والواجهات وصولًا إلى الأساسات والهياكل وتفاصيل التنفيذ.",
       "sections": [
         {
           "title": "Architectural Drawings",
+          "title_ar": "الرسومات المعمارية",
           "description": "",
           "renders": [
-            { "image": "assets/images/projects/plans-details/01.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Site Plan</span>Villa position on the plot, setbacks, road/lane widths, and area statement — the basis for permits." },
-            { "image": "assets/images/projects/plans-details/02.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Ground Floor Plan</span>Ground level layout, parking, entrances, and door/window schedule." },
-            { "image": "assets/images/projects/plans-details/03.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">First Floor Plan</span>Bedrooms, baths, and terraces layout." },
-            { "image": "assets/images/projects/plans-details/04.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Pent &amp; Roof Floor Plan</span>Penthouse/roof level with general notes &amp; specifications." },
-            { "image": "assets/images/projects/plans-details/05.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Rear Elevation</span>Rear facade with levels and detail." },
-            { "image": "assets/images/projects/plans-details/06.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Left Side Elevation</span>Side facade, massing, projections, and finishes." },
-            { "image": "assets/images/projects/plans-details/07.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Front Elevation</span>Main facade: levels, openings, and materials." },
-            { "image": "assets/images/projects/plans-details/08.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Sections (A-A &amp; B-B)</span>Vertical cuts: floor heights, stairs, and level relationships." }
+            { "image": "assets/images/projects/plans-details/01.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Site Plan</span>Villa position on the plot, setbacks, road/lane widths, and area statement — the basis for permits.", "caption_ar": "<span class=\"pd-draw-title\">مخطط الموقع</span>موضع الفيلا على قطعة الأرض، والارتدادات، وعروض الطرق والممرّات، وبيان المساحات — أساس استخراج التراخيص." },
+            { "image": "assets/images/projects/plans-details/02.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Ground Floor Plan</span>Ground level layout, parking, entrances, and door/window schedule.", "caption_ar": "<span class=\"pd-draw-title\">مخطط الطابق الأرضي</span>توزيع الطابق الأرضي، والمواقف، والمداخل، وجدول الأبواب والنوافذ." },
+            { "image": "assets/images/projects/plans-details/03.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">First Floor Plan</span>Bedrooms, baths, and terraces layout.", "caption_ar": "<span class=\"pd-draw-title\">مخطط الطابق الأول</span>توزيع غرف النوم والحمّامات والشرفات." },
+            { "image": "assets/images/projects/plans-details/04.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Pent &amp; Roof Floor Plan</span>Penthouse/roof level with general notes &amp; specifications.", "caption_ar": "<span class=\"pd-draw-title\">مخطط طابق العلية والسطح</span>مستوى العلية والسطح مع الملاحظات العامة والمواصفات." },
+            { "image": "assets/images/projects/plans-details/05.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Rear Elevation</span>Rear facade with levels and detail.", "caption_ar": "<span class=\"pd-draw-title\">الواجهة الخلفية</span>الواجهة الخلفية مع المناسيب والتفاصيل." },
+            { "image": "assets/images/projects/plans-details/06.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Left Side Elevation</span>Side facade, massing, projections, and finishes.", "caption_ar": "<span class=\"pd-draw-title\">الواجهة الجانبية اليسرى</span>الواجهة الجانبية، والكتل، والبروزات، والتشطيبات." },
+            { "image": "assets/images/projects/plans-details/07.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Front Elevation</span>Main facade: levels, openings, and materials.", "caption_ar": "<span class=\"pd-draw-title\">الواجهة الأمامية</span>الواجهة الرئيسية: المناسيب، والفتحات، والمواد." },
+            { "image": "assets/images/projects/plans-details/08.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Sections (A-A &amp; B-B)</span>Vertical cuts: floor heights, stairs, and level relationships.", "caption_ar": "<span class=\"pd-draw-title\">المقاطع (A-A و B-B)</span>قطوعٌ رأسية: ارتفاعات الطوابق، والدرج، والعلاقات بين المناسيب." }
           ]
         },
         {
           "title": "Structural Drawings",
+          "title_ar": "الرسومات الإنشائية",
           "description": "",
           "renders": [
-            { "image": "assets/images/projects/plans-details/09.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Pent Floor Roof Layout</span>Roof framing and beam/slab reinforcement schedules." },
-            { "image": "assets/images/projects/plans-details/10.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">First Floor Roof Layout</span>First-floor roof framing and hidden beam details." },
-            { "image": "assets/images/projects/plans-details/11.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Ground Floor Roof Layout</span>Ground-floor roof framing." },
-            { "image": "assets/images/projects/plans-details/12.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Plinth Beam Layout</span>Plinth beam grid and schedule." },
-            { "image": "assets/images/projects/plans-details/13.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Foundation Layout</span>Footing positions/sizes, footing &amp; strap-beam schedules." },
-            { "image": "assets/images/projects/plans-details/14.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Column Layout (Axis)</span>Columns on grid with sections &amp; reinforcement." }
+            { "image": "assets/images/projects/plans-details/09.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Pent Floor Roof Layout</span>Roof framing and beam/slab reinforcement schedules.", "caption_ar": "<span class=\"pd-draw-title\">مخطط سقف طابق العلية</span>هيكل السقف وجداول تسليح الجسور والبلاطات." },
+            { "image": "assets/images/projects/plans-details/10.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">First Floor Roof Layout</span>First-floor roof framing and hidden beam details.", "caption_ar": "<span class=\"pd-draw-title\">مخطط سقف الطابق الأول</span>هيكل سقف الطابق الأول وتفاصيل الجسور المخفية." },
+            { "image": "assets/images/projects/plans-details/11.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Ground Floor Roof Layout</span>Ground-floor roof framing.", "caption_ar": "<span class=\"pd-draw-title\">مخطط سقف الطابق الأرضي</span>هيكل سقف الطابق الأرضي." },
+            { "image": "assets/images/projects/plans-details/12.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Plinth Beam Layout</span>Plinth beam grid and schedule.", "caption_ar": "<span class=\"pd-draw-title\">مخطط الجسور الأرضية</span>شبكة الجسور الأرضية وجدولها." },
+            { "image": "assets/images/projects/plans-details/13.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Foundation Layout</span>Footing positions/sizes, footing &amp; strap-beam schedules.", "caption_ar": "<span class=\"pd-draw-title\">مخطط الأساسات</span>مواضع القواعد وأبعادها، وجداول القواعد والجسور الرابطة." },
+            { "image": "assets/images/projects/plans-details/14.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Column Layout (Axis)</span>Columns on grid with sections &amp; reinforcement.", "caption_ar": "<span class=\"pd-draw-title\">مخطط الأعمدة (المحاور)</span>الأعمدة على الشبكة مع المقاطع والتسليح." }
           ]
         },
         {
           "title": "Details & Services",
+          "title_ar": "التفاصيل والخدمات",
           "description": "",
           "renders": [
-            { "image": "assets/images/projects/plans-details/15.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Compound Wall &amp; Gate Details</span>Boundary wall, gates, and wall footing." },
-            { "image": "assets/images/projects/plans-details/16.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Footing &amp; Column Details</span>Typical footing/column/plinth reinforcement." },
-            { "image": "assets/images/projects/plans-details/17.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Slab, Beam &amp; Staircase Details</span>Typical slab/beam/cantilever/stair reinforcement." },
-            { "image": "assets/images/projects/plans-details/18.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Holding Tank &amp; Compound Details</span>Water tank, manholes, and drainage chambers." }
+            { "image": "assets/images/projects/plans-details/15.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Compound Wall &amp; Gate Details</span>Boundary wall, gates, and wall footing.", "caption_ar": "<span class=\"pd-draw-title\">تفاصيل سور وبوابة المجمّع</span>الجدار الحدودي، والبوابات، وقاعدة الجدار." },
+            { "image": "assets/images/projects/plans-details/16.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Footing &amp; Column Details</span>Typical footing/column/plinth reinforcement.", "caption_ar": "<span class=\"pd-draw-title\">تفاصيل القواعد والأعمدة</span>التسليح النموذجي للقواعد والأعمدة والجسور الأرضية." },
+            { "image": "assets/images/projects/plans-details/17.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Slab, Beam &amp; Staircase Details</span>Typical slab/beam/cantilever/stair reinforcement.", "caption_ar": "<span class=\"pd-draw-title\">تفاصيل البلاطات والجسور والدرج</span>التسليح النموذجي للبلاطات والجسور والكوابيل والدرج." },
+            { "image": "assets/images/projects/plans-details/18.png", "fit": "contain", "caption": "<span class=\"pd-draw-title\">Holding Tank &amp; Compound Details</span>Water tank, manholes, and drainage chambers.", "caption_ar": "<span class=\"pd-draw-title\">تفاصيل خزان التجميع والمجمّع</span>خزان المياه، وغرف التفتيش، وغرف الصرف." }
           ]
         }
       ]
@@ -301,32 +385,41 @@
       "id": "master-suite",
       "collection": "residential",
       "title": "Master Suite Design — Al Ozaiba Villa",
+      "title_ar": "تصميم الجناح الرئيسي — فيلا العذيبة",
       "category": "Interior Design",
+      "category_ar": "التصميم الداخلي",
       "location": "Al Azaiba, Muscat — Oman",
+      "location_ar": "العذيبة، مسقط — عُمان",
       "image": "assets/images/projects/residential/master-suite/01.jpg",
       "description": "A complete master suite for a villa in Al Ozaiba — bedroom, walk-in dressing room, and onyx-clad ensuite designed as one calm, cohesive retreat.",
+      "description_ar": "جناحٌ رئيسي متكامل لفيلا في العذيبة — غرفة نوم، وغرفة ملابس واسعة، وحمّام داخلي مكسوّ بحجر الأونيكس، صُمّمت معًا كملاذٍ هادئ متناغم.",
       "featured": false,
       "order": 5,
       "overview": "A complete master suite for a villa in Al Ozaiba, Muscat, designed as a single, cohesive retreat. A warm ivory-and-champagne palette runs from the bedroom and reading nook through a generous walk-in dressing room and into an onyx-clad ensuite. Natural marble and onyx, brushed brass, fluted oak, and large-format porcelain were chosen to be as durable and easy to maintain as they are beautiful.",
+      "overview_ar": "جناحٌ رئيسي متكامل لفيلا في العذيبة، مسقط، صُمّم كملاذٍ واحد متناغم. تمتدّ لوحة دافئة من العاجي والشمبانيا من غرفة النوم وركن القراءة عبر غرفة ملابس واسعة وصولًا إلى حمّامٍ داخلي مكسوّ بالأونيكس. اختير الرخام والأونيكس الطبيعيان والنحاس المصقول والبلوط المضلّع والبورسلان كبير المقاس ليكون متينًا وسهل العناية بقدر ما هو جميل.",
       "sections": [
         {
           "title": "Rest Area & Closet",
+          "title_ar": "منطقة الراحة وخزانة الملابس",
           "description": "The sleeping, seating, and dressing zone — shown in purple on the floor plan.",
+          "description_ar": "منطقة النوم والجلوس وتبديل الملابس — مميّزة باللون البنفسجي في المخطط الأفقي.",
           "renders": [
-            { "image": "assets/images/projects/residential/master-suite/01.jpg", "caption": "A classic-contemporary bedroom in ivory and champagne. Fluted gypsum panelling and an upholstered headboard wall soften acoustics, while large-format polished porcelain floors — durable and low-maintenance — are warmed by a hand-knotted wool rug beneath a sculptural crystal chandelier." },
-            { "image": "assets/images/projects/residential/master-suite/03.jpg", "caption": "A quiet reading nook with curved camel-velvet tub chairs framed by classic mouldings and reeded oak panels. Brass bubble sconces cast a soft, layered glow, and a mirrored return opens the corner toward the dressing room — the velvet-and-brass palette is hard-wearing and timeless." },
-            { "image": "assets/images/projects/residential/master-suite/04.jpg", "caption": "A curved, backlit dressing island in soft lacquer and brushed brass anchors the walk-in closet. Warm LED-lit open shelving displays edited pieces, while a calacatta-look quartz top resists stains and daily wear." },
-            { "image": "assets/images/projects/residential/master-suite/05.jpg", "caption": "A full walk-in wardrobe with bronze-glass fronts and warm oak interiors. Integrated linear lighting makes everything easy to find; glass and lacquer surfaces wipe clean and stay dust-free." },
-            { "image": "assets/images/projects/residential/master-suite/06.jpg", "caption": "A transitional vanity-console in ivory lacquer topped with book-matched calacatta viola marble and framed by fluted oak. The sealed natural stone resists moisture, pairing beauty with practicality at the suite's threshold." }
+            { "image": "assets/images/projects/residential/master-suite/01.jpg", "caption": "A classic-contemporary bedroom in ivory and champagne. Fluted gypsum panelling and an upholstered headboard wall soften acoustics, while large-format polished porcelain floors — durable and low-maintenance — are warmed by a hand-knotted wool rug beneath a sculptural crystal chandelier.", "caption_ar": "غرفة نومٍ كلاسيكية معاصرة بلونَي العاجي والشمبانيا. تُلطّف ألواح الجبس المضلّعة وجدار المسند المنجّد الصوتيات، فيما تُدفّئ سجادة صوفٍ يدوية أرضياتِ البورسلان المصقول كبيرة المقاس — المتينة وسهلة العناية — تحت ثُريّا كريستالية نحتية." },
+            { "image": "assets/images/projects/residential/master-suite/03.jpg", "caption": "A quiet reading nook with curved camel-velvet tub chairs framed by classic mouldings and reeded oak panels. Brass bubble sconces cast a soft, layered glow, and a mirrored return opens the corner toward the dressing room — the velvet-and-brass palette is hard-wearing and timeless.", "caption_ar": "ركن قراءةٍ هادئ بكراسٍ منحنية من المخمل بلون الجمل تؤطّرها زخارف كلاسيكية وألواح بلوط مضلّعة. تنشر إضاءات نحاسية على هيئة فقاعاتٍ توهّجًا ناعمًا متدرّجًا، وتفتح مرآةٌ جانبية الركنَ نحو غرفة الملابس — لوحة المخمل والنحاس متينة وخالدة." },
+            { "image": "assets/images/projects/residential/master-suite/04.jpg", "caption": "A curved, backlit dressing island in soft lacquer and brushed brass anchors the walk-in closet. Warm LED-lit open shelving displays edited pieces, while a calacatta-look quartz top resists stains and daily wear.", "caption_ar": "جزيرة ملابس منحنية مُضاءة من الخلف من اللاكيه الناعم والنحاس المصقول تتوسّط غرفة الملابس. تعرض رفوفٌ مفتوحة بإضاءة LED دافئة قطعًا مختارة، فيما يقاوم سطحٌ من الكوارتز بمظهر الكلاكاتا البقعَ والاستخدام اليومي." },
+            { "image": "assets/images/projects/residential/master-suite/05.jpg", "caption": "A full walk-in wardrobe with bronze-glass fronts and warm oak interiors. Integrated linear lighting makes everything easy to find; glass and lacquer surfaces wipe clean and stay dust-free.", "caption_ar": "خزانة ملابس واسعة متكاملة بواجهاتٍ من الزجاج البرونزي ودواخل من البلوط الدافئ. تُسهّل الإضاءة الخطّية المدمجة العثورَ على كل شيء؛ وتُمسح أسطح الزجاج واللاكيه بسهولة وتبقى خاليةً من الغبار." },
+            { "image": "assets/images/projects/residential/master-suite/06.jpg", "caption": "A transitional vanity-console in ivory lacquer topped with book-matched calacatta viola marble and framed by fluted oak. The sealed natural stone resists moisture, pairing beauty with practicality at the suite's threshold.", "caption_ar": "طاولة زينةٍ انتقالية الطراز من اللاكيه العاجي بسطحٍ من رخام الكلاكاتا فيولا المتناظر يؤطّره البلوط المضلّع. يقاوم الحجر الطبيعي المُحكَم الرطوبةَ، جامعًا بين الجمال والعملية عند مدخل الجناح." }
           ]
         },
         {
           "title": "Bathroom",
+          "title_ar": "الحمّام",
           "description": "The ensuite bathroom — shown in green on the floor plan.",
+          "description_ar": "الحمّام الداخلي — مميّزٌ باللون الأخضر في المخطط الأفقي.",
           "renders": [
-            { "image": "assets/images/projects/residential/master-suite/07.jpg", "caption": "The ensuite centres on a sculptural freestanding tub against a book-matched onyx feature wall, backlit to reveal its translucency. Honed marble and sealed onyx handle water beautifully, while brushed-brass fixtures resist tarnishing in humid conditions." },
-            { "image": "assets/images/projects/residential/master-suite/08.jpg", "caption": "Twin oval brass mirrors over an onyx vanity with a backlit stone shelf. The warm marble and brushed-gold tapware are hard-wearing and easy to clean, while concealed lighting flatters daily grooming." },
-            { "image": "assets/images/projects/residential/master-suite/09.jpg", "caption": "A walk-in glass shower and wall-hung WC set against continuous onyx keep the wet zone open and easy to maintain. Large-format polished slabs minimise grout lines for hygiene, and the glass screen keeps the room bright and seamless." }
+            { "image": "assets/images/projects/residential/master-suite/07.jpg", "caption": "The ensuite centres on a sculptural freestanding tub against a book-matched onyx feature wall, backlit to reveal its translucency. Honed marble and sealed onyx handle water beautifully, while brushed-brass fixtures resist tarnishing in humid conditions.", "caption_ar": "يتمحور الحمّام الداخلي حول حوضٍ نحتي قائم بذاته أمام جدارٍ مميّز من الأونيكس المتناظر، مُضاءٍ من الخلف لإظهار شفافيته. يتعامل الرخام المصقول والأونيكس المُحكَم مع الماء ببراعة، بينما تقاوم التجهيزات النحاسية المصقولة التأكسدَ في الأجواء الرطبة." },
+            { "image": "assets/images/projects/residential/master-suite/08.jpg", "caption": "Twin oval brass mirrors over an onyx vanity with a backlit stone shelf. The warm marble and brushed-gold tapware are hard-wearing and easy to clean, while concealed lighting flatters daily grooming.", "caption_ar": "مرآتان نحاسيّتان بيضويّتان فوق طاولة زينةٍ من الأونيكس برفٍّ حجري مُضاء من الخلف. الرخام الدافئ وخلّاطات الذهب المصقول متينة وسهلة التنظيف، فيما تُجمّل الإضاءة الخفية روتين العناية اليومي." },
+            { "image": "assets/images/projects/residential/master-suite/09.jpg", "caption": "A walk-in glass shower and wall-hung WC set against continuous onyx keep the wet zone open and easy to maintain. Large-format polished slabs minimise grout lines for hygiene, and the glass screen keeps the room bright and seamless.", "caption_ar": "دُشٌّ زجاجي بمدخلٍ مباشر ومرحاضٌ معلّق أمام أونيكس متّصل يُبقيان المنطقة الرطبة منفتحةً وسهلة العناية. تُقلّل الألواح المصقولة كبيرة المقاس خطوط الجَور للنظافة، ويُبقي الحاجز الزجاجي الغرفةَ مُشرقةً وسلسة." }
           ]
         }
       ]
@@ -335,37 +428,48 @@
       "id": "afkhami-villa",
       "collection": "residential",
       "title": "Villa Afkhami",
+      "title_ar": "فيلا أفخمي",
       "category": "Interior Design",
+      "category_ar": "التصميم الداخلي",
       "location": "Muscat, Oman",
+      "location_ar": "مسقط، عُمان",
       "image": "assets/images/projects/residential/afkhami-villa/01.jpg",
       "description": "A monochrome, minimalist villa — crisp white architecture, black marble floors, and graphic black-and-white art, opening onto serene planted courtyards.",
+      "description_ar": "فيلا أحادية اللون بطابعٍ بسيط — عمارة بيضاء صافية، وأرضيات من الرخام الأسود، وأعمال فنية بالأبيض والأسود، تنفتح على أفنيةٍ مزروعة هادئة.",
       "overview": "A minimalist family villa composed almost entirely in black and white. Crisp handle-less joinery and luminous large-format marble meet dramatic black stone floors, while bold abstract artworks give each room a strong graphic identity. The calm, monochrome interior opens through full-height glazing onto planted courtyards and a shaded roof terrace — a restrained palette built on durable, low-maintenance natural materials.",
+      "overview_ar": "فيلا عائلية بسيطة الطراز مؤلّفة بالكامل تقريبًا من الأبيض والأسود. تلتقي النجارة النظيفة بلا مقابض والرخام اللامع كبير المقاس بأرضياتٍ آسرة من الحجر الأسود، فيما تمنح أعمالٌ فنية تجريدية جريئة كل غرفةٍ هويةً بصرية قوية. وينفتح الداخل الهادئ الأحادي عبر واجهاتٍ زجاجية كاملة الارتفاع على أفنيةٍ مزروعة وشرفة سطحٍ مظلّلة — لوحة مقتصدة قائمة على مواد طبيعية متينة سهلة العناية.",
       "sections": [
         {
           "title": "Living Areas",
+          "title_ar": "مناطق المعيشة",
           "description": "Open, gallery-like living spaces in white and black marble, defined by graphic art and sculptural lighting.",
+          "description_ar": "مساحات معيشة منفتحة أشبه بالمعارض بالأبيض والرخام الأسود، تحدّدها الأعمال الفنية والإضاءة النحتية.",
           "renders": [
-            { "image": "assets/images/projects/residential/afkhami-villa/01.jpg", "caption": "An open, gallery-like living room in crisp white with luminous marble floors. Low white sofas and slim-framed armchairs sit beneath a sculptural pendant, while bold black-and-white artworks and an olive tree add graphic contrast — polished large-format marble keeps the floor bright and easy to maintain." },
-            { "image": "assets/images/projects/residential/afkhami-villa/02.jpg", "caption": "A bright sitting area opens to the garden through full-height steel-framed glazing. A built-in matte-white display wall softened with greenery frames white linen seating over honed black marble — a calm palette built on durable natural stone." },
-            { "image": "assets/images/projects/residential/afkhami-villa/03.jpg", "caption": "A relaxed family lounge anchored by a grey sectional and a floating black media console. A diptych of brushed black-and-white art and a large portrait give the white walls a strong graphic identity, balanced by warm marble underfoot." }
+            { "image": "assets/images/projects/residential/afkhami-villa/01.jpg", "caption": "An open, gallery-like living room in crisp white with luminous marble floors. Low white sofas and slim-framed armchairs sit beneath a sculptural pendant, while bold black-and-white artworks and an olive tree add graphic contrast — polished large-format marble keeps the floor bright and easy to maintain.", "caption_ar": "غرفة معيشة منفتحة أشبه بالمعارض بالأبيض الصافي وأرضياتٍ رخامية لامعة. تجلس أرائك بيضاء منخفضة وكراسٍ بإطاراتٍ نحيلة تحت إضاءةٍ متدلّية نحتية، فيما تضيف أعمالٌ فنية جريئة بالأبيض والأسود وشجرة زيتون تباينًا بصريًا — يُبقي الرخام المصقول كبير المقاس الأرضيةَ مُشرقةً وسهلة العناية." },
+            { "image": "assets/images/projects/residential/afkhami-villa/02.jpg", "caption": "A bright sitting area opens to the garden through full-height steel-framed glazing. A built-in matte-white display wall softened with greenery frames white linen seating over honed black marble — a calm palette built on durable natural stone.", "caption_ar": "منطقة جلوسٍ مُشرقة تنفتح على الحديقة عبر واجهةٍ زجاجية كاملة الارتفاع بإطاراتٍ فولاذية. يؤطّر جدار عرضٍ مدمج أبيض مطفأ تُلطّفه المساحات الخضراء مقاعدَ من الكتّان الأبيض فوق رخامٍ أسود مصقول — لوحة هادئة قائمة على حجرٍ طبيعي متين." },
+            { "image": "assets/images/projects/residential/afkhami-villa/03.jpg", "caption": "A relaxed family lounge anchored by a grey sectional and a floating black media console. A diptych of brushed black-and-white art and a large portrait give the white walls a strong graphic identity, balanced by warm marble underfoot.", "caption_ar": "صالة عائلية مريحة تثبّتها أريكة رمادية مقسّمة وطاولة وسائطٍ سوداء طافية. تمنح لوحةٌ ثنائية بالأبيض والأسود وصورةٌ كبيرة الجدرانَ البيضاء هويةً بصرية قوية، يوازنها رخامٌ دافئ تحت القدم." }
           ]
         },
         {
           "title": "Kitchen & Dining",
+          "title_ar": "المطبخ والطعام",
           "description": "Handle-less white kitchen and dining set against dramatic black marble.",
+          "description_ar": "مطبخٌ أبيض بلا مقابض وطعامٌ أمام رخامٍ أسود آسر.",
           "renders": [
-            { "image": "assets/images/projects/residential/afkhami-villa/04.jpg", "caption": "An open-plan kitchen wrapped in white with a dramatic black marble backsplash and floor. A sculptural linear pendant defines the breakfast bar while concealed handle-less cabinetry keeps the lines pure — hard-wearing stone and lacquer chosen for low-maintenance daily use." },
-            { "image": "assets/images/projects/residential/afkhami-villa/05.jpg", "caption": "A refined dining space set against a charcoal display niche and lit by sheer-filtered daylight. The black marble floor grounds pale upholstered chairs and a minimal table — a restrained, monochrome composition." },
-            { "image": "assets/images/projects/residential/afkhami-villa/06.jpg", "caption": "The kitchen reads as a sculptural threshold between the dark marble service zone and the bright white living beyond. Integrated appliances, a black stone counter, and bar seating make it as functional as it is graphic." }
+            { "image": "assets/images/projects/residential/afkhami-villa/04.jpg", "caption": "An open-plan kitchen wrapped in white with a dramatic black marble backsplash and floor. A sculptural linear pendant defines the breakfast bar while concealed handle-less cabinetry keeps the lines pure — hard-wearing stone and lacquer chosen for low-maintenance daily use.", "caption_ar": "مطبخٌ مفتوح المخطط يكسوه الأبيض مع جدار خلفي وأرضيةٍ من الرخام الأسود الآسر. تُحدّد إضاءةٌ خطّية نحتية طاولة الإفطار، بينما تُبقي الخزائن المخفية بلا مقابض الخطوطَ نقية — حجرٌ ولاكيه متينان اختيرا لاستخدامٍ يومي سهل العناية." },
+            { "image": "assets/images/projects/residential/afkhami-villa/05.jpg", "caption": "A refined dining space set against a charcoal display niche and lit by sheer-filtered daylight. The black marble floor grounds pale upholstered chairs and a minimal table — a restrained, monochrome composition.", "caption_ar": "مساحة طعامٍ راقية أمام كوّة عرضٍ بلون الفحم يُضيئها ضوء نهارٍ مُرشّح عبر ستائر شفّافة. تُثبّت أرضية الرخام الأسود كراسٍ منجّدة فاتحة وطاولةً بسيطة — تكوينٌ مقتصد أحادي اللون." },
+            { "image": "assets/images/projects/residential/afkhami-villa/06.jpg", "caption": "The kitchen reads as a sculptural threshold between the dark marble service zone and the bright white living beyond. Integrated appliances, a black stone counter, and bar seating make it as functional as it is graphic.", "caption_ar": "يُقرأ المطبخ كعتبةٍ نحتية بين منطقة الخدمة بالرخام الداكن والمعيشة البيضاء المُشرقة خلفه. تجعله الأجهزة المدمجة وسطحٌ من الحجر الأسود ومقاعد البار عمليًا بقدر ما هو بصري." }
           ]
         },
         {
           "title": "Courtyard & Terrace",
+          "title_ar": "الفناء والشرفة",
           "description": "Planted courtyards and a shaded roof terrace that extend the home outdoors.",
+          "description_ar": "أفنيةٌ مزروعة وشرفة سطحٍ مظلّلة تمدّان المنزل إلى الخارج.",
           "renders": [
-            { "image": "assets/images/projects/residential/afkhami-villa/07.jpg", "caption": "A private courtyard with a compact plunge pool, mature trees, and outdoor seating, framed by the villa's two-storey glazed facade — an intimate green retreat carved into the home." },
-            { "image": "assets/images/projects/residential/afkhami-villa/08.jpg", "caption": "Stepped white terraces descend to the plunge pool, a single tree casting soft shadows across the rendered walls — minimalism extended to the outdoors." },
-            { "image": "assets/images/projects/residential/afkhami-villa/09.jpg", "caption": "A shaded roof terrace under a timber-battened pergola, with board-formed concrete walls, integrated planting, and an outdoor dining set — a textural, sunlit counterpoint to the monochrome interior." }
+            { "image": "assets/images/projects/residential/afkhami-villa/07.jpg", "caption": "A private courtyard with a compact plunge pool, mature trees, and outdoor seating, framed by the villa's two-storey glazed facade — an intimate green retreat carved into the home.", "caption_ar": "فناءٌ خاص بمسبحٍ صغير وأشجارٍ وارفة وجلسةٍ خارجية، تؤطّره واجهة الفيلا الزجاجية المكوّنة من طابقين — ملاذٌ أخضر حميمي مُحتفَر داخل المنزل." },
+            { "image": "assets/images/projects/residential/afkhami-villa/08.jpg", "caption": "Stepped white terraces descend to the plunge pool, a single tree casting soft shadows across the rendered walls — minimalism extended to the outdoors.", "caption_ar": "شرفاتٌ بيضاء متدرّجة تنحدر نحو المسبح، وشجرةٌ وحيدة تُلقي ظلالًا ناعمة على الجدران المُلبَّسة — بساطةٌ ممتدّة إلى الخارج." },
+            { "image": "assets/images/projects/residential/afkhami-villa/09.jpg", "caption": "A shaded roof terrace under a timber-battened pergola, with board-formed concrete walls, integrated planting, and an outdoor dining set — a textural, sunlit counterpoint to the monochrome interior.", "caption_ar": "شرفة سطحٍ مظلّلة تحت عريشةٍ بشرائح خشبية، بجدرانٍ خرسانية مصبوبة بنمط الألواح، وزراعةٍ مدمجة، وطقم طعامٍ خارجي — نقيضٌ مُلمَسي تغمره الشمس للداخل الأحادي اللون." }
           ]
         }
       ]
@@ -374,38 +478,47 @@
       "id": "barzegari-villa",
       "collection": "residential",
       "title": "Barzegari Villa",
+      "title_ar": "فيلا برزكري",
       "category": "Interior Design",
+      "category_ar": "التصميم الداخلي",
       "location": "Muscat, Oman",
+      "location_ar": "مسقط، عُمان",
       "image": "assets/images/projects/residential/barzegari-villa/04.jpg",
       "description": "A warm, contemporary family villa — natural oak, travertine, and soft bouclé define an open-plan living, dining, and kitchen sequence bathed in daylight.",
+      "description_ar": "فيلا عائلية معاصرة دافئة — البلوط الطبيعي والترافرتين والبوكليه الناعم تحدّد تسلسلًا مفتوحًا للمعيشة والطعام والمطبخ يغمره ضوء النهار.",
       "overview": "A warm, contemporary family villa built around a single open-plan volume. Natural oak veneer, travertine and book-matched marble, and soft bouclé in calm neutral tones flow from the living and lounge through to the kitchen and dining — all grounded by large-format porcelain and washed in daylight. A restrained, tactile palette chosen to feel both timeless and effortlessly liveable.",
+      "overview_ar": "فيلا عائلية معاصرة دافئة بُنيت حول كتلةٍ واحدة مفتوحة المخطط. تنساب قشرة البلوط الطبيعي والترافرتين والرخام المتناظر والبوكليه الناعم بدرجاتٍ محايدة هادئة من المعيشة والصالة إلى المطبخ والطعام — يثبّتها جميعًا بورسلانٌ كبير المقاس ويغمرها ضوء النهار. لوحة مقتصدة محسوسة اختيرت لتكون خالدةً وسهلة العيش بعفوية.",
       "sections": [
         {
           "title": "Living Room",
+          "title_ar": "غرفة المعيشة",
           "description": "",
           "renders": [
-            { "image": "assets/images/projects/residential/barzegari-villa/02.jpg", "caption": "Conceived as a calm, light-filled retreat — soft bouclé and natural oak set against diffused daylight for an unhurried, tactile gathering space." }
+            { "image": "assets/images/projects/residential/barzegari-villa/02.jpg", "caption": "Conceived as a calm, light-filled retreat — soft bouclé and natural oak set against diffused daylight for an unhurried, tactile gathering space.", "caption_ar": "صُمّمت كملاذٍ هادئ يفيض بالضوء — بوكليه ناعم وبلوط طبيعي أمام ضوء نهارٍ منتشر، لمساحة لقاءٍ متأنّية ومحسوسة." }
           ]
         },
         {
           "title": "Library",
+          "title_ar": "المكتبة",
           "description": "",
           "renders": [
-            { "image": "assets/images/projects/residential/barzegari-villa/03.jpg", "caption": "A quiet reading corner built around a sculptural oak grid shelf — a pared-back niche designed for focus and stillness." }
+            { "image": "assets/images/projects/residential/barzegari-villa/03.jpg", "caption": "A quiet reading corner built around a sculptural oak grid shelf — a pared-back niche designed for focus and stillness.", "caption_ar": "ركن قراءةٍ هادئ بُني حول رفٍّ شبكي نحتي من البلوط — كوّة مقتصدة صُمّمت للتركيز والسكينة." }
           ]
         },
         {
           "title": "Kitchen & Breakfast",
+          "title_ar": "المطبخ والإفطار",
           "description": "",
           "renders": [
-            { "image": "assets/images/projects/residential/barzegari-villa/01.jpg", "caption": "A handle-less oak kitchen organised around an island that doubles as a breakfast table — clean lines shaped for easy, family-centred mornings." }
+            { "image": "assets/images/projects/residential/barzegari-villa/01.jpg", "caption": "A handle-less oak kitchen organised around an island that doubles as a breakfast table — clean lines shaped for easy, family-centred mornings.", "caption_ar": "مطبخٌ من البلوط بلا مقابض منظّم حول جزيرةٍ تصلح أيضًا كطاولة إفطار — خطوطٌ نظيفة صِيغت لصباحاتٍ سهلة محورها العائلة." }
           ]
         },
         {
           "title": "Dining",
+          "title_ar": "الطعام",
           "description": "",
           "renders": [
-            { "image": "assets/images/projects/residential/barzegari-villa/04.jpg", "caption": "Dining anchors the open-plan heart — one continuous palette of warm wood and soft neutrals ties it seamlessly to the living and kitchen." }
+            { "image": "assets/images/projects/residential/barzegari-villa/04.jpg", "caption": "Dining anchors the open-plan heart — one continuous palette of warm wood and soft neutrals ties it seamlessly to the living and kitchen.", "caption_ar": "يثبّت الطعامُ قلبَ المخطط المفتوح — لوحةٌ واحدة متّصلة من الخشب الدافئ والدرجات المحايدة الناعمة تربطه بسلاسةٍ بالمعيشة والمطبخ." }
           ]
         }
       ]
@@ -413,20 +526,29 @@
     {
       "id": "visualization",
       "title": "Architectural Visualization & Animation",
+      "title_ar": "الإظهار المعماري والتحريك",
       "category": "Visualization & Animation",
+      "category_ar": "الإظهار المعماري والتحريك",
       "location": "Studio Project",
+      "location_ar": "مشروع استوديو",
       "image": "assets/images/projects/visualization/card.jpg",
       "heroPos": "left center",
       "description": "Photorealistic 3D renders and cinematic animation that bring unbuilt spaces to life — capturing mood, light, and material long before construction begins.",
+      "description_ar": "إظهارٌ ثلاثي الأبعاد فائق الواقعية وتحريكٌ سينمائي يبثّان الحياة في مساحاتٍ لم تُبنَ بعد — يلتقطان الأجواء والضوء والمادة قبل بدء التنفيذ بوقتٍ طويل.",
       "homeTitle": "Visualization & Animation",
+      "homeTitle_ar": "الإظهار والتحريك",
       "homeDescription": "Photorealistic renders and cinematic animation that bring spaces to life before they are built.",
+      "homeDescription_ar": "إظهارٌ فائق الواقعية وتحريكٌ سينمائي يبثّان الحياة في المساحات قبل بنائها.",
       "featured": true,
       "order": 6,
       "overview": "A visualization study for a modular boutique hotel — exploring how light, material, and mood transform a single interior. Each scene is rendered first in rich, photographic colour and again as a dramatic monochrome study, demonstrating the full storytelling range of architectural visualization.",
+      "overview_ar": "دراسة إظهارٍ لفندق بوتيك معياري — تستكشف كيف يحوّل الضوء والمادة والأجواء مساحةً داخلية واحدة. يُظهَر كل مشهدٍ أولًا بألوانٍ غنية فوتوغرافية، ثم مرةً أخرى كدراسةٍ أحادية اللون آسرة، بما يُبرز المدى الكامل لقدرة الإظهار المعماري على رواية القصة.",
       "sections": [
         {
           "title": "Artistic Renders",
+          "title_ar": "أعمال إظهار فنية",
           "description": "A series of photographic interior studies — page through the collection with the arrows.",
+          "description_ar": "سلسلة من الدراسات الداخلية الفوتوغرافية — تصفّح المجموعة بالأسهم.",
           "renders": [
             { "fit": "gallery", "images": [
               "assets/images/projects/visualization/01.jpg",
@@ -437,14 +559,16 @@
               "assets/images/projects/visualization/06.jpg",
               "assets/images/projects/visualization/07.jpg",
               "assets/images/projects/visualization/08.jpg"
-            ], "caption": "A modular boutique-hotel interior — deep teal panelling, mustard velvet, sculptural brass lighting, and dramatic monochrome studies. Page through the full set with the arrows." }
+            ], "caption": "A modular boutique-hotel interior — deep teal panelling, mustard velvet, sculptural brass lighting, and dramatic monochrome studies. Page through the full set with the arrows.", "caption_ar": "تصميم داخلي لفندق بوتيك معياري — ألواح بلون الأزرق المخضرّ الغامق، ومخمل بلون الخردل، وإضاءة نحاسية نحتية، ودراساتٌ أحادية اللون آسرة. تصفّح المجموعة الكاملة بالأسهم." }
           ]
         },
         {
           "title": "Animation",
+          "title_ar": "التحريك",
           "description": "A cinematic walkthrough rendered in Lumion.",
+          "description_ar": "جولة سينمائية أُظهِرت باستخدام برنامج Lumion.",
           "renders": [
-            { "video": "assets/images/projects/visualization/hero.mp4", "caption": "A cinematic walkthrough, animated and rendered in Lumion — bringing light, materials, and space to life in motion. <span class=\"pd-draw-title\">Al Mouj, Muscat</span>" }
+            { "video": "assets/images/projects/visualization/hero.mp4", "caption": "A cinematic walkthrough, animated and rendered in Lumion — bringing light, materials, and space to life in motion. <span class=\"pd-draw-title\">Al Mouj, Muscat</span>", "caption_ar": "جولة سينمائية، حُرّكت وأُظهِرت في برنامج Lumion — تبثّ الحياة في الضوء والمواد والمساحة بالحركة. <span class=\"pd-draw-title\">الموج، مسقط</span>" }
           ]
         }
       ]

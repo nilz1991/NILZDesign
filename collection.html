@@ -1,14 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('nilz_lang');if(l==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl';document.documentElement.classList.add('lang-ar');}}catch(e){}</script>
   <title>Collection — NILZ</title>
   <link rel="icon" type="image/png" href="assets/images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=4">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&family=Tajawal:wght@300;400;500;700&family=El+Messiri:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=7">
   <script src="js/analytics.js" defer></script>
 </head>
 <body>
@@ -16,7 +17,7 @@
   <section class="page-hero">
     <img src="assets/images/services-hero.jpg" alt="" class="page-hero__bg" id="col-hero-bg">
     <div class="page-hero__content">
-      <a href="projects.html" class="page-hero__back">&#8592; All Projects</a>
+      <a href="projects.html" class="page-hero__back" data-i18n="back.all_projects">&#8592; All Projects</a>
       <span class="section-tag page-hero__tag" id="col-cat"></span>
       <h1 class="page-hero__title display" id="col-title">Collection</h1>
     </div>
@@ -37,7 +38,9 @@
     import { initRotatingText } from './js/components/rotating-text.js';
     import { renderCollection } from './js/content.js';
     import { init as initMain } from './js/main.js';
+    import { initI18n, applyStatic, t, tf } from './js/i18n.js';
 
+    await initI18n();
     initHeader();
     initFooter();
 
@@ -48,22 +51,23 @@
     if (!col) {
       location.href = 'projects.html';
     } else {
-      document.title = `${col.title} — NILZ`;
+      document.title = `${tf(col, 'title')} — NILZ`;
       if (col.image) document.getElementById('col-hero-bg').src = col.image;
-      document.getElementById('col-cat').textContent = col.category || '';
-      document.getElementById('col-title').textContent = col.title;
-      document.getElementById('col-desc').textContent = col.description || '';
+      document.getElementById('col-cat').textContent = tf(col, 'category') || '';
+      document.getElementById('col-title').textContent = tf(col, 'title');
+      document.getElementById('col-desc').textContent = tf(col, 'description') || '';
     }
 
     initRotatingText('#rotating-text-placeholder', {
-      tag:            "Let's Build Your Dream",
-      headline:       'Elevate Your',
-      headlineEm:     'Project.',
-      sub:            'Architecture, interiors, landscape, and visualization — all under one roof, one vision, one team.',
-      ctaLabel:       'Contact Us Today',
+      tag:            t('statement.tag'),
+      headline:       t('statement.headline'),
+      headlineEm:     t('statement.headline_em'),
+      sub:            t('statement.sub.home'),
+      ctaLabel:       t('statement.cta'),
       ctaHref:        'contact.html',
       decorativeImage:'assets/images/line-art-hero.png',
     });
+    applyStatic();
     initMain();
   </script>
 </body>

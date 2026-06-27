@@ -1,63 +1,82 @@
 {
   "home": {
     "hero_headline": "Design Spaces.\nElevate Life.",
+    "hero_headline_ar": "نُصمّم المساحات.\nنرتقي بالحياة.",
     "hero_sub": "Architecture & Interior Design Group",
+    "hero_sub_ar": "مجموعة العمارة والتصميم الداخلي",
     "about_tag": "About NILZ",
     "about_quote": "Architecture should speak of its time and place, but yearn for timelessness.",
+    "about_quote_ar": "ينبغي للعمارة أن تُعبّر عن زمانها ومكانها، وأن تتطلّع في الوقت ذاته إلى الخلود.",
     "about_body": "We are a team led by Niloufar Zanjani — architect and interior designer with over 13 years of professional experience across residential and commercial projects. Our approach bridges modern art and engineering precision, creating spaces that are as functional as they are beautiful.",
+    "about_body_ar": "نحن فريق بقيادة نيلوفر زنجاني — مهندسة معمارية ومصمّمة داخلية بخبرة تتجاوز ثلاثة عشر عامًا في المشاريع السكنية والتجارية. تجمع مقاربتنا بين الفن الحديث ودقّة الهندسة، لنبتكر مساحات تجمع بين الوظيفة والجمال في آنٍ واحد.",
     "marquee_text": "Architecture · Interior Design · Muscat · Oman · NILZ · ",
     "software_label": "Software & Tools",
+    "software_label_ar": "البرامج والأدوات",
     "software": [
-      { "use": "Interior Design", "names": ["3ds Max"] },
-      { "use": "Render Engines", "names": ["Corona", "V-Ray"] },
-      { "use": "Post-production", "names": ["Photoshop"] },
-      { "use": "Characters", "names": ["AI"] },
-      { "use": "Modeling", "names": ["SketchUp"] },
-      { "use": "Technical & Engineering Drawings", "names": ["AutoCAD", "Revit"] },
-      { "use": "Animation & Visualization", "names": ["Unreal Engine", "Lumion", "Chaos Vantage"] }
+      { "use": "Interior Design", "use_ar": "التصميم الداخلي", "names": ["3ds Max"] },
+      { "use": "Render Engines", "use_ar": "محرّكات الإظهار", "names": ["Corona", "V-Ray"] },
+      { "use": "Post-production", "use_ar": "المعالجة النهائية", "names": ["Photoshop"] },
+      { "use": "Characters", "use_ar": "الشخصيات", "names": ["AI"] },
+      { "use": "Modeling", "use_ar": "النمذجة", "names": ["SketchUp"] },
+      { "use": "Technical & Engineering Drawings", "use_ar": "الرسومات الفنية والهندسية", "names": ["AutoCAD", "Revit"] },
+      { "use": "Animation & Visualization", "use_ar": "التحريك والإظهار المعماري", "names": ["Unreal Engine", "Lumion", "Chaos Vantage"] }
     ]
   },
   "about": {
     "hero_title": "Designing with purpose.\nBuilding with integrity.",
+    "hero_title_ar": "نُصمّم بهدف.\nنبني بنزاهة.",
     "bio_1": "I am Niloufar Zanjani, architect and interior designer with over 13 years of professional experience across residential and commercial projects. My approach bridges modern art and engineering precision — creating spaces that are as functional as they are beautiful.",
+    "bio_1_ar": "أنا نيلوفر زنجاني، مهندسة معمارية ومصمّمة داخلية بخبرة تتجاوز ثلاثة عشر عامًا في المشاريع السكنية والتجارية. تجمع مقاربتي بين الفن الحديث ودقّة الهندسة — لأبتكر مساحات تجمع بين الوظيفة والجمال معًا.",
     "bio_2": "After a decade of design, construction supervision and project management, and three years of freelance practice in Oman, I now lead NILZ Architecture & Interior Design Group in Al Mouj, Muscat — and hold membership in the Oman Society of Engineers.",
+    "bio_2_ar": "بعد عقدٍ من التصميم والإشراف على التنفيذ وإدارة المشاريع، وثلاث سنوات من العمل المستقل في عُمان، أقود اليوم مجموعة نيلز للعمارة والتصميم الداخلي في الموج، مسقط — وأحمل عضوية الجمعية العُمانية للمهندسين.",
     "bio_3": "At NILZ, we believe quality of life is rooted in the spaces we inhabit. We are committed to turning your vision into an enduring reality — through authentic materials, meticulous detail, and the latest in architectural knowledge.",
+    "bio_3_ar": "في نيلز، نؤمن بأنّ جودة الحياة تنبع من المساحات التي نعيش فيها. ونلتزم بتحويل رؤيتك إلى واقعٍ يدوم — عبر المواد الأصيلة، والتفاصيل الدقيقة، وأحدث المعارف المعمارية.",
     "values": [
-      { "number": "01", "title": "Contextual Design", "body": "We design with the surroundings in mind — creating spaces that feel rooted in place, culture, and natural light." },
-      { "number": "02", "title": "Timeless Aesthetics", "body": "Every detail is carefully considered to ensure longevity, elegance, and a visual language that transcends trends." },
-      { "number": "03", "title": "Functional Flow", "body": "From layout to circulation, we prioritise clarity and ease of use — shaping environments that support daily life intuitively." },
-      { "number": "04", "title": "Collaborative Process", "body": "We work closely with clients, engineers, and builders — ensuring every decision is aligned with the shared vision." }
+      { "number": "01", "title": "Contextual Design", "title_ar": "تصميم متجذّر في سياقه", "body": "We design with the surroundings in mind — creating spaces that feel rooted in place, culture, and natural light.", "body_ar": "نُصمّم مع وضع المحيط في الاعتبار — لنبتكر مساحات تنبض بالمكان والثقافة والضوء الطبيعي." },
+      { "number": "02", "title": "Timeless Aesthetics", "title_ar": "جمالٌ خالد", "body": "Every detail is carefully considered to ensure longevity, elegance, and a visual language that transcends trends.", "body_ar": "نتأنّى في كل تفصيل لنضمن المتانة والأناقة ولغةً بصريةً تتجاوز الموضات العابرة." },
+      { "number": "03", "title": "Functional Flow", "title_ar": "انسيابٌ وظيفي", "body": "From layout to circulation, we prioritise clarity and ease of use — shaping environments that support daily life intuitively.", "body_ar": "من التوزيع إلى الحركة، نُقدّم الوضوح وسهولة الاستخدام — لنشكّل بيئات تدعم الحياة اليومية بسلاسة وبداهة." },
+      { "number": "04", "title": "Collaborative Process", "title_ar": "عملٌ تشاركي", "body": "We work closely with clients, engineers, and builders — ensuring every decision is aligned with the shared vision.", "body_ar": "نعمل عن قرب مع العملاء والمهندسين والمنفّذين — لنضمن انسجام كل قرار مع الرؤية المشتركة." }
     ]
   },
   "services": {
     "hero_title": "Architecture shaped by vision and detail.",
+    "hero_title_ar": "عمارةٌ تتشكّل بالرؤية والتفصيل.",
     "intro": "We deliver thoughtful architectural solutions that solve complex challenges with clarity, creativity, and precision.",
+    "intro_ar": "نُقدّم حلولًا معمارية مدروسة تعالج التحديات المعقّدة بوضوحٍ وإبداعٍ ودقّة.",
     "items": [
       {
         "number": "01",
         "title": "Vision & Scope",
+        "title_ar": "الرؤية والنطاق",
         "body": "Every project begins with a conversation. We take time to understand how you live and work, your aspirations, and the realities of the site — then translate them into a clear brief and a defined scope. This shared understanding becomes the compass that guides every decision that follows, from the first sketch to the final detail.",
+        "body_ar": "يبدأ كل مشروع بحوار. نأخذ وقتنا لفهم طريقة حياتك وعملك وتطلّعاتك ومعطيات الموقع — ثم نترجمها إلى موجزٍ واضح ونطاقٍ محدّد. ويغدو هذا الفهم المشترك بوصلةً توجّه كل قرار يليه، من أول رسمٍ تخطيطي إلى آخر تفصيل.",
         "image": "assets/images/services/service-01.webp",
         "tools": []
       },
       {
         "number": "02",
         "title": "Planning",
+        "title_ar": "التخطيط",
         "body": "Before a single form is drawn, we study the site in depth — its orientation, light, climate, views, and surrounding context, alongside the regulations that shape what's possible. From this analysis we develop a spatial strategy and concept direction that feels grounded and almost inevitable, carefully balancing how a space performs with how it should feel to live in.",
+        "body_ar": "قبل رسم أي شكل، ندرس الموقع بعمق — توجيهه وضوءه ومناخه ومشاهده ومحيطه، إلى جانب الأنظمة التي تحدّد ما هو ممكن. ومن هذا التحليل نطوّر استراتيجيةً مكانيةً وتوجّهًا تصميميًا يبدو متجذّرًا وكأنه حتمي، موازنين بعناية بين أداء المساحة وإحساس العيش فيها.",
         "image": "assets/images/services/service-02.webp",
         "tools": []
       },
       {
         "number": "03",
         "title": "Designing",
+        "title_ar": "التصميم",
         "body": "This is where ideas take shape. We develop the architecture and interiors together — massing, layouts, materials, light, and detailing — refining each through drawings and 3D visualization until the design is both bold and timeless. Every proportion, surface, and junction is considered so the finished space feels effortless, purposeful, and unmistakably yours.",
+        "body_ar": "هنا تتّخذ الأفكار شكلها. نطوّر العمارة والتصميم الداخلي معًا — الكتل والتوزيعات والمواد والضوء والتفاصيل — ونصقل كلًّا منها عبر الرسومات والإظهار ثلاثي الأبعاد حتى يصبح التصميم جريئًا وخالدًا في آن. ونتأمّل كل نسبةٍ وسطحٍ وملتقى ليبدو المكان المكتمل عفويًا وهادفًا ومعبّرًا عنك بوضوح.",
         "image": "assets/images/services/service-03.webp",
         "tools": []
       },
       {
         "number": "04",
         "title": "Final Step",
+        "title_ar": "الخطوة الأخيرة",
         "body": "We translate the design into precise technical drawings, schedules, and documentation, coordinating closely with engineers and consultants so every detail is feasible and buildable. Through construction we stay involved — supervising quality, resolving details on site, and managing finishes — so the project is delivered exactly as envisioned, down to the last detail.",
+        "body_ar": "نترجم التصميم إلى رسومات فنية دقيقة وجداول ومستندات، بتنسيقٍ وثيق مع المهندسين والاستشاريين ليكون كل تفصيل قابلًا للتنفيذ والبناء. ونبقى حاضرين طوال مرحلة التنفيذ — نشرف على الجودة، ونحسم التفاصيل في الموقع، وندير التشطيبات — لِيُسلَّم المشروع تمامًا كما تُصوِّر، حتى آخر تفصيل.",
         "image": "assets/images/services/service-04.webp",
         "tools": []
       }
@@ -71,12 +90,15 @@
   },
   "contact": {
     "hero_title": "Let's talk today.",
+    "hero_title_ar": "لنتحدّث اليوم.",
     "hero_sub": "Whether you're starting a project or just exploring ideas, we'd love to hear from you.",
+    "hero_sub_ar": "سواء كنت تبدأ مشروعًا أو تستكشف الأفكار، يسعدنا أن نسمع منك.",
     "phone": "+968 99009464",
     "whatsapp": "https://api.whatsapp.com/send?phone=96892315257",
     "instagram": "https://www.instagram.com/nilz.design",
     "linkedin": "https://www.linkedin.com/in/niloufar-zanjani-2888a4271",
     "facebook": "https://www.facebook.com/share/1Hh7Pq64TZ/?mibextid=wwXIfr",
-    "location": "Al Mouj Street, Muscat, Oman"
+    "location": "Al Mouj Street, Muscat, Oman",
+    "location_ar": "شارع الموج، مسقط، عُمان"
   }
 }

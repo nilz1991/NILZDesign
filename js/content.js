@@ -1,3 +1,5 @@
+import { t, tf } from './i18n.js';
+
 let _data = null;
 let _site = null;
 
@@ -24,15 +26,17 @@ async function loadSite() {
 }
 
 // ── Project / collection card HTML ─────────
+// item.category stays the canonical (English) value used for filtering;
+// item.categoryLabel is the localised text shown on the card.
 function gridCardHTML(item) {
   return `
 <a class="project-card project-card--clickable" href="${item.href}" data-category="${item.category}">
   <div class="project-card__img" style="background-image:url('${item.image}')">
     ${item.badge ? `<span class="project-card__badge">${item.badge}</span>` : ''}
-    <span class="project-card__view">${item.cta || 'View Project Details'}<span class="project-card__view-icon">→</span></span>
+    <span class="project-card__view">${item.cta || t('card.view_details')}<span class="project-card__view-icon">→</span></span>
   </div>
   <div class="project-card__body">
-    <span class="project-card__cat">${item.category}</span>
+    <span class="project-card__cat">${item.categoryLabel || item.category}</span>
     <h3 class="project-card__title">${item.title}</h3>
     <p class="project-card__loc">${item.location || ''}</p>
     <p class="project-card__desc">${item.description}</p>
@@ -44,8 +48,9 @@ function gridCardHTML(item) {
 function projectToItem(p) {
   return {
     href: `project.html?id=${p.id}`,
-    image: p.image, category: p.category, title: p.title,
-    location: p.location, description: p.description,
+    image: p.image, category: p.category, categoryLabel: tf(p, 'category'),
+    title: tf(p, 'title'),
+    location: tf(p, 'location'), description: tf(p, 'description'),
   };
 }
 
@@ -56,8 +61,8 @@ function stackedCardHTML(p, idx) {
 <div class="stack-card fade-up ${isEven ? '' : 'stack-card--reverse'}">
   <div class="stack-card__img" style="background-image:url('${p.image}')"></div>
   <div class="stack-card__body">
-    <h2 class="stack-card__title">${p.homeTitle || p.title}</h2>
-    <p class="stack-card__desc">${p.homeDescription || p.description}</p>
+    <h2 class="stack-card__title">${tf(p, 'homeTitle') || tf(p, 'title')}</h2>
+    <p class="stack-card__desc">${tf(p, 'homeDescription') || tf(p, 'description')}</p>
   </div>
 </div>`;
 }
@@ -78,13 +83,13 @@ async function renderHomeSoftware(containerSelector) {
   const site = await loadSite();
   const list = (site.home && site.home.software) || [];
   if (!list.length) { container.innerHTML = ''; return; }
-  const label = (site.home && site.home.software_label) || 'Software & Tools';
+  const label = (site.home && tf(site.home, 'software_label')) || 'Software & Tools';
   container.innerHTML = `
     <div class="container">
       <span class="section-tag home-software__label">${label}</span>
       <ul class="home-software__grid">
         ${list.map(s => `<li class="home-software__item">
-          <span class="home-software__use">${s.use}</span>
+          <span class="home-software__use">${tf(s, 'use')}</span>
           <span class="home-software__name">${(s.names || [s.name]).join(' · ')}</span>
         </li>`).join('')}
       </ul>
@@ -111,9 +116,10 @@ async function renderProjectsGrid(containerSelector, filterSelector) {
       const count = projects.filter(x => x.collection === p.collection).length;
       items.push({
         href: `collection.html?id=${col.id}`,
-        image: col.image, category: col.category, title: col.title,
-        location: col.location, description: col.description,
-        badge: `${count} Projects`, cta: 'View Collection',
+        image: col.image, category: col.category, categoryLabel: tf(col, 'category'),
+        title: tf(col, 'title'),
+        location: tf(col, 'location'), description: tf(col, 'description'),
+        badge: `${count} ${t('card.projects_count')}`, cta: t('card.view_collection'),
       });
     } else {
       items.push(projectToItem(p));
@@ -271,11 +277,12 @@ async function renderSiteContent(pageKey) {
   const data = site[pageKey];
   if (!data) return;
 
-  // [data-cms="key"] → innerHTML
+  // [data-cms="key"] → innerHTML (prefers the `<key>_ar` value in Arabic)
   document.querySelectorAll('[data-cms]').forEach(el => {
     const key = el.dataset.cms;
-    if (data[key] !== undefined && typeof data[key] === 'string') {
-      el.innerHTML = data[key].replace(/\n/g, '<br>');
+    const val = tf(data, key);
+    if (val !== undefined && typeof val === 'string') {
+      el.innerHTML = val.replace(/\n/g, '<br>');
     }
   });
 

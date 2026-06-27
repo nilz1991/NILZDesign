@@ -1,0 +1,112 @@
+{
+  "nav.home":       { "en": "Home",     "ar": "الرئيسية" },
+  "nav.projects":   { "en": "Projects", "ar": "المشاريع" },
+  "nav.about":      { "en": "About",    "ar": "من نحن" },
+  "nav.contact":    { "en": "Contact",  "ar": "تواصل معنا" },
+
+  "cta.start_project":  { "en": "Start a Project", "ar": "ابدأ مشروعك" },
+  "btn.view_projects":  { "en": "View Projects",   "ar": "تصفّح المشاريع" },
+  "btn.about_us":       { "en": "About Us",        "ar": "من نحن" },
+  "btn.contact":        { "en": "Contact",         "ar": "تواصل معنا" },
+  "btn.our_services":   { "en": "Our Services",    "ar": "خدماتنا" },
+  "btn.all_projects":   { "en": "All Projects",    "ar": "كل المشاريع" },
+  "btn.submit":         { "en": "Submit",          "ar": "إرسال" },
+
+  "hero.eyebrow": { "en": "NILZ — Muscat, Oman", "ar": "نيلز — مسقط، عُمان" },
+  "hero.scroll":  { "en": "Scroll", "ar": "مرّر للأسفل" },
+
+  "mq.architecture": { "en": "Architecture",        "ar": "العمارة" },
+  "mq.interior":     { "en": "Interior Design",     "ar": "التصميم الداخلي" },
+  "mq.muscat":       { "en": "Muscat",              "ar": "مسقط" },
+  "mq.oman":         { "en": "Oman",                "ar": "عُمان" },
+  "mq.experience":   { "en": "13+ Years Experience", "ar": "أكثر من ١٣ عامًا من الخبرة" },
+
+  "tag.about_nilz":  { "en": "About NILZ",  "ar": "عن نيلز" },
+  "tag.services":    { "en": "Services",    "ar": "خدماتنا" },
+  "tag.our_story":   { "en": "Our Story",   "ar": "قصّتنا" },
+  "tag.our_values":  { "en": "Our Values",  "ar": "قيمنا" },
+  "tag.projects":    { "en": "Projects",    "ar": "المشاريع" },
+  "tag.contact":     { "en": "Contact",     "ar": "تواصل معنا" },
+
+  "services.title":  { "en": "What We <em>Do</em>", "ar": "ما الذي <em>نقدّمه</em>" },
+
+  "about.values_title": { "en": "What we stand for", "ar": "ما نؤمن به" },
+
+  "stat.years":        { "en": "Years Experience", "ar": "سنوات الخبرة" },
+  "stat.member":       { "en": "Member",           "ar": "عضو" },
+  "stat.architecture": { "en": "Architecture",     "ar": "العمارة" },
+
+  "projects.title":          { "en": "Selected <em>Work</em>", "ar": "أعمال <em>مختارة</em>" },
+  "projects.instagram_text": { "en": "See more work on Instagram", "ar": "شاهد المزيد من الأعمال على إنستغرام" },
+
+  "filter.all":           { "en": "All",                "ar": "الكل" },
+  "filter.interior":      { "en": "Interior Design",    "ar": "التصميم الداخلي" },
+  "filter.architecture":  { "en": "Architecture",       "ar": "العمارة" },
+  "filter.technical":     { "en": "Technical Drawings", "ar": "الرسومات الفنية" },
+  "filter.visualization": { "en": "Visualization",      "ar": "الإظهار المعماري" },
+
+  "card.view_details":  { "en": "View Project Details", "ar": "عرض تفاصيل المشروع" },
+  "card.view_collection": { "en": "View Collection",    "ar": "عرض المجموعة" },
+  "card.projects_count": { "en": "Projects",            "ar": "مشاريع" },
+
+  "back.all_projects": { "en": "&#8592; All Projects", "ar": "كل المشاريع &#8594;" },
+
+  "pd.overview":  { "en": "Project Overview", "ar": "نبذة عن المشروع" },
+  "pd.contents":  { "en": "Contents",         "ar": "المحتويات" },
+  "pd.location":  { "en": "Location",         "ar": "الموقع" },
+  "pd.view_full": { "en": "View full image",  "ar": "عرض الصورة كاملة" },
+  "pd.see_more_title": { "en": "See more <em>work</em>", "ar": "شاهد المزيد من <em>الأعمال</em>" },
+  "pd.see_more_sub":   { "en": "Explore the full portfolio across architecture, interior design, and landscape.", "ar": "تصفّح مجموعة الأعمال الكاملة في العمارة والتصميم الداخلي وتنسيق الحدائق." },
+
+  "statement.tag":         { "en": "Let's Build Your Dream", "ar": "لنبنِ حلمك معًا" },
+  "statement.headline":    { "en": "Elevate Your",  "ar": "ارتقِ" },
+  "statement.headline_em": { "en": "Project.",       "ar": "بمشروعك." },
+  "statement.cta":         { "en": "Contact Us Today", "ar": "تواصل معنا اليوم" },
+  "statement.sub.home":    { "en": "Architecture, interiors, landscape, and visualization — all under one roof, one vision, one team.", "ar": "العمارة والتصميم الداخلي وتنسيق الحدائق والإظهار المعماري — تحت سقف واحد، برؤية واحدة، وفريق واحد." },
+  "statement.sub.about":   { "en": "Thirteen years of shaping spaces that work as beautifully as they look — because great design is both seen and felt.", "ar": "ثلاثة عشر عامًا من تشكيل مساحات تعمل بالكفاءة ذاتها التي تبدو بها جمالًا — فالتصميم العظيم يُرى ويُحَسّ معًا." },
+  "statement.sub.projects":{ "en": "Ready to start something extraordinary? Let's shape your vision into a space that lasts.", "ar": "هل أنت مستعد لبدء شيء استثنائي؟ لنحوّل رؤيتك إلى مساحة تدوم." },
+
+  "footer.desc":            { "en": "Architecture &amp; Interior Design Group led by Niloufar Zanjani — shaping spaces across Muscat and beyond for over 13 years.", "ar": "مجموعة العمارة والتصميم الداخلي بقيادة نيلوفر زنجاني — نُشكّل المساحات في مسقط وما حولها منذ أكثر من ١٣ عامًا." },
+  "footer.nav_heading":     { "en": "Navigate",    "ar": "تصفّح" },
+  "footer.services_heading":{ "en": "Services",    "ar": "خدماتنا" },
+  "footer.contact_heading": { "en": "Get in Touch", "ar": "تواصل معنا" },
+  "footer.services_nav":    { "en": "Services",    "ar": "خدماتنا" },
+  "footer.address_line1":   { "en": "Al Mouj Street, Muscat", "ar": "شارع الموج، مسقط" },
+  "footer.address_line2":   { "en": "Sultanate of Oman", "ar": "سلطنة عُمان" },
+  "footer.copyright":       { "en": "NILZ Architecture &amp; Interior Design Group", "ar": "نيلز — مجموعة العمارة والتصميم الداخلي" },
+  "footer.start_project":   { "en": "Start a Project &rarr;", "ar": "ابدأ مشروعك &larr;" },
+
+  "svc.interior":      { "en": "Interior Design",      "ar": "التصميم الداخلي" },
+  "svc.architecture":  { "en": "Architecture",         "ar": "العمارة" },
+  "svc.landscape":     { "en": "Landscape &amp; Exterior", "ar": "تنسيق الحدائق والخارجية" },
+  "svc.visualization": { "en": "Visualization",        "ar": "الإظهار المعماري" },
+
+  "contact.form_title":   { "en": "Apply for a collaboration", "ar": "اطلب تعاونًا" },
+  "form.name":            { "en": "Your name",    "ar": "الاسم" },
+  "form.email":           { "en": "Your email",   "ar": "البريد الإلكتروني" },
+  "form.phone":           { "en": "Your phone",   "ar": "رقم الهاتف" },
+  "form.company":         { "en": "Your company", "ar": "الشركة" },
+  "form.message":         { "en": "Your message", "ar": "رسالتك" },
+  "form.ph_name":         { "en": "Niloufar Zanjani", "ar": "نيلوفر زنجاني" },
+  "form.ph_email":        { "en": "hello@nilz.com",    "ar": "hello@nilz.com" },
+  "form.ph_phone":        { "en": "+968 9xxx xxxx",    "ar": "+968 9xxx xxxx" },
+  "form.ph_company":      { "en": "Optional",          "ar": "اختياري" },
+  "form.ph_message":      { "en": "Tell us about your project...", "ar": "أخبرنا عن مشروعك..." },
+  "form.solution_label":  { "en": "What solution do you need?", "ar": "ما الخدمة التي تحتاجها؟" },
+  "form.opt_house":       { "en": "House",          "ar": "منزل" },
+  "form.opt_office":      { "en": "Office",         "ar": "مكتب" },
+  "form.opt_interior":    { "en": "Interior Design", "ar": "تصميم داخلي" },
+  "form.opt_other":       { "en": "Other",          "ar": "أخرى" },
+
+  "info.phone":     { "en": "Phone",     "ar": "الهاتف" },
+  "info.whatsapp":  { "en": "WhatsApp",  "ar": "واتساب" },
+  "info.location":  { "en": "Location",  "ar": "الموقع" },
+  "info.follow":    { "en": "Follow Us", "ar": "تابعنا" },
+  "info.location_value": { "en": "Al Mouj Street, Muscat<br>Oman", "ar": "شارع الموج، مسقط<br>عُمان" },
+
+  "thanks.tag":   { "en": "Message Received", "ar": "تم استلام رسالتك" },
+  "thanks.title": { "en": "Thank you for<br><em>reaching out.</em>", "ar": "شكرًا<br><em>لتواصلك معنا.</em>" },
+  "thanks.body":  { "en": "We've received your message and will get back to you within 1–2 business days.", "ar": "لقد استلمنا رسالتك وسنعاود التواصل معك خلال يوم إلى يومي عمل." },
+  "thanks.home":  { "en": "Back to Home",  "ar": "العودة إلى الرئيسية" },
+  "thanks.work":  { "en": "View Our Work", "ar": "شاهد أعمالنا" }
+}

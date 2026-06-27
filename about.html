@@ -1,14 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('nilz_lang');if(l==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl';document.documentElement.classList.add('lang-ar');}}catch(e){}</script>
   <title>About — NILZ Architecture & Interior Design Group</title>
   <link rel="icon" type="image/png" href="assets/images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=4">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&family=Tajawal:wght@300;400;500;700&family=El+Messiri:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=7">
   <script src="js/analytics.js" defer></script>
 </head>
 <body>
@@ -17,7 +18,7 @@
   <section class="page-hero">
     <img src="assets/images/project-2.jpg" alt="" class="page-hero__bg">
     <div class="page-hero__content">
-      <span class="section-tag page-hero__tag">About NILZ</span>
+      <span class="section-tag page-hero__tag" data-i18n="tag.about_nilz">About NILZ</span>
       <h1 class="page-hero__title display" data-cms="hero_title">Designing with purpose.<br>Building with integrity.</h1>
     </div>
   </section>
@@ -28,19 +29,19 @@
       <div class="about-bio__photo fade-up">
         <img src="assets/images/photo.jpeg" alt="Niloufar Zanjani" class="about-bio__img">
         <div class="about-bio__stats">
-          <div class="stat-item"><span class="stat-number">13+</span><span class="stat-label">Years Experience</span></div>
-          <div class="stat-item"><span class="stat-number">OSE</span><span class="stat-label">Member</span></div>
-          <div class="stat-item"><span class="stat-number">M.Arch</span><span class="stat-label">Architecture</span></div>
+          <div class="stat-item"><span class="stat-number">13+</span><span class="stat-label" data-i18n="stat.years">Years Experience</span></div>
+          <div class="stat-item"><span class="stat-number">OSE</span><span class="stat-label" data-i18n="stat.member">Member</span></div>
+          <div class="stat-item"><span class="stat-number">M.Arch</span><span class="stat-label" data-i18n="stat.architecture">Architecture</span></div>
         </div>
       </div>
       <div class="about-bio__text">
-        <span class="section-tag">Our Story</span>
+        <span class="section-tag" data-i18n="tag.our_story">Our Story</span>
         <p class="fade-up" data-cms="bio_1">I am Niloufar Zanjani, architect and interior designer with over 13 years of professional experience.</p>
         <p class="fade-up delay-1" data-cms="bio_2">After a decade of design, construction supervision and project management, and three years of freelance practice in Oman, I now lead NILZ Architecture & Interior Design Group in Al Mouj, Muscat.</p>
         <p class="fade-up delay-2" data-cms="bio_3">At NILZ, we believe quality of life is rooted in the spaces we inhabit.</p>
         <div style="display:flex;gap:16px;margin-top:36px" class="fade-up delay-3">
-          <a href="index.html#services" class="btn btn--solid">Our Services</a>
-          <a href="contact.html" class="btn btn--outline">Contact</a>
+          <a href="index.html#services" class="btn btn--solid" data-i18n="btn.our_services">Our Services</a>
+          <a href="contact.html" class="btn btn--outline" data-i18n="btn.contact">Contact</a>
         </div>
       </div>
     </div>
@@ -49,8 +50,8 @@
   <!-- ── Values ──────────────────────────── -->
   <section class="section section--cream values-section">
     <div class="container">
-      <span class="section-tag">Our Values</span>
-      <h2 class="section-title fade-up">What we stand for</h2>
+      <span class="section-tag" data-i18n="tag.our_values">Our Values</span>
+      <h2 class="section-title fade-up" data-i18n="about.values_title">What we stand for</h2>
       <div class="values-grid" id="values-grid">
         <!-- rendered by content.js -->
       </div>
@@ -67,15 +68,17 @@
     import { initRotatingText } from './js/components/rotating-text.js';
     import { loadSite, renderSiteContent } from './js/content.js';
     import { init as initMain } from './js/main.js';
+    import { initI18n, applyStatic, t, tf } from './js/i18n.js';
 
+    await initI18n();
     initHeader();
     initFooter();
     initRotatingText('#rotating-text-placeholder', {
-      tag:            "Let's Build Your Dream",
-      headline:       'Elevate Your',
-      headlineEm:     'Project.',
-      sub:            'Thirteen years of shaping spaces that work as beautifully as they look — because great design is both seen and felt.',
-      ctaLabel:       'Contact Us Today',
+      tag:            t('statement.tag'),
+      headline:       t('statement.headline'),
+      headlineEm:     t('statement.headline_em'),
+      sub:            t('statement.sub.about'),
+      ctaLabel:       t('statement.cta'),
       ctaHref:        'contact.html',
       decorativeImage:'assets/images/line-art-hero.png',
     });
@@ -86,11 +89,12 @@
     document.getElementById('values-grid').innerHTML = values.map(v => `
       <div class="value-card fade-up">
         <span class="value-number">${v.number}</span>
-        <h3 class="value-title">${v.title}</h3>
-        <p class="value-body">${v.body}</p>
+        <h3 class="value-title">${tf(v, 'title')}</h3>
+        <p class="value-body">${tf(v, 'body')}</p>
       </div>`).join('');
 
     await renderSiteContent('about');
+    applyStatic();
     initMain();
   </script>
 </body>

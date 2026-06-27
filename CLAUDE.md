@@ -5,9 +5,16 @@ Live: **nilzdesign.com** · Repo: **github.com/nilz1991/NILZDesign** · Host: **
 
 ## Stack
 - Plain HTML + CSS + vanilla JS (ES modules). **No build step.**
-- Content: **`_data/projects.json`** (projects) + **`_data/site.json`** (home/about/services/contact text).
-- Header/footer injected by `js/components/*.js`. Page logic in `js/content.js`, `js/main.js`.
+- Content: **`_data/projects.json`** (projects) + **`_data/site.json`** (home/about/services/contact text) + **`_data/i18n.json`** (static UI strings, EN/AR).
+- Header/footer injected by `js/components/*.js`. Page logic in `js/content.js`, `js/main.js`. i18n in `js/i18n.js`.
 - CSS link is cache-busted: `css/style.css?v=N` — **bump N** on every CSS change so mobile picks it up.
+
+## Bilingual (EN / AR + RTL) — `js/i18n.js`
+- Default **English**; choice stored in `localStorage('nilz_lang')` (or one-time `?lang=ar`). Switching reloads the page (everything re-renders cleanly). Switch UI = `EN | العربية` in header (active bolded/gold), built by `langSwitchHTML()`.
+- Each page: early inline `<head>` script sets `dir/lang/.lang-ar` to avoid flash; module then `await initI18n()` **before** rendering, and `applyStatic()` **after** injecting header/footer + dynamic content.
+- **Static UI text**: mark with `data-i18n="key"` (innerHTML), `data-i18n-ph` (placeholder), `data-i18n-aria` (aria-label); keys live in `_data/i18n.json` as `{en, ar}`. JS components use `t('key')`.
+- **Data content** (site.json / projects.json): add a sibling `<field>_ar` next to each text field; rendering reads it via `tf(obj, 'field')` (falls back to base field if `_ar` missing). `category` stays English (used for filtering) — `category_ar` is display-only.
+- **RTL**: `html.lang-ar` swaps font tokens to `El Messiri` (display) / `Tajawal` (body); a small `html[dir="rtl"]` block at the end of `style.css` mirrors the few physically-positioned bits (scroll hint, card badge, captions border, toc, lightbox bar). Arabic translations must be **fluent MSA (فصحى)**.
 
 ## Pages
 - `index.html` home (Selected Work = `featured` projects, max 4) · `projects.html` grid (collections collapse to 1 card) · `collection.html?id=` · `project.html?id=` detail · `about/services/contact/thank-you.html`.

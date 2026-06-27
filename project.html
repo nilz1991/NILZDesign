@@ -1,14 +1,15 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('nilz_lang');if(l==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl';document.documentElement.classList.add('lang-ar');}}catch(e){}</script>
   <title>Project — NILZ</title>
   <link rel="icon" type="image/png" href="assets/images/logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=4">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&family=Tajawal:wght@300;400;500;700&family=El+Messiri:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=7">
 </head>
 <body>
 
@@ -17,7 +18,7 @@
     <div class="pd-hero__bg" id="pd-hero-bg"></div>
     <div class="pd-hero__overlay"></div>
     <div class="pd-hero__content container">
-      <a href="projects.html" class="pd-hero__back">&#8592; All Projects</a>
+      <a href="projects.html" class="pd-hero__back" data-i18n="back.all_projects">&#8592; All Projects</a>
       <span class="pd-hero__cat" id="pd-hero-cat"></span>
       <h1 class="pd-hero__title" id="pd-hero-title"></h1>
       <p class="pd-hero__loc" id="pd-hero-loc"></p>
@@ -28,7 +29,7 @@
   <section class="pd-overview">
     <div class="container">
       <div class="pd-overview__inner">
-        <span class="pd-overview__label">Project Overview</span>
+        <span class="pd-overview__label" data-i18n="pd.overview">Project Overview</span>
         <p class="pd-overview__text" id="pd-overview-text"></p>
       </div>
     </div>
@@ -43,11 +44,11 @@
   <!-- Footer CTA -->
   <section class="pd-back-strip">
     <div class="container">
-      <h2 class="fade-up">See more <em>work</em></h2>
-      <p class="fade-up delay-1">Explore the full portfolio across architecture, interior design, and landscape.</p>
+      <h2 class="fade-up" data-i18n="pd.see_more_title">See more <em>work</em></h2>
+      <p class="fade-up delay-1" data-i18n="pd.see_more_sub">Explore the full portfolio across architecture, interior design, and landscape.</p>
       <div class="pd-back-strip__actions fade-up delay-2">
-        <a href="projects.html" class="btn btn--gold">All Projects</a>
-        <a href="contact.html" class="btn btn--outline-light">Start a Project</a>
+        <a href="projects.html" class="btn btn--gold" data-i18n="btn.all_projects">All Projects</a>
+        <a href="contact.html" class="btn btn--outline-light" data-i18n="cta.start_project">Start a Project</a>
       </div>
     </div>
   </section>
@@ -56,7 +57,9 @@
     import { initHeader } from './js/components/header.js';
     import { initFooter } from './js/components/footer.js';
     import { init as initMain } from './js/main.js';
+    import { initI18n, applyStatic, t, tf } from './js/i18n.js';
 
+    await initI18n();
     initHeader();
     initFooter();
 
@@ -69,7 +72,7 @@
     if (!p) { location.href = 'projects.html'; }
 
     // Page title
-    document.title = `${p.title} — NILZ`;
+    document.title = `${tf(p, 'title')} — NILZ`;
 
     // Hero — explicit p.hero wins, else first slide, else card image
     const heroImg = p.hero || ((p.slides && p.slides[0]) ? p.slides[0].image : p.image);
@@ -77,12 +80,12 @@
     heroBg.style.backgroundImage = `url('${heroImg}')`;
     if (p.heroFit === 'contain') heroBg.classList.add('pd-hero__bg--contain');
     if (p.heroPos) heroBg.style.backgroundPosition = p.heroPos;
-    document.getElementById('pd-hero-cat').textContent  = p.category;
-    document.getElementById('pd-hero-title').textContent = p.title;
-    document.getElementById('pd-hero-loc').textContent  = p.location;
+    document.getElementById('pd-hero-cat').textContent  = tf(p, 'category');
+    document.getElementById('pd-hero-title').textContent = tf(p, 'title');
+    document.getElementById('pd-hero-loc').textContent  = tf(p, 'location');
 
     // Overview
-    document.getElementById('pd-overview-text').textContent = p.overview || p.description;
+    document.getElementById('pd-overview-text').textContent = tf(p, 'overview') || tf(p, 'description');
 
     // Structure: locations[] → sections[] → renders[].
     // Back-compat: a flat sections[] or slides[] becomes a single unnamed location.
@@ -105,8 +108,9 @@
         const contain = r.fit === 'contain';
         const drawing = r.fit === 'drawing';
         const flip = r.fit === 'flip';
-        const altText = (r.caption || '').replace(/<[^>]*>/g, '').replace(/"/g, '&quot;');
-        const caption = r.caption ? `<div class="container"><figcaption class="pd-render__caption"><p>${r.caption}</p></figcaption></div>` : '';
+        const capText = tf(r, 'caption');
+        const altText = (capText || '').replace(/<[^>]*>/g, '').replace(/"/g, '&quot;');
+        const caption = capText ? `<div class="container"><figcaption class="pd-render__caption"><p>${capText}</p></figcaption></div>` : '';
         if (flip) {
           const [colorSrc, bwSrc] = r.images || [];
           return `
@@ -154,7 +158,7 @@
         const zoomable = !contain;
         return `
         <figure class="pd-render ${contain ? 'pd-render--contain' : ''}${drawing ? 'pd-render--drawing' : ''}">
-          <img class="pd-render__img" src="${r.image}" alt="${altText}" loading="lazy"${contain ? ' data-nozoom="1"' : ' title="View full image"'}>
+          <img class="pd-render__img" src="${r.image}" alt="${altText}" loading="lazy"${contain ? ' data-nozoom="1"' : ` title="${t('pd.view_full')}"`}>
           ${zoomable ? zoomBadge : ''}
           ${caption}
         </figure>`;
@@ -165,8 +169,8 @@
           <div class="pd-section__header">
             <span class="pd-section__num">${String(i + 1).padStart(2, '0')}</span>
             <div>
-              <h2 class="pd-section__title fade-up">${sec.title}</h2>
-              ${sec.description ? `<p class="pd-section__desc fade-up delay-1">${sec.description}</p>` : ''}
+              <h2 class="pd-section__title fade-up">${tf(sec, 'title')}</h2>
+              ${tf(sec, 'description') ? `<p class="pd-section__desc fade-up delay-1">${tf(sec, 'description')}</p>` : ''}
             </div>
           </div>
         </div>
@@ -180,16 +184,16 @@
       const header = loc.name ? `
         <div class="pd-locationhead fade-up">
           <div class="container">
-            <span class="pd-locationhead__label">Location</span>
-            <h2 class="pd-locationhead__name">${loc.name}</h2>
-            ${loc.description ? `<p class="pd-locationhead__desc">${loc.description}</p>` : ''}
+            <span class="pd-locationhead__label">${t('pd.location')}</span>
+            <h2 class="pd-locationhead__name">${tf(loc, 'name')}</h2>
+            ${tf(loc, 'description') ? `<p class="pd-locationhead__desc">${tf(loc, 'description')}</p>` : ''}
           </div>
         </div>` : '';
-      if (loc.name) contents.push({ type: 'loc', name: loc.name });
+      if (loc.name) contents.push({ type: 'loc', name: tf(loc, 'name') });
       return header + loc.sections.map((sec, i) => {
         secId += 1;
         const id = `sec-${secId}`;
-        contents.push({ type: 'sec', id, num: String(i + 1).padStart(2, '0'), title: sec.title });
+        contents.push({ type: 'sec', id, num: String(i + 1).padStart(2, '0'), title: tf(sec, 'title') });
         return renderSection(sec, i, id);
       }).join('');
     }).join('');
@@ -199,7 +203,7 @@
     const contentsEl = document.getElementById('pd-contents');
     if (contentsEl && sectionCount >= 2) {
       contentsEl.innerHTML = `
-        <span class="pd-contents__label">Contents</span>
+        <span class="pd-contents__label">${t('pd.contents')}</span>
         <nav class="pd-contents__list">
           ${contents.map(c => c.type === 'loc'
             ? `<span class="pd-contents__loc">${c.name}</span>`
@@ -365,6 +369,7 @@
       imgs.forEach(im => im.addEventListener('click', () => openLb(imgs[idx].src)));
     });
 
+    applyStatic();
     initMain();
   </script>
 </body>

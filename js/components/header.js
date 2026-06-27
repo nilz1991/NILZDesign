@@ -4,21 +4,23 @@
 // - Active nav link highlighting
 // - Mobile hamburger toggle
 
+import { t, langSwitchHTML, bindLangSwitch } from '../i18n.js';
+
 export function initHeader() {
   // Normalise: strip .html so both '/about' and '/about.html' match 'about.html'
   const currentSlug = (location.pathname.split('/').pop() || 'index').replace(/\.html$/, '');
 
   const pages = [
-    { href: 'index.html',    label: 'Home' },
-    { href: 'projects.html', label: 'Projects' },
-    { href: 'about.html',    label: 'About' },
-    { href: 'contact.html',  label: 'Contact' },
+    { href: 'index.html',    key: 'nav.home' },
+    { href: 'projects.html', key: 'nav.projects' },
+    { href: 'about.html',    key: 'nav.about' },
+    { href: 'contact.html',  key: 'nav.contact' },
   ];
 
   const navLinks = pages.map(p => {
     const slug   = p.href.replace(/\.html$/, '');
     const active = currentSlug === slug ? 'class="active"' : '';
-    return `<li><a href="${p.href}" ${active}>${p.label}</a></li>`;
+    return `<li><a href="${p.href}" ${active}>${t(p.key)}</a></li>`;
   }).join('');
 
   const html = `
@@ -30,8 +32,10 @@ export function initHeader() {
     </a>
     <nav class="header-nav" id="header-nav">
       <ul>${navLinks}</ul>
+      ${langSwitchHTML('lang-switch--mobile')}
     </nav>
-    <a href="contact.html" class="btn btn--outline header-cta">Start a Project</a>
+    ${langSwitchHTML('lang-switch--desktop')}
+    <a href="contact.html" class="btn btn--outline header-cta">${t('cta.start_project')}</a>
     <button class="header-burger" id="header-burger" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
@@ -39,6 +43,7 @@ export function initHeader() {
 </header>`;
 
   document.body.insertAdjacentHTML('afterbegin', html);
+  bindLangSwitch(document.getElementById('site-header'));
 
   // Scroll: add .scrolled class when past 60px
   const header = document.getElementById('site-header');
