@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&family=Tajawal:wght@300;400;500;700&family=El+Messiri:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=9">
+  <link rel="stylesheet" href="css/style.css?v=12">
 </head>
 <body>
 
@@ -57,7 +57,7 @@
     import { initHeader } from './js/components/header.js';
     import { initFooter } from './js/components/footer.js';
     import { init as initMain } from './js/main.js';
-    import { initI18n, applyStatic, t, tf } from './js/i18n.js';
+    import { initI18n, applyStatic, t, tf, onLangChange } from './js/i18n.js';
 
     await initI18n();
     initHeader();
@@ -71,28 +71,101 @@
     const p = projects.find(x => x.id === id);
     if (!p) { location.href = 'projects.html'; }
 
-    // Page title
-    document.title = `${tf(p, 'title')} — NILZ`;
-
-    // Hero — explicit p.hero wins, else first slide, else card image
+    // ── Hero image (language-independent, set once) ──
     const heroImg = p.hero || ((p.slides && p.slides[0]) ? p.slides[0].image : p.image);
     const heroBg = document.getElementById('pd-hero-bg');
     heroBg.style.backgroundImage = `url('${heroImg}')`;
     if (p.heroFit === 'contain') heroBg.classList.add('pd-hero__bg--contain');
     if (p.heroPos) heroBg.style.backgroundPosition = p.heroPos;
-    document.getElementById('pd-hero-cat').textContent  = tf(p, 'category');
-    document.getElementById('pd-hero-title').textContent = tf(p, 'title');
-    document.getElementById('pd-hero-loc').textContent  = tf(p, 'location');
 
-    // Overview
-    document.getElementById('pd-overview-text').textContent = tf(p, 'overview') || tf(p, 'description');
+    /* ════════ Lightbox — created once, content-independent ════════ */
+    const magInSvg = `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>`;
+    const magOutSvg = `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>`;
+    const lb = document.createElement('div');
+    lb.className = 'pd-lightbox';
+    lb.innerHTML = `
+      <div class="pd-lightbox__bar">
+        <button class="pd-lightbox__btn pd-lightbox__zoomout" type="button" aria-label="Zoom out">${magOutSvg}</button>
+        <button class="pd-lightbox__btn pd-lightbox__zoomin" type="button" aria-label="Zoom in">${magInSvg}</button>
+        <button class="pd-lightbox__btn pd-lightbox__close" type="button" aria-label="Close">&times;</button>
+      </div>
+      <img alt="">`;
+    document.body.appendChild(lb);
+    const lbImg = lb.querySelector('img');
 
-    // Structure: locations[] → sections[] → renders[].
-    // Back-compat: a flat sections[] or slides[] becomes a single unnamed location.
-    const locations = p.locations
-      || [{ name: null, description: '', sections: (p.sections
-          || (p.slides || []).map((s, i) => ({ title: `View ${String(i + 1).padStart(2, '0')}`, description: '', renders: [s] }))) }];
+    // Zoom (3 steps, targeted to the click point) + drag-to-pan when zoomed
+    const zScales = [1, 1.6, 2.3, 3];
+    let zLevel = 0, tx = 0, ty = 0;
+    const curScale = () => zScales[zLevel];
+    const clampPan = () => {
+      const s = curScale();
+      tx = Math.min(0, Math.max(lbImg.clientWidth * (1 - s), tx));
+      ty = Math.min(0, Math.max(lbImg.clientHeight * (1 - s), ty));
+    };
+    const updateCursor = () => { lbImg.style.cursor = zLevel > 0 ? 'grab' : 'zoom-in'; };
+    const applyTransform = () => {
+      lbImg.style.transformOrigin = '0 0';
+      lbImg.style.transform = `translate(${tx}px, ${ty}px) scale(${curScale()})`;
+      updateCursor();
+    };
+    const resetZoom = () => { zLevel = 0; tx = 0; ty = 0; applyTransform(); };
+    const zoomStep = (lx, ly, dir) => {
+      const sOld = curScale();
+      if (dir > 0) { if (zLevel >= zScales.length - 1) { resetZoom(); return; } zLevel += 1; }
+      else { if (zLevel <= 0) return; zLevel -= 1; }
+      const sNew = curScale();
+      if (zLevel === 0) { tx = 0; ty = 0; }
+      else { tx += lx * (sOld - sNew); ty += ly * (sOld - sNew); clampPan(); }
+      applyTransform();
+    };
 
+    const openLb  = (src) => { lbImg.src = src; resetZoom(); lb.classList.add('open'); document.body.classList.add('modal-open'); };
+    const closeLb = () => { lb.classList.remove('open'); document.body.classList.remove('modal-open'); };
+
+    let down = false, moved = false, sx = 0, sy = 0, sTx = 0, sTy = 0;
+    lbImg.addEventListener('pointerdown', (e) => {
+      e.preventDefault();
+      down = true; moved = false; sx = e.clientX; sy = e.clientY; sTx = tx; sTy = ty;
+      try { lbImg.setPointerCapture(e.pointerId); } catch (_) {}
+      if (zLevel > 0) lbImg.style.cursor = 'grabbing';
+    });
+    lbImg.addEventListener('pointermove', (e) => {
+      if (!down) return;
+      const dx = e.clientX - sx, dy = e.clientY - sy;
+      if (Math.abs(dx) > 4 || Math.abs(dy) > 4) moved = true;
+      if (zLevel > 0 && moved) { lbImg.style.transition = 'none'; tx = sTx + dx; ty = sTy + dy; clampPan(); applyTransform(); lbImg.style.cursor = 'grabbing'; }
+    });
+    const endDrag = (e) => {
+      if (!down) return; down = false;
+      try { lbImg.releasePointerCapture(e.pointerId); } catch (_) {}
+      lbImg.style.transition = '';
+      if (!moved) zoomStep(e.offsetX, e.offsetY, 1);
+      updateCursor();
+    };
+    lbImg.addEventListener('pointerup', endDrag);
+    lbImg.addEventListener('pointercancel', endDrag);
+    lbImg.addEventListener('click', (e) => e.stopPropagation());
+    lb.querySelector('.pd-lightbox__zoomin').addEventListener('click', (e) => { e.stopPropagation(); zoomStep(lbImg.clientWidth / 2, lbImg.clientHeight / 2, 1); });
+    lb.querySelector('.pd-lightbox__zoomout').addEventListener('click', (e) => { e.stopPropagation(); zoomStep(lbImg.clientWidth / 2, lbImg.clientHeight / 2, -1); });
+    lb.querySelector('.pd-lightbox__bar').addEventListener('click', (e) => e.stopPropagation());
+    lb.querySelector('.pd-lightbox__close').addEventListener('click', closeLb);
+    lb.addEventListener('click', closeLb);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLb(); });
+
+    // Close the floating TOC menu on an outside click; toggle its visibility on scroll
+    // (bound once; both query the live .pd-toc since it is rebuilt per language).
+    document.addEventListener('click', (e) => {
+      const toc = document.querySelector('.pd-toc');
+      if (toc && !toc.contains(e.target)) toc.classList.remove('pd-toc--open');
+    });
+    const tocToggle = () => {
+      const toc = document.querySelector('.pd-toc');
+      const ce  = document.getElementById('pd-contents');
+      if (toc && ce) toc.classList.toggle('pd-toc--show', ce.getBoundingClientRect().bottom < -40);
+    };
+    window.addEventListener('scroll', tocToggle, { passive: true });
+
+    /* ════════ Section markup ════════ */
     const renderSection = (sec, i, id) => {
       const altClass = i % 2 === 1 ? 'pd-section--alt' : '';
       const zoomBadge = `
@@ -178,197 +251,135 @@
       </section>`;
     };
 
-    let secId = 0;
-    const contents = [];
-    document.getElementById('pd-sections').innerHTML = locations.map(loc => {
-      const header = loc.name ? `
-        <div class="pd-locationhead fade-up">
-          <div class="container">
-            <span class="pd-locationhead__label">${t('pd.location')}</span>
-            <h2 class="pd-locationhead__name">${tf(loc, 'name')}</h2>
-            ${tf(loc, 'description') ? `<p class="pd-locationhead__desc">${tf(loc, 'description')}</p>` : ''}
-          </div>
-        </div>` : '';
-      if (loc.name) contents.push({ type: 'loc', name: tf(loc, 'name') });
-      return header + loc.sections.map((sec, i) => {
-        secId += 1;
-        const id = `sec-${secId}`;
-        contents.push({ type: 'sec', id, num: String(i + 1).padStart(2, '0'), title: tf(sec, 'title') });
-        return renderSection(sec, i, id);
+    /* ════════ Build / rebuild all language-dependent content ════════ */
+    function renderContent() {
+      document.title = `${tf(p, 'title')} — NILZ`;
+      document.getElementById('pd-hero-cat').textContent   = tf(p, 'category');
+      document.getElementById('pd-hero-title').textContent = tf(p, 'title');
+      document.getElementById('pd-hero-loc').textContent   = tf(p, 'location');
+      document.getElementById('pd-overview-text').textContent = tf(p, 'overview') || tf(p, 'description');
+
+      // Structure: locations[] → sections[] → renders[].
+      const locations = p.locations
+        || [{ name: null, description: '', sections: (p.sections
+            || (p.slides || []).map((s, i) => ({ title: `View ${String(i + 1).padStart(2, '0')}`, description: '', renders: [s] }))) }];
+
+      let secId = 0;
+      const contents = [];
+      document.getElementById('pd-sections').innerHTML = locations.map(loc => {
+        const header = loc.name ? `
+          <div class="pd-locationhead fade-up">
+            <div class="container">
+              <span class="pd-locationhead__label">${t('pd.location')}</span>
+              <h2 class="pd-locationhead__name">${tf(loc, 'name')}</h2>
+              ${tf(loc, 'description') ? `<p class="pd-locationhead__desc">${tf(loc, 'description')}</p>` : ''}
+            </div>
+          </div>` : '';
+        if (loc.name) contents.push({ type: 'loc', name: tf(loc, 'name') });
+        return header + loc.sections.map((sec, i) => {
+          secId += 1;
+          const sid = `sec-${secId}`;
+          contents.push({ type: 'sec', id: sid, num: String(i + 1).padStart(2, '0'), title: tf(sec, 'title') });
+          return renderSection(sec, i, sid);
+        }).join('');
       }).join('');
-    }).join('');
 
-    // Contents / index — listed before the project imagery (only when there are 2+ sections)
-    const sectionCount = contents.filter(c => c.type === 'sec').length;
-    const contentsEl = document.getElementById('pd-contents');
-    if (contentsEl && sectionCount >= 2) {
-      contentsEl.innerHTML = `
-        <span class="pd-contents__label">${t('pd.contents')}</span>
-        <nav class="pd-contents__list">
-          ${contents.map(c => c.type === 'loc'
-            ? `<span class="pd-contents__loc">${c.name}</span>`
-            : `<a class="pd-contents__item" href="#${c.id}"><span class="pd-contents__num">${c.num}</span><span class="pd-contents__title">${c.title}</span></a>`
-          ).join('')}
-        </nav>`;
+      // Contents index (only when 2+ sections) + floating quick-jump button
+      const sectionCount = contents.filter(c => c.type === 'sec').length;
+      const contentsEl = document.getElementById('pd-contents');
+      document.querySelectorAll('.pd-toc').forEach(el => el.remove());
+      if (contentsEl && sectionCount >= 2) {
+        contentsEl.innerHTML = `
+          <span class="pd-contents__label">${t('pd.contents')}</span>
+          <nav class="pd-contents__list">
+            ${contents.map(c => c.type === 'loc'
+              ? `<span class="pd-contents__loc">${c.name}</span>`
+              : `<a class="pd-contents__item" href="#${c.id}"><span class="pd-contents__num">${c.num}</span><span class="pd-contents__title">${c.title}</span></a>`
+            ).join('')}
+          </nav>`;
 
-      // Floating contents button — hover/tap reveals a glassy, staggered quick-jump menu
-      const toc = document.createElement('div');
-      toc.className = 'pd-toc';
-      const secItems = contents.filter(c => c.type === 'sec');
-      const menuHTML = secItems.map((c, idx) =>
-        `<a class="pd-toc-menu__item" href="#${c.id}" style="--i:${secItems.length - idx}"><span class="pd-toc-menu__num">${c.num}</span><span class="pd-toc-menu__title">${c.title}</span></a>`
-      ).join('');
-      toc.innerHTML = `
-        <nav class="pd-toc-menu">${menuHTML}</nav>
-        <button class="pd-toc-fab" type="button" aria-label="Back to contents">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="12" y1="19" x2="12" y2="6"></line><polyline points="5 13 12 6 19 13"></polyline>
-          </svg>
-        </button>`;
-      document.body.appendChild(toc);
-      const tocFab = toc.querySelector('.pd-toc-fab');
-      const tocMenu = toc.querySelector('.pd-toc-menu');
-      const isTouch = () => window.matchMedia('(hover: none)').matches;
-      const openMenu  = () => { clearTimeout(toc._t); toc.classList.add('pd-toc--open'); };
-      const closeMenu = () => { clearTimeout(toc._t); toc.classList.remove('pd-toc--open'); };
-      const scheduleClose = () => { clearTimeout(toc._t); toc._t = setTimeout(closeMenu, 160); };
-      // Desktop: hover the arrow (or menu) reveals; leaving closes
-      [tocFab, tocMenu].forEach(el => {
-        el.addEventListener('mouseenter', () => { if (!isTouch()) openMenu(); });
-        el.addEventListener('mouseleave', () => { if (!isTouch()) scheduleClose(); });
-      });
-      // Tap the arrow: touch → toggle menu; desktop → jump to contents
-      tocFab.addEventListener('click', (e) => {
-        if (isTouch()) { e.stopPropagation(); toc.classList.toggle('pd-toc--open'); }
-        else { contentsEl.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
-      });
-      // Selecting an item closes the menu; tapping anywhere else closes it too
-      tocMenu.querySelectorAll('.pd-toc-menu__item').forEach(a => a.addEventListener('click', closeMenu));
-      document.addEventListener('click', (e) => { if (!toc.contains(e.target)) closeMenu(); });
-      const toggleFab = () => toc.classList.toggle('pd-toc--show', contentsEl.getBoundingClientRect().bottom < -40);
-      window.addEventListener('scroll', toggleFab, { passive: true });
-      toggleFab();
-    }
-
-    // Lightbox — click any render to view it complete, with 3-step targeted zoom
-    const magInSvg = `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>`;
-    const magOutSvg = `<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>`;
-    const lb = document.createElement('div');
-    lb.className = 'pd-lightbox';
-    lb.innerHTML = `
-      <div class="pd-lightbox__bar">
-        <button class="pd-lightbox__btn pd-lightbox__zoomout" type="button" aria-label="Zoom out">${magOutSvg}</button>
-        <button class="pd-lightbox__btn pd-lightbox__zoomin" type="button" aria-label="Zoom in">${magInSvg}</button>
-        <button class="pd-lightbox__btn pd-lightbox__close" type="button" aria-label="Close">&times;</button>
-      </div>
-      <img alt="">`;
-    document.body.appendChild(lb);
-    const lbImg = lb.querySelector('img');
-
-    // Zoom (3 steps, targeted to the click point) + drag-to-pan when zoomed
-    const zScales = [1, 1.6, 2.3, 3];
-    let zLevel = 0, tx = 0, ty = 0;
-    const curScale = () => zScales[zLevel];
-    const clampPan = () => {
-      const s = curScale();
-      tx = Math.min(0, Math.max(lbImg.clientWidth * (1 - s), tx));
-      ty = Math.min(0, Math.max(lbImg.clientHeight * (1 - s), ty));
-    };
-    const updateCursor = () => { lbImg.style.cursor = zLevel > 0 ? 'grab' : 'zoom-in'; };
-    const applyTransform = () => {
-      lbImg.style.transformOrigin = '0 0';
-      lbImg.style.transform = `translate(${tx}px, ${ty}px) scale(${curScale()})`;
-      updateCursor();
-    };
-    const resetZoom = () => { zLevel = 0; tx = 0; ty = 0; applyTransform(); };
-    const zoomStep = (lx, ly, dir) => {
-      const sOld = curScale();
-      if (dir > 0) { if (zLevel >= zScales.length - 1) { resetZoom(); return; } zLevel += 1; }
-      else { if (zLevel <= 0) return; zLevel -= 1; }
-      const sNew = curScale();
-      if (zLevel === 0) { tx = 0; ty = 0; }
-      else { tx += lx * (sOld - sNew); ty += ly * (sOld - sNew); clampPan(); }
-      applyTransform();
-    };
-
-    const openLb  = (src) => { lbImg.src = src; resetZoom(); lb.classList.add('open'); document.body.classList.add('modal-open'); };
-    const closeLb = () => { lb.classList.remove('open'); document.body.classList.remove('modal-open'); };
-
-    // Pointer: drag to pan (when zoomed); a tap with no drag zooms toward that point
-    let down = false, moved = false, sx = 0, sy = 0, sTx = 0, sTy = 0;
-    lbImg.addEventListener('pointerdown', (e) => {
-      e.preventDefault();
-      down = true; moved = false; sx = e.clientX; sy = e.clientY; sTx = tx; sTy = ty;
-      try { lbImg.setPointerCapture(e.pointerId); } catch (_) {}
-      if (zLevel > 0) lbImg.style.cursor = 'grabbing';
-    });
-    lbImg.addEventListener('pointermove', (e) => {
-      if (!down) return;
-      const dx = e.clientX - sx, dy = e.clientY - sy;
-      if (Math.abs(dx) > 4 || Math.abs(dy) > 4) moved = true;
-      if (zLevel > 0 && moved) { lbImg.style.transition = 'none'; tx = sTx + dx; ty = sTy + dy; clampPan(); applyTransform(); lbImg.style.cursor = 'grabbing'; }
-    });
-    const endDrag = (e) => {
-      if (!down) return; down = false;
-      try { lbImg.releasePointerCapture(e.pointerId); } catch (_) {}
-      lbImg.style.transition = '';
-      if (!moved) zoomStep(e.offsetX, e.offsetY, 1);
-      updateCursor();
-    };
-    lbImg.addEventListener('pointerup', endDrag);
-    lbImg.addEventListener('pointercancel', endDrag);
-    lbImg.addEventListener('click', (e) => e.stopPropagation());
-
-    lb.querySelector('.pd-lightbox__zoomin').addEventListener('click', (e) => { e.stopPropagation(); zoomStep(lbImg.clientWidth / 2, lbImg.clientHeight / 2, 1); });
-    lb.querySelector('.pd-lightbox__zoomout').addEventListener('click', (e) => { e.stopPropagation(); zoomStep(lbImg.clientWidth / 2, lbImg.clientHeight / 2, -1); });
-    lb.querySelector('.pd-lightbox__bar').addEventListener('click', (e) => e.stopPropagation());
-    lb.querySelector('.pd-lightbox__close').addEventListener('click', closeLb);
-
-    document.querySelectorAll('.pd-render__img').forEach(img => {
-      if (img.dataset.nozoom) return;
-      img.addEventListener('click', () => openLb(img.src));
-    });
-    lb.addEventListener('click', closeLb);
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeLb(); });
-
-    // Flip renders — auto-fade B&W → colour when scrolled into view; arrow toggles manually; image opens the lightbox
-    const flips = document.querySelectorAll('.pd-flip');
-    flips.forEach(flip => {
-      const toggle   = flip.querySelector('.pd-flip__toggle');
-      const colorImg = flip.querySelector('.pd-flip__img--color');
-      const bwImg    = flip.querySelector('.pd-flip__img--bw');
-      toggle.addEventListener('click', (e) => { e.stopPropagation(); flip.classList.toggle('is-flipped'); });
-      flip.addEventListener('click', () => {
-        openLb(flip.classList.contains('is-flipped') ? colorImg.src : bwImg.src);
-      });
-    });
-    if ('IntersectionObserver' in window) {
-      const flipObserver = new IntersectionObserver((entries) => {
-        entries.forEach(e => {
-          if (e.isIntersecting) { e.target.classList.add('is-flipped'); flipObserver.unobserve(e.target); }
+        const toc = document.createElement('div');
+        toc.className = 'pd-toc';
+        const secItems = contents.filter(c => c.type === 'sec');
+        const menuHTML = secItems.map((c, idx) =>
+          `<a class="pd-toc-menu__item" href="#${c.id}" style="--i:${secItems.length - idx}"><span class="pd-toc-menu__num">${c.num}</span><span class="pd-toc-menu__title">${c.title}</span></a>`
+        ).join('');
+        toc.innerHTML = `
+          <nav class="pd-toc-menu">${menuHTML}</nav>
+          <button class="pd-toc-fab" type="button" aria-label="Back to contents">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="19" x2="12" y2="6"></line><polyline points="5 13 12 6 19 13"></polyline>
+            </svg>
+          </button>`;
+        document.body.appendChild(toc);
+        const tocFab = toc.querySelector('.pd-toc-fab');
+        const tocMenu = toc.querySelector('.pd-toc-menu');
+        const isTouch = () => window.matchMedia('(hover: none)').matches;
+        const openMenu  = () => { clearTimeout(toc._t); toc.classList.add('pd-toc--open'); };
+        const closeMenu = () => { clearTimeout(toc._t); toc.classList.remove('pd-toc--open'); };
+        const scheduleClose = () => { clearTimeout(toc._t); toc._t = setTimeout(closeMenu, 160); };
+        [tocFab, tocMenu].forEach(el => {
+          el.addEventListener('mouseenter', () => { if (!isTouch()) openMenu(); });
+          el.addEventListener('mouseleave', () => { if (!isTouch()) scheduleClose(); });
         });
-      }, { threshold: 0, rootMargin: '-25% 0px -25% 0px' });
-      flips.forEach(flip => flipObserver.observe(flip));
-    } else {
-      flips.forEach(flip => flip.classList.add('is-flipped'));
+        tocFab.addEventListener('click', (e) => {
+          if (isTouch()) { e.stopPropagation(); toc.classList.toggle('pd-toc--open'); }
+          else { contentsEl.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+        });
+        tocMenu.querySelectorAll('.pd-toc-menu__item').forEach(a => a.addEventListener('click', closeMenu));
+      } else if (contentsEl) {
+        contentsEl.innerHTML = '';
+      }
+
+      // Bind images → lightbox (on the freshly rendered figures)
+      document.querySelectorAll('.pd-render__img').forEach(img => {
+        if (img.dataset.nozoom) return;
+        img.addEventListener('click', () => openLb(img.src));
+      });
+
+      // Flip renders — auto-fade B&W → colour on scroll; arrow toggles; image opens lightbox
+      const flips = document.querySelectorAll('.pd-flip');
+      flips.forEach(flip => {
+        const toggle   = flip.querySelector('.pd-flip__toggle');
+        const colorImg = flip.querySelector('.pd-flip__img--color');
+        const bwImg    = flip.querySelector('.pd-flip__img--bw');
+        toggle.addEventListener('click', (e) => { e.stopPropagation(); flip.classList.toggle('is-flipped'); });
+        flip.addEventListener('click', () => {
+          openLb(flip.classList.contains('is-flipped') ? colorImg.src : bwImg.src);
+        });
+      });
+      if ('IntersectionObserver' in window) {
+        const flipObserver = new IntersectionObserver((entries) => {
+          entries.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add('is-flipped'); flipObserver.unobserve(e.target); }
+          });
+        }, { threshold: 0, rootMargin: '-25% 0px -25% 0px' });
+        flips.forEach(flip => flipObserver.observe(flip));
+      } else {
+        flips.forEach(flip => flip.classList.add('is-flipped'));
+      }
+
+      // Gallery renders — page through images with a cross-fade
+      document.querySelectorAll('.pd-gallery').forEach(g => {
+        const imgs = [...g.querySelectorAll('.pd-gallery__img')];
+        const dots = [...g.querySelectorAll('.pd-gallery__dot')];
+        let idx = 0;
+        const show = (n) => {
+          idx = (n + imgs.length) % imgs.length;
+          imgs.forEach((im, i) => im.classList.toggle('is-active', i === idx));
+          dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
+        };
+        g.querySelector('.pd-gallery__nav--prev').addEventListener('click', (e) => { e.stopPropagation(); show(idx - 1); });
+        g.querySelector('.pd-gallery__nav--next').addEventListener('click', (e) => { e.stopPropagation(); show(idx + 1); });
+        dots.forEach((d, i) => d.addEventListener('click', (e) => { e.stopPropagation(); show(i); }));
+        imgs.forEach(im => im.addEventListener('click', () => openLb(imgs[idx].src)));
+      });
+
+      tocToggle();
     }
 
-    // Gallery renders — page through images with a cross-fade
-    document.querySelectorAll('.pd-gallery').forEach(g => {
-      const imgs = [...g.querySelectorAll('.pd-gallery__img')];
-      const dots = [...g.querySelectorAll('.pd-gallery__dot')];
-      let idx = 0;
-      const show = (n) => {
-        idx = (n + imgs.length) % imgs.length;
-        imgs.forEach((im, i) => im.classList.toggle('is-active', i === idx));
-        dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
-      };
-      g.querySelector('.pd-gallery__nav--prev').addEventListener('click', (e) => { e.stopPropagation(); show(idx - 1); });
-      g.querySelector('.pd-gallery__nav--next').addEventListener('click', (e) => { e.stopPropagation(); show(idx + 1); });
-      dots.forEach((d, i) => d.addEventListener('click', (e) => { e.stopPropagation(); show(i); }));
-      imgs.forEach(im => im.addEventListener('click', () => openLb(imgs[idx].src)));
-    });
-
+    renderContent();
+    onLangChange(renderContent);
     applyStatic();
     initMain();
   </script>

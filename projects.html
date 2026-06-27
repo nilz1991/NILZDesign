@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&family=Tajawal:wght@300;400;500;700&family=El+Messiri:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=9">
+  <link rel="stylesheet" href="css/style.css?v=12">
   <script src="js/analytics.js" defer></script>
 </head>
 <body>
@@ -52,22 +52,28 @@
     import { initRotatingText } from './js/components/rotating-text.js';
     import { renderProjectsGrid } from './js/content.js';
     import { init as initMain } from './js/main.js';
-    import { initI18n, applyStatic, t } from './js/i18n.js';
+    import { initI18n, applyStatic, t, onLangChange } from './js/i18n.js';
 
     await initI18n();
     initHeader();
     initFooter();
-    initRotatingText('#rotating-text-placeholder', {
-      tag:            t('statement.tag'),
-      headline:       t('statement.headline'),
-      headlineEm:     t('statement.headline_em'),
-      sub:            t('statement.sub.projects'),
-      ctaLabel:       t('statement.cta'),
-      ctaHref:        'contact.html',
-      decorativeImage:'assets/images/line-art-hero.png',
-    });
+
+    async function renderProjectsPage() {
+      initRotatingText('#rotating-text-placeholder', {
+        tag:            t('statement.tag'),
+        headline:       t('statement.headline'),
+        headlineEm:     t('statement.headline_em'),
+        sub:            t('statement.sub.projects'),
+        ctaLabel:       t('statement.cta'),
+        ctaHref:        'contact.html',
+        decorativeImage:'assets/images/line-art-hero.png',
+      });
+      await renderProjectsGrid('#projects-grid', '.filter-btn');
+    }
+
+    await renderProjectsPage();
+    onLangChange(renderProjectsPage);
     applyStatic();
-    await renderProjectsGrid('#projects-grid', '.filter-btn');
     initMain();
   </script>
 </body>

@@ -6,6 +6,11 @@
 const LANGS = ['en', 'ar'];
 const STORE_KEY = 'nilz_lang';
 let _dict = null;
+const _refreshers = [];
+
+// Register a callback that re-renders language-dependent content in place.
+// Called (in order) by setLang after the new language is applied — no page reload.
+export function onLangChange(fn) { if (typeof fn === 'function') _refreshers.push(fn); }
 
 export function getLang() {
   // URL ?lang= wins once (lets us share a link in a language), then persists
@@ -20,13 +25,21 @@ export function getLang() {
 
 export function isAr() { return getLang() === 'ar'; }
 
-export function setLang(lang) {
-  if (!LANGS.includes(lang)) return;
+export async function setLang(lang) {
+  if (!LANGS.includes(lang) || lang === getLang()) return;
   try { localStorage.setItem(STORE_KEY, lang); } catch (_) {}
-  // Drop any ?lang= from the URL so the stored choice stays authoritative
-  const url = new URL(location.href);
-  url.searchParams.delete('lang');
-  location.replace(url.toString());
+  // Drop any ?lang= from the URL (without navigating) so the stored choice wins
+  try {
+    const url = new URL(location.href);
+    if (url.searchParams.has('lang')) { url.searchParams.delete('lang'); history.replaceState(null, '', url); }
+  } catch (_) {}
+  // Apply the new language in place — no reload, scroll position is preserved
+  applyDir();
+  for (const fn of _refreshers) {
+    try { await fn(); } catch (e) { console.error('lang refresh failed', e); }
+  }
+  applyStatic();
+  if (window.__revealFadeUps) window.__revealFadeUps();
 }
 
 // Set <html lang/dir> + a convenience class. Safe to call early and often.

@@ -17,6 +17,13 @@ export function initFadeUps() {
   window.__initFadeUps = initFadeUps;
 }
 
+// Instantly reveal every fade-up element (used after an in-place language switch,
+// where freshly rendered elements would otherwise start hidden with no observer).
+export function revealFadeUps() {
+  document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
+}
+window.__revealFadeUps = revealFadeUps;
+
 export function initMarquee() {
   const track = document.querySelector('.marquee-track');
   if (!track) return;

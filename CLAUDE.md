@@ -10,7 +10,8 @@ Live: **nilzdesign.com** · Repo: **github.com/nilz1991/NILZDesign** · Host: **
 - CSS link is cache-busted: `css/style.css?v=N` — **bump N** on every CSS change so mobile picks it up.
 
 ## Bilingual (EN / AR + RTL) — `js/i18n.js`
-- Default **English**; choice stored in `localStorage('nilz_lang')` (or one-time `?lang=ar`). Switching reloads the page (everything re-renders cleanly). Switch UI = `EN | العربية` in header (active bolded/gold), built by `langSwitchHTML()`.
+- Default **English**; choice stored in `localStorage('nilz_lang')` (or one-time `?lang=ar`). Switch UI = `EN | العربية` in header (active bolded/gold), built by `langSwitchHTML()`. On mobile the switch also sits in the top bar next to the burger.
+- **Switching is in-place — NO reload.** `setLang()` sets dir, runs every callback registered via `onLangChange(fn)`, then `applyStatic()` + reveals fade-ups. Scroll position is preserved. Each page wraps its dynamic rendering in a `render()`/`renderContent()` and registers it with `onLangChange`. header.js/footer.js rebuild themselves in place; rotating-text renders **into** its placeholder (keeps the node); project.html keeps the lightbox a one-time singleton and rebuilds sections/contents/TOC per render.
 - Each page: early inline `<head>` script sets `dir/lang/.lang-ar` to avoid flash; module then `await initI18n()` **before** rendering, and `applyStatic()` **after** injecting header/footer + dynamic content.
 - **Static UI text**: mark with `data-i18n="key"` (innerHTML), `data-i18n-ph` (placeholder), `data-i18n-aria` (aria-label); keys live in `_data/i18n.json` as `{en, ar}`. JS components use `t('key')`.
 - **Data content** (site.json / projects.json): add a sibling `<field>_ar` next to each text field; rendering reads it via `tf(obj, 'field')` (falls back to base field if `_ar` missing). `category` stays English (used for filtering) — `category_ar` is display-only.

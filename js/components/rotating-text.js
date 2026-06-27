@@ -35,7 +35,9 @@ export function initRotatingText(targetSelector = '#rotating-text-placeholder', 
   </div>
 </section>`;
 
+  // Render INTO the placeholder (keep the element) so it can be re-rendered in
+  // place on a language switch without losing its anchor.
   const target = document.querySelector(targetSelector);
-  if (target) target.outerHTML = html;
+  if (target) target.innerHTML = html;
   else document.querySelector('#cta-placeholder, footer').insertAdjacentHTML('beforebegin', html);
 }

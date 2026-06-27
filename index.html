@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&family=Tajawal:wght@300;400;500;700&family=El+Messiri:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=9">
+  <link rel="stylesheet" href="css/style.css?v=12">
   <script src="js/analytics.js" defer></script>
 </head>
 <body class="hero-page">
@@ -88,7 +88,7 @@
     import { initRotatingText } from './js/components/rotating-text.js';
     import { loadSite, renderHomeSoftware, renderSiteContent } from './js/content.js';
     import { init as initMain } from './js/main.js';
-    import { initI18n, applyStatic, t, tf } from './js/i18n.js';
+    import { initI18n, applyStatic, t, tf, onLangChange } from './js/i18n.js';
 
     await initI18n();
 
@@ -105,30 +105,36 @@
 
     initHeader();
     initFooter();
-    initRotatingText('#rotating-text-placeholder', {
-      tag:            t('statement.tag'),
-      headline:       t('statement.headline'),
-      headlineEm:     t('statement.headline_em'),
-      sub:            t('statement.sub.home'),
-      ctaLabel:       t('statement.cta'),
-      ctaHref:        'contact.html',
-      decorativeImage:'assets/images/line-art-hero.png',
-    });
-    const site = await loadSite();
-    const introEl = document.getElementById('home-services-intro');
-    if (introEl) introEl.textContent = tf(site.services, 'intro');
-    document.getElementById('services-list').innerHTML = site.services.items.map((s, i) => `
-      <div class="service-row fade-up ${i % 2 !== 0 ? 'service-row--reverse' : ''}">
-        <img class="service-row__img" src="${s.image}" alt="${tf(s, 'title')}" loading="lazy">
-        <div class="service-row__body">
-          <span class="service-row__num">${s.number}</span>
-          <h2 class="service-row__title">${tf(s, 'title')}</h2>
-          <p class="service-row__desc">${tf(s, 'body')}</p>
-          ${s.tools && s.tools.length ? `<div class="service-row__tools">${s.tools.map(tool => `<span class="tool-tag">${tool}</span>`).join('')}</div>` : ''}
-        </div>
-      </div>`).join('');
-    await renderHomeSoftware('#home-software');
-    await renderSiteContent('home');
+
+    async function renderHome() {
+      initRotatingText('#rotating-text-placeholder', {
+        tag:            t('statement.tag'),
+        headline:       t('statement.headline'),
+        headlineEm:     t('statement.headline_em'),
+        sub:            t('statement.sub.home'),
+        ctaLabel:       t('statement.cta'),
+        ctaHref:        'contact.html',
+        decorativeImage:'assets/images/line-art-hero.png',
+      });
+      const site = await loadSite();
+      const introEl = document.getElementById('home-services-intro');
+      if (introEl) introEl.textContent = tf(site.services, 'intro');
+      document.getElementById('services-list').innerHTML = site.services.items.map((s, i) => `
+        <div class="service-row fade-up ${i % 2 !== 0 ? 'service-row--reverse' : ''}">
+          <img class="service-row__img" src="${s.image}" alt="${tf(s, 'title')}" loading="lazy">
+          <div class="service-row__body">
+            <span class="service-row__num">${s.number}</span>
+            <h2 class="service-row__title">${tf(s, 'title')}</h2>
+            <p class="service-row__desc">${tf(s, 'body')}</p>
+            ${s.tools && s.tools.length ? `<div class="service-row__tools">${s.tools.map(tool => `<span class="tool-tag">${tool}</span>`).join('')}</div>` : ''}
+          </div>
+        </div>`).join('');
+      await renderHomeSoftware('#home-software');
+      await renderSiteContent('home');
+    }
+
+    await renderHome();
+    onLangChange(renderHome);
     applyStatic();
     initMain();
   </script>

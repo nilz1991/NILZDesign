@@ -3,10 +3,11 @@
 // - Transparent → solid on scroll
 // - Active nav link highlighting
 // - Mobile hamburger toggle
+// - Re-renders in place on language change (no reload)
 
-import { t, langSwitchHTML, bindLangSwitch } from '../i18n.js';
+import { t, langSwitchHTML, bindLangSwitch, onLangChange } from '../i18n.js';
 
-export function initHeader() {
+function headerMarkup() {
   // Normalise: strip .html so both '/about' and '/about.html' match 'about.html'
   const currentSlug = (location.pathname.split('/').pop() || 'index').replace(/\.html$/, '');
 
@@ -23,7 +24,7 @@ export function initHeader() {
     return `<li><a href="${p.href}" ${active}>${t(p.key)}</a></li>`;
   }).join('');
 
-  const html = `
+  return `
 <header id="site-header">
   <div class="header-inner container">
     <a href="index.html" class="header-logo">
@@ -41,21 +42,41 @@ export function initHeader() {
     </button>
   </div>
 </header>`;
+}
 
-  document.body.insertAdjacentHTML('afterbegin', html);
-  bindLangSwitch(document.getElementById('site-header'));
-
-  // Scroll: add .scrolled class when past 60px
+// (Re)bind the per-element handlers on the current header DOM.
+function bindHeader(setScrolled) {
   const header = document.getElementById('site-header');
-  window.addEventListener('scroll', () => {
-    header.classList.toggle('scrolled', window.scrollY > 60);
-  }, { passive: true });
-
-  // Burger toggle
+  if (!header) return;
+  bindLangSwitch(header);
+  setScrolled();
   const burger = document.getElementById('header-burger');
   const nav    = document.getElementById('header-nav');
   burger.addEventListener('click', () => {
     nav.classList.toggle('open');
     burger.classList.toggle('open');
+  });
+}
+
+export function initHeader() {
+  document.body.insertAdjacentHTML('afterbegin', headerMarkup());
+
+  // Scroll → solid header. Bound once on window; queries the live header each time
+  // so it keeps working after the header is rebuilt on a language switch.
+  const setScrolled = () => {
+    const h = document.getElementById('site-header');
+    if (h) h.classList.toggle('scrolled', window.scrollY > 60);
+  };
+  window.addEventListener('scroll', setScrolled, { passive: true });
+
+  bindHeader(setScrolled);
+
+  // Language switch → rebuild the header in place (nav labels, CTA, switch state)
+  onLangChange(() => {
+    const old = document.getElementById('site-header');
+    if (!old) return;
+    old.insertAdjacentHTML('beforebegin', headerMarkup());
+    old.remove();
+    bindHeader(setScrolled);
   });
 }

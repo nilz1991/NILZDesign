@@ -132,10 +132,19 @@ async function renderProjectsGrid(containerSelector, filterSelector) {
     if (window.__initFadeUps) window.__initFadeUps();
   }
 
-  render('All');
+  // Preserve the active filter across re-renders (e.g. an in-place language switch)
+  let activeFilter = 'All';
+  if (filterSelector) {
+    const cur = document.querySelector(`${filterSelector}.active`);
+    if (cur && cur.dataset.filter) activeFilter = cur.dataset.filter;
+  }
+  render(activeFilter);
 
   if (filterSelector) {
-    document.querySelectorAll(filterSelector).forEach(btn => {
+    // Clone-replace buttons so re-binding doesn't stack duplicate listeners
+    document.querySelectorAll(filterSelector).forEach(oldBtn => {
+      const btn = oldBtn.cloneNode(true);
+      oldBtn.replaceWith(btn);
       btn.addEventListener('click', () => {
         document.querySelectorAll(filterSelector).forEach(b => b.classList.remove('active'));
         btn.classList.add('active');

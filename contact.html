@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&family=Tajawal:wght@300;400;500;700&family=El+Messiri:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=9">
+  <link rel="stylesheet" href="css/style.css?v=12">
   <script src="js/analytics.js" defer></script>
 </head>
 <body>
@@ -57,11 +57,29 @@
           </div>
           <div class="form-group">
             <label data-i18n="form.solution_label">What solution do you need?</label>
+
+            <span class="form-subhead" data-i18n="form.grp_interior">Interior Design</span>
             <div class="form-checks">
-              <label class="check-label"><input type="checkbox" name="type" value="House"> <span data-i18n="form.opt_house">House</span></label>
-              <label class="check-label"><input type="checkbox" name="type" value="Office"> <span data-i18n="form.opt_office">Office</span></label>
-              <label class="check-label"><input type="checkbox" name="type" value="Interior Design"> <span data-i18n="form.opt_interior">Interior Design</span></label>
-              <label class="check-label"><input type="checkbox" name="type" value="Other"> <span data-i18n="form.opt_other">Other</span></label>
+              <label class="check-label"><input type="checkbox" name="Interior Design" value="House"> <span data-i18n="form.opt_house">House</span></label>
+              <label class="check-label"><input type="checkbox" name="Interior Design" value="Office"> <span data-i18n="form.opt_office">Office</span></label>
+              <label class="check-label"><input type="checkbox" name="Interior Design" value="Shop"> <span data-i18n="form.opt_shop">Shop</span></label>
+              <label class="check-label"><input type="checkbox" name="Interior Design" value="Beauty Salon"> <span data-i18n="form.opt_salon">Beauty Salon</span></label>
+              <label class="check-label"><input type="checkbox" name="Interior Design" value="Partial Design"> <span data-i18n="form.opt_partial">Partial Design</span></label>
+            </div>
+
+            <span class="form-subhead" data-i18n="form.grp_exterior">Exterior Design</span>
+            <div class="form-checks">
+              <label class="check-label"><input type="checkbox" name="Exterior Design" value="Facade Design"> <span data-i18n="form.opt_facade">Facade Design</span></label>
+              <label class="check-label"><input type="checkbox" name="Exterior Design" value="Landscape Design"> <span data-i18n="form.opt_landscape">Landscape Design</span></label>
+            </div>
+
+            <span class="form-subhead" data-i18n="form.grp_area">Area</span>
+            <div class="form-checks">
+              <label class="check-label"><input type="radio" name="Area" value="Under 100 m2"> <span data-i18n="form.area_u100">Under 100 m²</span></label>
+              <label class="check-label"><input type="radio" name="Area" value="100-500 m2"> <span data-i18n="form.area_100_500">100–500 m²</span></label>
+              <label class="check-label"><input type="radio" name="Area" value="500-1000 m2"> <span data-i18n="form.area_500_1000">500–1,000 m²</span></label>
+              <label class="check-label"><input type="radio" name="Area" value="1000-2000 m2"> <span data-i18n="form.area_1000_2000">1,000–2,000 m²</span></label>
+              <label class="check-label"><input type="radio" name="Area" value="Over 2000 m2"> <span data-i18n="form.area_o2000">Over 2,000 m²</span></label>
             </div>
           </div>
           <button type="submit" class="btn btn--solid" style="width:100%;justify-content:center;padding:18px" data-i18n="btn.submit">Submit</button>
@@ -71,11 +89,11 @@
       <div class="contact-info fade-up delay-1">
         <div class="contact-info__item">
           <span class="contact-info__label" data-i18n="info.phone">Phone</span>
-          <a href="tel:+96899009464" class="contact-info__value" data-cms="phone">+968 99009464</a>
+          <a href="tel:+96899009464" class="contact-info__value contact-num" data-cms="phone">+968 99009464</a>
         </div>
         <div class="contact-info__item">
           <span class="contact-info__label" data-i18n="info.whatsapp">WhatsApp</span>
-          <a href="https://api.whatsapp.com/send?phone=96892315257" data-cms-href="whatsapp" target="_blank" rel="noopener" class="contact-info__value">+968 92315257</a>
+          <a href="https://api.whatsapp.com/send?phone=96892315257" data-cms-href="whatsapp" data-cms="whatsapp_number" target="_blank" rel="noopener" class="contact-info__value contact-num">+968 92315257</a>
         </div>
         <div class="contact-info__item">
           <span class="contact-info__label" data-i18n="info.location">Location</span>
@@ -107,12 +125,13 @@
     import { initFooter } from './js/components/footer.js';
     import { renderSiteContent } from './js/content.js';
     import { init as initMain } from './js/main.js';
-    import { initI18n, applyStatic } from './js/i18n.js';
+    import { initI18n, applyStatic, onLangChange } from './js/i18n.js';
 
     await initI18n();
     initHeader();
     initFooter();
     await renderSiteContent('contact');
+    onLangChange(() => renderSiteContent('contact'));
     applyStatic();
     initMain();
   </script>

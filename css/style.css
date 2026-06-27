@@ -1141,7 +1141,17 @@ h1, h2, h3, h4 {
 .form-group input:focus,
 .form-group textarea:focus { border-color: var(--gold); background: var(--white); }
 .form-group textarea { resize: vertical; min-height: 120px; }
-.form-checks { display: flex; flex-wrap: wrap; gap: 12px; }
+.form-subhead {
+  display: block;
+  margin: 18px 0 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.form-subhead:first-of-type { margin-top: 6px; }
+.form-checks { display: flex; flex-wrap: wrap; gap: 12px 22px; }
 .check-label {
   display: flex;
   align-items: center;
@@ -1771,6 +1781,17 @@ html[dir="rtl"] .pd-render__caption {
 html[dir="rtl"] .pd-zoom-badge { right: auto; left: 18px; }
 html[dir="rtl"] .pd-toc { right: auto; left: clamp(16px,3vw,32px); }
 html[dir="rtl"] .pd-lightbox__bar { right: auto; left: 24px; }
+
+/* Home Services rows: keep the same alternating image/text order as the English
+   layout (the .service-row--reverse direction trick collapses under page RTL),
+   while Arabic body copy stays right-aligned. */
+html.lang-ar .service-row { direction: ltr; }
+html.lang-ar .service-row--reverse { direction: rtl; }
+html.lang-ar .service-row--reverse > * { direction: ltr; }
+html.lang-ar .service-row__body { direction: rtl; text-align: right; }
+
+/* Phone/WhatsApp numbers must keep left-to-right digit order even in RTL */
+.contact-num { direction: ltr; unicode-bidi: embed; display: inline-block; }
 @media (max-width: 768px) {
   html[dir="rtl"] .pd-zoom-badge { right: auto; left: 14px; }
 }

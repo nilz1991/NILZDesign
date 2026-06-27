@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&family=Tajawal:wght@300;400;500;700&family=El+Messiri:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=9">
+  <link rel="stylesheet" href="css/style.css?v=12">
   <script src="js/analytics.js" defer></script>
 </head>
 <body>
@@ -68,32 +68,35 @@
     import { initRotatingText } from './js/components/rotating-text.js';
     import { loadSite, renderSiteContent } from './js/content.js';
     import { init as initMain } from './js/main.js';
-    import { initI18n, applyStatic, t, tf } from './js/i18n.js';
+    import { initI18n, applyStatic, t, tf, onLangChange } from './js/i18n.js';
 
     await initI18n();
     initHeader();
     initFooter();
-    initRotatingText('#rotating-text-placeholder', {
-      tag:            t('statement.tag'),
-      headline:       t('statement.headline'),
-      headlineEm:     t('statement.headline_em'),
-      sub:            t('statement.sub.about'),
-      ctaLabel:       t('statement.cta'),
-      ctaHref:        'contact.html',
-      decorativeImage:'assets/images/line-art-hero.png',
-    });
 
-    // Render values from site.json
-    const site = await loadSite();
-    const values = site.about.values;
-    document.getElementById('values-grid').innerHTML = values.map(v => `
-      <div class="value-card fade-up">
-        <span class="value-number">${v.number}</span>
-        <h3 class="value-title">${tf(v, 'title')}</h3>
-        <p class="value-body">${tf(v, 'body')}</p>
-      </div>`).join('');
+    async function renderAbout() {
+      initRotatingText('#rotating-text-placeholder', {
+        tag:            t('statement.tag'),
+        headline:       t('statement.headline'),
+        headlineEm:     t('statement.headline_em'),
+        sub:            t('statement.sub.about'),
+        ctaLabel:       t('statement.cta'),
+        ctaHref:        'contact.html',
+        decorativeImage:'assets/images/line-art-hero.png',
+      });
+      const site = await loadSite();
+      const values = site.about.values;
+      document.getElementById('values-grid').innerHTML = values.map(v => `
+        <div class="value-card fade-up">
+          <span class="value-number">${v.number}</span>
+          <h3 class="value-title">${tf(v, 'title')}</h3>
+          <p class="value-body">${tf(v, 'body')}</p>
+        </div>`).join('');
+      await renderSiteContent('about');
+    }
 
-    await renderSiteContent('about');
+    await renderAbout();
+    onLangChange(renderAbout);
     applyStatic();
     initMain();
   </script>
