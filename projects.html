@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&family=Tajawal:wght@300;400;500;700&family=El+Messiri:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=15">
+  <link rel="stylesheet" href="css/style.css?v=17">
   <script src="js/analytics.js" defer></script>
 </head>
 <body>
@@ -61,7 +61,51 @@
         decorativeImage:'assets/images/line-art-hero.png',
       });
       await renderProjectsGrid('#projects-grid');
+      buildJumpToc();
     }
+
+    // Floating quick-jump button + glassy menu (mirrors the project-page TOC),
+    // so categories are reachable from anywhere on the page.
+    function buildJumpToc() {
+      document.querySelectorAll('.pd-toc').forEach(el => el.remove());
+      const groups = [...document.querySelectorAll('.projects-group')];
+      if (groups.length < 2) return;
+      const toc = document.createElement('div');
+      toc.className = 'pd-toc';
+      toc.innerHTML = `
+        <nav class="pd-toc-menu">
+          ${groups.map((g, idx) =>
+            `<a class="pd-toc-menu__item" href="#${g.id}" style="--i:${groups.length - idx}"><span class="pd-toc-menu__title">${g.querySelector('.projects-cat-title')?.textContent || ''}</span></a>`
+          ).join('')}
+        </nav>
+        <button class="pd-toc-fab" type="button" aria-label="Jump to a section">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="6"></line><polyline points="5 13 12 6 19 13"></polyline>
+          </svg>
+        </button>`;
+      document.body.appendChild(toc);
+      const tocFab = toc.querySelector('.pd-toc-fab');
+      const tocMenu = toc.querySelector('.pd-toc-menu');
+      const isTouch = () => window.matchMedia('(hover: none)').matches;
+      const openMenu  = () => { clearTimeout(toc._t); toc.classList.add('pd-toc--open'); };
+      const closeMenu = () => { clearTimeout(toc._t); toc.classList.remove('pd-toc--open'); };
+      const scheduleClose = () => { clearTimeout(toc._t); toc._t = setTimeout(closeMenu, 160); };
+      [tocFab, tocMenu].forEach(el => {
+        el.addEventListener('mouseenter', () => { if (!isTouch()) openMenu(); });
+        el.addEventListener('mouseleave', () => { if (!isTouch()) scheduleClose(); });
+      });
+      tocFab.addEventListener('click', (e) => {
+        if (isTouch()) { e.stopPropagation(); toc.classList.toggle('pd-toc--open'); }
+        else { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+      });
+      tocMenu.querySelectorAll('.pd-toc-menu__item').forEach(a => a.addEventListener('click', closeMenu));
+      toc.classList.add('pd-toc--show');   // always visible, including at the Interior section
+    }
+
+    document.addEventListener('click', (e) => {
+      const toc = document.querySelector('.pd-toc');
+      if (toc && !toc.contains(e.target)) toc.classList.remove('pd-toc--open');
+    });
 
     await renderProjectsPage();
     onLangChange(renderProjectsPage);

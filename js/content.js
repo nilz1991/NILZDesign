@@ -155,15 +155,25 @@ async function renderProjectsGrid(containerSelector) {
     return (ia === -1 ? 999 : ia) - (ib === -1 ? 999 : ib);
   });
 
-  container.innerHTML = cats.map(cat => {
+  const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+
+  // Quick-jump nav: one button per category that smooth-scrolls to its group
+  const navHTML = cats.length > 1 ? `
+    <div class="projects-nav fade-up">
+      ${cats.map(cat => `<a class="projects-nav__btn" href="#cat-${slug(cat)}">${groups.get(cat)[0].categoryLabel || cat}</a>`).join('')}
+    </div>` : '';
+
+  const groupsHTML = cats.map(cat => {
     const list = groups.get(cat);
     const heading = list[0].categoryLabel || cat;
     return `
-      <div class="projects-group">
+      <div class="projects-group" id="cat-${slug(cat)}">
         <h2 class="projects-cat-title fade-up">${heading}</h2>
         <div class="projects-grid">${list.map(gridCardHTML).join('')}</div>
       </div>`;
   }).join('');
+
+  container.innerHTML = navHTML + groupsHTML;
   if (window.__initFadeUps) window.__initFadeUps();
 }
 
