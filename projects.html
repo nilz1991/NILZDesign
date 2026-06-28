@@ -24,14 +24,6 @@
 
   <section class="section section--cream">
     <div class="container">
-      <!-- Filter bar -->
-      <div class="filter-bar fade-up">
-        <button class="filter-btn active" data-filter="All" data-i18n="filter.all">All</button>
-        <button class="filter-btn" data-filter="Interior Design" data-i18n="filter.interior">Interior Design</button>
-        <button class="filter-btn" data-filter="Architecture" data-i18n="filter.architecture">Architecture</button>
-        <button class="filter-btn" data-filter="Engineering & Technical Drawings" data-i18n="filter.technical">Technical Drawings</button>
-        <button class="filter-btn" data-filter="Visualization" data-i18n="filter.visualization">Visualization</button>
-      </div>
       <!-- Project grid -->
       <div id="projects-grid" class="projects-grid"></div>
       <!-- Instagram CTA -->
@@ -68,7 +60,7 @@
         ctaHref:        'contact.html',
         decorativeImage:'assets/images/line-art-hero.png',
       });
-      await renderProjectsGrid('#projects-grid', '.filter-btn');
+      await renderProjectsGrid('#projects-grid');
     }
 
     await renderProjectsPage();
