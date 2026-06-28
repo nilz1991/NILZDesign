@@ -610,6 +610,20 @@
           ]
         }
       ]
+    },
+    {
+      "id": "landscape",
+      "title": "Landscape Design",
+      "title_ar": "تنسيق الحدائق",
+      "category": "Exterior Design",
+      "category_ar": "التصميم الخارجي",
+      "location": "Muscat, Oman",
+      "location_ar": "مسقط، عُمان",
+      "image": "assets/images/projects/exterior/landscape/card.jpg",
+      "description": "Garden and outdoor-space design — landscaping, pools, and shaded terraces shaped for the Omani climate. New work coming soon.",
+      "description_ar": "تصميم الحدائق والمساحات الخارجية — التنسيق والمسابح والشرفات المظلّلة المصمّمة لتلائم المناخ العُماني. أعمال جديدة قريبًا.",
+      "overview": "Garden and outdoor-space design — landscaping, pools, and shaded terraces shaped for the Omani climate. New work coming soon.",
+      "overview_ar": "تصميم الحدائق والمساحات الخارجية — التنسيق والمسابح والشرفات المظلّلة المصمّمة لتلائم المناخ العُماني. أعمال جديدة قريبًا."
     }
   ]
 }
