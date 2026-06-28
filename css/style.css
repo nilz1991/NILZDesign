@@ -687,6 +687,13 @@ h1, h2, h3, h4 {
   gap: 2px;
   background: rgba(27,43,75,0.08);
 }
+.values-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 56px;
+}
 .value-card {
   background: var(--cream);
   padding: 48px 40px;
