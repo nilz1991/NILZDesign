@@ -572,6 +572,44 @@
           ]
         }
       ]
+    },
+    {
+      "id": "exterior",
+      "title": "Modern Villa Facade",
+      "title_ar": "واجهة فيلا عصرية",
+      "category": "Exterior Design",
+      "category_ar": "التصميم الخارجي",
+      "location": "Muscat, Oman",
+      "location_ar": "مسقط، عُمان",
+      "image": "assets/images/projects/exterior/card.jpg",
+      "description": "A modern villa exterior in warm microcement — clean cubic volumes, dark-framed glazing, and concealed linear lighting that brings the facade to life at dusk.",
+      "description_ar": "واجهة فيلا عصرية من الميكروسمنت الدافئ — كتلٌ مكعّبة نظيفة، وزجاجٌ بإطاراتٍ داكنة، وإضاءةٌ خطّية مخفية تبثّ الحياة في الواجهة عند الغسق.",
+      "overview": "A modern villa exterior composed in warm microcement, where clean cubic volumes meet dark-framed glazing and concealed linear lighting. The palette — off-white and warm-beige microcement, dark aluminium frames, and clear glass — gives the facade a calm, contemporary presence that glows softly at dusk.",
+      "overview_ar": "واجهة فيلا عصرية مؤلّفة من الميكروسمنت الدافئ، حيث تلتقي الكتل المكعّبة النظيفة بزجاجٍ بإطاراتٍ داكنة وإضاءةٍ خطّية مخفية. تمنح اللوحة — ميكروسمنت أوف-وايت وبيج دافئ، وإطارات ألمنيوم داكنة، وزجاج شفّاف — الواجهةَ حضورًا هادئًا معاصرًا يتوهّج بنعومة عند الغسق.",
+      "sections": [
+        {
+          "title": "Facade",
+          "title_ar": "الواجهة",
+          "description": "Clean cubic massing with cantilevered volumes and integrated lighting.",
+          "description_ar": "كتلٌ مكعّبة نظيفة بأجزاء كابولية وإضاءة مدمجة.",
+          "renders": [
+            { "image": "assets/images/projects/exterior/01.jpg", "caption": "The villa reads as a composition of stacked microcement volumes, framed by dark aluminium glazing and washed with warm linear light that traces the soffits at dusk.", "caption_ar": "تُقرأ الفيلا كتكوينٍ من كتل الميكروسمنت المتراصّة، يؤطّرها زجاجٌ بإطارات ألمنيوم داكنة وتغمرها إضاءةٌ خطّية دافئة تتتبّع بطون الأسقف عند الغسق." }
+          ]
+        },
+        {
+          "title": "Materials",
+          "title_ar": "المواد",
+          "description": "The exterior material palette.",
+          "description_ar": "لوحة مواد الواجهة.",
+          "renders": [
+            { "fit": "gallery", "images": [
+              "assets/images/projects/exterior/02.jpg",
+              "assets/images/projects/exterior/03.jpg",
+              "assets/images/projects/exterior/04.jpg"
+            ], "caption": "The facade palette — off-white and warm-beige microcement, dark aluminium window frames, advanced clear glass, and concealed linear LED. Page through with the arrows.", "caption_ar": "لوحة الواجهة — ميكروسمنت أوف-وايت وبيج دافئ، وإطارات نوافذ من الألمنيوم الداكن، وزجاج شفّاف متطوّر، وإضاءة LED خطّية مخفية. تصفّح بالأسهم." }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -96,8 +96,28 @@ async function renderHomeSoftware(containerSelector) {
     </div>`;
 }
 
-// ── Render projects grid (collections collapse into one card) ───────
-async function renderProjectsGrid(containerSelector, filterSelector) {
+// Normalize a collection into a grid item (links to its collection page)
+function collectionToItem(col, count) {
+  return {
+    href: `collection.html?id=${col.id}`,
+    image: col.image, category: col.category, categoryLabel: tf(col, 'category'),
+    title: tf(col, 'title'),
+    location: tf(col, 'location'), description: tf(col, 'description'),
+    badge: count > 0 ? `${count} ${t('card.projects_count')}` : '',
+    cta: t('card.view_collection'),
+  };
+}
+
+// Order categories appear in on the Projects page
+const CATEGORY_ORDER = [
+  'Interior Design',
+  'Exterior Design',
+  'Engineering & Technical Drawings',
+  'Visualization & Animation',
+];
+
+// ── Render projects grid, grouped by category with a heading per group ──
+async function renderProjectsGrid(containerSelector) {
   const container = document.querySelector(containerSelector);
   if (!container) return;
   const data = await loadData();
@@ -114,44 +134,37 @@ async function renderProjectsGrid(containerSelector, filterSelector) {
       const col = collections.find(c => c.id === p.collection);
       if (!col) continue;
       const count = projects.filter(x => x.collection === p.collection).length;
-      items.push({
-        href: `collection.html?id=${col.id}`,
-        image: col.image, category: col.category, categoryLabel: tf(col, 'category'),
-        title: tf(col, 'title'),
-        location: tf(col, 'location'), description: tf(col, 'description'),
-        badge: `${count} ${t('card.projects_count')}`, cta: t('card.view_collection'),
-      });
+      items.push(collectionToItem(col, count));
     } else {
       items.push(projectToItem(p));
     }
   }
-
-  function render(filter) {
-    const filtered = filter === 'All' ? items : items.filter(it => it.category === filter);
-    container.innerHTML = filtered.map(gridCardHTML).join('');
-    if (window.__initFadeUps) window.__initFadeUps();
+  // Include collections that have no member projects yet (placeholders)
+  for (const col of collections) {
+    if (!seen.has(col.id)) { seen.add(col.id); items.push(collectionToItem(col, 0)); }
   }
 
-  // Preserve the active filter across re-renders (e.g. an in-place language switch)
-  let activeFilter = 'All';
-  if (filterSelector) {
-    const cur = document.querySelector(`${filterSelector}.active`);
-    if (cur && cur.dataset.filter) activeFilter = cur.dataset.filter;
+  // Group by canonical category, ordered by CATEGORY_ORDER
+  const groups = new Map();
+  for (const it of items) {
+    if (!groups.has(it.category)) groups.set(it.category, []);
+    groups.get(it.category).push(it);
   }
-  render(activeFilter);
+  const cats = [...groups.keys()].sort((a, b) => {
+    const ia = CATEGORY_ORDER.indexOf(a), ib = CATEGORY_ORDER.indexOf(b);
+    return (ia === -1 ? 999 : ia) - (ib === -1 ? 999 : ib);
+  });
 
-  if (filterSelector) {
-    // Clone-replace buttons so re-binding doesn't stack duplicate listeners
-    document.querySelectorAll(filterSelector).forEach(oldBtn => {
-      const btn = oldBtn.cloneNode(true);
-      oldBtn.replaceWith(btn);
-      btn.addEventListener('click', () => {
-        document.querySelectorAll(filterSelector).forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        render(btn.dataset.filter);
-      });
-    });
-  }
+  container.innerHTML = cats.map(cat => {
+    const list = groups.get(cat);
+    const heading = list[0].categoryLabel || cat;
+    return `
+      <div class="projects-group">
+        <h2 class="projects-cat-title fade-up">${heading}</h2>
+        <div class="projects-grid">${list.map(gridCardHTML).join('')}</div>
+      </div>`;
+  }).join('');
+  if (window.__initFadeUps) window.__initFadeUps();
 }
 
 // ── Render a collection page (cards for the collection's projects) ──
