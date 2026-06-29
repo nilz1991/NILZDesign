@@ -23,6 +23,18 @@
       "image": "assets/images/projects/office-workspace/madineh/01.jpg",
       "description": "Office and workspace designs across multiple Muscat locations — from a refined modern scheme to a raw industrial one. Explore each project individually.",
       "description_ar": "تصاميم مكاتب ومساحات عمل في مواقع متعددة بمسقط — من طرازٍ عصري راقٍ إلى آخر صناعي خام. تصفّح كل مشروع على حدة."
+    },
+    {
+      "id": "facade",
+      "title": "Facade Design",
+      "title_ar": "تصميم الواجهات",
+      "category": "Exterior Design",
+      "category_ar": "التصميم الخارجي",
+      "location": "Muscat, Oman",
+      "location_ar": "مسقط، عُمان",
+      "image": "assets/images/projects/exterior/2/01.jpeg",
+      "description": "Modern villa facades — clean volumes, refined materials, and integrated architectural lighting. Explore each individually.",
+      "description_ar": "واجهات فلل عصرية — كتلٌ نظيفة، ومواد راقية، وإضاءة معمارية مدمجة. تصفّح كلًّا منها على حدة."
     }
   ],
   "projects": [
@@ -524,6 +536,66 @@
       ]
     },
     {
+      "id": "al-khodh-villa",
+      "collection": "residential",
+      "title": "Al Khodh Villa",
+      "title_ar": "فيلا الخوض",
+      "category": "Interior Design",
+      "category_ar": "التصميم الداخلي",
+      "location": "Al Khodh, Muscat — Oman",
+      "location_ar": "الخوض، مسقط — عُمان",
+      "image": "assets/images/projects/residential/al-khodh/living-01.jpg",
+      "description": "A warm, contemporary Al Khodh villa in soft neutrals, natural oak, and marble — across living, dining, a tailored dressing room, and spa-like bathrooms.",
+      "description_ar": "فيلا عصرية دافئة في الخوض بدرجاتٍ محايدة ناعمة والبلوط الطبيعي والرخام — تشمل المعيشة والطعام وغرفة ملابس مُفصّلة وحمّاماتٍ أشبه بالمنتجع.",
+      "overview": "A warm, contemporary villa in Al Khodh, Muscat, composed in soft neutrals, natural oak, and book-matched marble. Light-filled living and dining spaces flow into a tailored walk-in dressing room and spa-like bathrooms, balancing minimal calm with rich, tactile materials.",
+      "overview_ar": "فيلا عصرية دافئة في الخوض، مسقط، مؤلّفة من درجاتٍ محايدة ناعمة والبلوط الطبيعي والرخام المتناظر. تنساب مساحات المعيشة والطعام المفعمة بالضوء إلى غرفة ملابس واسعة مُفصّلة وحمّاماتٍ أشبه بالمنتجع، موازنةً بين الهدوء المينيمال والمواد الغنية المحسوسة.",
+      "sections": [
+        {
+          "title": "Living Room",
+          "title_ar": "غرفة المعيشة",
+          "description": "An open, light-filled living space in soft neutrals.",
+          "description_ar": "مساحة معيشة منفتحة تفيض بالضوء بدرجاتٍ محايدة ناعمة.",
+          "renders": [
+            { "image": "assets/images/projects/residential/al-khodh/living-01.jpg", "caption": "A double-height living room layered in soft neutrals — a low modular sofa and organic stone tables on a textured rug, beneath a sculptural linear chandelier and warm polished-marble floors.", "caption_ar": "غرفة معيشة مزدوجة الارتفاع متدرّجة بألوانٍ محايدة ناعمة — أريكة منخفضة متعددة الوحدات وطاولات حجرية عضوية فوق سجادةٍ محسوسة، تحت ثُريّا خطّية نحتية وأرضياتٍ رخامية مصقولة دافئة." },
+            { "image": "assets/images/projects/residential/al-khodh/living-02.jpg", "caption": "The media wall pairs fluted oak and a warm microcement panel with a floating console and backlit display niches, framed by a sculptural ring chandelier.", "caption_ar": "يجمع جدار الوسائط بين البلوط المضلّع ولوحٍ دافئ من الميكروسمنت مع طاولةٍ طافية وكوّاتٍ عرض مُضاءة من الخلف، يؤطّرها ثُريّا حلقية نحتية." }
+          ]
+        },
+        {
+          "title": "Dining",
+          "title_ar": "غرفة الطعام",
+          "description": "",
+          "renders": [
+            { "image": "assets/images/projects/residential/al-khodh/dining-01.jpg", "caption": "A serene dining corner — a solid oak table with soft bouclé chairs beneath a cascading linear chandelier, set against a tall plaster-relief artwork and concealed cove light.", "caption_ar": "ركن طعامٍ هادئ — طاولة من البلوط المصمت بكراسٍ من البوكليه الناعم تحت ثُريّا خطّية متدلّية، أمام عملٍ فني بارز من الجص وإضاءة كورنيش خفية." }
+          ]
+        },
+        {
+          "title": "Dressing Room",
+          "title_ar": "غرفة الملابس",
+          "description": "A tailored walk-in dressing room in warm oak.",
+          "description_ar": "غرفة ملابس واسعة مُفصّلة من البلوط الدافئ.",
+          "renders": [
+            { "fit": "gallery", "images": [
+              "assets/images/projects/residential/al-khodh/dressing-01.jpg",
+              "assets/images/projects/residential/al-khodh/dressing-02.jpg",
+              "assets/images/projects/residential/al-khodh/dressing-03.jpg",
+              "assets/images/projects/residential/al-khodh/dressing-04.jpg"
+            ], "caption": "A walk-in dressing room in warm oak with integrated linear lighting, open display shelving, a soft seating island, and a mirrored vanity console. Page through with the arrows.", "caption_ar": "غرفة ملابس واسعة من البلوط الدافئ بإضاءةٍ خطّية مدمجة، ورفوف عرضٍ مفتوحة، وجزيرة جلوسٍ ناعمة، وطاولة زينةٍ بمرآة. تصفّح بالأسهم." }
+          ]
+        },
+        {
+          "title": "Bathroom",
+          "title_ar": "الحمّام",
+          "description": "Spa-like ensuite bathrooms in marble and oak.",
+          "description_ar": "حمّاماتٌ داخلية أشبه بالمنتجع من الرخام والبلوط.",
+          "renders": [
+            { "image": "assets/images/projects/residential/al-khodh/bath-01.jpg", "caption": "A spa-like bathroom with a floating oak vanity, a backlit round mirror, and book-matched marble framing the wall.", "caption_ar": "حمّامٌ أشبه بالمنتجع بطاولة غسيلٍ طافية من البلوط، ومرآةٍ مستديرة مُضاءة من الخلف، ورخامٍ متناظر يؤطّر الجدار." },
+            { "image": "assets/images/projects/residential/al-khodh/bath-02.jpg", "caption": "A glazed wet zone with a wall-hung WC and walk-in rain shower set against dramatic veined marble and warm oak.", "caption_ar": "منطقة رطبة زجاجية بمرحاضٍ معلّق ودُشٍّ مطري بمدخلٍ مباشر أمام رخامٍ بعروقٍ آسرة وبلوطٍ دافئ." },
+            { "image": "assets/images/projects/residential/al-khodh/bath-03.jpg", "caption": "A styling detail — natural textures, candlelight, and curated objects on the stone vanity top.", "caption_ar": "تفصيلٌ من التنسيق — ملمسٌ طبيعي وضوء شموع ومقتنياتٌ مختارة على سطح الغسيل الحجري." }
+          ]
+        }
+      ]
+    },
+    {
       "id": "visualization",
       "title": "Architectural Visualization & Animation",
       "title_ar": "الإظهار المعماري والتحريك",
@@ -575,6 +647,7 @@
     },
     {
       "id": "exterior",
+      "collection": "facade",
       "title": "Modern Villa Facade",
       "title_ar": "واجهة فيلا عصرية",
       "category": "Exterior Design",
@@ -607,6 +680,41 @@
               "assets/images/projects/exterior/03.jpg",
               "assets/images/projects/exterior/04.jpg"
             ], "caption": "The facade palette — off-white and warm-beige microcement, dark aluminium window frames, advanced clear glass, and concealed linear LED. Page through with the arrows.", "caption_ar": "لوحة الواجهة — ميكروسمنت أوف-وايت وبيج دافئ، وإطارات نوافذ من الألمنيوم الداكن، وزجاج شفّاف متطوّر، وإضاءة LED خطّية مخفية. تصفّح بالأسهم." }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "exterior-corner-villa",
+      "collection": "facade",
+      "title": "Corner Villa Facade",
+      "title_ar": "واجهة فيلا الزاوية",
+      "category": "Exterior Design",
+      "category_ar": "التصميم الخارجي",
+      "location": "Muscat, Oman",
+      "location_ar": "مسقط، عُمان",
+      "image": "assets/images/projects/exterior/2/01.jpeg",
+      "description": "A modern corner villa facade in white cement plaster, grey travertine, and black aluminium — clean stacked volumes, sleek black-framed glazing, and integrated architectural lighting.",
+      "description_ar": "واجهة فيلا ركنية عصرية من بلاستر الأسمنت الأبيض وحجر الترافرتين الرمادي والألمنيوم الأسود — كتلٌ متراصّة نظيفة، وزجاجٌ بإطاراتٍ سوداء أنيقة، وإضاءةٌ معمارية مدمجة.",
+      "overview": "A modern corner villa composed in white cement plaster with a grey travertine base and minimalist black aluminium trims. Clean stacked volumes, sleek black-framed glazing, and integrated architectural lighting give the facade a calm, contemporary presence, while bougainvillea and rose planting soften the boundary wall.",
+      "overview_ar": "فيلا ركنية عصرية مؤلّفة من بلاستر الأسمنت الأبيض مع قاعدةٍ من حجر الترافرتين الرمادي وحلياتٍ بسيطة من الألمنيوم الأسود. تمنح الكتل المتراصّة النظيفة والزجاج بإطاراتٍ سوداء أنيقة والإضاءة المعمارية المدمجة الواجهةَ حضورًا هادئًا معاصرًا، فيما تُلطّف نباتات الجهنمية والورد جدار المحيط.",
+      "sections": [
+        {
+          "title": "Facade",
+          "title_ar": "الواجهة",
+          "description": "A crisp corner composition in white, travertine and black aluminium.",
+          "description_ar": "تكوينٌ ركني صافٍ بالأبيض والترافرتين والألمنيوم الأسود.",
+          "renders": [
+            { "image": "assets/images/projects/exterior/2/01.jpeg", "caption": "The corner villa reads as a composition of crisp white volumes over a travertine base, framed by slim black aluminium glazing and a planted boundary wall.", "caption_ar": "تُقرأ الفيلا الركنية كتكوينٍ من كتلٍ بيضاء صافية فوق قاعدةٍ من الترافرتين، يؤطّرها زجاجٌ نحيل بإطارات ألمنيوم سوداء وجدار محيطٍ مزروع." }
+          ]
+        },
+        {
+          "title": "Materials & Details",
+          "title_ar": "المواد والتفاصيل",
+          "description": "The facade development board — materials, lighting and details.",
+          "description_ar": "لوحة تطوير الواجهة — المواد والإضاءة والتفاصيل.",
+          "renders": [
+            { "image": "assets/images/projects/exterior/2/materials.jpeg", "fit": "drawing", "caption": "Facade development board &#8212; white cement plaster, grey travertine and black aluminium, a professional lighting scheme, boundary-wall planting, and technical details.", "caption_ar": "لوحة تطوير الواجهة &#8212; بلاستر الأسمنت الأبيض والترافرتين الرمادي والألمنيوم الأسود، ومخطط إضاءة احترافي، وزراعة جدار المحيط، والتفاصيل الفنية." }
           ]
         }
       ]
