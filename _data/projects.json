@@ -333,6 +333,54 @@
       ]
     },
     {
+      "id": "kindergarten",
+      "collection": "office",
+      "title": "Nursery Design",
+      "title_ar": "تصميم حضانة",
+      "category": "Interior Design",
+      "category_ar": "التصميم الداخلي",
+      "location": "Muscat, Oman",
+      "location_ar": "مسقط، عُمان",
+      "image": "assets/images/projects/office-workspace/kindergarten/classroom-01.jpg",
+      "description": "A bright, playful nursery interior — soft pastels, warm wood, and house-shaped joinery designed around how young children learn, play and rest.",
+      "description_ar": "تصميم داخلي لحضانة مشرق ومرح — ألوان باستيلية ناعمة وخشب دافئ ونجارة على هيئة بيوت، مُصمّمة حول طريقة تعلّم الأطفال الصغار ولعبهم وراحتهم.",
+      "overview": "A bright, playful nursery in Muscat designed around how young children learn, move and rest. Soft pastels and warm natural wood, house-shaped joinery, and learning walls for numbers, letters and colours create a calm yet stimulating environment — from the welcoming reception through flexible classrooms to a cosy reading nook.",
+      "overview_ar": "حضانة مشرقة ومرحة في مسقط، صُمّمت حول طريقة تعلّم الأطفال الصغار وحركتهم وراحتهم. تخلق الألوان الباستيلية الناعمة والخشب الطبيعي الدافئ والنجارة على هيئة بيوت وجدران التعلّم للأرقام والحروف والألوان بيئةً هادئة ومحفّزة في آنٍ واحد — من الاستقبال المُرحِّب عبر الفصول المرنة إلى ركن مطالعةٍ دافئ.",
+      "sections": [
+        {
+          "title": "Reception",
+          "title_ar": "الاستقبال",
+          "description": "A warm, friendly arrival area.",
+          "description_ar": "منطقة وصولٍ دافئة وودودة.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/kindergarten/reception.jpg", "caption": "A welcoming reception with a coral desk, hanging greenery, and playful animal wall art that sets a warm, friendly tone from the entrance.", "caption_ar": "استقبالٌ مُرحِّب بمكتبٍ بلون المرجان، ونباتاتٍ متدلّية، ورسوم حيواناتٍ مرحة على الجدار تمنح المدخل نبرةً دافئة وودودة." }
+          ]
+        },
+        {
+          "title": "Classrooms",
+          "title_ar": "الفصول",
+          "description": "Bright, flexible learning spaces.",
+          "description_ar": "مساحات تعلّمٍ مشرقة ومرنة.",
+          "renders": [
+            { "fit": "gallery", "images": [
+              "assets/images/projects/office-workspace/kindergarten/classroom-01.jpg",
+              "assets/images/projects/office-workspace/kindergarten/classroom-02.jpg",
+              "assets/images/projects/office-workspace/kindergarten/classroom-03.jpg"
+            ], "caption": "Light-filled classrooms with child-scale furniture, house-shaped storage, and learning walls for numbers, letters and colours. Page through with the arrows.", "caption_ar": "فصولٌ تفيض بالضوء بأثاثٍ على مقاس الأطفال، وتخزينٍ على هيئة بيوت، وجدران تعلّمٍ للأرقام والحروف والألوان. تصفّح بالأسهم." }
+          ]
+        },
+        {
+          "title": "Parents' Waiting Area & Lobby",
+          "title_ar": "منطقة انتظار الأهالي والردهة",
+          "description": "A warm waiting and lobby area for families.",
+          "description_ar": "منطقة انتظارٍ وردهة دافئة للعائلات.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/kindergarten/lobby.jpg", "caption": "A parents' waiting area and lobby — a cosy house-shaped seating niche framed by warm backlit shelving, where families can sit and relax.", "caption_ar": "منطقة انتظارٍ للأهالي وردهة — كوّة جلوسٍ دافئة على هيئة بيت تؤطّرها رفوفٌ مُضاءة من الخلف، حيث يمكن للعائلات الجلوس والاسترخاء." }
+          ]
+        }
+      ]
+    },
+    {
       "id": "terrace-pergola",
       "title": "Plans & Details",
       "title_ar": "المخططات والتفاصيل",
