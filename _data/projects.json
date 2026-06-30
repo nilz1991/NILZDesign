@@ -379,6 +379,15 @@
           ]
         },
         {
+          "title": "Children's Restroom",
+          "title_ar": "دورات مياه الأطفال",
+          "description": "A playful, child-scale restroom.",
+          "description_ar": "دورة مياهٍ مرحة على مقاس الأطفال.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/kindergarten/restroom.jpg", "caption": "A children's restroom with low wooden stalls, child-height sinks, and playful cloud, star and flower mirrors — gentle animal artwork keeps it warm and friendly.", "caption_ar": "دورة مياهٍ للأطفال بأكشاكٍ خشبية منخفضة، ومغاسل بارتفاع الأطفال، ومرايا مرحة على هيئة سحابة ونجمة وزهرة — ورسوم حيواناتٍ لطيفة تمنحها دفئًا وودًّا." }
+          ]
+        },
+        {
           "title": "Parents' Waiting Area & Lobby",
           "title_ar": "منطقة انتظار الأهالي والردهة",
           "description": "A warm waiting and lobby area for families.",
