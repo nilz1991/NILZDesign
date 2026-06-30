@@ -370,6 +370,15 @@
           ]
         },
         {
+          "title": "Kids' Rest Area",
+          "title_ar": "منطقة استراحة الأطفال",
+          "description": "A cosy nap and reading nook for children.",
+          "description_ar": "ركن قيلولةٍ ومطالعة دافئ للأطفال.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/kindergarten/rest-area.jpg", "caption": "A cosy children's rest and reading nook — a soft daybed framed by book ledges, plush animals, and hanging greenery in gentle blush tones for quiet downtime.", "caption_ar": "ركن استراحةٍ ومطالعة دافئ للأطفال — سريرٌ وثير تؤطّره رفوف الكتب ودمى الحيوانات والنباتات المتدلّية، بدرجاتٍ ورديةٍ ناعمة لأوقات الهدوء." }
+          ]
+        },
+        {
           "title": "Parents' Waiting Area & Lobby",
           "title_ar": "منطقة انتظار الأهالي والردهة",
           "description": "A warm waiting and lobby area for families.",
