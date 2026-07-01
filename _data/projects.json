@@ -809,6 +809,41 @@
       ]
     },
     {
+      "id": "exterior-classical-villa",
+      "collection": "facade",
+      "title": "Classical Villa Facade",
+      "title_ar": "واجهة فيلا كلاسيكية",
+      "category": "Exterior Design",
+      "category_ar": "التصميم الخارجي",
+      "location": "Muscat, Oman",
+      "location_ar": "مسقط، عُمان",
+      "image": "assets/images/projects/exterior/3/01.jpg",
+      "description": "A neoclassical villa facade in beige limestone — fluted pilasters, ornate cornices, and decorative wrought-iron balconies overlooking a reflecting pool.",
+      "description_ar": "واجهة فيلا كلاسيكية من الحجر الجيري البيج، بأعمدةٍ مضلّعة وكرانيش زخرفية وشرفات حديدية مزخرفة تطلّ على مسبحٍ عاكس.",
+      "overview": "A neoclassical villa facade composed in warm beige limestone, with fluted pilasters, dentilled cornices, and pedimented window surrounds. Wrought-iron balcony railings, terraced planters of agave and asparagus fern, and a long reflecting pool with warm deck lighting complete a stately, garden-wrapped presence.",
+      "overview_ar": "واجهة فيلا كلاسيكية (نيوكلاسيكية) مؤلّفة من حجرٍ جيري بيج دافئ، بأعمدةٍ مضلّعة وكرانيش مسنّنة وفتحات نوافذ مزخرفة بأفاريز مثلّثية. تُكمل شرفاتٌ حديدية مزخرفة، وأصصٌ متدرّجة من الأغاف والسرخس الهليوني، ومسبحٌ عاكس طويل بإضاءة ممشى دافئة، حضورًا مهيبًا تحتضنه الحدائق.",
+      "sections": [
+        {
+          "title": "Facade",
+          "title_ar": "الواجهة",
+          "description": "A neoclassical composition in beige limestone.",
+          "description_ar": "تكوينٌ كلاسيكي جديد من الحجر الجيري البيج.",
+          "renders": [
+            { "image": "assets/images/projects/exterior/3/01.jpg", "caption": "The villa rises in warm beige limestone, its fluted pilasters and dentilled cornices framing tall pedimented windows with wrought-iron balconies. Cascading planters of agave and fern soften the stacked volumes, all mirrored in a long turquoise-tiled reflecting pool lit by warm deck lighting at dusk.", "caption_ar": "ترتفع الفيلا بحجرٍ جيري بيج دافئ، تؤطّر أعمدتها المضلّعة وكرانيشها المسنّنة نوافذ طويلة ذات أفاريز مثلّثية وشرفات حديدية مزخرفة. تُلطّف أصص الأغاف والسرخس المتدلّية الكتلَ المتراصّة، لينعكس الجميع في مسبحٍ طويل مكسوّ بالموزاييك التركوازي تُضيئه إضاءة ممشى دافئة عند الغسق." }
+          ]
+        },
+        {
+          "title": "Materials & Details",
+          "title_ar": "المواد والتفاصيل",
+          "description": "The facade development board — materials, planting and lighting.",
+          "description_ar": "لوحة تطوير الواجهة — المواد والزراعة والإضاءة.",
+          "renders": [
+            { "image": "assets/images/projects/exterior/3/materials.jpg", "fit": "drawing", "caption": "Facade development board — beige limestone cladding, neoclassical cornice profiles, decorative wrought iron, agave and asparagus fern planting, turquoise pool mosaic tile, warm pool-deck lighting, and a warm 2700K interior glow.", "caption_ar": "لوحة تطوير الواجهة — تكسية من الحجر الجيري البيج، وقطاعات كرانيش كلاسيكية، وحديد مزخرف، وزراعة الأغاف والسرخس الهليوني، وبلاط موزاييك تركوازي للمسبح، وإضاءة دافئة لممشى المسبح، وتوهّج داخلي دافئ بحرارة لونية 2700 كلفن." }
+          ]
+        }
+      ]
+    },
+    {
       "id": "landscape",
       "title": "Landscape Design",
       "title_ar": "تنسيق الحدائق",
