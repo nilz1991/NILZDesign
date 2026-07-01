@@ -409,6 +409,15 @@
               "assets/images/projects/office-workspace/kindergarten/playground-03.jpg"
             ], "caption": "A shaded outdoor yard wrapped in a tensioned green sun-net canopy — a full play structure with slide, climbing net and swings over colourful rubberized safety flooring, a sunken sand pit, and a timber pergola where parents can sit and watch, all framed by Muscat's mountains. Page through with the arrows.", "caption_ar": "ساحة خارجية مظلّلة تحتضنها شبكة تظليل خضراء مشدودة — مجمّع ألعابٍ متكامل بزحليقة وشبكة تسلّق وأراجيح فوق أرضية مطاطية آمنة وملوّنة، وحفرة رملٍ منخفضة، وعريشة خشبية يجلس تحتها الأهالي للمراقبة، يؤطّر الجميع جبال مسقط. تصفّح بالأسهم." }
           ]
+        },
+        {
+          "title": "Mini Theatre",
+          "title_ar": "المسرح الصغير",
+          "description": "A colourful stage and cinema room for shows and storytime.",
+          "description_ar": "مسرحٌ ملوّن وغرفة سينما لعروض الأطفال ووقت الحكايات.",
+          "renders": [
+            { "image": "assets/images/projects/office-workspace/kindergarten/theatre.jpg", "caption": "A playful mini theatre with a curved stage framed by teal-and-coral curtains, a drop-down cinema screen, and stepped, cloud-soft seating in candy colours where children gather for shows, films and storytime.", "caption_ar": "مسرحٌ صغيرٌ مرح بخشبةٍ منحنية تؤطّرها ستائر بلونَي التركواز والمرجان، وشاشة سينما قابلة للطي، ومقاعد متدرّجة ناعمة كالغيوم بألوانٍ حلوة يجتمع فيها الأطفال لمشاهدة العروض والأفلام ووقت الحكايات." }
+          ]
         }
       ]
     },
