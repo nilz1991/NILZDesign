@@ -396,6 +396,19 @@
           "renders": [
             { "image": "assets/images/projects/office-workspace/kindergarten/lobby.jpg", "caption": "A parents' waiting area and lobby — a cosy house-shaped seating niche framed by warm backlit shelving, where families can sit and relax.", "caption_ar": "منطقة انتظارٍ للأهالي وردهة — كوّة جلوسٍ دافئة على هيئة بيت تؤطّرها رفوفٌ مُضاءة من الخلف، حيث يمكن للعائلات الجلوس والاسترخاء." }
           ]
+        },
+        {
+          "title": "Outdoor Play Area & Yard",
+          "title_ar": "ساحة اللعب الخارجية",
+          "description": "A shaded outdoor yard for play, with a pergola for parents.",
+          "description_ar": "ساحة خارجية مظلّلة للعب، مع عريشةٍ لجلوس الأهالي.",
+          "renders": [
+            { "fit": "gallery", "images": [
+              "assets/images/projects/office-workspace/kindergarten/playground-01.jpg",
+              "assets/images/projects/office-workspace/kindergarten/playground-02.jpg",
+              "assets/images/projects/office-workspace/kindergarten/playground-03.jpg"
+            ], "caption": "A shaded outdoor yard wrapped in a tensioned green sun-net canopy — a full play structure with slide, climbing net and swings over colourful rubberized safety flooring, a sunken sand pit, and a timber pergola where parents can sit and watch, all framed by Muscat's mountains. Page through with the arrows.", "caption_ar": "ساحة خارجية مظلّلة تحتضنها شبكة تظليل خضراء مشدودة — مجمّع ألعابٍ متكامل بزحليقة وشبكة تسلّق وأراجيح فوق أرضية مطاطية آمنة وملوّنة، وحفرة رملٍ منخفضة، وعريشة خشبية يجلس تحتها الأهالي للمراقبة، يؤطّر الجميع جبال مسقط. تصفّح بالأسهم." }
+          ]
         }
       ]
     },
