@@ -844,6 +844,41 @@
       ]
     },
     {
+      "id": "exterior-desert-villa",
+      "collection": "facade",
+      "title": "Desert Villa Facade",
+      "title_ar": "واجهة فيلا صحراوية",
+      "category": "Exterior Design",
+      "category_ar": "التصميم الخارجي",
+      "location": "Muscat, Oman",
+      "location_ar": "مسقط، عُمان",
+      "image": "assets/images/projects/exterior/4/01.jpg",
+      "description": "A modern desert villa in natural stone and white render — mashrabiya-patterned screens, glass balconies, and an infinity pool set against Oman's mountains.",
+      "description_ar": "فيلا صحراوية عصرية من الحجر الطبيعي والطلاء الأبيض — شبكات بنقوش المشربية، وشرفات زجاجية، ومسبح لامتناهٍ أمام جبال عُمان.",
+      "overview": "A modern villa shaped for its desert setting — crisp white volumes over natural stone cladding, warm timber soffits, and perforated mashrabiya screens that filter the harsh sun. Full-height glazing opens the interiors to a travertine terrace, an infinity-edge pool, and drought-tolerant planting of palms, olives and agave, all framed by Oman's mountains at dusk.",
+      "overview_ar": "فيلا عصرية صُمّمت لبيئتها الصحراوية — كتلٌ بيضاء صافية فوق تكسيةٍ من الحجر الطبيعي، وأسقفٌ خشبية دافئة، وشبكات مشربية مثقّبة تُرشّح الشمس الحارقة. تفتح الواجهات الزجاجية كاملة الارتفاع الداخلَ على شرفةٍ من الترافرتين ومسبحٍ لامتناهي الحافة وزراعةٍ مقاومة للجفاف من النخيل والزيتون والأغاف، يؤطّر الجميع جبال عُمان عند الغسق.",
+      "sections": [
+        {
+          "title": "Facade",
+          "title_ar": "الواجهة",
+          "description": "White volumes, natural stone, and mashrabiya screens.",
+          "description_ar": "كتلٌ بيضاء وحجرٌ طبيعي وشبكات مشربية.",
+          "renders": [
+            { "image": "assets/images/projects/exterior/4/02.jpg", "caption": "The main elevation pairs crisp white volumes with natural stone cladding and warm timber soffits, while perforated mashrabiya screens shade the glazing — a contemporary facade rooted in regional character.", "caption_ar": "تجمع الواجهة الرئيسية كتلًا بيضاء صافية مع تكسيةٍ من الحجر الطبيعي وأسقفٍ خشبية دافئة، فيما تُظلّل شبكات المشربية المثقّبة الزجاجَ — واجهة معاصرة متجذّرة في الطابع المحلي." }
+          ]
+        },
+        {
+          "title": "Pool & Landscape",
+          "title_ar": "المسبح والتنسيق",
+          "description": "An infinity pool and desert planting frame the villa.",
+          "description_ar": "مسبحٌ لامتناهٍ وزراعةٌ صحراوية يؤطّران الفيلا.",
+          "renders": [
+            { "image": "assets/images/projects/exterior/4/01.jpg", "caption": "A raised infinity-edge pool in stone-clad travertine anchors the terrace, with lounge and dining zones under a slatted pergola, fire pits, and drought-tolerant planting of palms, olives, agave and bougainvillea — the mountains completing the view.", "caption_ar": "مسبحٌ مرتفع لامتناهي الحافة مكسوّ بالترافرتين الحجري يتوسّط الشرفة، مع مناطق جلوسٍ وطعام تحت عريشةٍ شرائحية، ومواقد نار، وزراعةٍ مقاومة للجفاف من النخيل والزيتون والأغاف والجهنمية — وتُكمل الجبالُ المشهد." }
+          ]
+        }
+      ]
+    },
+    {
       "id": "landscape",
       "title": "Landscape Design",
       "title_ar": "تنسيق الحدائق",
