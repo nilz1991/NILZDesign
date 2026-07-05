@@ -1821,17 +1821,23 @@ html.lang-ar em { font-style: normal; }
   transition: opacity 0.25s, color 0.25s;
 }
 .header-pf svg { width: 13px; height: 13px; flex: none; }
+.header-pf__short { display: none; }
 .header-pf:hover { opacity: 1; color: var(--gold); }
 #site-header.scrolled .header-pf--bar { color: var(--navy); }
 #site-header.scrolled .header-pf--bar:hover { color: var(--gold); }
 .header-pf--menu { display: none; }
 
 @media (max-width: 900px) {
-  /* Compact top bar: icon only, next to the switch; hide while the menu is open
+  /* Compact top bar: smaller label, next to the switch; hide while the menu is open
      (the in-menu link takes over) */
-  .header-pf--bar { margin-inline-start: 6px; padding: 10px; }
-  .header-pf--bar span { display: none; }
-  .header-pf--bar svg { width: 15px; height: 15px; }
+  .header-inner { gap: 18px; }
+  .header-pf--bar {
+    margin-inline-start: 10px;
+    padding: 8px 0;
+    gap: 5px;
+    font-size: 0.72rem;
+    white-space: nowrap;
+  }
   .header-nav.open ~ .header-pf--bar { visibility: hidden; }
   .header-pf--menu {
     display: inline-flex;
@@ -1841,6 +1847,18 @@ html.lang-ar em { font-style: normal; }
     opacity: 0.9;
   }
   .header-pf--menu svg { width: 15px; height: 15px; }
+}
+
+@media (max-width: 520px) {
+  /* Narrow phones: everything still on one row — smaller logo, tighter switch,
+     and the download link falls back to its short label */
+  .header-inner { gap: 12px; }
+  .header-logo__img { height: 28px; }
+  .lang-switch--desktop .lang-switch__btn { font-size: 0.76rem; }
+  .header-burger { margin-inline-start: 8px; }
+  .header-pf--bar { margin-inline-start: 6px; }
+  .header-pf--bar .header-pf__full { display: none; }
+  .header-pf--bar .header-pf__short { display: inline; }
 }
 
 /* ─── Portfolio download band (home) ─────── */
