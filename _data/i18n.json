@@ -66,6 +66,12 @@
   "statement.sub.about":   { "en": "Thirteen years of shaping spaces that work as beautifully as they look — because great design is both seen and felt.", "ar": "ثلاثة عشر عامًا من تشكيل مساحات تعمل بالكفاءة ذاتها التي تبدو بها جمالًا — فالتصميم العظيم يُرى ويُحَسّ معًا." },
   "statement.sub.projects":{ "en": "Ready to start something extraordinary? Let's shape your vision into a space that lasts.", "ar": "هل أنت مستعد لبدء شيء استثنائي؟ لنحوّل رؤيتك إلى مساحة تدوم." },
 
+  "pf.tag":   { "en": "Portfolio · 2026", "ar": "ملف الأعمال · ٢٠٢٦" },
+  "pf.title": { "en": "The Portfolio, <em>in Print</em>", "ar": "ملف الأعمال <em>المطبوع</em>" },
+  "pf.desc":  { "en": "A curated 21-page A4 portfolio — residential and commercial interiors, facade design, visualization and technical drawings, composed as an editorial print document.", "ar": "ملف أعمال منسّق من ٢١ صفحة بقياس A4 — تصاميم داخلية سكنية وتجارية، وتصميم واجهات، وإظهار معماري، ورسومات فنية، أُخرج بأسلوب طباعي أنيق." },
+  "pf.btn":   { "en": "Download PDF", "ar": "تحميل الملف (PDF)" },
+  "pf.meta":  { "en": "PDF · 21 pages · 15 MB", "ar": "PDF · ٢١ صفحة · ١٥ م.ب" },
+
   "footer.desc":            { "en": "Architecture &amp; Interior Design Group led by Niloufar Zanjani — shaping spaces across Muscat and beyond for over 13 years.", "ar": "مجموعة العمارة والتصميم الداخلي بقيادة نيلوفر زنجاني — نُشكّل المساحات في مسقط وما حولها منذ أكثر من ١٣ عامًا." },
   "footer.nav_heading":     { "en": "Navigate",    "ar": "تصفّح" },
   "footer.services_heading":{ "en": "Services",    "ar": "خدماتنا" },

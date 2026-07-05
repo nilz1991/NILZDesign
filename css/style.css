@@ -1806,6 +1806,60 @@ html.lang-ar em { font-style: normal; }
   .lang-switch--mobile .lang-switch__sep { color: rgba(27,43,75,0.3); font-size: 1.2rem; }
 }
 
+/* ─── Portfolio download band (home) ─────── */
+.portfolio-band { background: var(--navy); }
+.portfolio-band__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+  gap: clamp(36px, 6vw, 84px);
+  align-items: center;
+}
+.portfolio-band__cover { position: relative; }
+.portfolio-band__cover img {
+  width: 100%;
+  display: block;
+  box-shadow: 0 26px 60px rgba(0, 0, 0, 0.45);
+}
+.portfolio-band__badge {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  background: rgba(27, 43, 75, 0.88);
+  color: #E2D1AF;
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  padding: 7px 14px;
+}
+.portfolio-band .section-title { color: var(--white); }
+.portfolio-band .section-title em { color: var(--gold); }
+.portfolio-band__desc {
+  margin: 20px 0 30px;
+  max-width: 52ch;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.78);
+}
+.portfolio-band .btn--gold:hover {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--navy);
+}
+.portfolio-band__meta {
+  display: block;
+  margin-top: 16px;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+@media (max-width: 800px) {
+  .portfolio-band__inner { grid-template-columns: 1fr; }
+  .portfolio-band__cover { max-width: 440px; }
+}
+
 /* ── RTL mirroring for the handful of physically-positioned elements ── */
 html[dir="rtl"] .hero-scroll-hint { right: auto; left: var(--pad); }
 html[dir="rtl"] .project-card__badge { left: auto; right: 14px; }
