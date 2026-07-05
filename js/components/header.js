@@ -24,6 +24,10 @@ function headerMarkup() {
     return `<li><a href="${p.href}" ${active}>${t(p.key)}</a></li>`;
   }).join('');
 
+  const pfIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>`;
+  const pfLink = (cls) =>
+    `<a href="assets/pdf/Niloufar-Zanjani-Portfolio-2026.pdf" download="Niloufar-Zanjani-Portfolio-2026.pdf" class="header-pf ${cls}" aria-label="${t('pf.btn')}">${pfIcon}<span>${t('pf.nav')}</span></a>`;
+
   return `
 <header id="site-header">
   <div class="header-inner container">
@@ -34,8 +38,10 @@ function headerMarkup() {
     <nav class="header-nav" id="header-nav">
       <ul>${navLinks}</ul>
       ${langSwitchHTML('lang-switch--mobile')}
+      ${pfLink('header-pf--menu')}
     </nav>
     ${langSwitchHTML('lang-switch--desktop')}
+    ${pfLink('header-pf--bar')}
     <a href="contact.html" class="btn btn--outline header-cta">${t('cta.start_project')}</a>
     <button class="header-burger" id="header-burger" aria-label="Toggle menu">
       <span></span><span></span><span></span>

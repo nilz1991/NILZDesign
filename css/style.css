@@ -1806,6 +1806,43 @@ html.lang-ar em { font-style: normal; }
   .lang-switch--mobile .lang-switch__sep { color: rgba(27,43,75,0.3); font-size: 1.2rem; }
 }
 
+/* ── Header portfolio download link (next to the language switch) ── */
+.header-pf {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-inline-start: 18px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--white);
+  opacity: 0.85;
+  transition: opacity 0.25s, color 0.25s;
+}
+.header-pf svg { width: 13px; height: 13px; flex: none; }
+.header-pf:hover { opacity: 1; color: var(--gold); }
+#site-header.scrolled .header-pf--bar { color: var(--navy); }
+#site-header.scrolled .header-pf--bar:hover { color: var(--gold); }
+.header-pf--menu { display: none; }
+
+@media (max-width: 900px) {
+  /* Compact top bar: icon only, next to the switch; hide while the menu is open
+     (the in-menu link takes over) */
+  .header-pf--bar { margin-inline-start: 6px; padding: 10px; }
+  .header-pf--bar span { display: none; }
+  .header-pf--bar svg { width: 15px; height: 15px; }
+  .header-nav.open ~ .header-pf--bar { visibility: hidden; }
+  .header-pf--menu {
+    display: inline-flex;
+    margin-top: 18px;
+    color: var(--navy);
+    font-size: 1.05rem;
+    opacity: 0.9;
+  }
+  .header-pf--menu svg { width: 15px; height: 15px; }
+}
+
 /* ─── Portfolio download band (home) ─────── */
 .portfolio-band { background: var(--navy); }
 .portfolio-band__inner {
