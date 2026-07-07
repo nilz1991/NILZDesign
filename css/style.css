@@ -1617,6 +1617,47 @@ a.contact-info__value:hover { color: var(--gold); }
   transition: background 0.3s var(--ease), transform 0.3s var(--ease);
 }
 .pd-gallery__dot.is-active { background: var(--gold); transform: scale(1.35); }
+/* Cover veil — leads a gallery, prompts the visitor to swipe. Shown only on
+   slide 0 via .pd-gallery--cover-active; sits below the nav/dots (z 2) so the
+   arrows still work, above the images. */
+.pd-gallery__cover {
+  position: absolute; inset: 0; z-index: 1;
+  display: none;
+  align-items: flex-end; justify-content: center;
+  cursor: pointer;
+  background: linear-gradient(to top, rgba(27,43,75,0.62), rgba(27,43,75,0.10) 55%, rgba(27,43,75,0.30));
+}
+.pd-gallery--cover-active .pd-gallery__cover { display: flex; }
+.pd-gallery__cover-hint {
+  display: inline-flex; align-items: center; gap: 10px;
+  margin-bottom: 12%;
+  padding: 12px 26px;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.32);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  border: 1px solid rgba(255,255,255,0.4);
+  color: #fff;
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.25);
+}
+.pd-gallery__cover-icon { color: var(--gold); flex: 0 0 auto; animation: pd-swipe 1.8s ease-in-out infinite; }
+@keyframes pd-swipe {
+  0%, 100% { transform: translateX(-3px); opacity: 0.6; }
+  50%      { transform: translateX(4px);  opacity: 1; }
+}
+/* RTL: chevrons point left, matching right-to-left paging */
+html[dir="rtl"] .pd-gallery__cover-icon { animation-name: pd-swipe-rtl; }
+@keyframes pd-swipe-rtl {
+  0%, 100% { transform: translateX(3px) scaleX(-1);  opacity: 0.6; }
+  50%      { transform: translateX(-4px) scaleX(-1); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pd-gallery__cover-icon { animation: none; }
+}
 
 /* Video render */
 .pd-render--video .pd-render__video {

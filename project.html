@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&family=Tajawal:wght@300;400;500;700&family=El+Messiri:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=22">
+  <link rel="stylesheet" href="css/style.css?v=23">
 </head>
 <body>
 
@@ -211,16 +211,33 @@
           </figure>`;
         }
         if (r.fit === 'gallery') {
-          const slides = (r.images || []).map((src, k) =>
+          // A cover slide leads the gallery: it repeats the first image with a
+          // "please swipe" veil so visitors know the set pages. Swiping past it
+          // lands on the same first image, clean, then the rest. Cover shows on
+          // every cycle (it's slide 0).
+          const imgList = r.images || [];
+          const display = imgList.length ? [imgList[0], ...imgList] : [];
+          const slides = display.map((src, k) =>
             `<img class="pd-render__img pd-gallery__img${k === 0 ? ' is-active' : ''}" src="${src}" alt="${altText}" loading="lazy" data-nozoom="1">`
           ).join('');
-          const dots = (r.images || []).map((_, k) =>
+          const dots = display.map((_, k) =>
             `<button class="pd-gallery__dot${k === 0 ? ' is-active' : ''}" type="button" aria-label="Slide ${k + 1}"></button>`
           ).join('');
+          const cover = `
+            <div class="pd-gallery__cover" aria-hidden="true">
+              <span class="pd-gallery__cover-hint">
+                <svg class="pd-gallery__cover-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="14 7 19 12 14 17"></polyline>
+                  <polyline points="7 7 12 12 7 17"></polyline>
+                </svg>
+                <span>${t('pd.swipe_hint')}</span>
+              </span>
+            </div>`;
           return `
           <figure class="pd-render pd-render--gallery">
-            <div class="pd-gallery">
+            <div class="pd-gallery pd-gallery--cover-active">
               ${slides}
+              ${cover}
               <button class="pd-gallery__nav pd-gallery__nav--prev" type="button" aria-label="Previous">&#8249;</button>
               <button class="pd-gallery__nav pd-gallery__nav--next" type="button" aria-label="Next">&#8250;</button>
               <div class="pd-gallery__dots">${dots}</div>
@@ -368,10 +385,14 @@
           idx = (n + imgs.length) % imgs.length;
           imgs.forEach((im, i) => im.classList.toggle('is-active', i === idx));
           dots.forEach((d, i) => d.classList.toggle('is-active', i === idx));
+          g.classList.toggle('pd-gallery--cover-active', idx === 0);  // veil only on the cover slide
         };
         g.querySelector('.pd-gallery__nav--prev').addEventListener('click', (e) => { e.stopPropagation(); show(idx - 1); });
         g.querySelector('.pd-gallery__nav--next').addEventListener('click', (e) => { e.stopPropagation(); show(idx + 1); });
         dots.forEach((d, i) => d.addEventListener('click', (e) => { e.stopPropagation(); show(i); }));
+        // Tapping the cover pages forward to the clean first image; images open the lightbox.
+        const cover = g.querySelector('.pd-gallery__cover');
+        if (cover) cover.addEventListener('click', (e) => { e.stopPropagation(); show(idx + 1); });
         imgs.forEach(im => im.addEventListener('click', () => openLb(imgs[idx].src)));
       });
 

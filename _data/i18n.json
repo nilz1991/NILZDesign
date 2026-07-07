@@ -56,6 +56,7 @@
   "pd.contents":  { "en": "Contents",         "ar": "المحتويات" },
   "pd.location":  { "en": "Location",         "ar": "الموقع" },
   "pd.view_full": { "en": "View full image",  "ar": "عرض الصورة كاملة" },
+  "pd.swipe_hint": { "en": "Please swipe", "ar": "يُرجى التمرير" },
   "pd.see_more_title": { "en": "See more <em>work</em>", "ar": "شاهد المزيد من <em>الأعمال</em>" },
   "pd.see_more_sub":   { "en": "Explore the full portfolio across architecture, interior design, and landscape.", "ar": "تصفّح مجموعة الأعمال الكاملة في العمارة والتصميم الداخلي وتنسيق الحدائق." },
 
