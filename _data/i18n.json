@@ -72,7 +72,7 @@
   "pf.desc":  { "en": "A curated 21-page A4 portfolio — residential and commercial interiors, facade design, visualization and technical drawings, composed as an editorial print document.", "ar": "ملف أعمال منسّق من ٢١ صفحة بقياس A4 — تصاميم داخلية سكنية وتجارية، وتصميم واجهات، وإظهار معماري، ورسومات فنية، أُخرج بأسلوب طباعي أنيق." },
   "pf.btn":   { "en": "Download PDF", "ar": "تحميل الملف (PDF)" },
   "pf.nav":   { "en": "Download Portfolio", "ar": "تحميل ملف الأعمال" },
-  "pf.nav_short": { "en": "Download", "ar": "تحميل" },
+  "pf.nav_short": { "en": "Portfolio", "ar": "ملف الأعمال" },
   "pf.meta":  { "en": "PDF · 21 pages · 11 MB", "ar": "PDF · ٢١ صفحة · ١١ م.ب" },
 
   "footer.desc":            { "en": "Architecture &amp; Interior Design Group led by Niloufar Zanjani — shaping spaces across Muscat and beyond for over 13 years.", "ar": "مجموعة العمارة والتصميم الداخلي بقيادة نيلوفر زنجاني — نُشكّل المساحات في مسقط وما حولها منذ أكثر من ١٣ عامًا." },
