@@ -56,7 +56,7 @@ Live: **nilzdesign.com** · Repo: **github.com/nilz1991/NILZDesign** · Host: **
 - **Building .docx by hand**: author OOXML under a folder, zip with `System.IO.Compression.ZipArchive` using **forward-slash entry names** (`CreateFromDirectory` writes back-slashes → Word rejects it); include `[Content_Types].xml`.
 
 ## Working notes
-- CSS cache-bust is currently at **`css/style.css?v=22`** — bump on the next CSS change (all HTML pages share the number).
+- CSS cache-bust is currently at **`css/style.css?v=24`** — bump on the next CSS change (all HTML pages share the number).
 - Use `preview_*` tools to verify (server `serve.js` via Adobe's bundled node, `.claude/launch.json`). `serve.js` now reads `process.env.PORT` and launch.json has `autoPort:true`, so the preview may get a random port (another chat can hold 3000). The static server serves no `.pdf` MIME (browser downloads instead of viewing). Preview navigation/scroll lags — trust `preview_eval` data over screenshots; re-check after a delay.
 - **Always `git pull --rebase origin main` before pushing** (user also edits on GitHub). Commit + push only when done; tell user to hard-refresh (Ctrl+Shift+R) — mobile caches hard. Note: the user often leaves unrelated local edits uncommitted (e.g. `muscat-hills` images) — stage only the files for the task at hand.
 - Backup branches on request: `V1`, `V2`, … Existing: `V1-NILZDesign`, `V2`, `V3`, `V4` (= main at time of backup). **Next is `V5`.**

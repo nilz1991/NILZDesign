@@ -1649,12 +1649,6 @@ a.contact-info__value:hover { color: var(--gold); }
   0%, 100% { transform: translateX(-3px); opacity: 0.6; }
   50%      { transform: translateX(4px);  opacity: 1; }
 }
-/* RTL: chevrons point left, matching right-to-left paging */
-html[dir="rtl"] .pd-gallery__cover-icon { animation-name: pd-swipe-rtl; }
-@keyframes pd-swipe-rtl {
-  0%, 100% { transform: translateX(3px) scaleX(-1);  opacity: 0.6; }
-  50%      { transform: translateX(-4px) scaleX(-1); opacity: 1; }
-}
 @media (prefers-reduced-motion: reduce) {
   .pd-gallery__cover-icon { animation: none; }
 }
