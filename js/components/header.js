@@ -38,7 +38,6 @@ function headerMarkup() {
     <nav class="header-nav" id="header-nav">
       <ul>${navLinks}</ul>
       ${langSwitchHTML('lang-switch--mobile')}
-      ${pfLink('header-pf--menu')}
     </nav>
     ${langSwitchHTML('lang-switch--desktop')}
     ${pfLink('header-pf--bar')}
