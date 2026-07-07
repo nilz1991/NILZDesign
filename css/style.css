@@ -855,6 +855,69 @@ h1, h2, h3, h4 {
   gap: 24px;
   margin-bottom: 64px;
 }
+/* Hint above the grid — cards are clickable / open into more work */
+.projects-hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 32px;
+  padding: 10px 20px;
+  border: 1px solid rgba(198,166,100,0.4);
+  border-radius: 999px;
+  background: rgba(198,166,100,0.09);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 4px 18px rgba(198,166,100,0.08);
+  color: var(--navy);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
+.projects-hint__cursor {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.projects-hint__icon {
+  color: var(--gold);
+  width: 17px;
+  height: 17px;
+  animation: hint-cursor 2.4s ease-in-out infinite;
+  transform-origin: 30% 30%;
+}
+.projects-hint__ripple {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold);
+  opacity: 0;
+  transform: scale(0.2);
+  animation: hint-ripple 2.4s ease-out infinite;
+}
+@keyframes hint-cursor {
+  0%, 100% { transform: translate(0, 0); }
+  30%      { transform: translate(5px, 3px); }        /* glide forward */
+  40%      { transform: translate(5px, 3px) scale(0.82); } /* press / select */
+  50%      { transform: translate(5px, 3px) scale(1); }
+  70%      { transform: translate(5px, 3px); }
+}
+@keyframes hint-ripple {
+  0%, 32%  { opacity: 0; transform: translate(5px, 3px) scale(0.2); }
+  40%      { opacity: 0.7; transform: translate(5px, 3px) scale(0.5); }
+  60%, 100%{ opacity: 0; transform: translate(5px, 3px) scale(1.5); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .projects-hint__icon { animation: none; }
+  .projects-hint__ripple { animation: none; }
+}
+
 /* Category quick-jump nav — soft pills */
 .projects-nav { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 56px; }
 .projects-nav__btn {

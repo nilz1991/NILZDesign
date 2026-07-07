@@ -37,6 +37,7 @@
   "stat.architecture": { "en": "Architecture",     "ar": "العمارة" },
 
   "projects.title":          { "en": "Selected <em>Work</em>", "ar": "أعمال <em>مختارة</em>" },
+  "projects.hint":           { "en": "Tap the cards to open the full projects.", "ar": "انقر على البطاقات لفتح المشاريع كاملة." },
   "projects.instagram_text": { "en": "See more work on Instagram", "ar": "شاهد المزيد من الأعمال على إنستغرام" },
 
   "filter.all":           { "en": "All",                "ar": "الكل" },
