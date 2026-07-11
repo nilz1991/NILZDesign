@@ -152,6 +152,7 @@ h1, h2, h3, h4 {
 /* ─── Page hero (inner pages) ────────────── */
 .page-hero {
   height: 55vh;
+  height: 55svh; /* stable on mobile — avoids jump when the address bar hides/shows */
   min-height: 360px;
   background: var(--navy);
   display: flex;
