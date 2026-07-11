@@ -51,7 +51,8 @@
       const col = await renderCollection(id, '#collection-grid');
       if (!col) { location.href = 'projects.html'; return; }
       document.title = `${tf(col, 'title')} — NILZ`;
-      if (col.image) document.getElementById('col-hero-bg').src = col.image;
+      const heroSrc = col.hero || col.image;
+      if (heroSrc) document.getElementById('col-hero-bg').src = heroSrc;
       document.getElementById('col-cat').textContent = tf(col, 'category') || '';
       document.getElementById('col-title').textContent = tf(col, 'title');
       document.getElementById('col-desc').textContent = tf(col, 'description') || '';
