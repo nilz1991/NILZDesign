@@ -1,8 +1,12 @@
 // W2/js/components/footer.js
-import { t, onLangChange } from '../i18n.js';
+import { t, tf, onLangChange } from '../i18n.js';
+import { loadSite } from '../content.js';
 
-function footerMarkup() {
+function footerMarkup(services) {
   const year = new Date().getFullYear();
+  const servicesList = (services || [])
+    .map(s => `<li><a href="index.html#services">${tf(s, 'title')}</a></li>`)
+    .join('');
   return `
 <footer id="site-footer">
 
@@ -45,10 +49,7 @@ function footerMarkup() {
     <div class="footer-col">
       <h4 class="footer-heading">${t('footer.services_heading')}</h4>
       <ul>
-        <li><a href="index.html#services">${t('svc.interior')}</a></li>
-        <li><a href="index.html#services">${t('svc.architecture')}</a></li>
-        <li><a href="index.html#services">${t('svc.landscape')}</a></li>
-        <li><a href="index.html#services">${t('svc.visualization')}</a></li>
+        ${servicesList}
       </ul>
     </div>
 
@@ -93,14 +94,17 @@ function footerMarkup() {
 </footer>`;
 }
 
-export function initFooter() {
-  document.body.insertAdjacentHTML('beforeend', footerMarkup());
+export async function initFooter() {
+  const site = await loadSite();
+  const services = (site.services && site.services.items) || [];
+
+  document.body.insertAdjacentHTML('beforeend', footerMarkup(services));
 
   // Language switch → rebuild the footer in place
   onLangChange(() => {
     const old = document.getElementById('site-footer');
     if (!old) return;
-    old.insertAdjacentHTML('beforebegin', footerMarkup());
+    old.insertAdjacentHTML('beforebegin', footerMarkup(services));
     old.remove();
   });
 }
