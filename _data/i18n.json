@@ -69,7 +69,7 @@
   "statement.sub.projects":{ "en": "Ready to start something extraordinary? Let's shape your vision into a space that lasts.", "ar": "هل أنت مستعد لبدء شيء استثنائي؟ لنحوّل رؤيتك إلى مساحة تدوم." },
 
   "pf.tag":   { "en": "Portfolio · 2026", "ar": "ملف الأعمال · ٢٠٢٦" },
-  "pf.title": { "en": "The Portfolio, <em>in Print</em>", "ar": "ملف الأعمال <em>المطبوع</em>" },
+  "pf.title": { "en": "The <em>Portfolio</em>", "ar": "<em>ملف الأعمال</em>" },
   "pf.desc":  { "en": "A curated 21-page A4 portfolio — residential and commercial interiors, facade design, visualization and technical drawings, composed as an editorial print document.", "ar": "ملف أعمال منسّق من ٢١ صفحة بقياس A4 — تصاميم داخلية سكنية وتجارية، وتصميم واجهات، وإظهار معماري، ورسومات فنية، أُخرج بأسلوب طباعي أنيق." },
   "pf.btn":   { "en": "Download PDF", "ar": "تحميل الملف (PDF)" },
   "pf.nav":   { "en": "Download Portfolio", "ar": "تحميل ملف الأعمال" },
