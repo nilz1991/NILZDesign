@@ -89,10 +89,10 @@
   "footer.whatsapp_display": { "en": "+968 9231 5257", "ar": "+٩٦٨ ٩٢٣١ ٥٢٥٧" },
   "footer.start_project":   { "en": "Start a Project &rarr;", "ar": "ابدأ مشروعك &larr;" },
 
-  "svc.interior":      { "en": "Interior Design",      "ar": "التصميم الداخلي" },
-  "svc.architecture":  { "en": "Architecture",         "ar": "العمارة" },
-  "svc.landscape":     { "en": "Landscape &amp; Exterior", "ar": "تنسيق الحدائق والخارجية" },
-  "svc.visualization": { "en": "Visualization",        "ar": "الإظهار المعماري" },
+  "svc.interior":      { "en": "Concept design, mood boards &amp; design consultation", "ar": "تصميم المفهوم وإعداد لوحات الإلهام والاستشارات التصميمية" },
+  "svc.architecture":  { "en": "3D design with clear renders, 4K visuals &amp; VR animations", "ar": "التصميم ثلاثي الأبعاد وتقديم صور ورسوم متحركة واضحة عبر رندرات عالية الجودة وصور بدقة 4K ورسوم واقع افتراضي" },
+  "svc.landscape":     { "en": "Complete 3D design album &amp; working drawings, delivered fast to engineering standards", "ar": "تقديم ألبوم كامل للتصميم ثلاثي الأبعاد والمخططات التنفيذية في أسرع وقت ممكن مع مراعاة الأصول الفنية والهندسية" },
+  "svc.visualization": { "en": "Interior fit-out &amp; full site supervision to match designs with the final build", "ar": "تنفيذ الديكور الداخلي والإشراف على جميع مراحل التنفيذ لمطابقة المخططات والتصاميم مع التنفيذ النهائي" },
 
   "contact.form_title":   { "en": "Apply for a collaboration", "ar": "اطلب تعاونًا" },
   "form.name":            { "en": "Your name",    "ar": "الاسم" },
