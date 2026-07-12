@@ -5,7 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script>try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('nilz_lang');if(l==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl';document.documentElement.classList.add('lang-ar');}}catch(e){}</script>
   <title>Project — NILZ</title>
+  <meta name="description" content="Explore a project by NILZ Architecture & Interior Design Group — Muscat, Oman.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nilzdesign.com/project.html">
+  <meta name="theme-color" content="#1b2b4b">
   <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="NILZ">
+  <meta property="og:title" content="Project — NILZ">
+  <meta property="og:description" content="Explore a project by NILZ Architecture & Interior Design Group — Muscat, Oman.">
+  <meta property="og:url" content="https://nilzdesign.com/project.html">
+  <meta property="og:image" content="https://nilzdesign.com/assets/images/og-image.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Project — NILZ">
+  <meta name="twitter:description" content="Explore a project by NILZ Architecture & Interior Design Group — Muscat, Oman.">
+  <meta name="twitter:image" content="https://nilzdesign.com/assets/images/og-image.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&family=Tajawal:wght@300;400;500;700&family=El+Messiri:wght@500;600;700&display=swap" rel="stylesheet">
@@ -70,6 +87,21 @@
     const { projects } = await res.json();
     const p = projects.find(x => x.id === id);
     if (!p) { location.href = 'projects.html'; }
+
+    const absUrl = (u) => u ? (u.startsWith('http') ? u : 'https://nilzdesign.com/' + u.replace(/^\//, '')) : null;
+    function updateSeo({ title, desc, url, image }) {
+      const set = (sel, attr, val) => { const el = document.querySelector(sel); if (el && val) el.setAttribute(attr, val); };
+      if (title) document.title = title;
+      set('meta[name="description"]', 'content', desc);
+      set('link[rel="canonical"]', 'href', url);
+      set('meta[property="og:title"]', 'content', title);
+      set('meta[property="og:description"]', 'content', desc);
+      set('meta[property="og:url"]', 'content', url);
+      set('meta[property="og:image"]', 'content', image);
+      set('meta[name="twitter:title"]', 'content', title);
+      set('meta[name="twitter:description"]', 'content', desc);
+      set('meta[name="twitter:image"]', 'content', image);
+    }
 
     // ── Hero image (language-independent, set once) ──
     const heroImg = p.hero || ((p.slides && p.slides[0]) ? p.slides[0].image : p.image);
@@ -271,6 +303,12 @@
     /* ════════ Build / rebuild all language-dependent content ════════ */
     function renderContent() {
       document.title = `${tf(p, 'title')} — NILZ`;
+      updateSeo({
+        title: `${tf(p, 'title')} — NILZ`,
+        desc: tf(p, 'overview') || tf(p, 'description') || 'A project by NILZ Architecture & Interior Design Group — Muscat, Oman.',
+        url: `https://nilzdesign.com/project.html?id=${id}`,
+        image: absUrl(heroImg),
+      });
       document.getElementById('pd-hero-cat').textContent   = tf(p, 'category');
       document.getElementById('pd-hero-title').textContent = tf(p, 'title');
       document.getElementById('pd-hero-loc').textContent   = tf(p, 'location');
