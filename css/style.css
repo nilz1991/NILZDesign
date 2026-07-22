@@ -461,6 +461,24 @@ h1, h2, h3, h4 {
   color: var(--white);
   max-width: 780px;
   margin-bottom: 20px;
+  opacity: 0; /* revealed by JS (.is-ready) once split into words — prevents flash */
+}
+.hero-headline.is-ready { opacity: 1; }
+/* staggered word-by-word reveal */
+.hero-headline .hero-word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.7em);
+  animation: heroWordIn 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: calc(var(--wi) * 0.1s + 0.12s);
+  will-change: transform, opacity;
+}
+@keyframes heroWordIn {
+  from { opacity: 0; transform: translateY(0.7em); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-headline .hero-word { animation: none; opacity: 1; transform: none; }
 }
 .hero-sub {
   font-family: var(--font-body);
