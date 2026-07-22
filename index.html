@@ -58,7 +58,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&family=Tajawal:wght@300;400;500;700&family=El+Messiri:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=26">
+  <link rel="stylesheet" href="css/style.css?v=27">
   <script src="js/analytics.js" defer></script>
 </head>
 <body class="hero-page">
@@ -176,20 +176,49 @@
     initHeader();
     initFooter();
 
-    // Split the hero headline into words so they can animate in one-by-one,
-    // preserving the <br> line break. Re-runs on language switch.
+    // Typewriter reveal for the hero headline: every character is placed (and
+    // reserves its space, so nothing reflows) then revealed one-by-one with a
+    // blinking caret. Re-runs on language switch.
+    let heroTypeToken = 0;
     function animateHeroHeadline() {
       const el = document.querySelector('.hero-headline');
       if (!el) return;
-      let wi = 0;
-      el.innerHTML = el.innerHTML
-        .split(/<br\s*\/?>/i)
-        .map(line => line.trim().split(/\s+/).filter(Boolean)
-          .map(w => `<span class="hero-word" style="--wi:${wi++}">${w}</span>`)
-          .join(' '))
-        .join('<br>');
-      // reveal container (kept hidden via CSS to avoid a flash of the un-split text)
-      requestAnimationFrame(() => el.classList.add('is-ready'));
+      const token = ++heroTypeToken; // cancels any in-flight typing (e.g. on lang switch)
+      const parts = el.innerHTML.split(/(<br\s*\/?>)/i); // keep the <br>
+      el.innerHTML = '';
+      const chars = [];
+      parts.forEach(part => {
+        if (/^<br\s*\/?>$/i.test(part)) { el.appendChild(document.createElement('br')); return; }
+        for (const ch of part) {
+          const s = document.createElement('span');
+          s.className = 'hero-char';
+          s.textContent = ch;
+          el.appendChild(s);
+          chars.push(s);
+        }
+      });
+      const caret = document.createElement('span');
+      caret.className = 'hero-caret';
+      caret.setAttribute('aria-hidden', 'true');
+      el.appendChild(caret);
+      el.classList.add('is-ready');
+
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        chars.forEach(s => s.classList.add('visible'));
+        caret.remove();
+        return;
+      }
+      let i = 0;
+      const step = () => {
+        if (token !== heroTypeToken) return; // superseded
+        if (i >= chars.length) return;        // done — caret stays blinking at the end
+        const s = chars[i];
+        s.classList.add('visible');
+        s.after(caret);                       // caret follows the typing position
+        i++;
+        setTimeout(step, s.textContent === ' ' ? 95 : 48 + Math.random() * 45);
+      };
+      setTimeout(step, 320);
     }
 
     async function renderHome() {

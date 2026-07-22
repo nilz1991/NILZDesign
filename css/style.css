@@ -464,21 +464,22 @@ h1, h2, h3, h4 {
   opacity: 0; /* revealed by JS (.is-ready) once split into words — prevents flash */
 }
 .hero-headline.is-ready { opacity: 1; }
-/* staggered word-by-word reveal */
-.hero-headline .hero-word {
+/* typewriter reveal — characters appear one-by-one with a blinking caret */
+.hero-headline .hero-char { visibility: hidden; }
+.hero-headline .hero-char.visible { visibility: visible; }
+.hero-headline .hero-caret {
   display: inline-block;
-  opacity: 0;
-  transform: translateY(0.7em);
-  animation: heroWordIn 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
-  animation-delay: calc(var(--wi) * 0.1s + 0.12s);
-  will-change: transform, opacity;
+  width: 0.055em;
+  height: 0.82em;
+  background: var(--gold);
+  margin-left: 0.06em;
+  vertical-align: -0.04em;
+  animation: heroCaretBlink 0.9s steps(1) infinite;
 }
-@keyframes heroWordIn {
-  from { opacity: 0; transform: translateY(0.7em); }
-  to   { opacity: 1; transform: translateY(0); }
-}
+@keyframes heroCaretBlink { 50% { opacity: 0; } }
 @media (prefers-reduced-motion: reduce) {
-  .hero-headline .hero-word { animation: none; opacity: 1; transform: none; }
+  .hero-headline .hero-char { visibility: visible; }
+  .hero-headline .hero-caret { display: none; }
 }
 .hero-sub {
   font-family: var(--font-body);
