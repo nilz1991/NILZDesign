@@ -119,6 +119,7 @@
   "form.area_o2000":      { "en": "Over 2,000 m²",       "ar": "أكثر من ٢٠٠٠ م²" },
 
   "info.phone":     { "en": "Phone",     "ar": "الهاتف" },
+  "info.email":     { "en": "Email",     "ar": "البريد الإلكتروني" },
   "info.whatsapp":  { "en": "WhatsApp",  "ar": "واتساب" },
   "info.location":  { "en": "Location",  "ar": "الموقع" },
   "info.follow":    { "en": "Follow Us", "ar": "تابعنا" },

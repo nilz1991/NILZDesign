@@ -333,6 +333,14 @@ async function renderSiteContent(pageKey) {
       telLink.href = 'tel:' + data.phone.replace(/\s/g, '');
     }
   }
+
+  // Email mailto: link — derive from email field
+  if (data.email) {
+    const mailLink = document.querySelector('a[href^="mailto:"][data-cms="email"]');
+    if (mailLink) {
+      mailLink.href = 'mailto:' + data.email.trim();
+    }
+  }
 }
 
 export { loadData, loadProjects, loadCollections, loadSite, renderHomeProjects, renderHomeSoftware, renderProjectsGrid, renderCollection, renderSiteContent };
