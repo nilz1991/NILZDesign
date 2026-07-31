@@ -101,6 +101,7 @@ collections:
               - {label: "Hero Title", name: "hero_title", widget: "string"}
               - {label: "Hero Subtitle", name: "hero_sub", widget: "string"}
               - {label: "Phone", name: "phone", widget: "string", hint: "Display text e.g. +968 92315257"}
+              - {label: "Email", name: "email", widget: "string", hint: "e.g. info@nilzdesign.com"}
               - {label: "WhatsApp Link", name: "whatsapp", widget: "string", hint: "Full URL"}
               - {label: "Instagram URL", name: "instagram", widget: "string"}
               - {label: "LinkedIn URL", name: "linkedin", widget: "string"}
