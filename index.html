@@ -59,7 +59,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&family=Tajawal:wght@300;400;500;700&family=El+Messiri:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=27">
+  <link rel="stylesheet" href="css/style.css?v=28">
   <script src="js/analytics.js" defer></script>
 </head>
 <body class="hero-page">
@@ -222,6 +222,20 @@
       setTimeout(step, 320);
     }
 
+    // Services "curtain": a row stays open while any part of it overlaps the
+    // middle band of the viewport, and closes once you scroll past it. The
+    // row only grows downward when opening, so toggling never re-triggers.
+    let svcIO = null;
+    function initServicesCurtain() {
+      if (svcIO) svcIO.disconnect();
+      const rows = document.querySelectorAll('#services-list .svc-acc');
+      if (!rows.length) return;
+      svcIO = new IntersectionObserver((entries) => {
+        entries.forEach(en => en.target.classList.toggle('is-open', en.isIntersecting));
+      }, { rootMargin: '-38% 0px -38% 0px', threshold: 0 });
+      rows.forEach(r => svcIO.observe(r));
+    }
+
     async function renderHome() {
       initRotatingText('#rotating-text-placeholder', {
         tag:            t('statement.tag'),
@@ -236,15 +250,23 @@
       const introEl = document.getElementById('home-services-intro');
       if (introEl) introEl.textContent = tf(site.services, 'intro');
       document.getElementById('services-list').innerHTML = site.services.items.map((s, i) => `
-        <div class="service-row fade-up ${i % 2 !== 0 ? 'service-row--reverse' : ''}">
-          <img class="service-row__img" src="${s.image}" alt="${tf(s, 'title')}" loading="lazy">
-          <div class="service-row__body">
+        <div class="service-row svc-acc">
+          <div class="svc-head">
             <span class="service-row__num">${s.number}</span>
             <h2 class="service-row__title">${tf(s, 'title')}</h2>
-            <p class="service-row__desc">${tf(s, 'body')}</p>
-            ${s.tools && s.tools.length ? `<div class="service-row__tools">${s.tools.map(tool => `<span class="tool-tag">${tool}</span>`).join('')}</div>` : ''}
+            <svg class="svc-chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
           </div>
+          <div class="svc-collapse"><div class="svc-collapse__in">
+            <div class="svc-grid ${i % 2 !== 0 ? 'service-row--reverse' : ''}">
+              <img class="service-row__img" src="${s.image}" alt="${tf(s, 'title')}" loading="lazy">
+              <div class="service-row__body">
+                <p class="service-row__desc">${tf(s, 'body')}</p>
+                ${s.tools && s.tools.length ? `<div class="service-row__tools">${s.tools.map(tool => `<span class="tool-tag">${tool}</span>`).join('')}</div>` : ''}
+              </div>
+            </div>
+          </div></div>
         </div>`).join('');
+      initServicesCurtain();
       await renderHomeSoftware('#home-software');
       await renderSiteContent('home');
       animateHeroHeadline();
