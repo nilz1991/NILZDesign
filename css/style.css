@@ -2119,6 +2119,9 @@ html.lang-ar .service-row.svc-acc { direction: rtl; }
 html.lang-ar .svc-grid { direction: ltr; }
 html.lang-ar .svc-grid.service-row--reverse { direction: rtl; }
 html.lang-ar .svc-grid.service-row--reverse > * { direction: ltr; }
+.svc-acc.svc-noanim .svc-collapse,
+.svc-acc.svc-noanim .svc-chev,
+.svc-acc.svc-noanim .service-row__num { transition: none; }
 @media (prefers-reduced-motion: reduce) {
   .svc-collapse, .svc-chev, .svc-head .service-row__num { transition: none; }
 }
