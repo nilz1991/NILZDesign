@@ -2080,7 +2080,7 @@ html.lang-ar .service-row__body { direction: rtl; text-align: right; }
 .svc-head .service-row__num {
   margin-bottom: 0;
   font-size: 2.4rem;
-  transition: color 0.5s ease;
+  transition: color 0.9s ease;
 }
 .svc-acc.is-open .svc-head .service-row__num { color: var(--gold); }
 .svc-head .service-row__title { margin-bottom: 0; flex: 1; font-size: 1.6rem; }
@@ -2089,13 +2089,13 @@ html.lang-ar .service-row__body { direction: rtl; text-align: right; }
   width: 22px;
   height: 22px;
   color: var(--gold);
-  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: transform 0.9s cubic-bezier(0.3, 0.75, 0.25, 1);
 }
 .svc-acc.is-open .svc-chev { transform: rotate(180deg); }
 .svc-collapse {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  transition: grid-template-rows 1.05s cubic-bezier(0.3, 0.75, 0.25, 1);
 }
 .svc-acc.is-open .svc-collapse { grid-template-rows: 1fr; }
 .svc-collapse__in { overflow: hidden; min-height: 0; }
