@@ -2061,3 +2061,14 @@ html.lang-ar .service-row__body { direction: rtl; text-align: right; }
   html[dir="rtl"] .pd-zoom-badge { right: auto; left: 14px; }
 }
 
+
+/* Contact + footer: one number serving both call and WhatsApp */
+.footer-contact-row--duo { display: flex; align-items: center; gap: 10px; }
+.footer-contact-icon { display: inline-flex; align-items: center; }
+.contact-info__wa {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: var(--gold);
+}

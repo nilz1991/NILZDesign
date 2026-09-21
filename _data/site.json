@@ -13,13 +13,59 @@
     "software_label": "Software & Tools",
     "software_label_ar": "البرامج والأدوات",
     "software": [
-      { "use": "Interior Design", "use_ar": "التصميم الداخلي", "names": ["3ds Max"] },
-      { "use": "Render Engines", "use_ar": "محرّكات الإظهار", "names": ["Corona", "V-Ray"] },
-      { "use": "Post-production", "use_ar": "المعالجة النهائية", "names": ["Photoshop"] },
-      { "use": "Characters", "use_ar": "الشخصيات", "names": ["AI"] },
-      { "use": "Modeling", "use_ar": "النمذجة", "names": ["SketchUp"] },
-      { "use": "Technical & Engineering Drawings", "use_ar": "الرسومات الفنية والهندسية", "names": ["AutoCAD", "Revit"] },
-      { "use": "Animation & Visualization", "use_ar": "التحريك والإظهار المعماري", "names": ["Unreal Engine", "Lumion", "Chaos Vantage"] }
+      {
+        "use": "Interior Design",
+        "use_ar": "التصميم الداخلي",
+        "names": [
+          "3ds Max"
+        ]
+      },
+      {
+        "use": "Render Engines",
+        "use_ar": "محرّكات الإظهار",
+        "names": [
+          "Corona",
+          "V-Ray"
+        ]
+      },
+      {
+        "use": "Post-production",
+        "use_ar": "المعالجة النهائية",
+        "names": [
+          "Photoshop"
+        ]
+      },
+      {
+        "use": "Characters",
+        "use_ar": "الشخصيات",
+        "names": [
+          "AI"
+        ]
+      },
+      {
+        "use": "Modeling",
+        "use_ar": "النمذجة",
+        "names": [
+          "SketchUp"
+        ]
+      },
+      {
+        "use": "Technical & Engineering Drawings",
+        "use_ar": "الرسومات الفنية والهندسية",
+        "names": [
+          "AutoCAD",
+          "Revit"
+        ]
+      },
+      {
+        "use": "Animation & Visualization",
+        "use_ar": "التحريك والإظهار المعماري",
+        "names": [
+          "Unreal Engine",
+          "Lumion",
+          "Chaos Vantage"
+        ]
+      }
     ]
   },
   "about": {
@@ -27,15 +73,39 @@
     "hero_title_ar": "نُصمّم بهدف.\nنبني بنزاهة.",
     "bio_1": "I am Niloufar Zanjani, an architect and interior designer holding a Master's degree in Architecture and a member of the Oman Society of Engineers, with over 13 years of professional experience across residential and commercial projects. My work spans both design and the supervision and execution of interior architecture — an approach that bridges modern art with engineering precision to create spaces that are as functional as they are beautiful.",
     "bio_1_ar": "أنا نيلوفر زنجاني، مهندسة معمارية ومصمّمة داخلية حاصلة على درجة الماجستير في العمارة وعضوٌ في الجمعية العُمانية للمهندسين، بخبرة تتجاوز ثلاثة عشر عامًا في المشاريع السكنية والتجارية. يشمل عملي التصميم والإشراف على تنفيذ العمارة الداخلية معًا — مقاربةٌ تجمع بين الفن الحديث ودقّة الهندسة لابتكار مساحات تجمع بين الوظيفة والجمال.",
-    "bio_2": "Under my personal design brand, NILZ Design, I now lead the architecture department at Al Tariq — a department we built together. Al Tariq is a well-established, reputable name in Oman's real-estate market, attracting investors for more than eight years. Alongside this, I also take on freelance design projects for clients across the Gulf region.",
-    "bio_2_ar": "من خلال علامتي الشخصية للتصميم، نيلز ديزاين، أقود اليوم قسم العمارة في مجموعة الطارق — وهو قسمٌ أسّسناه معًا. والطارق اسمٌ مرموق وراسخ في سوق العقارات بعُمان، يستقطب المستثمرين منذ أكثر من ثماني سنوات. وإلى جانب ذلك، أتولّى مشاريع تصميم بصفة مستقلّة لعملاء في دول الخليج.",
+    "bio_2": "Under my own design brand, NILZ Design, I lead architecture and interior design projects from first concept through to execution — concept development and 3D visualization, working drawings and material specification, and supervision on site. Alongside this, I take on freelance design projects for clients across the Gulf region.",
+    "bio_2_ar": "من خلال علامتي الخاصة للتصميم، نيلز ديزاين، أقود مشاريع العمارة والتصميم الداخلي من الفكرة الأولى حتى التنفيذ — تطوير المفهوم والإظهار ثلاثي الأبعاد، والرسومات التنفيذية وتحديد المواد، والإشراف في الموقع. وإلى جانب ذلك، أتولّى مشاريع تصميم بصفة مستقلّة لعملاء في دول الخليج.",
     "bio_3": "At NILZ, we believe quality of life is rooted in the spaces we inhabit, and we are committed to turning your vision into an enduring reality — through authentic materials, meticulous detail, and the latest in architectural knowledge.",
     "bio_3_ar": "في نيلز، نؤمن بأنّ جودة الحياة تنبع من المساحات التي نعيش فيها، ونلتزم بتحويل رؤيتك إلى واقعٍ يدوم — عبر المواد الأصيلة، والتفاصيل الدقيقة، وأحدث المعارف المعمارية.",
     "values": [
-      { "number": "01", "title": "Contextual Design", "title_ar": "تصميم متجذّر في سياقه", "body": "We design with the surroundings in mind — creating spaces that feel rooted in place, culture, and natural light.", "body_ar": "نُصمّم مع وضع المحيط في الاعتبار — لنبتكر مساحات تنبض بالمكان والثقافة والضوء الطبيعي." },
-      { "number": "02", "title": "Timeless Aesthetics", "title_ar": "جمالٌ خالد", "body": "Every detail is carefully considered to ensure longevity, elegance, and a visual language that transcends trends.", "body_ar": "نتأنّى في كل تفصيل لنضمن المتانة والأناقة ولغةً بصريةً تتجاوز الموضات العابرة." },
-      { "number": "03", "title": "Functional Flow", "title_ar": "انسيابٌ وظيفي", "body": "From layout to circulation, we prioritise clarity and ease of use — shaping environments that support daily life intuitively.", "body_ar": "من التوزيع إلى الحركة، نُقدّم الوضوح وسهولة الاستخدام — لنشكّل بيئات تدعم الحياة اليومية بسلاسة وبداهة." },
-      { "number": "04", "title": "Collaborative Process", "title_ar": "عملٌ تشاركي", "body": "We work closely with clients, engineers, and builders — ensuring every decision is aligned with the shared vision.", "body_ar": "نعمل عن قرب مع العملاء والمهندسين والمنفّذين — لنضمن انسجام كل قرار مع الرؤية المشتركة." }
+      {
+        "number": "01",
+        "title": "Contextual Design",
+        "title_ar": "تصميم متجذّر في سياقه",
+        "body": "We design with the surroundings in mind — creating spaces that feel rooted in place, culture, and natural light.",
+        "body_ar": "نُصمّم مع وضع المحيط في الاعتبار — لنبتكر مساحات تنبض بالمكان والثقافة والضوء الطبيعي."
+      },
+      {
+        "number": "02",
+        "title": "Timeless Aesthetics",
+        "title_ar": "جمالٌ خالد",
+        "body": "Every detail is carefully considered to ensure longevity, elegance, and a visual language that transcends trends.",
+        "body_ar": "نتأنّى في كل تفصيل لنضمن المتانة والأناقة ولغةً بصريةً تتجاوز الموضات العابرة."
+      },
+      {
+        "number": "03",
+        "title": "Functional Flow",
+        "title_ar": "انسيابٌ وظيفي",
+        "body": "From layout to circulation, we prioritise clarity and ease of use — shaping environments that support daily life intuitively.",
+        "body_ar": "من التوزيع إلى الحركة، نُقدّم الوضوح وسهولة الاستخدام — لنشكّل بيئات تدعم الحياة اليومية بسلاسة وبداهة."
+      },
+      {
+        "number": "04",
+        "title": "Collaborative Process",
+        "title_ar": "عملٌ تشاركي",
+        "body": "We work closely with clients, engineers, and builders — ensuring every decision is aligned with the shared vision.",
+        "body_ar": "نعمل عن قرب مع العملاء والمهندسين والمنفّذين — لنضمن انسجام كل قرار مع الرؤية المشتركة."
+      }
     ]
   },
   "services": {
@@ -82,10 +152,26 @@
       }
     ],
     "process": [
-      { "number": "01", "title": "Vision & Scope", "body": "Every project begins with dialogue. We listen, define the brief, and understand the vision — setting the direction for everything that follows." },
-      { "number": "02", "title": "Planning", "body": "We study the location, light, landscape and context to create a concept that feels grounded and natural — both functionally and emotionally." },
-      { "number": "03", "title": "Designing", "body": "From massing to materials, we shape bold yet timeless spaces that balance aesthetics, purpose, and experience." },
-      { "number": "04", "title": "Final Step", "body": "Our team prepares precise drawings and documentation — collaborating with engineers and consultants to ensure feasibility and performance." }
+      {
+        "number": "01",
+        "title": "Vision & Scope",
+        "body": "Every project begins with dialogue. We listen, define the brief, and understand the vision — setting the direction for everything that follows."
+      },
+      {
+        "number": "02",
+        "title": "Planning",
+        "body": "We study the location, light, landscape and context to create a concept that feels grounded and natural — both functionally and emotionally."
+      },
+      {
+        "number": "03",
+        "title": "Designing",
+        "body": "From massing to materials, we shape bold yet timeless spaces that balance aesthetics, purpose, and experience."
+      },
+      {
+        "number": "04",
+        "title": "Final Step",
+        "body": "Our team prepares precise drawings and documentation — collaborating with engineers and consultants to ensure feasibility and performance."
+      }
     ]
   },
   "contact": {
@@ -93,8 +179,8 @@
     "hero_title_ar": "لنتحدّث اليوم.",
     "hero_sub": "Whether you're starting a project or just exploring ideas, we'd love to hear from you.",
     "hero_sub_ar": "سواء كنت تبدأ مشروعًا أو تستكشف الأفكار، يسعدنا أن نسمع منك.",
-    "phone": "+968 99009464",
-    "phone_ar": "+٩٦٨ ٩٩٠٠٩٤٦٤",
+    "phone": "+968 92315257",
+    "phone_ar": "+٩٦٨ ٩٢٣١٥٢٥٧",
     "whatsapp": "https://api.whatsapp.com/send?phone=96892315257",
     "whatsapp_number": "+968 92315257",
     "whatsapp_number_ar": "+٩٦٨ ٩٢٣١٥٢٥٧",
