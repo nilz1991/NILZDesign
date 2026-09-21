@@ -20,7 +20,8 @@ async function loadCollections() {
 
 async function loadSite() {
   if (_site) return _site;
-  const res = await fetch('_data/site.json');
+  // ?v bumped when site.json content changes — the JSON is cached like any asset
+  const res = await fetch('_data/site.json?v=2');
   _site = await res.json();
   return _site;
 }
