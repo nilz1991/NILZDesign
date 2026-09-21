@@ -59,7 +59,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&family=Tajawal:wght@300;400;500;700&family=El+Messiri:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=36">
+  <link rel="stylesheet" href="css/style.css?v=37">
   <script src="js/analytics.js" defer></script>
 </head>
 <body class="hero-page">
@@ -159,21 +159,17 @@
       <div class="partner-band__actions fade-up delay-2">
         <a class="btn btn--solid" href="for-agents.html" data-i18n="partner.btn_agents">For Real Estate Agents</a>
         <a class="btn btn--outline" href="for-suppliers.html" data-i18n="partner.btn_suppliers">For Suppliers &amp; Contractors</a>
+        <a class="btn btn--outline" href="contact.html" data-i18n="partner.btn_client">For Home &amp; Business Owners</a>
       </div>
     </div>
   </section>
 
-  <!-- ── Rotating 360° ───────────────────── -->
-  <div id="rotating-text-placeholder"></div>
-
-
   <script type="module">
     import { initHeader } from './js/components/header.js';
     import { initFooter } from './js/components/footer.js?v=4';
-    import { initRotatingText } from './js/components/rotating-text.js';
     import { loadSite, renderHomeSoftware, renderSiteContent } from './js/content.js?v=3';
     import { init as initMain } from './js/main.js';
-    import { initI18n, applyStatic, t, tf, onLangChange } from './js/i18n.js';
+    import { initI18n, applyStatic, tf, onLangChange } from './js/i18n.js';
 
     await initI18n();
 
@@ -237,15 +233,6 @@
     }
 
     async function renderHome() {
-      initRotatingText('#rotating-text-placeholder', {
-        tag:            t('statement.tag'),
-        headline:       t('statement.headline'),
-        headlineEm:     t('statement.headline_em'),
-        sub:            t('statement.sub.home'),
-        ctaLabel:       t('statement.cta'),
-        ctaHref:        'contact.html',
-        decorativeImage:'assets/images/line-art-hero.png',
-      });
       const site = await loadSite();
       const introEl = document.getElementById('home-services-intro');
       if (introEl) introEl.textContent = tf(site.services, 'intro');

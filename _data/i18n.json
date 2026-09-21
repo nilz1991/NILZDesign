@@ -472,8 +472,8 @@
     "ar": "لنعمل <em>معًا</em>"
   },
   "partner.band_body": {
-    "en": "Two ways to partner with us — visualization and referral commission for real estate agents, and referral commission for suppliers and contractors.",
-    "ar": "طريقتان للعمل معنا — الإظهار المعماري وعمولة الترشيح للوكلاء العقاريين، وعمولة الترشيح للمورّدين والمقاولين."
+    "en": "Three ways to work with us — visualization and referral commission for real estate agents, referral commission for suppliers and contractors, and full design and supervision for your own home or business.",
+    "ar": "ثلاث طرق للعمل معنا — الإظهار المعماري وعمولة الترشيح للوكلاء العقاريين، وعمولة الترشيح للمورّدين والمقاولين، والتصميم الكامل والإشراف لمنزلك أو عملك."
   },
   "partner.btn_agents": {
     "en": "For Real Estate Agents",
@@ -482,6 +482,10 @@
   "partner.btn_suppliers": {
     "en": "For Suppliers & Contractors",
     "ar": "للمورّدين والمقاولين"
+  },
+  "partner.btn_client": {
+    "en": "For Home &amp; Business Owners",
+    "ar": "لأصحاب المنازل والأعمال"
   },
   "pform.title_agents": {
     "en": "Start a partnership",

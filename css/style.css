@@ -2264,7 +2264,8 @@ html.lang-ar .service-row__body { direction: rtl; text-align: right; }
 .partner-form-wrap { max-width: 760px; }
 /* home band linking to both partner pages */
 .partner-band { background: var(--cream); }
-.partner-band__inner { max-width: 820px; text-align: center; }
+/* wide enough for the three audience buttons to sit on one row on desktop */
+.partner-band__inner { max-width: 1140px; text-align: center; }
 .partner-band__title {
   font-family: var(--font-display);
   font-size: clamp(1.8rem, 3.6vw, 2.5rem);

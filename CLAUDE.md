@@ -18,7 +18,7 @@ Live: **nilzdesign.com** · Repo: **github.com/nilz1991/NILZDesign** · Host: **
 - **RTL**: `html.lang-ar` swaps font tokens to `El Messiri` (display) / `Tajawal` (body); a small `html[dir="rtl"]` block at the end of `style.css` mirrors the few physically-positioned bits (scroll hint, card badge, captions border, toc, lightbox bar). Arabic translations must be **fluent MSA (فصحى)**.
 
 ## Pages
-- `index.html` home: hero video · marquee · about teaser · **Services** (“What We Do” = `site.services.items`) · Software & Tools strip · rotating statement. **No standalone `services.html`** (moved onto home; footer/nav “Services” links point to `index.html#services`).
+- `index.html` home: hero video · marquee · about teaser · **Services** (“What We Do” = `site.services.items`, a click-to-open accordion) · software line · portfolio band · **partner band** (3 buttons: agents / suppliers / direct clients → contact). The rotating statement was removed from home (still on projects + about). **No standalone `services.html`** (moved onto home; footer/nav “Services” links point to `index.html#services`).
 - `projects.html` = work grid **grouped by category, with a heading per group** + a category quick-jump bar (soft pills) + a floating jump button/menu. Collections collapse to one card.
 - `collection.html?id=` (lists a collection’s members) · `project.html?id=` (detail) · `about.html` · `contact.html` · `thank-you.html`.
 
@@ -56,7 +56,7 @@ Live: **nilzdesign.com** · Repo: **github.com/nilz1991/NILZDesign** · Host: **
 - **Building .docx by hand**: author OOXML under a folder, zip with `System.IO.Compression.ZipArchive` using **forward-slash entry names** (`CreateFromDirectory` writes back-slashes → Word rejects it); include `[Content_Types].xml`.
 
 ## Working notes
-- CSS cache-bust is currently at **`css/style.css?v=36`** — bump on the next CSS change (all HTML pages share the number). `js/components/footer.js?v=4` and the home page's `js/content.js?v=3` import are versioned too (JS is otherwise unversioned and caches hard); `loadSite()` fetches `_data/site.json?v=2` — bump that when site.json content changes.
+- CSS cache-bust is currently at **`css/style.css?v=37`** — bump on the next CSS change (all HTML pages share the number). `js/components/footer.js?v=4` and the home page's `js/content.js?v=3` import are versioned too (JS is otherwise unversioned and caches hard); `loadSite()` fetches `_data/site.json?v=2` — bump that when site.json content changes.
 - Use `preview_*` tools to verify (server `serve.js` via Adobe's bundled node, `.claude/launch.json`). `serve.js` now reads `process.env.PORT` and launch.json has `autoPort:true`, so the preview may get a random port (another chat can hold 3000). The static server serves no `.pdf` MIME (browser downloads instead of viewing). Preview navigation/scroll lags — trust `preview_eval` data over screenshots; re-check after a delay.
 - **Always `git pull --rebase origin main` before pushing** (user also edits on GitHub). Commit + push only when done; tell user to hard-refresh (Ctrl+Shift+R) — mobile caches hard. Note: the user often leaves unrelated local edits uncommitted (e.g. `muscat-hills` images) — stage only the files for the task at hand.
 - Backup branches on request: `V1`, `V2`, … Existing: `V1-NILZDesign`, `V2`, `V3`, `V4` (= main at time of backup). **Next is `V5`.**
