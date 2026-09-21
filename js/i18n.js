@@ -54,7 +54,9 @@ export function applyDir() {
 export async function loadI18n() {
   if (_dict) return _dict;
   try {
-    const res = await fetch('_data/i18n.json');
+    // no-cache: always revalidate with the server, so edited strings show up at
+    // once instead of after the 10-minute cache expires (a 304 costs nothing).
+    const res = await fetch('_data/i18n.json', { cache: 'no-cache' });
     _dict = await res.json();
   } catch (_) { _dict = {}; }
   return _dict;

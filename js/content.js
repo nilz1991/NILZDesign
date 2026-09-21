@@ -5,7 +5,7 @@ let _site = null;
 
 async function loadData() {
   if (_data) return _data;
-  const res = await fetch('_data/projects.json');
+  const res = await fetch('_data/projects.json', { cache: 'no-cache' });
   _data = await res.json();
   return _data;
 }
@@ -20,8 +20,9 @@ async function loadCollections() {
 
 async function loadSite() {
   if (_site) return _site;
-  // ?v bumped when site.json content changes — the JSON is cached like any asset
-  const res = await fetch('_data/site.json?v=2');
+  // no-cache: always revalidate, so edited copy shows up without waiting out
+  // the 10-minute asset cache (a 304 costs nothing).
+  const res = await fetch('_data/site.json', { cache: 'no-cache' });
   _site = await res.json();
   return _site;
 }
