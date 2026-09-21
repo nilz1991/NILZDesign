@@ -2093,7 +2093,8 @@ html.lang-ar em { font-style: normal; }
   text-transform: uppercase;
   padding: 7px 14px;
 }
-.portfolio-band .section-title { color: var(--white); }
+/* the description used to carry this gap; it now sits on the title */
+.portfolio-band .section-title { color: var(--white); margin-bottom: 30px; }
 .portfolio-band .section-title em { color: var(--gold); }
 .portfolio-band__desc {
   margin: 20px 0 30px;
