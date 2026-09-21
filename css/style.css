@@ -607,49 +607,40 @@ h1, h2, h3, h4 {
   margin-bottom: 16px;
 }
 .stack-card__desc { color: var(--gray); line-height: 1.8; }
+/* Software strip — a question + one plain line of names, gold dots between */
 .home-software { margin-top: clamp(50px, 6vw, 90px); }
-.home-software__label { display: block; text-align: center; margin-bottom: 30px; }
-.home-software__grid {
-  list-style: none;
-  margin: 0 auto;
-  padding: 0;
-  max-width: 1040px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 14px;
-}
-.home-software__item {
-  flex: 0 0 auto;
-  width: calc(25% - 14px);
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  padding: 12px 14px;
+.home-software__q {
+  margin: 0 0 14px;
   text-align: center;
-  border: 1px solid rgba(27, 43, 75, 0.14);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.5);
-}
-.home-software__use {
-  font-size: 0.58rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--gold);
-}
-.home-software__name {
-  font-size: 0.85rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.05rem, 2.2vw, 1.4rem);
   font-weight: 500;
   color: var(--navy);
 }
-@media (max-width: 900px) {
-  .home-software__item { width: calc(33.333% - 10px); }
+.home-software__line {
+  max-width: 900px;
+  margin: 0 auto;
+  /* flex so the names wrap between items (the dot rides along with its name) */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 2px;
+  text-align: center;
+  font-size: clamp(0.85rem, 1.6vw, 0.95rem);
+  line-height: 2;
+  color: var(--gray);
 }
+.home-software__item { white-space: nowrap; }
+.home-software__item::after {
+  content: '·';
+  margin: 0 10px;
+  color: var(--gold);
+}
+.home-software__item:last-child::after { content: none; }
 @media (max-width: 600px) {
-  .home-software__grid { gap: 8px; }
-  .home-software__item { width: calc(50% - 8px); padding: 10px 10px; }
-  .home-software__name { font-size: 0.78rem; }
+  /* the line wraps on phones — drop the dots so none dangles at a line end */
+  .home-software__item::after { content: none; }
+  .home-software__line { column-gap: 18px; }
 }
 @media (max-width: 900px) {
   .stack-card, .stack-card--reverse { grid-template-columns: 1fr; direction: ltr; }
@@ -1963,8 +1954,7 @@ html.lang-ar .footer-heading,
 html.lang-ar .pd-overview__label,
 html.lang-ar .pd-contents__label,
 html.lang-ar .pd-locationhead__label,
-html.lang-ar .contact-info__label,
-html.lang-ar .home-software__use {
+html.lang-ar .contact-info__label {
   letter-spacing: 0;
   text-transform: none;
 }

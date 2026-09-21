@@ -83,16 +83,16 @@ async function renderHomeSoftware(containerSelector) {
   const site = await loadSite();
   const list = (site.home && site.home.software) || [];
   if (!list.length) { container.innerHTML = ''; return; }
-  const label = (site.home && tf(site.home, 'software_label')) || 'Software & Tools';
+  const label = (site.home && tf(site.home, 'software_label')) || 'What software do we use?';
+  // One plain line of names under a question — the per-category boxes were too
+  // heavy for the home page. Names are flattened and de-duplicated, order kept.
+  const names = [...new Set(list.flatMap(s => s.names || [s.name]).filter(Boolean))];
   container.innerHTML = `
     <div class="container">
-      <span class="section-tag home-software__label">${label}</span>
-      <ul class="home-software__grid">
-        ${list.map(s => `<li class="home-software__item">
-          <span class="home-software__use">${tf(s, 'use')}</span>
-          <span class="home-software__name">${(s.names || [s.name]).join(' · ')}</span>
-        </li>`).join('')}
-      </ul>
+      <h2 class="home-software__q">${label}</h2>
+      <p class="home-software__line">
+        ${names.map(n => `<span class="home-software__item">${n}</span>`).join('')}
+      </p>
     </div>`;
 }
 
