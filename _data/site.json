@@ -190,5 +190,139 @@
     "location": "Al Mouj Street, Muscat, Oman",
     "location_ar": "شارع الموج، مسقط، عُمان",
     "email": "info@nilzdesign.com"
+  },
+  "agents": {
+    "hero_tag": "For Real Estate Agents",
+    "hero_tag_ar": "للوكلاء العقاريين",
+    "hero_title": "Sell faster.<br>Sell higher.",
+    "hero_title_ar": "بِع أسرع.<br>بِع بسعرٍ أعلى.",
+    "hero_sub": "We turn empty and dated listings into images buyers fall for — and into spaces we design and build for them afterwards.",
+    "hero_sub_ar": "نحوّل الوحدات الفارغة والعقارات القديمة إلى صورٍ تأسر المشتري — ثم إلى مساحاتٍ نصمّمها وننفّذها له بعد الشراء.",
+    "intro": "A property that photographs well sells faster and closes higher. Most listings never get that chance: the unit is bare, the finishes are dated, or the buyer simply cannot picture living there. That is the gap we close.",
+    "intro_ar": "العقار الذي يظهر جيدًا في الصور يُباع أسرع ويُغلق بسعرٍ أعلى. لكن معظم الوحدات لا تحظى بهذه الفرصة: الوحدة خامٌ، أو التشطيبات قديمة، أو أن المشتري ببساطة لا يستطيع تخيّل نفسه فيها. هذه هي الفجوة التي نسدّها.",
+    "services_heading": "What we produce for your listings",
+    "services_heading_ar": "ما ننتجه لعقاراتكم",
+    "services": [
+      {
+        "number": "01",
+        "title": "Virtual Staging",
+        "title_ar": "التأثيث الافتراضي",
+        "body": "Your empty or core-and-shell unit, furnished and styled in 3D. The buyer stops seeing a concrete box and starts seeing a home — without you spending a rial on real furniture.",
+        "body_ar": "وحدتكم الفارغة أو المسلّمة على الهيكل، مؤثّثة ومنسّقة ثلاثي الأبعاد. يتوقّف المشتري عن رؤية صندوقٍ خرساني ويبدأ برؤية منزل — دون أن تنفقوا ريالًا واحدًا على أثاثٍ حقيقي."
+      },
+      {
+        "number": "02",
+        "title": "Renovation Visualization",
+        "title_ar": "إظهار إمكانات التجديد",
+        "body": "A tired property shown as it could be. Instead of apologising for the condition, you hand the buyer a before-and-after and sell the potential.",
+        "body_ar": "عقارٌ متهالك يُعرض كما يمكن أن يكون. فبدل الاعتذار عن حالته، تسلّمون المشتري صورة «قبل وبعد» وتبيعون الإمكانات."
+      },
+      {
+        "number": "03",
+        "title": "Video &amp; Animation",
+        "title_ar": "الفيديو والرسوم المتحركة",
+        "body": "A moving walkthrough for Instagram, WhatsApp and the property portals — where a still image is scrolled past and a video is watched.",
+        "body_ar": "جولة متحرّكة لإنستغرام وواتساب ومنصّات العقارات — حيث تُتجاوز الصورة الثابتة بينما يُشاهَد الفيديو."
+      }
+    ],
+    "edge_title": "It also wins you the listing",
+    "edge_title_ar": "وتكسبون بها العقار نفسه",
+    "edge_body": "Owners give their property to the agent who presents it best. Walking into a valuation with finished visuals of what their property could look like is a different conversation from walking in with a camera phone.",
+    "edge_body_ar": "يمنح الملّاك عقارهم للوكيل الذي يعرضه على أفضل وجه. فالدخول إلى اجتماع التقييم ومعكم صور احترافية لما يمكن أن يكون عليه العقار حديثٌ مختلف تمامًا عن الدخول بهاتفٍ فقط.",
+    "steps_heading": "How it works",
+    "steps_heading_ar": "كيف تتم العملية",
+    "steps": [
+      {
+        "title": "Send the file",
+        "title_ar": "أرسلوا الملف",
+        "body": "A floor plan, a few photos, or both. Whatever you already have on the listing.",
+        "body_ar": "مخطّطًا أو بضع صور أو كليهما. أيّ شيء متوفّر لديكم عن العقار."
+      },
+      {
+        "title": "We visualize it",
+        "title_ar": "ننفّذ الإظهار",
+        "body": "We return finished images, and animation if you want it — ready for the portal, the brochure and social.",
+        "body_ar": "نعيد إليكم صورًا نهائية، ورسومًا متحركة إن أردتم — جاهزة للمنصّات والكتيّب ووسائل التواصل."
+      },
+      {
+        "title": "You sell it",
+        "title_ar": "وتبيعونه",
+        "body": "And when the new owner wants the space designed and built, we are already in the conversation.",
+        "body_ar": "وحين يرغب المالك الجديد في تصميم المساحة وتنفيذها، نكون حاضرين في الحديث أصلًا."
+      }
+    ],
+    "referral_title": "Refer a client, earn on every project",
+    "referral_title_ar": "رشّحوا عميلًا، واكسبوا من كل مشروع",
+    "referral_body": "Your buyers and tenants almost always need the space designed, furnished or fitted out. Introduce them to us and we pay you an attractive commission on every project that signs — on top of anything you earn on the property itself.",
+    "referral_body_ar": "يحتاج المشترون والمستأجرون لديكم في معظم الأحيان إلى تصميم المساحة أو تأثيثها أو تنفيذها. عرّفونا بهم، وندفع لكم عمولة مجزية عن كل مشروع يُوقَّع — إضافةً إلى ما تكسبونه من العقار نفسه.",
+    "referral_note": "Commission terms are agreed individually — talk to us and we will walk you through them.",
+    "referral_note_ar": "تُتّفق شروط العمولة بشكل فردي — تواصلوا معنا ونوضّحها لكم بالتفصيل."
+  },
+  "suppliers": {
+    "hero_tag": "For Suppliers &amp; Contractors",
+    "hero_tag_ar": "للمورّدين والمقاولين",
+    "hero_title": "Bring us the project.<br>We handle the design.",
+    "hero_title_ar": "أحضروا لنا المشروع.<br>ونحن نتولّى التصميم.",
+    "hero_sub": "You meet clients who need a designer. We need suppliers and contractors we can trust. Everyone is better off when that introduction gets made.",
+    "hero_sub_ar": "أنتم تلتقون بعملاء يحتاجون إلى مصمّم. ونحن نحتاج إلى مورّدين ومقاولين نثق بهم. والجميع يكسب حين تتم هذه الوصلة.",
+    "intro": "Suppliers and contractors are usually the first professionals a client speaks to — often before there is any design at all. When that client has no designer, the project stalls, the scope stays vague, and the job you hoped for never materialises. We are the missing piece in that conversation.",
+    "intro_ar": "غالبًا ما يكون المورّدون والمقاولون أول من يتحدّث إليهم العميل — وربما قبل وجود أي تصميم. وحين لا يكون لدى العميل مصمّم، يتعثّر المشروع ويبقى النطاق غامضًا ولا يتحقّق العمل الذي كنتم تأملونه. نحن الحلقة المفقودة في هذا الحديث.",
+    "why_heading": "Why it is worth your while",
+    "why_heading_ar": "لماذا يستحقّ ذلك",
+    "why": [
+      {
+        "number": "01",
+        "title": "You keep the client",
+        "title_ar": "تحتفظون بالعميل",
+        "body": "A client who cannot find a designer drifts elsewhere and takes the supply or build work with them. Referring them to us keeps the project — and the client — in your orbit.",
+        "body_ar": "العميل الذي لا يجد مصمّمًا ينصرف إلى جهةٍ أخرى ويأخذ معه أعمال التوريد أو التنفيذ. وترشيحه إلينا يُبقي المشروع — والعميل — في دائرتكم."
+      },
+      {
+        "number": "02",
+        "title": "We specify the materials",
+        "title_ar": "نحن من يحدّد المواد",
+        "body": "Every project we design carries a full material and finish specification. Working with us puts your products in front of the person writing that specification.",
+        "body_ar": "كل مشروعٍ نصمّمه يحمل مواصفاتٍ كاملة للمواد والتشطيبات. والعمل معنا يضع منتجاتكم أمام من يكتب تلك المواصفات."
+      },
+      {
+        "number": "03",
+        "title": "Commission on every signed project",
+        "title_ar": "عمولة عن كل مشروع مُوقَّع",
+        "body": "Beyond the work it brings you, every introduction that turns into a signed project earns you an attractive commission.",
+        "body_ar": "وإلى جانب العمل الذي يعود عليكم، فإن كل ترشيحٍ يتحوّل إلى مشروعٍ مُوقَّع يمنحكم عمولة مجزية."
+      }
+    ],
+    "deliver_heading": "What we deliver on a referred project",
+    "deliver_heading_ar": "ما نقدّمه في المشروع المُرشَّح",
+    "deliver": [
+      {
+        "title": "Interior design",
+        "title_ar": "التصميم الداخلي",
+        "body": "Concept, layout, lighting and material selection for residential and commercial spaces.",
+        "body_ar": "المفهوم والتوزيع والإضاءة واختيار المواد للمساحات السكنية والتجارية."
+      },
+      {
+        "title": "3D visualization",
+        "title_ar": "الإظهار ثلاثي الأبعاد",
+        "body": "4K renders and animation so the client approves the design before anything is ordered or built.",
+        "body_ar": "رندرات بدقة 4K ورسوم متحركة ليعتمد العميل التصميم قبل طلب أي شيء أو تنفيذه."
+      },
+      {
+        "title": "Working drawings",
+        "title_ar": "الرسومات التنفيذية",
+        "body": "Engineering-grade drawings and shop-drawing packages your team can build from directly.",
+        "body_ar": "رسومات بمعايير هندسية وحِزم رسومات تصنيعية يستطيع فريقكم التنفيذ منها مباشرة."
+      },
+      {
+        "title": "Site supervision",
+        "title_ar": "الإشراف في الموقع",
+        "body": "We stay on the project through execution, so what was drawn is what gets built.",
+        "body_ar": "نبقى مع المشروع حتى التنفيذ، ليُبنى ما رُسم تمامًا."
+      }
+    ],
+    "referral_title": "How the referral works",
+    "referral_title_ar": "كيف يتم الترشيح",
+    "referral_body": "Introduce the client, stay in the loop, and we take the design from there. When the project signs, you are paid an attractive commission. Terms are agreed individually — get in touch and we will walk you through them.",
+    "referral_body_ar": "عرّفونا بالعميل، وابقوا على اطّلاع، ونتولّى نحن التصميم من تلك النقطة. وعند توقيع المشروع، تُدفع لكم عمولة مجزية. وتُتّفق الشروط بشكل فردي — تواصلوا معنا ونوضّحها لكم."
   }
 }

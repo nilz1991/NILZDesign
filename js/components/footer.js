@@ -42,6 +42,8 @@ function footerMarkup(services) {
         <li><a href="projects.html">${t('nav.projects')}</a></li>
         <li><a href="about.html">${t('nav.about')}</a></li>
         <li><a href="contact.html">${t('nav.contact')}</a></li>
+        <li><a href="for-agents.html">${t('nav.agents')}</a></li>
+        <li><a href="for-suppliers.html">${t('nav.suppliers')}</a></li>
       </ul>
     </div>
 

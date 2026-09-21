@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>try{var l=new URLSearchParams(location.search).get('lang')||localStorage.getItem('nilz_lang');if(l==='ar'){document.documentElement.lang='ar';document.documentElement.dir='rtl';document.documentElement.classList.add('lang-ar');}}catch(e){}</script>
+  <title>For Real Estate Agents — NILZ Architecture &amp; Interior Design</title>
+  <meta name="description" content="Virtual staging, renovation visualization and animation for property listings in Muscat, Oman — plus referral commission when your buyers need interior design and fit-out.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://nilzdesign.com/for-agents.html">
+  <meta name="theme-color" content="#1b2b4b">
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NILZ">
+  <meta property="og:title" content="For Real Estate Agents — NILZ">
+  <meta property="og:description" content="Turn empty and dated listings into images buyers fall for. Virtual staging, renovation visualization and animation — plus referral commission on design and fit-out.">
+  <meta property="og:url" content="https://nilzdesign.com/for-agents.html">
+  <meta property="og:image" content="https://nilzdesign.com/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ar_AR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="For Real Estate Agents — NILZ">
+  <meta name="twitter:description" content="Virtual staging, renovation visualization and animation for property listings in Muscat, Oman.">
+  <meta name="twitter:image" content="https://nilzdesign.com/assets/images/og-image.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&family=Tajawal:wght@300;400;500;700&family=El+Messiri:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=33">
+  <script src="js/analytics.js" defer></script>
+</head>
+<body>
+
+  <!-- ── Hero ───────────────────────────── -->
+  <section class="page-hero">
+    <img src="assets/images/portfolio-cover.jpg" alt="" class="page-hero__bg">
+    <div class="page-hero__content">
+      <span class="section-tag page-hero__tag" data-cms="hero_tag">For Real Estate Agents</span>
+      <h1 class="page-hero__title display" data-cms="hero_title">Sell faster.<br>Sell higher.</h1>
+      <p class="partner-hero__sub" data-cms="hero_sub"></p>
+    </div>
+  </section>
+
+  <!-- ── Intro ──────────────────────────── -->
+  <section class="section section--white">
+    <div class="container">
+      <p class="partner-intro fade-up" data-cms="intro"></p>
+    </div>
+  </section>
+
+  <!-- ── Services ───────────────────────── -->
+  <section class="section section--cream">
+    <div class="container">
+      <h2 class="section-title fade-up" data-cms="services_heading">What we produce for your listings</h2>
+      <div id="agent-services" class="partner-cards"></div>
+    </div>
+  </section>
+
+  <!-- ── The extra edge ─────────────────── -->
+  <section class="section section--white">
+    <div class="container">
+      <div class="partner-edge fade-up">
+        <h2 class="partner-edge__title" data-cms="edge_title">It also wins you the listing</h2>
+        <p class="partner-edge__body" data-cms="edge_body"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── How it works ───────────────────── -->
+  <section class="section section--cream">
+    <div class="container">
+      <h2 class="section-title fade-up" data-cms="steps_heading">How it works</h2>
+      <div id="agent-steps" class="partner-steps"></div>
+    </div>
+  </section>
+
+  <!-- ── Referral commission ────────────── -->
+  <section class="section partner-referral">
+    <div class="container partner-referral__inner">
+      <h2 class="partner-referral__title" data-cms="referral_title">Refer a client, earn on every project</h2>
+      <p class="partner-referral__body" data-cms="referral_body"></p>
+      <p class="partner-referral__note" data-cms="referral_note"></p>
+      <a href="#partner-form" class="btn btn--gold" data-i18n="pform.title_agents">Start a partnership</a>
+    </div>
+  </section>
+
+  <!-- ── Enquiry form ───────────────────── -->
+  <section class="section section--white" id="partner-form">
+    <div class="container partner-form-wrap">
+      <h2 class="contact-form__title fade-up" data-i18n="pform.title_agents">Start a partnership</h2>
+      <form class="contact-form fade-up" name="agent-partnership" method="POST" action="https://formsubmit.co/info@nilzdesign.com">
+        <input type="hidden" name="_next" value="https://nilzdesign.com/thank-you">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="PARTNER ENQUIRY — Real Estate Agent">
+        <input type="hidden" name="Partner type" value="Real estate agent">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="company" data-i18n="pform.company">Company name</label>
+            <input type="text" id="company" name="Company" required placeholder="Your agency" data-i18n-ph="pform.ph_company">
+          </div>
+          <div class="form-group">
+            <label for="person" data-i18n="pform.contact">Contact person</label>
+            <input type="text" id="person" name="Contact person" required placeholder="Full name" data-i18n-ph="pform.ph_contact">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="phone" data-i18n="pform.phone">Phone / WhatsApp</label>
+            <input type="tel" id="phone" name="Phone" required placeholder="+968 9xxx xxxx">
+          </div>
+          <div class="form-group">
+            <label for="email" data-i18n="pform.email">Email</label>
+            <input type="email" id="email" name="Email" required placeholder="name@company.com">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="listings" data-i18n="pform.listings">Active listings (approx.)</label>
+          <input type="text" id="listings" name="Active listings" placeholder="e.g. 20" data-i18n-ph="pform.ph_listings">
+        </div>
+        <div class="form-group">
+          <label data-i18n="pform.interest">What interests you?</label>
+          <div class="form-checks">
+            <label class="check-label"><input type="checkbox" name="Interest" value="Virtual staging"> <span data-i18n="pform.opt_staging">Virtual staging</span></label>
+            <label class="check-label"><input type="checkbox" name="Interest" value="Renovation visualization"> <span data-i18n="pform.opt_reno">Renovation visualization</span></label>
+            <label class="check-label"><input type="checkbox" name="Interest" value="Video & animation"> <span data-i18n="pform.opt_video">Video &amp; animation</span></label>
+            <label class="check-label"><input type="checkbox" name="Interest" value="Referral commission"> <span data-i18n="pform.opt_referral">Referral commission</span></label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="message" data-i18n="pform.message">Anything else?</label>
+          <textarea id="message" name="Message" rows="4" placeholder="Tell us briefly about your business..." data-i18n-ph="pform.ph_message"></textarea>
+        </div>
+        <button type="submit" class="btn btn--solid" style="width:100%;justify-content:center;padding:18px" data-i18n="pform.submit">Send enquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <script type="module">
+    import { initHeader } from './js/components/header.js';
+    import { initFooter } from './js/components/footer.js?v=4';
+    import { loadSite, renderSiteContent } from './js/content.js';
+    import { init as initMain } from './js/main.js';
+    import { initI18n, applyStatic, tf, onLangChange } from './js/i18n.js';
+
+    await initI18n();
+    initHeader();
+    initFooter();
+
+    async function renderAgents() {
+      const site = await loadSite();
+      const a = site.agents;
+
+      document.getElementById('agent-services').innerHTML = a.services.map(s => `
+        <article class="partner-card fade-up">
+          <span class="partner-card__num">${s.number}</span>
+          <h3 class="partner-card__title">${tf(s, 'title')}</h3>
+          <p class="partner-card__body">${tf(s, 'body')}</p>
+        </article>`).join('');
+
+      document.getElementById('agent-steps').innerHTML = a.steps.map((s, i) => `
+        <div class="partner-step fade-up">
+          <span class="partner-step__num">${String(i + 1).padStart(2, '0')}</span>
+          <h3 class="partner-step__title">${tf(s, 'title')}</h3>
+          <p class="partner-step__body">${tf(s, 'body')}</p>
+        </div>`).join('');
+
+      await renderSiteContent('agents');
+    }
+
+    await renderAgents();
+    onLangChange(renderAgents);
+    applyStatic();
+    initMain();
+  </script>
+</body>
+</html>

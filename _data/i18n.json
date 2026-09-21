@@ -454,5 +454,121 @@
   "thanks.work": {
     "en": "View Our Work",
     "ar": "شاهد أعمالنا"
+  },
+  "nav.agents": {
+    "en": "For Real Estate Agents",
+    "ar": "للوكلاء العقاريين"
+  },
+  "nav.suppliers": {
+    "en": "For Suppliers & Contractors",
+    "ar": "للمورّدين والمقاولين"
+  },
+  "partner.band_tag": {
+    "en": "Partner with NILZ",
+    "ar": "اعمل مع نيلز"
+  },
+  "partner.band_title": {
+    "en": "Let's <em>work together</em>",
+    "ar": "لنعمل <em>معًا</em>"
+  },
+  "partner.band_body": {
+    "en": "Two ways to partner with us — visualization and referral commission for real estate agents, and referral commission for suppliers and contractors.",
+    "ar": "طريقتان للعمل معنا — الإظهار المعماري وعمولة الترشيح للوكلاء العقاريين، وعمولة الترشيح للمورّدين والمقاولين."
+  },
+  "partner.btn_agents": {
+    "en": "For Real Estate Agents",
+    "ar": "للوكلاء العقاريين"
+  },
+  "partner.btn_suppliers": {
+    "en": "For Suppliers & Contractors",
+    "ar": "للمورّدين والمقاولين"
+  },
+  "pform.title_agents": {
+    "en": "Start a partnership",
+    "ar": "ابدأ الشراكة"
+  },
+  "pform.title_suppliers": {
+    "en": "Start a partnership",
+    "ar": "ابدأ الشراكة"
+  },
+  "pform.company": {
+    "en": "Company name",
+    "ar": "اسم الشركة"
+  },
+  "pform.ph_company": {
+    "en": "Your agency or company",
+    "ar": "اسم وكالتكم أو شركتكم"
+  },
+  "pform.contact": {
+    "en": "Contact person",
+    "ar": "اسم المسؤول"
+  },
+  "pform.ph_contact": {
+    "en": "Full name",
+    "ar": "الاسم الكامل"
+  },
+  "pform.phone": {
+    "en": "Phone / WhatsApp",
+    "ar": "الهاتف / واتساب"
+  },
+  "pform.email": {
+    "en": "Email",
+    "ar": "البريد الإلكتروني"
+  },
+  "pform.listings": {
+    "en": "Active listings (approx.)",
+    "ar": "عدد العقارات المعروضة (تقريبًا)"
+  },
+  "pform.ph_listings": {
+    "en": "e.g. 20",
+    "ar": "مثال: ٢٠"
+  },
+  "pform.field": {
+    "en": "Your field",
+    "ar": "مجال عملكم"
+  },
+  "pform.opt_supplier": {
+    "en": "Supplier",
+    "ar": "مورّد"
+  },
+  "pform.opt_contractor": {
+    "en": "Contractor",
+    "ar": "مقاول"
+  },
+  "pform.opt_both": {
+    "en": "Both",
+    "ar": "كلاهما"
+  },
+  "pform.interest": {
+    "en": "What interests you?",
+    "ar": "ما الذي يهمّكم؟"
+  },
+  "pform.opt_staging": {
+    "en": "Virtual staging",
+    "ar": "التأثيث الافتراضي"
+  },
+  "pform.opt_reno": {
+    "en": "Renovation visualization",
+    "ar": "إظهار إمكانات التجديد"
+  },
+  "pform.opt_video": {
+    "en": "Video & animation",
+    "ar": "الفيديو والرسوم المتحركة"
+  },
+  "pform.opt_referral": {
+    "en": "Referral commission",
+    "ar": "عمولة الترشيح"
+  },
+  "pform.message": {
+    "en": "Anything else?",
+    "ar": "أي ملاحظات أخرى؟"
+  },
+  "pform.ph_message": {
+    "en": "Tell us briefly about your business...",
+    "ar": "أخبرونا باختصار عن نشاطكم..."
+  },
+  "pform.submit": {
+    "en": "Send enquiry",
+    "ar": "إرسال الطلب"
   }
 }

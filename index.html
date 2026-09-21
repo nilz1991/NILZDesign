@@ -59,7 +59,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&family=Tajawal:wght@300;400;500;700&family=El+Messiri:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=32">
+  <link rel="stylesheet" href="css/style.css?v=33">
   <script src="js/analytics.js" defer></script>
 </head>
 <body class="hero-page">
@@ -149,13 +149,26 @@
     </div>
   </section>
 
+  <!-- ── Partner with NILZ ───────────────── -->
+  <section class="section partner-band" id="partners">
+    <div class="container partner-band__inner">
+      <span class="section-tag" data-i18n="partner.band_tag">Partner with NILZ</span>
+      <h2 class="partner-band__title fade-up" data-i18n="partner.band_title">Let's <em>work together</em></h2>
+      <p class="partner-band__body fade-up delay-1" data-i18n="partner.band_body"></p>
+      <div class="partner-band__actions fade-up delay-2">
+        <a class="btn btn--solid" href="for-agents.html" data-i18n="partner.btn_agents">For Real Estate Agents</a>
+        <a class="btn btn--outline" href="for-suppliers.html" data-i18n="partner.btn_suppliers">For Suppliers &amp; Contractors</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ── Rotating 360° ───────────────────── -->
   <div id="rotating-text-placeholder"></div>
 
 
   <script type="module">
     import { initHeader } from './js/components/header.js';
-    import { initFooter } from './js/components/footer.js?v=3';
+    import { initFooter } from './js/components/footer.js?v=4';
     import { initRotatingText } from './js/components/rotating-text.js';
     import { loadSite, renderHomeSoftware, renderSiteContent } from './js/content.js';
     import { init as initMain } from './js/main.js';
