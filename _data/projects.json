@@ -422,54 +422,6 @@
       ]
     },
     {
-      "id": "taneen-abaya",
-      "collection": "office",
-      "title": "Taneen Abaya Boutique",
-      "title_ar": "متجر تنين عبايا",
-      "category": "Interior Design",
-      "category_ar": "التصميم الداخلي",
-      "location": "Al Khoudh, Muscat — Oman",
-      "location_ar": "الخوض، مسقط — عُمان",
-      "image": "assets/images/projects/office-workspace/taneen-abaya/03.jpg",
-      "description": "A retail interior for an abaya boutique in Al Khoudh — warm cream plaster, arched backlit display niches, a curved marble counter banded in brass, and a brand wall carrying the house line-drawing.",
-      "description_ar": "تصميمٌ داخلي لمتجر عبايات في الخوض — جصٌّ كريمي دافئ، وكوّات عرضٍ مقوّسة مُضاءة من الخلف، وكاونتر رخامي منحنٍ محاطٌ بشريطٍ نحاسي، وجدار هويةٍ يحمل الرسم الخطّي للعلامة.",
-      "featured": false,
-      "order": 4,
-      "overview": "A boutique for Taneen Abaya, designed so that the merchandise — black abayas with gold embroidery — reads as the only strong colour in the room. Everything built is kept in warm cream: hand-finished plaster walls, large-format marble-look porcelain, and a run of arched niches lit from a concealed cove, so each garment hangs in its own pool of light. A curved counter in white marble with a brass base anchors the entrance beside the brand wall, and a small refreshment nook with bouclé seating turns a fitting appointment into a visit.",
-      "overview_ar": "متجرٌ لعلامة «تنين عبايا»، صُمّم ليكون المعروض — العبايات السوداء المطرّزة بالذهب — اللون القوي الوحيد في المكان. فجاء كل ما هو مبنيٌّ بدرجات الكريمي الدافئ: جدرانٌ من الجصّ بلمسةٍ يدوية، وبلاطٌ بورسلان كبير المقاس يحاكي الرخام، وسلسلةٌ من الكوّات المقوّسة تضيئها إنارة مخفية، فتقف كل قطعةٍ في بركة ضوءٍ خاصة بها. ويتصدّر المدخلَ كاونترٌ منحنٍ من الرخام الأبيض بقاعدةٍ نحاسية إلى جوار جدار الهوية، بينما يحوّل ركنُ ضيافةٍ صغير بمقاعد البوكليه زيارةَ القياس إلى تجربةٍ كاملة.",
-      "sections": [
-        {
-          "title": "Reception & Brand Wall",
-          "title_ar": "الاستقبال وجدار الهوية",
-          "description": "The entrance sets the tone: a curved white marble counter with a brushed brass base, and behind it an arched recess washed with concealed light that carries the Taneen line-drawing and the bilingual wordmark.",
-          "description_ar": "يحدّد المدخل نبرة المكان: كاونتر منحنٍ من الرخام الأبيض بقاعدةٍ من النحاس المصقول، وخلفه كوّةٌ مقوّسة يغمرها ضوءٌ مخفي تحمل الرسم الخطّي لـ«تنين» والاسم بالعربية والإنجليزية.",
-          "renders": [
-            { "image": "assets/images/projects/office-workspace/taneen-abaya/01.jpg", "caption": "The reception counter and the brand wall — the arched recess is washed from a concealed cove, so the line-drawing reads without a single visible fitting.", "caption_ar": "كاونتر الاستقبال وجدار الهوية — تُغسل الكوّة المقوّسة بضوءٍ من تجويفٍ مخفي، فيظهر الرسم الخطّي دون أي وحدة إنارة ظاهرة." },
-            { "image": "assets/images/projects/office-workspace/taneen-abaya/02.jpg", "caption": "The counter's curved end, capped in white marble and banded in brushed brass at the floor — a detail repeated in the niches and the shelving.", "caption_ar": "الطرف المنحني للكاونتر، مكسوٌّ برخامٍ أبيض ومحاطٌ عند الأرضية بشريطٍ من النحاس المصقول — تفصيلٌ يتكرّر في الكوّات والرفوف." },
-            { "image": "assets/images/projects/office-workspace/taneen-abaya/03.jpg", "caption": "Seen from the shop floor: reception, the lit display arches and the shopfront glazing line up on a single axis, so a customer entering sees the whole collection at once.", "caption_ar": "من داخل المتجر: يصطفّ الاستقبال وأقواس العرض المضاءة وواجهة الزجاج على محورٍ واحد، فيرى الزائر المجموعة كاملةً فور دخوله." }
-          ]
-        },
-        {
-          "title": "Display Arches & Shopfront",
-          "title_ar": "أقواس العرض والواجهة",
-          "description": "Along the side wall, a rhythm of arched niches holds the hanging rails; at the window, a raised circular platform carries the piece of the season against the street.",
-          "description_ar": "على الجدار الجانبي، إيقاعٌ من الكوّات المقوّسة يحتضن قضبان التعليق؛ وعند النافذة، منصّةٌ دائرية مرتفعة تعرض قطعة الموسم في مواجهة الشارع.",
-          "renders": [
-            { "image": "assets/images/projects/office-workspace/taneen-abaya/04.jpg", "caption": "The shopfront display — a raised marble platform and a single gold-embroidered piece framed by the window, with the wordmark applied to the glass above.", "caption_ar": "واجهة العرض — منصّةٌ رخامية مرتفعة وقطعةٌ واحدة مطرّزة بالذهب تؤطّرها النافذة، مع اسم العلامة مطبوعًا على الزجاج أعلاها." }
-          ]
-        },
-        {
-          "title": "Fitting Rooms & Refreshment Nook",
-          "title_ar": "غرف القياس وركن الضيافة",
-          "description": "At the far end, arched curtained fitting rooms sit beside a small hospitality nook — a brass-fronted cabinet, open shelves under a cluster pendant, and bouclé armchairs around a marble table.",
-          "description_ar": "في الطرف الآخر، تقع غرف القياس المقوّسة بستائرها إلى جوار ركن ضيافةٍ صغير — خزانةٌ بواجهةٍ نحاسية، ورفوفٌ مفتوحة تحت ثريّا عنقودية، ومقاعد من قماش البوكليه حول طاولةٍ رخامية.",
-          "renders": [
-            { "image": "assets/images/projects/office-workspace/taneen-abaya/05.jpg", "caption": "The refreshment nook — a brass-fronted cabinet and lit shelves under a cluster pendant, with bouclé armchairs drawn around a marble table beside the window.", "caption_ar": "ركن الضيافة — خزانةٌ بواجهةٍ نحاسية ورفوفٌ مُضاءة تحت ثريّا عنقودية، ومقاعد بوكليه مُجتمعة حول طاولةٍ رخامية إلى جانب النافذة." }
-          ]
-        }
-      ]
-    },
-    {
       "id": "terrace-pergola",
       "title": "Plans & Details",
       "title_ar": "المخططات والتفاصيل",
