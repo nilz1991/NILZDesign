@@ -1,8 +1,9 @@
 // Page-by-page brochure viewer for /lidoma/ (view only, no download link).
-// Reads lidoma/brochure/pages.json ({en:[...], ar:[...]}, each page {f,t,w,h,single,tour?}).
+// Reads lidoma/brochure/pages.json ({en:[...], ar:[...]}, each page {f,t,w,h,single,tour?,phone?}; phone = whole-page image
+// of the cover and back cover, whose f is cut to the desktop viewer's shape).
 // Desktop: one spread per view. Phone: every spread is split, so a page fills the screen width.
 // A page with a tour QR also gets an open-the-tour button: nobody can scan a screen with the phone that shows it.
-// Pages carry a baked-in watermark; the handlers below only stop casual saving, a screenshot cannot be blocked.
+// The handlers below only stop casual saving; a screenshot cannot be blocked.
 
 import { isAr, onLangChange, applyStatic } from './i18n.js';
 
@@ -52,6 +53,8 @@ export async function initBrochureViewer(root) {
   let slides = [];  // what one view shows: {page, side}, side is '' | 'l' | 'r'
   let index = 0;
 
+  const fileOf = (p) => BASE + (mq.matches && p.phone ? p.phone : p.f);
+
   function buildSlides() {
     slides = [];
     pages.forEach((p, i) => {
@@ -65,7 +68,7 @@ export async function initBrochureViewer(root) {
 
   function preload(i) {
     const s = slides[i];
-    if (s) { const im = new Image(); im.src = BASE + pages[s.page].f; }
+    if (s) { const im = new Image(); im.src = fileOf(pages[s.page]); }
   }
 
   function show(i) {
@@ -76,7 +79,7 @@ export async function initBrochureViewer(root) {
     pageEl.classList.toggle('is-half', !!s.side);
     pageEl.classList.toggle('is-left', s.side === 'l');
     pageEl.classList.toggle('is-right', s.side === 'r');
-    const src = BASE + p.f;
+    const src = fileOf(p);
     if (img.getAttribute('src') !== src) {
       img.classList.add('is-loading');
       img.onload = () => img.classList.remove('is-loading');
