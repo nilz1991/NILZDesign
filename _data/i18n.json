@@ -574,5 +574,193 @@
   "pform.submit": {
     "en": "Send enquiry",
     "ar": "إرسال الطلب"
+  },
+  "lidoma.hero_tag": {
+    "en": "Portfolio sample",
+    "ar": "نموذج من أعمالنا"
+  },
+  "lidoma.hero_title": {
+    "en": "Lidoma",
+    "ar": "ليدوما"
+  },
+  "lidoma.hero_sub": {
+    "en": "Shops below, homes above, a garden on top: a residential and commercial building in Al Mabaila South, Muscat, designed by NILZ.",
+    "ar": "متاجر في الأسفل، ومساكن في الأعلى، وحديقة على السطح: مبنى سكني تجاري في المعبيلة الجنوبية بمسقط، من تصميم NILZ."
+  },
+  "lidoma.btn_brochure": {
+    "en": "Browse the brochure",
+    "ar": "تصفّح الكتيّب"
+  },
+  "lidoma.btn_tours": {
+    "en": "Take the 360° tours",
+    "ar": "ابدأ الجولات الافتراضية"
+  },
+  "lidoma.stat_homes": {
+    "en": "Homes",
+    "ar": "وحدة سكنية"
+  },
+  "lidoma.stat_shops": {
+    "en": "Shops",
+    "ar": "متجرًا"
+  },
+  "lidoma.stat_floors": {
+    "en": "Residential floors",
+    "ar": "طوابق سكنية"
+  },
+  "lidoma.stat_area": {
+    "en": "m² built-up area",
+    "ar": "م² مساحة البناء"
+  },
+  "lidoma.intro": {
+    "en": "We show Lidoma to developers, construction companies and real estate agents as a complete example of our work: architecture, interiors, the sales brochure and 360° tours, all from one studio.",
+    "ar": "نقدّم ليدوما إلى المطوّرين العقاريين وشركات المقاولات والوكلاء العقاريين بوصفه مثالًا متكاملًا لأعمالنا: العمارة والتصميم الداخلي وكتيّب المبيعات والجولات الافتراضية بزاوية 360°، وكلها من استوديو واحد."
+  },
+  "lidoma.who_title": {
+    "en": "What this project shows",
+    "ar": "ما يُظهره هذا المشروع"
+  },
+  "lidoma.c1_title": {
+    "en": "For developers",
+    "ar": "للمطوّرين العقاريين"
+  },
+  "lidoma.c1_body": {
+    "en": "Everything a launch needs: the sales brochure, plans of every unit type, exterior and interior images, and virtual tours.",
+    "ar": "كل ما يحتاجه إطلاق المشروع: كتيّب المبيعات، ومخططات جميع نماذج الوحدات، وصور الواجهات والتصميم الداخلي، والجولات الافتراضية."
+  },
+  "lidoma.c2_title": {
+    "en": "For construction companies",
+    "ar": "لشركات المقاولات"
+  },
+  "lidoma.c2_body": {
+    "en": "Drawings, 3D model and furnished plans that agree with each other, so what the buyer sees is what can be built.",
+    "ar": "مخططات ونموذج ثلاثي الأبعاد ومخططات مفروشة متطابقة فيما بينها، ليكون ما يراه المشتري هو ما يمكن تنفيذه فعلًا."
+  },
+  "lidoma.c3_title": {
+    "en": "For real estate agents",
+    "ar": "للوكلاء العقاريين"
+  },
+  "lidoma.c3_body": {
+    "en": "Material that sells before the building is finished: a buyer scans the QR code in the brochure and walks through the space on their phone.",
+    "ar": "مواد تبيع قبل اكتمال البناء: يمسح المشتري رمز QR في الكتيّب ويتجوّل في المكان من هاتفه."
+  },
+  "lidoma.brochure_tag": {
+    "en": "The brochure",
+    "ar": "الكتيّب"
+  },
+  "lidoma.brochure_title": {
+    "en": "Browse the sales brochure",
+    "ar": "تصفّح كتيّب المبيعات"
+  },
+  "lidoma.price_notice": {
+    "en": "<strong>Please note:</strong> the prices and payment figures in this brochure are sample figures, shown for presentation only. They are not real prices and are not an offer for sale.",
+    "ar": "<strong>يُرجى الانتباه:</strong> الأسعار وأرقام الدفع الواردة في هذا الكتيّب أرقام نموذجية لأغراض العرض فقط، وهي ليست أسعارًا حقيقية ولا تمثّل عرضًا للبيع."
+  },
+  "lidoma.view_only": {
+    "en": "View only. To receive the PDF, use the <a href=\"lidoma/#request\">request form</a> below.",
+    "ar": "للعرض فقط. للحصول على ملف PDF، يُرجى تعبئة <a href=\"lidoma/#request\">نموذج الطلب</a> أدناه."
+  },
+  "lidoma.en_only": {
+    "en": "",
+    "ar": "الكتيّب معروض حاليًا باللغة الإنجليزية، وستتوفر النسخة العربية قريبًا."
+  },
+  "lidoma.brochure_soon": {
+    "en": "The brochure will be available here soon.",
+    "ar": "سيتوفر الكتيّب هنا قريبًا."
+  },
+  "lidoma.prev": {
+    "en": "Previous page",
+    "ar": "الصفحة السابقة"
+  },
+  "lidoma.next": {
+    "en": "Next page",
+    "ar": "الصفحة التالية"
+  },
+  "lidoma.fullscreen": {
+    "en": "Full screen",
+    "ar": "ملء الشاشة"
+  },
+  "lidoma.tours_tag": {
+    "en": "360° tours",
+    "ar": "جولات 360°"
+  },
+  "lidoma.tours_title": {
+    "en": "Step inside",
+    "ar": "ادخلوا وتجوّلوا"
+  },
+  "lidoma.tour_205_title": {
+    "en": "Two-bedroom home, unit 205",
+    "ar": "شقة بغرفتي نوم، الوحدة 205"
+  },
+  "lidoma.tour_205_body": {
+    "en": "Living room, kitchen, hallway and both bedrooms.",
+    "ar": "غرفة المعيشة والمطبخ والممر وغرفتا النوم."
+  },
+  "lidoma.tour_cafe_title": {
+    "en": "Café, shop 01",
+    "ar": "المقهى، المتجر 01"
+  },
+  "lidoma.tour_cafe_body": {
+    "en": "A sample of the shops' interior design.",
+    "ar": "نموذج للتصميم الداخلي للمتاجر."
+  },
+  "lidoma.tour_open": {
+    "en": "Open the tour",
+    "ar": "افتح الجولة"
+  },
+  "lidoma.form_title": {
+    "en": "Request the full brochure",
+    "ar": "اطلب الكتيّب كاملًا"
+  },
+  "lidoma.form_intro": {
+    "en": "The brochure can be viewed on this page but not downloaded. Send your details and we will email you the PDF.",
+    "ar": "يمكن تصفّح الكتيّب في هذه الصفحة، لكن لا يمكن تنزيله. أرسلوا بياناتكم وسنرسل إليكم ملف PDF بالبريد الإلكتروني."
+  },
+  "lidoma.company_opt": {
+    "en": "Company (optional)",
+    "ar": "الشركة (اختياري)"
+  },
+  "lidoma.role": {
+    "en": "You are",
+    "ar": "صفة مقدّم الطلب"
+  },
+  "lidoma.role_developer": {
+    "en": "Developer",
+    "ar": "مطوّر عقاري"
+  },
+  "lidoma.role_contractor": {
+    "en": "Construction company",
+    "ar": "شركة مقاولات"
+  },
+  "lidoma.role_agent": {
+    "en": "Real estate agent",
+    "ar": "وكيل عقاري"
+  },
+  "lidoma.role_client": {
+    "en": "Private client",
+    "ar": "عميل فردي"
+  },
+  "lidoma.role_other": {
+    "en": "Other",
+    "ar": "أخرى"
+  },
+  "lidoma.submit": {
+    "en": "Request the brochure",
+    "ar": "اطلب الكتيّب"
+  },
+  "lidoma.sample_tag": {
+    "en": "Portfolio sample",
+    "ar": "نموذج من أعمالنا"
+  },
+  "lidoma.sample_title": {
+    "en": "Lidoma, Muscat: one full project",
+    "ar": "ليدوما، مسقط: مشروع متكامل"
+  },
+  "lidoma.sample_body": {
+    "en": "See what we deliver on a real project: the sales brochure, floor plans and 360° tours of a 40-home building in Al Mabaila.",
+    "ar": "شاهدوا ما ننجزه في مشروع حقيقي: كتيّب المبيعات والمخططات والجولات الافتراضية بزاوية 360° لمبنى يضم 40 وحدة سكنية في المعبيلة."
+  },
+  "lidoma.sample_btn": {
+    "en": "View the project",
+    "ar": "استعرض المشروع"
   }
 }

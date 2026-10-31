@@ -9,7 +9,7 @@ import { t, langSwitchHTML, bindLangSwitch, onLangChange } from '../i18n.js';
 
 function headerMarkup() {
   // Normalise: strip .html so both '/about' and '/about.html' match 'about.html'
-  const currentSlug = (location.pathname.split('/').pop() || 'index').replace(/\.html$/, '');
+  const currentSlug = (location.pathname.replace(/\/$/, '').split('/').pop() || 'index').replace(/\.html$/, '');
 
   const pages = [
     { href: 'index.html',    key: 'nav.home' },
