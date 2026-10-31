@@ -576,16 +576,16 @@
     "ar": "إرسال الطلب"
   },
   "lidoma.hero_tag": {
-    "en": "Portfolio sample",
-    "ar": "نموذج من أعمالنا"
+    "en": "Brochure design sample",
+    "ar": "نموذج لتصميم الكتيّبات"
   },
   "lidoma.hero_title": {
     "en": "Lidoma",
     "ar": "ليدوما"
   },
   "lidoma.hero_sub": {
-    "en": "Shops below, homes above, a garden on top: a residential and commercial building in Al Mabaila South, Muscat, designed by NILZ.",
-    "ar": "متاجر في الأسفل، ومساكن في الأعلى، وحديقة على السطح: مبنى سكني تجاري في المعبيلة الجنوبية بمسقط، من تصميم NILZ."
+    "en": "A sample of our work, not a property for sale: the sales brochure and 360° tours we designed for Lidoma, a residential and commercial building in Al Mabaila South, Muscat.",
+    "ar": "نموذج من أعمالنا، وليس عقارًا معروضًا للبيع: كتيّب المبيعات والجولات الافتراضية بزاوية 360° التي صمّمناها لمشروع ليدوما، وهو مبنى سكني تجاري في المعبيلة الجنوبية بمسقط."
   },
   "lidoma.btn_brochure": {
     "en": "Browse the brochure",
@@ -612,48 +612,44 @@
     "ar": "م² مساحة البناء"
   },
   "lidoma.intro": {
-    "en": "We show Lidoma to developers, construction companies and real estate agents as a complete example of our work: architecture, interiors, the sales brochure and 360° tours, all from one studio.",
-    "ar": "نقدّم ليدوما إلى المطوّرين العقاريين وشركات المقاولات والوكلاء العقاريين بوصفه مثالًا متكاملًا لأعمالنا: العمارة والتصميم الداخلي وكتيّب المبيعات والجولات الافتراضية بزاوية 360°، وكلها من استوديو واحد."
-  },
-  "lidoma.who_title": {
-    "en": "What this project shows",
-    "ar": "ما يُظهره هذا المشروع"
+    "en": "We design sales brochures for developers, construction companies and real estate agents. Lidoma shows the full result from one studio: architecture, interiors, brochure and 360° tours. We can make the same for your project.",
+    "ar": "نصمّم كتيّبات المبيعات للمطوّرين العقاريين وشركات المقاولات والوكلاء العقاريين. ويعرض ليدوما النتيجة الكاملة من استوديو واحد: العمارة والتصميم الداخلي والكتيّب والجولات بزاوية 360°. ويمكننا إنجاز المثل لمشروعكم."
   },
   "lidoma.c1_title": {
     "en": "For developers",
     "ar": "للمطوّرين العقاريين"
   },
   "lidoma.c1_body": {
-    "en": "Everything a launch needs: the sales brochure, plans of every unit type, exterior and interior images, and virtual tours.",
-    "ar": "كل ما يحتاجه إطلاق المشروع: كتيّب المبيعات، ومخططات جميع نماذج الوحدات، وصور الواجهات والتصميم الداخلي، والجولات الافتراضية."
+    "en": "A complete sales brochure for your project: plans of every unit type, exterior and interior images, and virtual tours.",
+    "ar": "كتيّب مبيعات كامل لمشروعكم: مخططات جميع نماذج الوحدات، وصور الواجهات والتصميم الداخلي، والجولات الافتراضية."
   },
   "lidoma.c2_title": {
     "en": "For construction companies",
     "ar": "لشركات المقاولات"
   },
   "lidoma.c2_body": {
-    "en": "Drawings, 3D model and furnished plans that agree with each other, so what the buyer sees is what can be built.",
-    "ar": "مخططات ونموذج ثلاثي الأبعاد ومخططات مفروشة متطابقة فيما بينها، ليكون ما يراه المشتري هو ما يمكن تنفيذه فعلًا."
+    "en": "A brochure built on your drawings, with a 3D model and furnished plans that agree with each other, so what the buyer sees is what can be built.",
+    "ar": "كتيّب مبني على مخططاتكم، مع نموذج ثلاثي الأبعاد ومخططات مفروشة متطابقة فيما بينها، ليكون ما يراه المشتري هو ما يمكن تنفيذه فعلًا."
   },
   "lidoma.c3_title": {
     "en": "For real estate agents",
     "ar": "للوكلاء العقاريين"
   },
   "lidoma.c3_body": {
-    "en": "Material that sells before the building is finished: a buyer scans the QR code in the brochure and walks through the space on their phone.",
-    "ar": "مواد تبيع قبل اكتمال البناء: يمسح المشتري رمز QR في الكتيّب ويتجوّل في المكان من هاتفه."
+    "en": "Brochures and tours that help you sell before the building is finished: a buyer scans a QR code and walks through the space on their phone.",
+    "ar": "كتيّبات وجولات تساعدكم على البيع قبل اكتمال البناء: يمسح المشتري رمز QR ويتجوّل في المكان من هاتفه."
   },
   "lidoma.brochure_tag": {
-    "en": "The brochure",
-    "ar": "الكتيّب"
+    "en": "The sample brochure",
+    "ar": "الكتيّب النموذجي"
   },
   "lidoma.brochure_title": {
-    "en": "Browse the sales brochure",
-    "ar": "تصفّح كتيّب المبيعات"
+    "en": "Browse the sample brochure",
+    "ar": "تصفّح الكتيّب النموذجي"
   },
   "lidoma.price_notice": {
-    "en": "<strong>Please note:</strong> the prices and payment figures in this brochure are sample figures, shown for presentation only. They are not real prices and are not an offer for sale.",
-    "ar": "<strong>يُرجى الانتباه:</strong> الأسعار وأرقام الدفع الواردة في هذا الكتيّب أرقام نموذجية لأغراض العرض فقط، وهي ليست أسعارًا حقيقية ولا تمثّل عرضًا للبيع."
+    "en": "<strong>Please note:</strong> this brochure is a design sample by NILZ, not a sales offer. Its prices, payment plan and specifications are sample figures, not real ones.",
+    "ar": "<strong>يُرجى الانتباه:</strong> هذا الكتيّب نموذج تصميم من NILZ، وليس عرضًا للبيع. والأسعار وخطة الدفع والمواصفات الواردة فيه أرقام نموذجية، وليست حقيقية."
   },
   "lidoma.view_only": {
     "en": "View only. To receive the PDF, use the <a href=\"lidoma/#request\">request form</a> below.",
@@ -664,8 +660,8 @@
     "ar": "الكتيّب معروض حاليًا باللغة الإنجليزية، وستتوفر النسخة العربية قريبًا."
   },
   "lidoma.brochure_soon": {
-    "en": "The brochure will be available here soon.",
-    "ar": "سيتوفر الكتيّب هنا قريبًا."
+    "en": "The sample brochure will be available here soon.",
+    "ar": "سيتوفر الكتيّب النموذجي هنا قريبًا."
   },
   "lidoma.prev": {
     "en": "Previous page",
@@ -708,12 +704,12 @@
     "ar": "افتح الجولة"
   },
   "lidoma.form_title": {
-    "en": "Request the full brochure",
-    "ar": "اطلب الكتيّب كاملًا"
+    "en": "Want a brochure like this for your project?",
+    "ar": "هل ترغبون في كتيّب مماثل لمشروعكم؟"
   },
   "lidoma.form_intro": {
-    "en": "The brochure can be viewed on this page but not downloaded. Send your details and we will email you the PDF.",
-    "ar": "يمكن تصفّح الكتيّب في هذه الصفحة، لكن لا يمكن تنزيله. أرسلوا بياناتكم وسنرسل إليكم ملف PDF بالبريد الإلكتروني."
+    "en": "The sample can be viewed here but not downloaded. Send your details and we will email you the PDF and talk about your project.",
+    "ar": "يمكن تصفّح النموذج هنا، لكن لا يمكن تنزيله. أرسلوا بياناتكم وسنرسل إليكم ملف PDF بالبريد الإلكتروني ونتحدث عن مشروعكم."
   },
   "lidoma.company_opt": {
     "en": "Company (optional)",
@@ -744,23 +740,23 @@
     "ar": "أخرى"
   },
   "lidoma.submit": {
-    "en": "Request the brochure",
-    "ar": "اطلب الكتيّب"
+    "en": "Request the PDF",
+    "ar": "اطلب ملف PDF"
   },
   "lidoma.sample_tag": {
-    "en": "Portfolio sample",
-    "ar": "نموذج من أعمالنا"
+    "en": "Brochure design sample",
+    "ar": "نموذج لتصميم الكتيّبات"
   },
   "lidoma.sample_title": {
-    "en": "Lidoma, Muscat: one full project",
-    "ar": "ليدوما، مسقط: مشروع متكامل"
+    "en": "A brochure we designed: Lidoma, Muscat",
+    "ar": "كتيّب من تصميمنا: ليدوما، مسقط"
   },
   "lidoma.sample_body": {
-    "en": "See what we deliver on a real project: the sales brochure, floor plans and 360° tours of a 40-home building in Al Mabaila.",
-    "ar": "شاهدوا ما ننجزه في مشروع حقيقي: كتيّب المبيعات والمخططات والجولات الافتراضية بزاوية 360° لمبنى يضم 40 وحدة سكنية في المعبيلة."
+    "en": "See what we can design for your projects: the full sales brochure, floor plans and 360° tours of Lidoma, a 40-home building in Al Mabaila.",
+    "ar": "شاهدوا ما يمكننا تصميمه لمشاريعكم: كتيّب مبيعات كامل ومخططات وجولات افتراضية بزاوية 360° لمشروع ليدوما، مبنى يضم 40 وحدة سكنية في المعبيلة."
   },
   "lidoma.sample_btn": {
-    "en": "View the project",
-    "ar": "استعرض المشروع"
+    "en": "View the sample",
+    "ar": "استعرض النموذج"
   }
 }

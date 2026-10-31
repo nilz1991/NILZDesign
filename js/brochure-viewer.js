@@ -1,5 +1,5 @@
 // Page-by-page brochure viewer for /lidoma/ (view only, no download link).
-// Reads lidoma/brochure/pages.json ({en:[...], ar:[...]}, each page {f,t,w,h,single,notice}).
+// Reads lidoma/brochure/pages.json ({en:[...], ar:[...]}, each page {f,t,w,h,single}).
 // Desktop: one spread per view. Phone: every spread is split, so a page fills the screen width.
 // Pages carry a baked-in watermark; the handlers below only stop casual saving, a screenshot cannot be blocked.
 
