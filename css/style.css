@@ -2474,6 +2474,7 @@ html[dir="rtl"] .partner-edge { padding: 8px 34px 8px 0; }
   .bv-nav { width: 38px; height: 38px; margin-top: -19px; font-size: 1.3rem; }
   .bv-nav--prev { left: 8px; }
   .bv-nav--next { right: 8px; }
+  .bv-count { left: auto; right: 10px; top: 10px; }
   .lidoma-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .lidoma-hero__actions .btn { width: 100%; justify-content: center; }
   .lidoma-sample { grid-template-columns: 1fr; }
