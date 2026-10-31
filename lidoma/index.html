@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&family=Tajawal:wght@300;400;500;700&family=El+Messiri:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=41">
+  <link rel="stylesheet" href="css/style.css?v=42">
   <script src="js/analytics.js" defer></script>
 </head>
 <body>
@@ -121,46 +121,24 @@
     <div class="container partner-form-wrap">
       <h2 class="contact-form__title" data-i18n="lidoma.form_title">Want a brochure like this for your project?</h2>
       <p class="lidoma-form-intro" data-i18n="lidoma.form_intro"></p>
-      <form class="contact-form" name="lidoma-brochure" method="POST" action="https://formsubmit.co/info@nilzdesign.com">
-        <input type="hidden" name="_next" value="https://nilzdesign.com/thank-you">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="BROCHURE SAMPLE REQUEST — Lidoma">
-        <input type="text" name="_honey" class="lidoma-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="person" data-i18n="pform.contact">Contact person</label>
-            <input type="text" id="person" name="Contact person" required placeholder="Full name" data-i18n-ph="pform.ph_contact">
-          </div>
-          <div class="form-group">
-            <label for="company" data-i18n="lidoma.company_opt">Company (optional)</label>
-            <input type="text" id="company" name="Company" placeholder="Your company" data-i18n-ph="pform.ph_company">
-          </div>
+      <form class="contact-form" id="lidoma-form">
+        <input type="text" name="website" class="lidoma-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-group">
+          <label for="company" data-i18n="pform.company">Company name</label>
+          <input type="text" id="company" name="company" required minlength="2" maxlength="120" placeholder="Your company" data-i18n-ph="pform.ph_company">
         </div>
         <div class="form-row">
           <div class="form-group">
             <label for="email" data-i18n="pform.email">Email</label>
-            <input type="email" id="email" name="Email" required placeholder="name@company.com">
+            <input type="email" id="email" name="email" required maxlength="160" placeholder="name@company.com">
           </div>
           <div class="form-group">
             <label for="phone" data-i18n="pform.phone">Phone / WhatsApp</label>
-            <input type="tel" id="phone" name="Phone" required placeholder="+968 9xxx xxxx">
+            <input type="tel" id="phone" name="phone" required maxlength="30" placeholder="+968 9xxx xxxx">
           </div>
         </div>
-        <div class="form-group">
-          <label for="role" data-i18n="lidoma.role">You are</label>
-          <select id="role" name="Requester">
-            <option value="Developer" data-i18n="lidoma.role_developer">Developer</option>
-            <option value="Construction company" data-i18n="lidoma.role_contractor">Construction company</option>
-            <option value="Real estate agent" data-i18n="lidoma.role_agent">Real estate agent</option>
-            <option value="Private client" data-i18n="lidoma.role_client">Private client</option>
-            <option value="Other" data-i18n="lidoma.role_other">Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message" data-i18n="pform.message">Anything else?</label>
-          <textarea id="message" name="Message" rows="3"></textarea>
-        </div>
-        <button type="submit" class="btn btn--solid" style="width:100%;justify-content:center;padding:18px" data-i18n="lidoma.submit">Request the PDF</button>
+        <button type="submit" class="btn btn--solid" style="width:100%;justify-content:center;padding:18px" data-i18n="lidoma.submit">Send me the download link</button>
+        <p class="lidoma-form-msg" id="lidoma-form-msg" role="status" hidden></p>
       </form>
     </div>
   </section>
@@ -171,6 +149,7 @@
     import { init as initMain } from './js/main.js';
     import { initI18n, applyStatic, isAr, onLangChange } from './js/i18n.js';
     import { initBrochureViewer } from './js/brochure-viewer.js';
+    import { initLidomaForm } from './js/lidoma-form.js';
 
     await initI18n();
     initHeader();
@@ -187,6 +166,7 @@
     };
     showLangNote();
     onLangChange(showLangNote);
+    initLidomaForm(document.getElementById('lidoma-form'));
 
     applyStatic();
     initMain();

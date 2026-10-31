@@ -652,8 +652,8 @@
     "ar": "<strong>يُرجى الانتباه:</strong> هذا الكتيّب نموذج تصميم من NILZ، وليس عرضًا للبيع. والأسعار وخطة الدفع والمواصفات الواردة فيه أرقام نموذجية، وليست حقيقية."
   },
   "lidoma.view_only": {
-    "en": "View only. To receive the PDF, use the <a href=\"lidoma/#request\">request form</a> below.",
-    "ar": "للعرض فقط. للحصول على ملف PDF، يُرجى تعبئة <a href=\"lidoma/#request\">نموذج الطلب</a> أدناه."
+    "en": "View only. To download the PDF, use the <a href=\"lidoma/#request\">request form</a> below.",
+    "ar": "للعرض فقط. لتنزيل ملف PDF، يُرجى تعبئة <a href=\"lidoma/#request\">نموذج الطلب</a> أدناه."
   },
   "lidoma.en_only": {
     "en": "",
@@ -708,40 +708,32 @@
     "ar": "هل ترغبون في كتيّب مماثل لمشروعكم؟"
   },
   "lidoma.form_intro": {
-    "en": "The sample can be viewed here but not downloaded. Send your details and we will email you the PDF and talk about your project.",
-    "ar": "يمكن تصفّح النموذج هنا، لكن لا يمكن تنزيله. أرسلوا بياناتكم وسنرسل إليكم ملف PDF بالبريد الإلكتروني ونتحدث عن مشروعكم."
-  },
-  "lidoma.company_opt": {
-    "en": "Company (optional)",
-    "ar": "الشركة (اختياري)"
-  },
-  "lidoma.role": {
-    "en": "You are",
-    "ar": "صفة مقدّم الطلب"
-  },
-  "lidoma.role_developer": {
-    "en": "Developer",
-    "ar": "مطوّر عقاري"
-  },
-  "lidoma.role_contractor": {
-    "en": "Construction company",
-    "ar": "شركة مقاولات"
-  },
-  "lidoma.role_agent": {
-    "en": "Real estate agent",
-    "ar": "وكيل عقاري"
-  },
-  "lidoma.role_client": {
-    "en": "Private client",
-    "ar": "عميل فردي"
-  },
-  "lidoma.role_other": {
-    "en": "Other",
-    "ar": "أخرى"
+    "en": "The sample can be viewed here but not downloaded directly. Enter your company, email and phone, and we will send the download link to your email.",
+    "ar": "يمكن تصفّح النموذج هنا، لكن لا يمكن تنزيله مباشرةً. أدخلوا اسم الشركة والبريد الإلكتروني ورقم الهاتف، وسنرسل رابط التنزيل إلى بريدكم الإلكتروني."
   },
   "lidoma.submit": {
-    "en": "Request the PDF",
-    "ar": "اطلب ملف PDF"
+    "en": "Send me the download link",
+    "ar": "أرسلوا لي رابط التنزيل"
+  },
+  "lidoma.form_sent": {
+    "en": "Check your email: the download link is on its way. If it does not arrive within a few minutes, look in your spam folder.",
+    "ar": "تفقّدوا بريدكم الإلكتروني: رابط التنزيل في طريقه إليكم. إن لم يصل خلال دقائق، يُرجى النظر في مجلد الرسائل غير المرغوب فيها."
+  },
+  "lidoma.form_err_email": {
+    "en": "Please enter a real email address. Temporary addresses are not accepted.",
+    "ar": "يُرجى إدخال بريد إلكتروني حقيقي. لا تُقبل العناوين المؤقتة."
+  },
+  "lidoma.form_err_input": {
+    "en": "Please check the company name and phone number.",
+    "ar": "يُرجى التحقق من اسم الشركة ورقم الهاتف."
+  },
+  "lidoma.form_err_limit": {
+    "en": "Too many requests. Please try again later or contact us on WhatsApp.",
+    "ar": "عدد الطلبات كبير. يُرجى المحاولة لاحقًا أو التواصل معنا عبر واتساب."
+  },
+  "lidoma.form_err_send": {
+    "en": "The link could not be sent. Please try again or contact us on WhatsApp.",
+    "ar": "تعذّر إرسال الرابط. يُرجى المحاولة مرة أخرى أو التواصل معنا عبر واتساب."
   },
   "lidoma.sample_tag": {
     "en": "Brochure design sample",

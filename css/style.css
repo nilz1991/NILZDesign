@@ -2349,6 +2349,17 @@ html[dir="rtl"] .partner-edge { padding: 8px 34px 8px 0; }
 .lidoma-soon { margin-top: 28px; color: var(--navy); font-size: 1.05rem; }
 .lidoma-form-intro { color: var(--gray); line-height: 1.8; margin: -22px 0 32px; }
 .lidoma-honey { display: none; }
+.lidoma-form-msg {
+  margin-top: 16px;
+  padding: 14px 18px;
+  background: var(--white);
+  border-inline-start: 3px solid var(--gold);
+  color: var(--navy);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+.lidoma-form-msg.is-error { border-inline-start-color: #582826; }
+.lidoma-form-msg[hidden] { display: none; }
 /* tours */
 .lidoma-tours {
   display: grid;
