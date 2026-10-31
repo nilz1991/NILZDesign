@@ -1,6 +1,6 @@
 // Page-by-page brochure viewer for /lidoma/ (view only, no download link).
-// Reads lidoma/brochure/pages.json ({en:[...], ar:[...]}, each page {f,t,w,h,single,tour?,phone?}; phone = whole-page image
-// of the cover and back cover, whose f is cut to the desktop viewer's shape).
+// Reads lidoma/brochure/pages.json ({en:[...], ar:[...]}, each page {f,t,w,h,single,tour?,phone?}). The cover's f is its lower
+// half on every screen; the back cover's f is widened for desktop and phone holds the plain page.
 // Desktop: one spread per view. Phone: every spread is split, so a page fills the screen width.
 // A page with a tour QR also gets an open-the-tour button: nobody can scan a screen with the phone that shows it.
 // The handlers below only stop casual saving; a screenshot cannot be blocked.
@@ -75,7 +75,7 @@ export async function initBrochureViewer(root) {
     index = Math.max(0, Math.min(slides.length - 1, i));
     const s = slides[index];
     const p = pages[s.page];
-    stage.classList.toggle('is-half', mq.matches);
+    stage.classList.toggle('is-half', !!s.side || !!(mq.matches && p.phone));
     pageEl.classList.toggle('is-half', !!s.side);
     pageEl.classList.toggle('is-left', s.side === 'l');
     pageEl.classList.toggle('is-right', s.side === 'r');
