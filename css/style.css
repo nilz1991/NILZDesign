@@ -2492,3 +2492,18 @@ html[dir="rtl"] .partner-edge { padding: 8px 34px 8px 0; }
   .lidoma-sample__img { min-height: 200px; }
   .lidoma-sample__text { padding: 28px 24px; }
 }
+
+/* ── Home: featured brochure design band ── */
+.brochure-band { position: relative; background: #0d0b09; overflow: hidden; }
+.brochure-band__img { display: block; width: 100%; aspect-ratio: 2000 / 707; object-fit: cover; }
+.brochure-band__inner { position: absolute; inset: 0; display: flex; align-items: center; }
+.brochure-band__text { max-width: 480px; color: var(--white); }
+.brochure-band__title { font-size: clamp(2rem, 3.6vw, 3.2rem); font-weight: 500; color: var(--white); margin-bottom: 14px; }
+.brochure-band__body { color: rgba(255,255,255,0.78); line-height: 1.75; margin-bottom: 26px; }
+/* the photo's dark side stays behind the text in Arabic */
+html[dir="rtl"] .brochure-band__img { transform: scaleX(-1); }
+@media (max-width: 760px) {
+  .brochure-band__inner { position: static; display: block; padding-top: 28px; padding-bottom: 36px; }
+  .brochure-band__text { max-width: none; }
+  .brochure-band .btn { width: 100%; justify-content: center; }
+}

@@ -575,6 +575,22 @@
     "en": "Send enquiry",
     "ar": "إرسال الطلب"
   },
+  "home.brochure_tag": {
+    "en": "Featured work",
+    "ar": "من أعمالنا المميزة"
+  },
+  "home.brochure_title": {
+    "en": "Sales Brochure Design",
+    "ar": "تصميم كتيّبات المبيعات"
+  },
+  "home.brochure_body": {
+    "en": "A complete brochure with 360° tours, designed for Lidoma, Muscat.",
+    "ar": "كتيّب متكامل مع جولات بزاوية 360°، صمّمناه لمشروع ليدوما في مسقط."
+  },
+  "home.brochure_btn": {
+    "en": "View the brochure sample",
+    "ar": "استعرض نموذج الكتيّب"
+  },
   "lidoma.hero_tag": {
     "en": "Brochure design sample",
     "ar": "نموذج لتصميم الكتيّبات"
