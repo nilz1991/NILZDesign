@@ -1,9 +1,10 @@
 // Page-by-page brochure viewer for /lidoma/ (view only, no download link).
-// Reads lidoma/brochure/pages.json ({en:[...], ar:[...]}, each page {f,t,w,h,single}).
+// Reads lidoma/brochure/pages.json ({en:[...], ar:[...]}, each page {f,t,w,h,single,tour?}).
 // Desktop: one spread per view. Phone: every spread is split, so a page fills the screen width.
+// A page with a tour QR also gets an open-the-tour button: nobody can scan a screen with the phone that shows it.
 // Pages carry a baked-in watermark; the handlers below only stop casual saving, a screenshot cannot be blocked.
 
-import { t, isAr, onLangChange, applyStatic } from './i18n.js';
+import { isAr, onLangChange, applyStatic } from './i18n.js';
 
 const BASE = 'lidoma/brochure/';
 const NARROW = '(max-width: 760px)';
@@ -26,6 +27,7 @@ export async function initBrochureViewer(root) {
       <div class="bv-stage">
         <div class="bv-page"><img alt="" draggable="false"></div>
         <div class="bv-shield" aria-hidden="true"></div>
+        <a class="bv-tour" data-i18n="lidoma.tour_open" hidden>Open the tour</a>
         <button type="button" class="bv-nav bv-nav--prev" data-i18n-aria="lidoma.prev">&#8249;</button>
         <button type="button" class="bv-nav bv-nav--next" data-i18n-aria="lidoma.next">&#8250;</button>
         <button type="button" class="bv-full" data-i18n-aria="lidoma.fullscreen" hidden>&#x26F6;</button>
@@ -39,7 +41,8 @@ export async function initBrochureViewer(root) {
   const pageEl = root.querySelector('.bv-page');
   const img    = pageEl.querySelector('img');
   const count  = root.querySelector('.bv-count');
-  const prev   = root.querySelector('.bv-nav--prev');
+  const tour   = root.querySelector('.bv-tour');
+  const prev  = root.querySelector('.bv-nav--prev');
   const next   = root.querySelector('.bv-nav--next');
   const full   = root.querySelector('.bv-full');
   const thumbs = root.querySelector('.bv-thumbs');
@@ -79,6 +82,8 @@ export async function initBrochureViewer(root) {
       img.onload = () => img.classList.remove('is-loading');
       img.src = src;
     }
+    tour.hidden = !p.tour;
+    if (p.tour) tour.href = p.tour;
     count.textContent = `${index + 1} / ${slides.length}`;
     prev.disabled = index === 0;
     next.disabled = index === slides.length - 1;
