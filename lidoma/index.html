@@ -90,7 +90,6 @@
     <div id="bv-root"></div>
     <div class="container">
       <p class="lidoma-note" id="bv-en-only" data-i18n="lidoma.en_only" hidden></p>
-      <p class="lidoma-note" id="bv-view-only" data-i18n="lidoma.view_only" hidden></p>
     </div>
   </section>
 
@@ -116,30 +115,11 @@
     </div>
   </section>
 
-  <!-- ── PDF request ────────────────────── -->
+  <!-- ── Contact ────────────────────────── -->
   <section class="section section--cream" id="request">
     <div class="container partner-form-wrap">
       <h2 class="contact-form__title" data-i18n="lidoma.form_title">Want a brochure like this for your project?</h2>
-      <p class="lidoma-form-intro" data-i18n="lidoma.form_intro"></p>
-      <form class="contact-form" id="lidoma-form">
-        <input type="text" name="website" class="lidoma-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <div class="form-group">
-          <label for="company" data-i18n="pform.company">Company name</label>
-          <input type="text" id="company" name="company" required minlength="2" maxlength="120" placeholder="Your company" data-i18n-ph="pform.ph_company">
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="email" data-i18n="pform.email">Email</label>
-            <input type="email" id="email" name="email" required maxlength="160" placeholder="name@company.com">
-          </div>
-          <div class="form-group">
-            <label for="phone" data-i18n="pform.phone">Phone / WhatsApp</label>
-            <input type="tel" id="phone" name="phone" required maxlength="30" placeholder="+968 9xxx xxxx">
-          </div>
-        </div>
-        <button type="submit" class="btn btn--solid" style="width:100%;justify-content:center;padding:18px" data-i18n="lidoma.submit">Send me the download link</button>
-        <p class="lidoma-form-msg" id="lidoma-form-msg" role="status" hidden></p>
-      </form>
+      <a class="btn btn--solid" href="contact.html" data-i18n="cta.start_project">Start a Project</a>
     </div>
   </section>
 
@@ -149,7 +129,6 @@
     import { init as initMain } from './js/main.js';
     import { initI18n, applyStatic, isAr, onLangChange } from './js/i18n.js';
     import { initBrochureViewer } from './js/brochure-viewer.js';
-    import { initLidomaForm } from './js/lidoma-form.js';
 
     await initI18n();
     initHeader();
@@ -158,7 +137,6 @@
     const viewer = await initBrochureViewer(document.getElementById('bv-root'));
     const pagesReady = viewer.count > 0;
     document.getElementById('bv-soon').hidden = pagesReady;
-    document.getElementById('bv-view-only').hidden = !pagesReady;
 
     // The brochure exists in English only until the Arabic edition is built
     const showLangNote = () => {
@@ -166,7 +144,6 @@
     };
     showLangNote();
     onLangChange(showLangNote);
-    initLidomaForm(document.getElementById('lidoma-form'));
 
     applyStatic();
     initMain();
