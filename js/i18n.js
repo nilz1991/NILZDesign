@@ -91,8 +91,9 @@ export function tf(obj, key) {
 // Translate static markup: [data-i18n] → innerHTML, plus placeholder / aria-label.
 export function applyStatic(root = document) {
   root.querySelectorAll('[data-i18n]').forEach(el => {
-    const val = t(el.getAttribute('data-i18n'));
-    if (val != null && val !== '') el.innerHTML = val;
+    const key = el.getAttribute('data-i18n');
+    const val = t(key);
+    if (val != null && val !== '' && val !== key) el.innerHTML = val;
   });
   root.querySelectorAll('[data-i18n-ph]').forEach(el => {
     const val = t(el.getAttribute('data-i18n-ph'));

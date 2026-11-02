@@ -9,7 +9,7 @@
   },
   "nav.about": {
     "en": "About",
-    "ar": "من نحن"
+    "ar": "نبذة عني"
   },
   "nav.contact": {
     "en": "Contact",
@@ -24,8 +24,8 @@
     "ar": "تصفّح المشاريع"
   },
   "btn.about_us": {
-    "en": "About Us",
-    "ar": "من نحن"
+    "en": "About Me",
+    "ar": "نبذة عني"
   },
   "btn.contact": {
     "en": "Contact",

@@ -1,4 +1,4 @@
-// Full-screen film for /lidoma/ and the home page: a click shows the film alone, over the whole page, and starts it with sound.
+// Full-screen film for /lidoma/: a click shows the film alone, over the whole page, and starts it with sound.
 // A screen held upright gets the vertical cut, any other screen the wide one. Nothing downloads before the click.
 // iPhone Safari cannot put a page element in full screen, so there the player fills the space between the browser's bars.
 
@@ -38,7 +38,7 @@ export function initFilmPlayer() {
 
   // While the panel fills the view, the white header and the cream scrollbar step aside
   const panel = document.getElementById('film');
-  if (panel) new IntersectionObserver(([entry]) => {
+  new IntersectionObserver(([entry]) => {
     document.documentElement.classList.toggle('panel-in-view', entry.isIntersecting);
   }, { threshold: 0.6 }).observe(panel);
 
