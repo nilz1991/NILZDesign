@@ -575,21 +575,189 @@
     "en": "Send enquiry",
     "ar": "إرسال الطلب"
   },
-  "home.brochure_tag": {
-    "en": "Featured work",
-    "ar": "من أعمالنا المميزة"
+  "home.top_tag": {
+    "en": "Top project · Lidoma",
+    "ar": "مشروع مميّز · ليدوما"
   },
-  "home.brochure_title": {
-    "en": "Sales Brochure Design",
-    "ar": "تصميم كتيّبات المبيعات"
+  "home.top_title": {
+    "en": "Complete brochure content and visual design <em>for developers and off-plan sales companies</em>",
+    "ar": "تصميم المحتوى الكامل للكتيّب والمواد البصرية <em>لشركات التطوير العقاري والبيع على الخارطة</em>"
   },
-  "home.brochure_body": {
-    "en": "A complete brochure with 360° tours, designed for Lidoma, Muscat.",
-    "ar": "كتيّب متكامل مع جولات بزاوية 360°، صمّمناه لمشروع ليدوما في مسقط."
+  "home.top_say_tag": {
+    "en": "The project",
+    "ar": "المشروع"
   },
-  "home.brochure_btn": {
-    "en": "View the brochure sample",
-    "ar": "استعرض نموذج الكتيّب"
+  "home.top_say": {
+    "en": "One studio took Lidoma from the first render to the last page: <em>the visuals, the words, the plans and the sales story.</em>",
+    "ar": "رافق استوديو واحد مشروع ليدوما من أول صورة إلى آخر صفحة: <em>المواد البصرية والنصوص والمخططات وقصة البيع.</em>"
+  },
+  "home.top_say_body": {
+    "en": "40 homes above 14 shops in Muscat: a 62-page brochure, a 30-second film and three 360° tours. A design sample by NILZ, not a sales offer.",
+    "ar": "40 وحدة سكنية فوق 14 متجرًا في مسقط: كتيّب من 62 صفحة وفيلم مدته 30 ثانية وثلاث جولات بزاوية 360°. نموذج تصميم من NILZ، وليس عرضًا للبيع."
+  },
+  "home.top_steps_tag": {
+    "en": "From the building to the home",
+    "ar": "من المبنى إلى الوحدة السكنية"
+  },
+  "home.top_of": {
+    "en": "of",
+    "ar": "من"
+  },
+  "home.top_st1_title": {
+    "en": "The building, layer by layer",
+    "ar": "المبنى طبقةً طبقة"
+  },
+  "home.top_st1_body": {
+    "en": "Basement parking, a ground floor of 14 shops, five residential floors and a roof garden.",
+    "ar": "مواقف في القبو وطابق أرضي من 14 متجرًا وخمسة طوابق سكنية وحديقة على السطح."
+  },
+  "home.top_st2_title": {
+    "en": "Roof garden",
+    "ar": "حديقة السطح"
+  },
+  "home.top_st2_body": {
+    "en": "Pool 9 × 4 m, sun deck, lounge, BBQ, kids' play and changing rooms.",
+    "ar": "مسبح بمقاس 9 × 4 م وسطح للتشمّس وجلسة استرخاء ومنطقة شواء وأخرى للعب الأطفال وغرف لتبديل الملابس."
+  },
+  "home.top_st3_title": {
+    "en": "Five residential floors",
+    "ar": "خمسة طوابق سكنية"
+  },
+  "home.top_st3_body": {
+    "en": "40 two-bedroom homes, eight on every floor.",
+    "ar": "40 وحدة سكنية بغرفتي نوم، ثماني وحدات في كل طابق."
+  },
+  "home.top_st4_title": {
+    "en": "Ground floor",
+    "ar": "الطابق الأرضي"
+  },
+  "home.top_st4_body": {
+    "en": "14 shops facing the street.",
+    "ar": "14 متجرًا مطلًّا على الشارع."
+  },
+  "home.top_st5_title": {
+    "en": "Basement parking",
+    "ar": "مواقف القبو"
+  },
+  "home.top_st5_body": {
+    "en": "The cars stay below, out of sight.",
+    "ar": "تبقى السيارات في الأسفل، بعيدًا عن الأنظار."
+  },
+  "home.top_st6_title": {
+    "en": "The typical floor",
+    "ar": "الطابق النموذجي"
+  },
+  "home.top_st6_body": {
+    "en": "Eight homes on every floor, each with its own number.",
+    "ar": "ثماني وحدات في كل طابق، لكل منها رقمها."
+  },
+  "home.top_st7_title": {
+    "en": "Type A",
+    "ar": "النوع A"
+  },
+  "home.top_st7_body": {
+    "en": "83.7 m² gross · two bedrooms, kitchen balcony",
+    "ar": "83.7 م² إجمالي · غرفتا نوم وشرفة للمطبخ"
+  },
+  "home.top_st8_title": {
+    "en": "Type B",
+    "ar": "النوع B"
+  },
+  "home.top_st8_body": {
+    "en": "82.1 m² gross · two bedrooms, facing east",
+    "ar": "82.1 م² إجمالي · غرفتا نوم باتجاه الشرق"
+  },
+  "home.top_st9_title": {
+    "en": "Type C",
+    "ar": "النوع C"
+  },
+  "home.top_st9_body": {
+    "en": "80.8 m² gross · a corner home, two balconies",
+    "ar": "80.8 م² إجمالي · وحدة ركنية بشرفتين"
+  },
+  "home.top_st10_title": {
+    "en": "Type D",
+    "ar": "النوع D"
+  },
+  "home.top_st10_body": {
+    "en": "74.5 m² gross · two bedrooms, two bathrooms",
+    "ar": "74.5 م² إجمالي · غرفتا نوم وحمّامان"
+  },
+  "home.top_st11_title": {
+    "en": "Type E",
+    "ar": "النوع E"
+  },
+  "home.top_st11_body": {
+    "en": "76.1 m² gross · two bathrooms, two balconies",
+    "ar": "76.1 م² إجمالي · حمّامان وشرفتان"
+  },
+  "home.top_book_tag": {
+    "en": "The brochure",
+    "ar": "الكتيّب"
+  },
+  "home.top_book_title": {
+    "en": "62 pages, <em>written and designed</em> for one project",
+    "ar": "62 صفحة <em>كُتبت وصُمّمت</em> لمشروع واحد"
+  },
+  "home.top_book_body": {
+    "en": "The text, the visuals, the plans and the sales pages all come from one team.",
+    "ar": "النصوص والمناظر والمخططات وصفحات المبيعات كلها من إعداد فريق واحد."
+  },
+  "home.top_r1_tag": {
+    "en": "Content",
+    "ar": "المحتوى"
+  },
+  "home.top_r1_title": {
+    "en": "Written for the buyer",
+    "ar": "مكتوب للمشتري"
+  },
+  "home.top_r1_body": {
+    "en": "The place, the building and the way of life, told in clear words.",
+    "ar": "المكان والمبنى وأسلوب الحياة، بكلمات واضحة."
+  },
+  "home.top_r2_tag": {
+    "en": "Plans and areas",
+    "ar": "المخططات والمساحات"
+  },
+  "home.top_r2_title": {
+    "en": "Every home, measured",
+    "ar": "كل وحدة بمقاساتها"
+  },
+  "home.top_r2_body": {
+    "en": "Plans, areas and a register of all 40 homes, floor by floor.",
+    "ar": "مخططات ومساحات وسجلّ لكل الوحدات الأربعين، طابقًا بعد طابق."
+  },
+  "home.top_r3_tag": {
+    "en": "QR codes",
+    "ar": "رموز QR"
+  },
+  "home.top_r3_title": {
+    "en": "From the page into the space",
+    "ar": "من الصفحة إلى داخل المكان"
+  },
+  "home.top_r3_body": {
+    "en": "Scan the page and the same space opens in 360°.",
+    "ar": "امسح الرمز ليفتح المكان نفسه بزاوية 360°."
+  },
+  "home.top_bridge": {
+    "en": "The brochure opens the door. <em>The film and the tours take the buyer inside.</em>",
+    "ar": "الكتيّب يفتح الباب، <em>والفيلم والجولات تأخذ المشتري إلى الداخل.</em>"
+  },
+  "home.top_end_title": {
+    "en": "See the whole <em>project</em>",
+    "ar": "شاهد <em>المشروع</em> كاملًا"
+  },
+  "home.top_end_body": {
+    "en": "The brochure, the film and the three 360° tours on one page.",
+    "ar": "الكتيّب والفيلم والجولات الثلاث بزاوية 360° في صفحة واحدة."
+  },
+  "home.top_end_btn": {
+    "en": "Open the project",
+    "ar": "افتح صفحة المشروع"
+  },
+  "home.top_end_note": {
+    "en": "A design sample by NILZ, not a sales offer.",
+    "ar": "نموذج تصميم من NILZ، وليس عرضًا للبيع."
   },
   "lidoma.hero_tag": {
     "en": "Brochure design sample",

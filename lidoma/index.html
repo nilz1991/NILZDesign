@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&family=Tajawal:wght@300;400;500;700&family=El+Messiri:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=45">
+  <link rel="stylesheet" href="css/style.css?v=46">
   <script src="js/analytics.js" defer></script>
 </head>
 <body>
@@ -95,15 +95,19 @@
   </section>
 
   <!-- ── Film ───────────────────────────── -->
-  <section class="section section--navy">
-    <div class="container">
+  <section class="film-panel" id="film">
+    <button type="button" class="film-panel__media" data-film-open data-i18n-aria="lidoma.film_aria">
+      <picture>
+        <source media="(orientation: portrait)" srcset="assets/images/lidoma/film-poster-vertical.jpg">
+        <img src="assets/images/lidoma/film-poster.jpg?v=2" alt="" loading="lazy">
+      </picture>
+      <span class="film-panel__play"></span>
+    </button>
+    <div class="film-panel__text">
       <span class="section-tag" data-i18n="lidoma.film_tag">Launch film</span>
       <h2 class="section-title" data-i18n="lidoma.film_title">The project in 30 seconds</h2>
-      <p class="lidoma-film__body" data-i18n="lidoma.film_body"></p>
-      <button type="button" class="lidoma-film" id="film" data-film-open data-i18n-aria="lidoma.film_aria">
-        <img src="assets/images/lidoma/film-poster.jpg" alt="" loading="lazy">
-        <span class="lidoma-film__play"></span>
-      </button>
+      <p class="film-panel__body" data-i18n="lidoma.film_body"></p>
+      <a class="btn btn--gold" href="lidoma/#film" data-film-open data-i18n="lidoma.btn_film">Watch the film</a>
     </div>
   </section>
 
