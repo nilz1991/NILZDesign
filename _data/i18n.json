@@ -715,6 +715,14 @@
     "en": "A sample of the shops' interior design.",
     "ar": "نموذج للتصميم الداخلي للمتاجر."
   },
+  "lidoma.tour_roof_title": {
+    "en": "Roof garden",
+    "ar": "حديقة السطح"
+  },
+  "lidoma.tour_roof_body": {
+    "en": "Ten spaces by day and at dusk, with three floor finishes to switch between.",
+    "ar": "عشر مساحات في النهار وعند الغروب، مع ثلاثة خيارات لتشطيب الأرضيات."
+  },
   "lidoma.tour_open": {
     "en": "Open the tour",
     "ar": "افتح الجولة"
