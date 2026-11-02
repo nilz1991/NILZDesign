@@ -711,6 +711,10 @@
     "en": "Lidoma film, 30 seconds",
     "ar": "فيلم ليدوما، 30 ثانية"
   },
+  "lidoma.film_close": {
+    "en": "Close the film",
+    "ar": "إغلاق الفيلم"
+  },
   "lidoma.tours_tag": {
     "en": "360° tours",
     "ar": "جولات 360°"

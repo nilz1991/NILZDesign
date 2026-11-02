@@ -28,7 +28,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&family=DM+Sans:wght@300;400;500&family=Tajawal:wght@300;400;500;700&family=El+Messiri:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=44">
+  <link rel="stylesheet" href="css/style.css?v=45">
   <script src="js/analytics.js" defer></script>
 </head>
 <body>
@@ -47,7 +47,7 @@
       </ul>
       <div class="lidoma-hero__actions">
         <a class="btn btn--gold" href="lidoma/#brochure" data-i18n="lidoma.btn_brochure">Browse the brochure</a>
-        <a class="btn btn--outline-light" href="lidoma/#film" data-i18n="lidoma.btn_film">Watch the film</a>
+        <a class="btn btn--outline-light" href="lidoma/#film" data-film-open data-i18n="lidoma.btn_film">Watch the film</a>
         <a class="btn btn--outline-light" href="lidoma/#tours" data-i18n="lidoma.btn_tours">Take the 360° tours</a>
       </div>
     </div>
@@ -100,9 +100,18 @@
       <span class="section-tag" data-i18n="lidoma.film_tag">Launch film</span>
       <h2 class="section-title" data-i18n="lidoma.film_title">The project in 30 seconds</h2>
       <p class="lidoma-film__body" data-i18n="lidoma.film_body"></p>
-      <video class="lidoma-film" id="film" src="assets/images/lidoma/film.mp4" poster="assets/images/lidoma/film-poster.jpg" controls playsinline preload="metadata" data-i18n-aria="lidoma.film_aria"></video>
+      <button type="button" class="lidoma-film" id="film" data-film-open data-i18n-aria="lidoma.film_aria">
+        <img src="assets/images/lidoma/film-poster.jpg" alt="" loading="lazy">
+        <span class="lidoma-film__play"></span>
+      </button>
     </div>
   </section>
+
+  <!-- Full-screen film: the only thing in view once it is open -->
+  <div class="film-player" id="film-player" hidden>
+    <video controls playsinline preload="none" controlslist="nodownload nofullscreen" data-i18n-aria="lidoma.film_aria"></video>
+    <button type="button" class="film-player__close" data-i18n-aria="lidoma.film_close">&times;</button>
+  </div>
 
   <!-- ── 360° tours ─────────────────────── -->
   <section class="section section--white" id="tours">
@@ -146,10 +155,12 @@
     import { init as initMain } from './js/main.js';
     import { initI18n, applyStatic, isAr, onLangChange } from './js/i18n.js';
     import { initBrochureViewer } from './js/brochure-viewer.js';
+    import { initFilmPlayer } from './js/lidoma-film.js';
 
     await initI18n();
     initHeader();
     initFooter();
+    initFilmPlayer();
 
     const viewer = await initBrochureViewer(document.getElementById('bv-root'));
     const pagesReady = viewer.count > 0;
