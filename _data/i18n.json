@@ -607,6 +607,10 @@
     "en": "Browse the brochure",
     "ar": "تصفّح الكتيّب"
   },
+  "lidoma.btn_film": {
+    "en": "Watch the film",
+    "ar": "شاهد الفيلم"
+  },
   "lidoma.btn_tours": {
     "en": "Take the 360° tours",
     "ar": "ابدأ الجولات الافتراضية"
@@ -690,6 +694,22 @@
   "lidoma.fullscreen": {
     "en": "Full screen",
     "ar": "ملء الشاشة"
+  },
+  "lidoma.film_tag": {
+    "en": "Launch film",
+    "ar": "الفيلم التعريفي"
+  },
+  "lidoma.film_title": {
+    "en": "The project in 30 seconds",
+    "ar": "المشروع في 30 ثانية"
+  },
+  "lidoma.film_body": {
+    "en": "A sample of the short film we make to launch a project: the building, shops, homes, roof garden, brochure and tours, in one story.",
+    "ar": "نموذج من الفيلم القصير الذي نُعدّه لإطلاق المشاريع: المبنى والمتاجر والوحدات السكنية وحديقة السطح والكتيّب والجولات الافتراضية، في قصة واحدة."
+  },
+  "lidoma.film_aria": {
+    "en": "Lidoma film, 30 seconds",
+    "ar": "فيلم ليدوما، 30 ثانية"
   },
   "lidoma.tours_tag": {
     "en": "360° tours",

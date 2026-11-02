@@ -2360,6 +2360,9 @@ html[dir="rtl"] .partner-edge { padding: 8px 34px 8px 0; }
 }
 .lidoma-form-msg.is-error { border-inline-start-color: #582826; }
 .lidoma-form-msg[hidden] { display: none; }
+/* film */
+.lidoma-film__body { max-width: 640px; margin-top: 14px; color: rgba(255,255,255,0.72); line-height: 1.8; }
+.lidoma-film { width: 100%; max-width: calc(86vh * 16 / 9); aspect-ratio: 16 / 9; margin-top: 36px; background: #000; scroll-margin-top: 84px; }
 /* tours */
 .lidoma-tours {
   display: grid;
