@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#0f4c5c">
 <meta name="robots" content="noindex, nofollow">
-<meta property="og:title" content="Al Tariq Design – Client Brief">
+<meta property="og:title" content="NILZ Design – Client Brief">
 <meta property="og:description" content="A short questionnaire to prepare for your house design meeting.">
-<title>Al Tariq Design – Client Brief</title>
+<title>NILZ Design – Client Brief</title>
 <style>
 :root{
   --bg:#f4f1ea; --card:#ffffff; --ink:#1d2a30; --muted:#63727a; --line:#dcd6c8;
@@ -132,7 +132,7 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:8px 16px 20
 <body>
 
 <header class="hero"><div class="wrap">
-  <div class="brand"><div class="mono">AT</div><div><b>Al Tariq Design</b><small id="by"></small></div></div>
+  <div class="brand"><div class="mono">N</div><div><b>NILZ Design</b><small id="by"></small></div></div>
   <h1 id="title"></h1>
   <p id="intro"></p>
   <p class="priv" id="priv"></p>
@@ -167,7 +167,7 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:8px 16px 20
   </details>
 </main>
 
-<footer>Al Tariq Design · Muscat, Sultanate of Oman</footer>
+<footer>NILZ Design · Muscat, Sultanate of Oman</footer>
 
 <div class="dock"><button class="btn pri" type="button" id="bDock"></button></div>
 <div class="toast" id="toast" role="status"></div>
@@ -176,7 +176,7 @@ footer{color:var(--muted);font-size:12.5px;text-align:center;padding:8px 16px 20
 /* ================= OFFICE SETTINGS =================
    Put the office WhatsApp number here (digits only, with country code, e.g. "9689XXXXXXX").
    If left empty, WhatsApp opens and the client chooses the chat.
-   It can also be set in the link:  ...Client_Brief_AlTariq.html?wa=9689XXXXXXX&lang=ar          */
+   It can also be set in the link:  ...index.html?wa=9689XXXXXXX&lang=ar          */
 const OFFICE_WHATSAPP = "96892315257";
 /* =================================================== */
 
@@ -184,7 +184,7 @@ const LI = {en:0, ar:1, fa:2};
 const Y=['y','Yes','نعم','بله'], N=['n','No','لا','خیر'], NS=['ns','Not sure','غير متأكد','مطمئن نیستم'];
 
 const U = {
- en:{by:'Eng. Niloufar Zanjani · Architectural design', title:'Your new home – design brief',
+ en:{by:'Eng. Niloufar Zanjani · Architect & Interior Designer', title:'Your new home – design brief',
   intro:'Thank you for contacting us. This short questionnaire helps us understand what you need before our first meeting. It takes about 10–15 minutes. Skip anything you are not sure about – we will discuss it together.',
   priv:'Your answers stay on this phone only, until you send them to us.',
   prog:'{n} of {t} answered', sendT:'Send your answers',
@@ -193,11 +193,11 @@ const U = {
   clear:'Clear the form', clearQ:'Clear all answers?', dock:'Finish & send', copied:'Answers copied ✓ – paste them in the chat',
   copyFail:'Could not copy automatically – open “Preview”, select all and copy.',
   noName:'Your name and phone number are still empty. Send anyway?',
-  outTitle:'Al Tariq Design – Client brief', date:'Date', code:'— Office code (please do not edit) —',
-  waShort:'Hello Al Tariq Design, here are my answers to the design brief:',
+  outTitle:'NILZ Design – Client brief', date:'Date', code:'— Office code (please do not edit) —',
+  waShort:'Hello NILZ Design, here are my answers to the design brief:',
   off:'For the office: load received answers', impPh:'Paste the full message received from the client here', imp:'Load answers',
   impOk:'Answers loaded ✓', impNo:'No office code found in this text.', m2:'m²'},
- ar:{by:'م. نيلوفر زنجاني · تصميم معماري', title:'منزلكم الجديد – استبيان التصميم',
+ ar:{by:'م. نيلوفر زنجاني · مهندسة معمارية ومصمّمة داخلية', title:'منزلكم الجديد – استبيان التصميم',
   intro:'شكراً لتواصلكم معنا. يساعدنا هذا الاستبيان القصير على فهم احتياجاتكم قبل الاجتماع الأول، ويستغرق حوالي 10–15 دقيقة. اتركوا أي سؤال لستم متأكدين منه وسنناقشه معاً.',
   priv:'تبقى إجاباتكم على هذا الهاتف فقط إلى أن ترسلوها إلينا.',
   prog:'تمت الإجابة على {n} من {t}', sendT:'إرسال الإجابات',
@@ -206,11 +206,11 @@ const U = {
   clear:'مسح النموذج', clearQ:'هل تريد مسح جميع الإجابات؟', dock:'إنهاء وإرسال', copied:'تم نسخ الإجابات ✓ – الصقوها في المحادثة',
   copyFail:'تعذّر النسخ تلقائياً – افتحوا «المعاينة» ثم حدّدوا الكل وانسخوا.',
   noName:'الاسم ورقم الهاتف ما زالا فارغين. هل تريد الإرسال على أي حال؟',
-  outTitle:'Al Tariq Design – استبيان العميل', date:'التاريخ', code:'— رمز خاص بالمكتب (يرجى عدم تعديله) —',
-  waShort:'مرحباً Al Tariq Design، هذه إجاباتي على استبيان التصميم:',
+  outTitle:'NILZ Design – استبيان العميل', date:'التاريخ', code:'— رمز خاص بالمكتب (يرجى عدم تعديله) —',
+  waShort:'مرحباً NILZ Design، هذه إجاباتي على استبيان التصميم:',
   off:'للمكتب: تحميل الإجابات المستلمة', impPh:'الصق هنا الرسالة الكاملة المستلمة من العميل', imp:'تحميل الإجابات',
   impOk:'تم تحميل الإجابات ✓', impNo:'لم يُعثر على رمز المكتب في هذا النص.', m2:'م²'},
- fa:{by:'مهندس نیلوفر زنجانی · طراحی معماری', title:'خانه جدید شما – پرسشنامه اطلاعات اولیه',
+ fa:{by:'مهندس نیلوفر زنجانی · معمار و طراح داخلی', title:'خانه جدید شما – پرسشنامه اطلاعات اولیه',
   intro:'از تماس شما سپاسگزاریم. این پرسشنامه کوتاه کمک می‌کند پیش از جلسه اول نیازهای شما را بشناسیم و حدود ۱۰ تا ۱۵ دقیقه زمان می‌برد. هر سؤالی را که مطمئن نیستید خالی بگذارید؛ در جلسه با هم بررسی می‌کنیم.',
   priv:'پاسخ‌ها تا وقتی ارسال نکنید فقط روی همین گوشی می‌ماند.',
   prog:'{n} از {t} پاسخ داده شد', sendT:'ارسال پاسخ‌ها',
@@ -219,7 +219,7 @@ const U = {
   clear:'پاک کردن فرم', clearQ:'همه پاسخ‌ها پاک شود؟', dock:'پایان و ارسال', copied:'پاسخ‌ها کپی شد ✓ – در گفتگو بچسبانید',
   copyFail:'کپی خودکار انجام نشد – «پیش‌نمایش» را باز کنید، همه را انتخاب و کپی کنید.',
   noName:'نام و شماره تماس هنوز خالی است. با این حال ارسال شود؟',
-  outTitle:'Al Tariq Design – پرسشنامه کارفرما', date:'تاریخ', code:'— کد مخصوص دفتر (لطفاً ویرایش نکنید) —',
+  outTitle:'NILZ Design – پرسشنامه کارفرما', date:'تاریخ', code:'— کد مخصوص دفتر (لطفاً ویرایش نکنید) —',
   waShort:'سلام، پاسخ‌های من به پرسشنامه طراحی:',
   off:'مخصوص دفتر: بارگذاری پاسخ‌های دریافتی', impPh:'کل پیام دریافتی از کارفرما را اینجا بچسبانید', imp:'بارگذاری پاسخ‌ها',
   impOk:'پاسخ‌ها بارگذاری شد ✓', impNo:'کد دفتر در این متن پیدا نشد.', m2:'متر مربع'}
@@ -492,7 +492,7 @@ function renderQ(q){
 }
 function render(){
   const L=U[lang];document.documentElement.lang=lang;document.documentElement.dir=lang==='en'?'ltr':'rtl';
-  document.title='Al Tariq Design – '+L.title;
+  document.title='NILZ Design – '+L.title;
   $('#by').textContent=L.by;$('#title').textContent=L.title;$('#intro').textContent=L.intro;$('#priv').textContent=L.priv;
   $('#sendT').textContent=L.sendT;$('#sendH').textContent=L.sendH;$('#bWa').textContent=L.wa;$('#bShare').textContent=L.share;
   $('#bCopy').textContent=L.copy;$('#bPrint').textContent=L.print;$('#pvT').textContent=L.pv;$('#bClear').textContent=L.clear;
