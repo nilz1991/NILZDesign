@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0f4c5c">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="Al Tariq Design – Client Brief">
+<meta property="og:description" content="A short questionnaire to prepare for your house design meeting.">
+<title>Al Tariq Design – Client Brief</title>
+<style>
+:root{
+  --bg:#f4f1ea; --card:#ffffff; --ink:#1d2a30; --muted:#63727a; --line:#dcd6c8;
+  --brand:#0f4c5c; --brand-ink:#ffffff; --accent:#b98a3e; --soft:#eef4f5; --on:#0f4c5c; --on-bg:#dcebee;
+  --ok:#1f7a4d; --shadow:0 1px 2px rgba(20,30,35,.06),0 6px 18px rgba(20,30,35,.06);
+}
+@media (prefers-color-scheme:dark){
+  :root{ --bg:#12191c; --card:#1b2529; --ink:#e8eef0; --muted:#9aaab1; --line:#31403f;
+    --brand:#16697d; --accent:#d6a857; --soft:#223036; --on:#8fd3e2; --on-bg:#173b45; --ok:#5fd09a;
+    --shadow:0 1px 2px rgba(0,0,0,.4); }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:16px/1.55 "Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans Arabic","Geeza Pro",Tahoma,sans-serif;
+  padding-bottom:84px}
+[dir=rtl] body{font-family:"Segoe UI","Noto Sans Arabic","Geeza Pro",Tahoma,Arial,sans-serif;line-height:1.75}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px}
+.hero{background:var(--brand);color:var(--brand-ink);padding:22px 0 26px}
+.brand{display:flex;align-items:center;gap:12px}
+.mono{width:46px;height:46px;border-radius:50%;border:2px solid var(--accent);display:grid;place-items:center;
+  font-weight:700;letter-spacing:.5px;color:var(--accent);flex:none;font-family:Georgia,"Times New Roman",serif}
+.brand b{display:block;font-size:19px;letter-spacing:.3px}
+.brand small{opacity:.8;font-size:13px}
+.hero h1{font-size:23px;line-height:1.3;margin:18px 0 8px}
+.hero p{margin:6px 0;opacity:.92;font-size:15px}
+.hero .priv{font-size:13px;opacity:.75}
+.langs{display:inline-flex;margin-top:14px;border:1px solid rgba(255,255,255,.35);border-radius:999px;overflow:hidden}
+.langs button{background:transparent;color:#fff;border:0;padding:8px 16px;font:inherit;font-size:14px;cursor:pointer;min-height:40px}
+.langs button[aria-pressed=true]{background:#fff;color:var(--brand);font-weight:600}
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;gap:10px;padding-top:8px;padding-bottom:8px}
+.track{flex:1;height:6px;border-radius:6px;background:var(--line);overflow:hidden}
+.fill{height:100%;width:0;background:var(--accent);transition:width .25s}
+.bar span{font-size:12.5px;color:var(--muted);white-space:nowrap}
+.card{background:var(--card);border-radius:14px;box-shadow:var(--shadow);padding:18px 16px 8px;margin:16px 0}
+.card h2{display:flex;align-items:center;gap:10px;margin:0 0 4px;font-size:18px;line-height:1.3}
+.num{width:28px;height:28px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;font-size:14px;flex:none}
+.cnt{margin-inline-start:auto;font-size:12px;font-weight:400;color:var(--muted);white-space:nowrap;direction:ltr;unicode-bidi:isolate}
+.cnt.done{color:var(--ok)}
+.hint{color:var(--muted);font-size:13.5px;margin:2px 0 6px}
+.ponly{display:none}
+.q{padding:12px 0;border-top:1px solid var(--line)}
+.card h2 + .q, .hint + .q{border-top:0}
+.ql{display:block;font-weight:600;font-size:15px;margin-bottom:8px}
+.qh{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:2px}
+input[type=text],textarea{width:100%;font:inherit;color:var(--ink);background:var(--soft);border:1px solid var(--line);
+  border-radius:10px;padding:11px 12px;min-height:46px}
+textarea{min-height:84px;resize:vertical}
+input:focus,textarea:focus,button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.unit{display:flex;align-items:center;gap:8px}
+.unit input{max-width:180px}
+.unit span{color:var(--muted);font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:inherit;font-size:14.5px;color:var(--ink);background:var(--soft);border:1px solid var(--line);border-radius:999px;
+  padding:9px 14px;min-height:42px;cursor:pointer;text-align:start;line-height:1.35}
+.chip::before{content:"";display:inline-block;width:14px;height:14px;border:1.5px solid var(--muted);border-radius:4px;
+  margin-inline-end:8px;vertical-align:-2px}
+.chip.r::before{border-radius:50%}
+.chip[aria-pressed=true]{background:var(--on-bg);border-color:var(--on);color:var(--on);font-weight:600}
+.chip[aria-pressed=true]::before{background:var(--on);border-color:var(--on);box-shadow:inset 0 0 0 2.5px var(--on-bg)}
+.sp{display:grid;gap:6px}
+.sprow{display:flex;align-items:center;gap:8px;background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:4px 4px 4px 12px}
+[dir=rtl] .sprow{padding:4px 12px 4px 4px}
+.sprow.on{background:var(--on-bg);border-color:var(--on)}
+.spname{flex:1;font:inherit;font-size:14.5px;color:inherit;background:none;border:0;text-align:start;padding:9px 0;cursor:pointer;min-height:40px}
+.sprow.on .spname{color:var(--on);font-weight:600}
+.step{display:flex;align-items:center;gap:2px;flex:none;direction:ltr}
+.step button{width:38px;height:38px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:20px;line-height:1;cursor:pointer}
+.step output{min-width:26px;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
+.send h2{margin-bottom:6px}
+.btns{display:grid;gap:10px;margin:14px 0}
+.btn{font:inherit;font-weight:600;border-radius:12px;border:1px solid var(--line);background:var(--soft);color:var(--ink);padding:13px 16px;min-height:50px;cursor:pointer}
+.btn.wa{background:#1faa59;border-color:#1faa59;color:#fff}
+.btn.pri{background:var(--brand);border-color:var(--brand);color:#fff}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+details{margin:10px 0 12px}
+summary{cursor:pointer;color:var(--muted);font-size:14px;padding:8px 0}
+#preview{min-height:220px;font-size:13px;direction:auto;white-space:pre-wrap}
+.link{background:none;border:0;color:var(--muted);font:inherit;font-size:13.5px;text-decoration:underline;cursor:pointer;padding:10px 0}
+.dock{position:fixed;inset-inline:0;bottom:0;z-index:6;background:var(--card);border-top:1px solid var(--line);
+  padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+.dock .btn{width:100%;max-width:728px;display:block;margin:0 auto}
+.toast{position:fixed;left:50%;bottom:96px;transform:translateX(-50%);background:#1d2a30;color:#fff;padding:11px 16px;border-radius:10px;
+  font-size:14px;max-width:calc(100vw - 32px);text-align:center;opacity:0;pointer-events:none;transition:opacity .2s;z-index:9}
+.toast.show{opacity:1}
+footer{color:var(--muted);font-size:12.5px;text-align:center;padding:8px 16px 20px}
+@media (min-width:620px){ .sp{grid-template-columns:1fr 1fr} .btns.main{grid-template-columns:1fr 1fr} }
+@page{size:A4;margin:12mm}
+@media print{
+  :root{--bg:#fff;--card:#fff;--ink:#000;--muted:#444;--line:#bbb;--soft:#fff;--on-bg:#fff;--on:#000;--brand:#0f4c5c}
+  body{padding:0;font-size:10.5pt;line-height:1.4}
+  [dir=rtl] body{line-height:1.6}
+  .bar,.dock,.toast,.langs,.send,.priv,.office,.sonly{display:none!important}
+  .ponly{display:block}
+  textarea{resize:none}
+  .wrap{max-width:none;padding:0}
+  .hero{background:none;color:#000;padding:0 0 6px;border-bottom:2px solid #0f4c5c}
+  .hero h1{font-size:15pt;margin:8px 0 2px}.hero p{font-size:9.5pt;margin:2px 0}
+  .mono{color:#0f4c5c;border-color:#0f4c5c;width:36px;height:36px}
+  .card{box-shadow:none;border-radius:0;padding:0;margin:10px 0 0}
+  .card h2{font-size:12pt;border-bottom:1px solid #000;padding-bottom:3px;break-after:avoid}
+  .num{background:#0f4c5c;width:20px;height:20px;font-size:9pt;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .cnt{display:none}
+  .q{padding:5px 0;border-top:0;break-inside:avoid}
+  .ql{font-size:10.5pt;margin-bottom:3px}.qh{font-size:9pt}
+  input[type=text]{border:0;border-bottom:1px solid #777;border-radius:0;min-height:22px;padding:2px 0}
+  textarea{border:1px solid #999;border-radius:0;min-height:44px;padding:3px}
+  .chips{gap:2px 14px}
+  .chip{border:0;padding:1px 0;min-height:0;font-size:10pt;font-weight:400!important}
+  .chip::before{border-color:#000;box-shadow:none!important;width:10px;height:10px}
+  .chip[aria-pressed=true]::before{background:#000;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .sp{grid-template-columns:1fr 1fr 1fr;gap:1px 14px}
+  .sprow,[dir=rtl] .sprow{border:0;padding:0;border-bottom:1px dotted #999;border-radius:0}
+  .spname{padding:1px 0;min-height:0;font-size:10pt;font-weight:400!important}
+  .step button{display:none}.step output{min-width:22px;border-bottom:1px solid #000;height:15px;font-size:10pt}
+  .step output.zero{color:transparent}
+  footer{padding:8px 0 0}
+}
+</style>
+</head>
+<body>
+
+<header class="hero"><div class="wrap">
+  <div class="brand"><div class="mono">AT</div><div><b>Al Tariq Design</b><small id="by"></small></div></div>
+  <h1 id="title"></h1>
+  <p id="intro"></p>
+  <p class="priv" id="priv"></p>
+  <div class="langs" role="group" aria-label="Language">
+    <button type="button" data-lang="en">English</button><button type="button" data-lang="ar">العربية</button><button type="button" data-lang="fa">فارسی</button>
+  </div>
+</div></header>
+
+<div class="bar"><div class="wrap"><div class="track"><div class="fill" id="fill"></div></div><span id="prog"></span></div></div>
+
+<main class="wrap">
+  <div id="form"></div>
+
+  <section class="card send" id="send">
+    <h2><span class="num">✓</span><span id="sendT"></span></h2>
+    <p class="hint" id="sendH"></p>
+    <div class="btns main">
+      <button class="btn wa" type="button" id="bWa"></button>
+      <button class="btn pri" type="button" id="bShare"></button>
+    </div>
+    <div class="row2">
+      <button class="btn" type="button" id="bCopy"></button>
+      <button class="btn" type="button" id="bPrint"></button>
+    </div>
+    <details id="pv"><summary id="pvT"></summary><textarea id="preview" readonly dir="auto"></textarea></details>
+    <button class="link" type="button" id="bClear"></button>
+  </section>
+
+  <details class="office"><summary id="offT"></summary>
+    <textarea id="imp" dir="auto"></textarea>
+    <div class="btns"><button class="btn" type="button" id="bImp"></button></div>
+  </details>
+</main>
+
+<footer>Al Tariq Design · Muscat, Sultanate of Oman</footer>
+
+<div class="dock"><button class="btn pri" type="button" id="bDock"></button></div>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* ================= OFFICE SETTINGS =================
+   Put the office WhatsApp number here (digits only, with country code, e.g. "9689XXXXXXX").
+   If left empty, WhatsApp opens and the client chooses the chat.
+   It can also be set in the link:  ...Client_Brief_AlTariq.html?wa=9689XXXXXXX&lang=ar          */
+const OFFICE_WHATSAPP = "96892315257";
+/* =================================================== */
+
+const LI = {en:0, ar:1, fa:2};
+const Y=['y','Yes','نعم','بله'], N=['n','No','لا','خیر'], NS=['ns','Not sure','غير متأكد','مطمئن نیستم'];
+
+const U = {
+ en:{by:'Eng. Niloufar Zanjani · Architectural design', title:'Your new home – design brief',
+  intro:'Thank you for contacting us. This short questionnaire helps us understand what you need before our first meeting. It takes about 10–15 minutes. Skip anything you are not sure about – we will discuss it together.',
+  priv:'Your answers stay on this phone only, until you send them to us.',
+  prog:'{n} of {t} answered', sendT:'Send your answers',
+  sendH:'When you finish, tap “Send on WhatsApp” or “Share”. After that you can send photos of the Krooki and other documents in the same chat.',
+  wa:'Send on WhatsApp', share:'Share…', copy:'Copy answers', print:'Print / save PDF', pv:'Preview the answers text',
+  clear:'Clear the form', clearQ:'Clear all answers?', dock:'Finish & send', copied:'Answers copied ✓ – paste them in the chat',
+  copyFail:'Could not copy automatically – open “Preview”, select all and copy.',
+  noName:'Your name and phone number are still empty. Send anyway?',
+  outTitle:'Al Tariq Design – Client brief', date:'Date', code:'— Office code (please do not edit) —',
+  waShort:'Hello Al Tariq Design, here are my answers to the design brief:',
+  off:'For the office: load received answers', impPh:'Paste the full message received from the client here', imp:'Load answers',
+  impOk:'Answers loaded ✓', impNo:'No office code found in this text.', m2:'m²'},
+ ar:{by:'م. نيلوفر زنجاني · تصميم معماري', title:'منزلكم الجديد – استبيان التصميم',
+  intro:'شكراً لتواصلكم معنا. يساعدنا هذا الاستبيان القصير على فهم احتياجاتكم قبل الاجتماع الأول، ويستغرق حوالي 10–15 دقيقة. اتركوا أي سؤال لستم متأكدين منه وسنناقشه معاً.',
+  priv:'تبقى إجاباتكم على هذا الهاتف فقط إلى أن ترسلوها إلينا.',
+  prog:'تمت الإجابة على {n} من {t}', sendT:'إرسال الإجابات',
+  sendH:'عند الانتهاء اضغطوا «إرسال عبر واتساب» أو «مشاركة». بعد ذلك يمكنكم إرسال صور الكروكي والمستندات الأخرى في نفس المحادثة.',
+  wa:'إرسال عبر واتساب', share:'مشاركة…', copy:'نسخ الإجابات', print:'طباعة / حفظ PDF', pv:'معاينة نص الإجابات',
+  clear:'مسح النموذج', clearQ:'هل تريد مسح جميع الإجابات؟', dock:'إنهاء وإرسال', copied:'تم نسخ الإجابات ✓ – الصقوها في المحادثة',
+  copyFail:'تعذّر النسخ تلقائياً – افتحوا «المعاينة» ثم حدّدوا الكل وانسخوا.',
+  noName:'الاسم ورقم الهاتف ما زالا فارغين. هل تريد الإرسال على أي حال؟',
+  outTitle:'Al Tariq Design – استبيان العميل', date:'التاريخ', code:'— رمز خاص بالمكتب (يرجى عدم تعديله) —',
+  waShort:'مرحباً Al Tariq Design، هذه إجاباتي على استبيان التصميم:',
+  off:'للمكتب: تحميل الإجابات المستلمة', impPh:'الصق هنا الرسالة الكاملة المستلمة من العميل', imp:'تحميل الإجابات',
+  impOk:'تم تحميل الإجابات ✓', impNo:'لم يُعثر على رمز المكتب في هذا النص.', m2:'م²'},
+ fa:{by:'مهندس نیلوفر زنجانی · طراحی معماری', title:'خانه جدید شما – پرسشنامه اطلاعات اولیه',
+  intro:'از تماس شما سپاسگزاریم. این پرسشنامه کوتاه کمک می‌کند پیش از جلسه اول نیازهای شما را بشناسیم و حدود ۱۰ تا ۱۵ دقیقه زمان می‌برد. هر سؤالی را که مطمئن نیستید خالی بگذارید؛ در جلسه با هم بررسی می‌کنیم.',
+  priv:'پاسخ‌ها تا وقتی ارسال نکنید فقط روی همین گوشی می‌ماند.',
+  prog:'{n} از {t} پاسخ داده شد', sendT:'ارسال پاسخ‌ها',
+  sendH:'پس از تکمیل، «ارسال با واتس‌اپ» یا «اشتراک‌گذاری» را بزنید. بعد می‌توانید عکس کروکی و مدارک دیگر را در همان گفتگو بفرستید.',
+  wa:'ارسال با واتس‌اپ', share:'اشتراک‌گذاری…', copy:'کپی پاسخ‌ها', print:'چاپ / ذخیره PDF', pv:'پیش‌نمایش متن پاسخ‌ها',
+  clear:'پاک کردن فرم', clearQ:'همه پاسخ‌ها پاک شود؟', dock:'پایان و ارسال', copied:'پاسخ‌ها کپی شد ✓ – در گفتگو بچسبانید',
+  copyFail:'کپی خودکار انجام نشد – «پیش‌نمایش» را باز کنید، همه را انتخاب و کپی کنید.',
+  noName:'نام و شماره تماس هنوز خالی است. با این حال ارسال شود؟',
+  outTitle:'Al Tariq Design – پرسشنامه کارفرما', date:'تاریخ', code:'— کد مخصوص دفتر (لطفاً ویرایش نکنید) —',
+  waShort:'سلام، پاسخ‌های من به پرسشنامه طراحی:',
+  off:'مخصوص دفتر: بارگذاری پاسخ‌های دریافتی', impPh:'کل پیام دریافتی از کارفرما را اینجا بچسبانید', imp:'بارگذاری پاسخ‌ها',
+  impOk:'پاسخ‌ها بارگذاری شد ✓', impNo:'کد دفتر در این متن پیدا نشد.', m2:'متر مربع'}
+};
+
+/* ty: text | num | area | radio | check | spaces     l: label [en,ar,fa]   h: hint   p: placeholder   o: options [id,en,ar,fa] */
+const S = [
+{id:'client', t:['You & how to reach you','بيانات العميل والتواصل','مشخصات کارفرما و تماس'], q:[
+ {id:'name', ty:'text', l:['Full name','الاسم الكامل','نام و نام خانوادگی']},
+ {id:'role', ty:'radio', l:['You are','صفتكم','سمت شما'], o:[
+  ['own','The owner','المالك','مالک'],['fam','A family member of the owner','أحد أفراد عائلة المالك','یکی از اعضای خانواده مالک'],
+  ['rep','Representative / agent','وكيل أو ممثل عن المالك','نماینده یا وکیل مالک'],['inv','Investor / developer','مستثمر أو مطوّر','سرمایه‌گذار یا سازنده']]},
+ {id:'phone', ty:'text', im:'tel', l:['Mobile / WhatsApp number','رقم الهاتف / الواتساب','شماره موبایل / واتس‌اپ']},
+ {id:'email', ty:'text', im:'email', l:['Email (optional)','البريد الإلكتروني (اختياري)','ایمیل (اختیاری)']},
+ {id:'live', ty:'text', l:['Where do you live now?','أين تسكنون حالياً؟','محل سکونت فعلی'], p:['Area / city','المنطقة / المدينة','منطقه / شهر']},
+ {id:'contact', ty:'check', l:['Preferred way to contact you','طريقة التواصل المفضلة','روش تماس ترجیحی'], o:[
+  ['wa','WhatsApp messages','رسائل واتساب','پیام واتس‌اپ'],['call','Phone call','مكالمة هاتفية','تماس تلفنی'],
+  ['wav','WhatsApp voice / video call','مكالمة واتساب صوتية أو مرئية','تماس صوتی / تصویری واتس‌اپ'],['mail','Email','البريد الإلكتروني','ایمیل'],
+  ['off','Meeting at the office','اجتماع في المكتب','جلسه در دفتر'],['site','Meeting on site','اجتماع في موقع الأرض','جلسه در محل زمین']]},
+ {id:'time', ty:'text', l:['Best days and times to contact you','أفضل الأيام والأوقات للتواصل','بهترین روز و ساعت تماس'], p:['e.g. Sun–Thu after 5 pm','مثال: الأحد–الخميس بعد 5 مساءً','مثلاً یکشنبه تا پنجشنبه بعد از ۵ عصر']},
+ {id:'lang', ty:'radio', l:['Preferred language for meetings and drawings','اللغة المفضلة للاجتماعات والمخططات','زبان ترجیحی جلسات و نقشه‌ها'], o:[
+  ['ar','Arabic','العربية','عربی'],['en','English','الإنجليزية','انگلیسی'],['both','Both','كلتاهما','هر دو']]},
+ {id:'source', ty:'radio', l:['How did you find us?','كيف تعرّفتم علينا؟','از کجا با ما آشنا شدید؟'], o:[
+  ['g','Google / Maps','جوجل / الخرائط','گوگل / نقشه'],['ig','Instagram / social media','إنستغرام / مواقع التواصل','اینستاگرام / شبکه‌های اجتماعی'],
+  ['ref','Recommended by someone','توصية من أحد المعارف','معرفی آشنایان'],['proj','Saw one of our projects','شاهدت أحد مشاريعنا','دیدن یکی از پروژه‌های ما'],['oth','Other','أخرى','سایر']]},
+ {id:'decide', ty:'text', l:['Who else takes part in design decisions?','من يشارك أيضاً في قرارات التصميم؟','چه کسان دیگری در تصمیم‌های طراحی نقش دارند؟'], p:['e.g. wife, parents, sons','مثال: الزوجة، الوالدان، الأبناء','مثلاً همسر، والدین، فرزندان']}
+]},
+
+{id:'plot', t:['The plot','الأرض','زمین'], h:['Most of this is written on the Krooki (site sketch). If you have it, a photo of it answers many of these questions.','معظم هذه البيانات مذكورة في الكروكي. إن كان لديكم، فصورة منه تجيب عن كثير من هذه الأسئلة.','بیشتر این اطلاعات روی کروکی نوشته شده است؛ اگر کروکی دارید، عکس آن پاسخ خیلی از این سؤال‌هاست.'], q:[
+ {id:'wil', ty:'text', l:['Location – Wilayat / area','الموقع – الولاية / المنطقة','موقعیت – ولایت / منطقه'], p:['e.g. Bausher, Seeb, Al Amerat','مثال: بوشر، السيب، العامرات','مثلاً بوشر، السیب، العامرات']},
+ {id:'map', ty:'text', im:'url', l:['Google Maps link of the plot','رابط موقع الأرض على خرائط جوجل','لینک لوکیشن زمین در گوگل‌مپ']},
+ {id:'plotno', ty:'text', l:['Plot number','رقم القطعة','شماره قطعه']},
+ {id:'krooki', ty:'radio', l:['Do you have the Krooki (site sketch)?','هل لديكم الكروكي (مخطط الأرض)؟','کروکی زمین را دارید؟'], o:[
+  ['y','Yes – I will send a photo / PDF','نعم – سأرسل صورة أو ملف PDF','بله – عکس یا PDF می‌فرستم'],['no','Not yet','ليس بعد','هنوز نه'],['ns','Not sure what it is','لا أعرف ما هو','نمی‌دانم چیست']]},
+ {id:'mulk', ty:'radio', l:['Ownership deed (Mulkiya)','سند الملكية (الملكية)','سند مالکیت (ملکیه)'], o:[
+  ['y','Available','متوفر','موجود است'],['no','Not available yet','غير متوفر بعد','هنوز موجود نیست']]},
+ {id:'area', ty:'num', unit:'m2', l:['Plot area','مساحة الأرض','مساحت زمین']},
+ {id:'dims', ty:'text', l:['Plot dimensions','أبعاد الأرض','ابعاد زمین'], p:['e.g. 25 × 30 m','مثال: 25 × 30 م','مثلاً ۲۵ × ۳۰ متر']},
+ {id:'shape', ty:'radio', l:['Plot shape','شكل الأرض','شکل زمین'], o:[
+  ['reg','Regular rectangle','مستطيل منتظم','مستطیل منظم'],['irr','Irregular','غير منتظم','نامنظم'],['cor','Corner plot','قطعة ركنية (زاوية)','زمین نبش']]},
+ {id:'streets', ty:'radio', l:['Number of streets around the plot','عدد الشوارع المحيطة بالأرض','تعداد خیابان‌های دور زمین'], o:[['1','1','1','۱'],['2','2','2','۲'],['3','3','3','۳'],['4','4','4','۴']]},
+ {id:'street', ty:'text', l:['Main street: side and width','الشارع الرئيسي: الجهة والعرض','خیابان اصلی: سمت و عرض'], p:['e.g. north side, 18 m','مثال: الجهة الشمالية، 18 م','مثلاً ضلع شمالی، ۱۸ متر']},
+ {id:'use', ty:'radio', l:['Land use (as written on the Krooki)','استعمال الأرض (حسب الكروكي)','کاربری زمین (طبق کروکی)'], o:[
+  ['res','Residential','سكني','مسکونی'],['apt','Residential – apartments','سكني – شقق','مسکونی – آپارتمانی'],['rc','Residential-commercial','سكني تجاري','مسکونی-تجاری'],
+  ['com','Commercial','تجاري','تجاری'],['agr','Agricultural','زراعي','کشاورزی'],NS]},
+ {id:'floors', ty:'radio', l:['Permitted number of floors','عدد الطوابق المسموح بها','تعداد طبقات مجاز'], o:[
+  ['g1','Ground + 1','أرضي + أول','همکف + ۱'],['g1p','Ground + 1 + roof room','أرضي + أول + ملحق علوي','همکف + ۱ + اتاق روی بام'],
+  ['g2','Ground + 2','أرضي + 2','همکف + ۲'],['g3','Ground + 3 or more','أرضي + 3 أو أكثر','همکف + ۳ یا بیشتر'],NS]},
+ {id:'level', ty:'radio', l:['Ground level of the plot','مستوى الأرض','وضعیت سطح زمین'], o:[
+  ['flat','Flat','مستوية','مسطح'],['gs','Gentle slope','منحدر بسيط','شیب ملایم'],['ss','Steep slope / rocky','منحدر شديد / صخرية','شیب تند / صخره‌ای'],
+  ['low','Lower than the street','أخفض من الشارع','پایین‌تر از خیابان'],['high','Higher than the street','أعلى من الشارع','بالاتر از خیابان'],NS]},
+ {id:'exist', ty:'check', l:['What is on the plot now?','ما الموجود على الأرض حالياً؟','الان روی زمین چه هست؟'], o:[
+  ['empty','Empty land','أرض فضاء','زمین خالی'],['demo','Old building to demolish','مبنى قديم للهدم','ساختمان قدیمی برای تخریب'],
+  ['keep','Building to keep (renovate / extend)','مبنى قائم للترميم أو التوسعة','ساختمان موجود برای بازسازی / توسعه'],
+  ['tree','Trees / palms to keep','أشجار أو نخيل يجب المحافظة عليها','درخت یا نخل که باید بماند'],['wall','Boundary wall exists','سور قائم','دیوار محوطه موجود است'],
+  ['util','Electricity & water connected','الكهرباء والماء موصولان','برق و آب وصل است'],['wadi','Wadi / drainage channel nearby','وادٍ أو مجرى مياه قريب','وادی یا مسیل در نزدیکی']]},
+ {id:'neigh', ty:'area', l:['Neighbours and views','الجيران والإطلالات','همسایه‌ها و دید و منظر'], p:['What is built next to you? Any view to enjoy or to hide?','ما المبني بجواركم؟ هل هناك إطلالة مرغوبة أو يجب حجبها؟','کنار زمین چه ساخته شده؟ منظره‌ای برای دیدن یا پوشاندن هست؟']}
+]},
+
+{id:'type', t:['Type of project','نوع المشروع','نوع پروژه'], q:[
+ {id:'ptype', ty:'radio', l:['What would you like to build?','ماذا تريدون أن تبنوا؟','چه چیزی می‌خواهید بسازید؟'], o:[
+  ['villa','Private family villa','فيلا خاصة للعائلة','ویلای شخصی خانواده'],['annex','Villa + annex / villas for sons','فيلا + ملحق / فلل للأبناء','ویلا + ملحق / ویلا برای فرزندان'],
+  ['twin','Twin (semi-detached) villas','فلل توأم (متلاصقة)','ویلاهای دوقلو'],['apt','Residential building (apartments)','مبنى سكني (شقق)','ساختمان آپارتمانی'],
+  ['mix','Mixed: family home + rental units','مختلط: سكن العائلة + وحدات للإيجار','ترکیبی: خانه خانواده + واحدهای اجاره‌ای'],
+  ['reno','Renovation of an existing house','ترميم منزل قائم','بازسازی خانه موجود'],['ext','Extension (new floor / rooms)','توسعة (طابق أو غرف إضافية)','توسعه (طبقه یا اتاق اضافه)'],
+  ['int','Interior design only','تصميم داخلي فقط','فقط طراحی داخلی'],['oth','Other','أخرى','سایر']]},
+ {id:'purpose', ty:'radio', l:['Main purpose','الغرض الأساسي','هدف اصلی'], o:[
+  ['own','Our own home','سكن خاص لنا','سکونت خودمان'],['rent','For rent','للإيجار','برای اجاره'],['sale','For sale / investment','للبيع / الاستثمار','فروش / سرمایه‌گذاری'],['mix','Mixed','مختلط','ترکیبی']]},
+ {id:'units', ty:'text', l:['For apartments / rental: number and type of units','للشقق أو الإيجار: عدد الوحدات وأنواعها','برای آپارتمان / اجاره: تعداد و تیپ واحدها'], p:['e.g. 6 flats, 2 and 3 bedrooms','مثال: 6 شقق من غرفتين وثلاث غرف','مثلاً ۶ واحد دو و سه‌خوابه']},
+ {id:'future', ty:'check', l:['Future plans','خطط مستقبلية','برنامه‌های آینده'], o:[
+  ['floor','Add a floor later','إضافة طابق لاحقاً','اضافه کردن طبقه در آینده'],['son','Annex for a married son later','ملحق لابن متزوج لاحقاً','ملحق برای فرزند متأهل در آینده'],
+  ['split','Divide into two homes later','تقسيم المنزل إلى سكنين لاحقاً','تقسیم خانه به دو واحد در آینده'],['none','No future plans','لا توجد خطط','برنامه‌ای نیست']]},
+ {id:'reno', ty:'area', l:['For renovation / extension only','في حال الترميم أو التوسعة فقط','فقط برای بازسازی / توسعه'], p:['Age and size of the building, and what you want to change','عمر المبنى ومساحته وما تريدون تغييره','عمر و متراژ ساختمان و تغییراتی که می‌خواهید']}
+]},
+
+{id:'family', t:['Family & lifestyle','العائلة ونمط الحياة','خانواده و سبک زندگی'], q:[
+ {id:'members', ty:'area', l:['Who will live in the house?','من سيسكن في المنزل؟','چه کسانی در خانه زندگی می‌کنند؟'], p:['e.g. father, mother, 3 sons (15, 12, 6), 2 daughters (10, 4), grandmother','مثال: الأب، الأم، 3 أبناء (15، 12، 6)، بنتان (10، 4)، الجدة','مثلاً پدر، مادر، ۳ پسر (۱۵، ۱۲، ۶)، ۲ دختر (۱۰، ۴)، مادربزرگ']},
+ {id:'elder', ty:'check', l:['Elderly person or someone with limited mobility?','هل يوجد كبار سن أو من لديه صعوبة في الحركة؟','سالمند یا فرد با محدودیت حرکتی دارید؟'], o:[
+  ['gf','Yes – needs a ground-floor bedroom','نعم – يحتاج غرفة نوم في الطابق الأرضي','بله – اتاق خواب همکف لازم است'],['lift','Yes – needs a lift','نعم – يحتاج مصعداً','بله – آسانسور لازم است'],
+  ['wc','Wheelchair access needed','يلزم ممر للكرسي المتحرك','دسترسی ویلچر لازم است'],N]},
+ {id:'maids', ty:'radio', l:['Housemaids living in the house','العاملات المنزليات المقيمات','خدمه مقیم (خانم)'], o:[['0','None','لا يوجد','ندارد'],['1','1','1','۱'],['2','2','2','۲'],['3','3 or more','3 أو أكثر','۳ یا بیشتر']]},
+ {id:'driver', ty:'radio', l:['Driver','السائق','راننده'], o:[
+  ['no','None','لا يوجد','ندارد'],['out','Yes – room outside the house','نعم – غرفة خارج المنزل','بله – اتاق بیرون از خانه'],['nor','Yes – no room needed','نعم – لا يحتاج غرفة','بله – اتاق لازم نیست']]},
+ {id:'guests', ty:'radio', l:['How often do you receive guests?','كم مرة تستقبلون الضيوف؟','هر چند وقت یک‌بار مهمان دارید؟'], o:[
+  ['d','Almost daily','شبه يومي','تقریباً هر روز'],['w','Weekly','أسبوعياً','هفتگی'],['m','Monthly','شهرياً','ماهانه'],['r','Rarely','نادراً','به‌ندرت']]},
+ {id:'gnum', ty:'text', l:['Usual number of guests (men / women)','العدد المعتاد للضيوف (رجال / نساء)','تعداد معمول مهمانان (آقایان / خانم‌ها)'], p:['e.g. 15 men / 10 women','مثال: 15 رجلاً / 10 نساء','مثلاً ۱۵ آقا / ۱۰ خانم']},
+ {id:'events', ty:'check', l:['Large gatherings held at home','المناسبات الكبيرة التي تقام في المنزل','مراسم بزرگی که در خانه برگزار می‌شود'], o:[
+  ['eid','Eid gatherings','تجمعات العيد','دورهمی عید'],['ram','Ramadan iftars','إفطارات رمضان','افطاری رمضان'],['wed','Weddings / engagements','الأعراس والخطوبات','عروسی و نامزدی'],
+  ['aza','Condolences (Azza)','العزاء','مجلس عزا'],['wk','Weekly family gathering','تجمع العائلة الأسبوعي','دورهمی هفتگی خانواده']]},
+ {id:'sep', ty:'radio', l:['Separation between guests and family','الفصل بين الضيوف والعائلة','تفکیک مهمان و خانواده'], o:[
+  ['full','Full – separate entrances for men and women guests','كامل – مداخل منفصلة لضيوف الرجال والنساء','کامل – ورودی جدا برای مهمانان آقا و خانم'],
+  ['part','Partial – separate majlis, shared entrance','جزئي – مجالس منفصلة ومدخل مشترك','نسبی – مجلس جدا، ورودی مشترک'],['no','Not important','غير مهم','مهم نیست']]},
+ {id:'cook', ty:'check', l:['Cooking habits','عادات الطبخ','عادت‌های آشپزی'], o:[
+  ['heavy','Daily heavy cooking','طبخ يومي ثقيل','آشپزی سنگین روزانه'],['light','Light cooking only','طبخ خفيف فقط','فقط آشپزی سبک'],['maid','The maid does most of the cooking','العاملة تطبخ في أغلب الأوقات','بیشتر آشپزی با خدمه است'],
+  ['bbq','Outdoor BBQ','شواء خارجي','باربیکیو در فضای باز'],['shuwa','Traditional oven / shuwa pit','تنور أو حفرة الشواء','تنور یا گودال شوا']]},
+ {id:'hobby', ty:'area', l:['Hobbies and special needs','الهوايات والاحتياجات الخاصة','سرگرمی‌ها و نیازهای خاص'], p:['Gym, home office, pets, gardening, cars, workshop…','رياضة، مكتب منزلي، حيوانات أليفة، زراعة، سيارات، ورشة…','ورزش، دفتر کار، حیوان خانگی، باغبانی، خودرو، کارگاه…']}
+]},
+
+{id:'spaces', t:['Rooms & spaces','الفراغات المطلوبة','برنامه فضاها'], h:['Tap + to choose how many you need. Leave at 0 what you do not need.','اضغطوا + لتحديد العدد المطلوب، واتركوا ما لا تحتاجونه على 0.','با + تعداد مورد نیاز را مشخص کنید؛ آنچه لازم ندارید روی ۰ بماند.'], hp:['Write the number you need next to each space.','اكتبوا العدد المطلوب بجانب كل فراغ.','تعداد مورد نیاز را کنار هر فضا بنویسید.'], q:[
+ {id:'sp_rec', ty:'spaces', l:['Reception','الاستقبال','پذیرایی'], o:[
+  ['mm','Men’s majlis','مجلس الرجال','مجلس آقایان'],['wm','Women’s majlis','مجلس النساء','مجلس بانوان'],
+  ['mwc','Majlis toilet & washbasin','دورة مياه ومغسلة للمجلس','سرویس و روشویی مجلس'],['fd','Formal dining room','غرفة طعام للضيوف','ناهارخوری مهمان'],
+  ['gb','Guest bedroom','غرفة نوم للضيوف','اتاق خواب مهمان']]},
+ {id:'sp_fam', ty:'spaces', l:['Family','العائلة','خانواده'], o:[
+  ['liv','Family living room','صالة العائلة (المعيشة)','نشیمن خانواده'],['din','Family dining','طعام العائلة','غذاخوری خانواده'],
+  ['ul','Upper-floor family lounge','صالة عائلية في الطابق العلوي','نشیمن طبقه بالا'],['mb','Master bedroom suite','جناح النوم الرئيسي','سوئیت خواب اصلی (مستر)'],
+  ['be','Bedroom with private bathroom','غرفة نوم مع حمام خاص','اتاق خواب با سرویس اختصاصی'],['bs','Bedroom with shared bathroom','غرفة نوم بحمام مشترك','اتاق خواب با سرویس مشترک'],
+  ['pr','Prayer room (musalla)','مصلى','نمازخانه'],['of','Home office / study','مكتب منزلي / غرفة دراسة','دفتر کار / اتاق مطالعه'],
+  ['pl','Children’s play room','غرفة ألعاب للأطفال','اتاق بازی کودکان'],['gym','Gym','صالة رياضة منزلية','باشگاه خانگی'],['tv','TV / cinema room','غرفة تلفزيون / سينما','اتاق تلویزیون / سینما']]},
+ {id:'sp_srv', ty:'spaces', l:['Kitchen & service','المطبخ والخدمات','آشپزخانه و خدمات'], o:[
+  ['kc','Main kitchen (closed)','مطبخ رئيسي (مغلق)','آشپزخانه اصلی (بسته)'],['ko','Open / show kitchen','مطبخ مفتوح (تحضيري)','آشپزخانه باز (نمایشی)'],
+  ['kx','Outdoor kitchen','مطبخ خارجي','آشپزخانه بیرونی'],['pan','Pantry (food store)','مخزن المواد الغذائية','انبار مواد غذایی (پنتری)'],
+  ['maid','Maid’s room with bathroom','غرفة عاملة مع حمام','اتاق خدمه با سرویس'],['lau','Laundry room','غرفة غسيل','لاندری'],
+  ['dry','Screened drying area','منشر غسيل مستور','محل خشک‌کردن لباس با پوشش دید'],['sto','Storage room','غرفة تخزين','انباری'],
+  ['drv','Driver’s room','غرفة السائق','اتاق راننده'],['grd','Guard room','غرفة حارس','اتاق نگهبان']]},
+ {id:'sp_out', ty:'spaces', l:['Outdoor & parking','الخارج والمواقف','فضای باز و پارکینگ'], o:[
+  ['car','Covered parking – number of cars','مواقف مظللة – عدد السيارات','پارکینگ سرپوشیده – تعداد خودرو'],['gar','Closed garage','كراج مغلق','گاراژ بسته'],
+  ['pool','Swimming pool','مسبح','استخر'],['gdn','Garden / lawn','حديقة / مسطح أخضر','باغچه / چمن'],['crt','Inner courtyard','فناء داخلي (حوش)','حیاط مرکزی'],
+  ['jal','Outdoor sitting (jalsa)','جلسة خارجية','نشیمن فضای باز (جلسه)'],['bbq','BBQ area','منطقة شواء','محل باربیکیو'],
+  ['kid','Children’s play area','منطقة ألعاب للأطفال','محوطه بازی کودکان'],['roof','Roof terrace / roof majlis','سطح مستغل / مجلس على السطح','تراس بام / مجلس روی بام']]},
+ {id:'lift', ty:'radio', l:['Lift','المصعد','آسانسور'], o:[['y','Yes, from the start','نعم، من البداية','بله، از ابتدا'],['fut','Leave space for the future','تجهيز مكان لمصعد مستقبلي','پیش‌بینی جا برای آینده'],N]},
+ {id:'master', ty:'check', l:['The master suite should include','يشمل جناح النوم الرئيسي','سوئیت مستر شامل'], o:[
+  ['wic','Walk-in closet','غرفة ملابس','اتاق لباس'],['tub','Bathtub','حوض استحمام (بانيو)','وان'],['two','Two washbasins','مغسلتان','دو روشویی'],
+  ['sit','Private sitting area','جلسة خاصة','نشیمن اختصاصی'],['bal','Balcony','شرفة','بالکن']]},
+ {id:'spnote', ty:'area', l:['Other spaces or notes','فراغات أخرى أو ملاحظات','فضاهای دیگر یا توضیحات'], p:['e.g. the kitchen must open to the yard; a room for the grandmother near the living room…','مثال: المطبخ يفتح على الحوش؛ غرفة للجدة قرب الصالة…','مثلاً آشپزخانه به حیاط باز شود؛ اتاق مادربزرگ نزدیک نشیمن…']}
+]},
+
+{id:'privacy', t:['Privacy & entrances','الخصوصية والمداخل','حریم و ورودی‌ها'], q:[
+ {id:'ent', ty:'check', l:['Entrances needed','المداخل المطلوبة','ورودی‌های مورد نیاز'], o:[
+  ['fam','Main family entrance','مدخل العائلة الرئيسي','ورودی اصلی خانواده'],['men','Separate men’s guest entrance (to the majlis)','مدخل منفصل لضيوف الرجال (للمجلس)','ورودی جدای مهمانان آقا (به مجلس)'],
+  ['wom','Separate women’s guest entrance','مدخل منفصل لضيوف النساء','ورودی جدای مهمانان خانم'],['srv','Service / kitchen entrance','مدخل خدمة / للمطبخ','ورودی خدماتی / آشپزخانه'],
+  ['ped','Pedestrian gate','بوابة مشاة','در نفررو'],['c1','One car gate','بوابة سيارات واحدة','یک در ماشین‌رو'],['c2','Two car gates','بوابتان للسيارات','دو در ماشین‌رو']]},
+ {id:'majloc', ty:'radio', l:['Location of the men’s majlis','موقع مجلس الرجال','محل مجلس آقایان'], o:[
+  ['gate','Near the gate, entered directly from outside','قرب البوابة بمدخل مباشر من الخارج','نزدیک در، با ورود مستقیم از بیرون'],['in','Inside the house','داخل المنزل','داخل خانه'],
+  ['sepb','Separate building in the yard','مبنى منفصل في الحوش','ساختمان جدا در حیاط']]},
+ {id:'priv', ty:'check', l:['Privacy measures you want','وسائل الخصوصية المطلوبة','تدابیر حریم مورد نظر'], o:[
+  ['wall','High boundary wall','سور مرتفع','دیوار محوطه بلند'],['now','No windows overlooking neighbours','بدون نوافذ مطلة على الجيران','بدون پنجره مشرف به همسایه'],
+  ['scr','Screens / mashrabiya','سواتر / مشربية','اسکرین / مشربیه'],['gls','Frosted or reflective glass','زجاج معتم أو عاكس','شیشه مات یا رفلکس'],
+  ['crt','House opening onto an inner courtyard','منزل منفتح على فناء داخلي','خانه درون‌گرا رو به حیاط مرکزی'],['kit','Kitchen hidden from guests','مطبخ غير مرئي للضيوف','آشپزخانه دور از دید مهمان']]},
+ {id:'bedloc', ty:'radio', l:['Where should the bedrooms be?','أين تفضلون غرف النوم؟','اتاق خواب‌ها کجا باشد؟'], o:[
+  ['up','All on the upper floor','جميعها في الطابق العلوي','همه در طبقه بالا'],['mg','Master bedroom on the ground floor','غرفة النوم الرئيسية في الطابق الأرضي','خواب مستر در همکف'],['np','No preference','لا يهم','فرقی نمی‌کند']]},
+ {id:'orient', ty:'area', l:['Orientation and views','الاتجاه والإطلالات','جهت‌گیری و منظره'], p:['Sea or mountain view, morning sun, wind, rooms that must not face the street…','إطلالة بحر أو جبل، شمس الصباح، الرياح، غرف لا تطل على الشارع…','دید دریا یا کوه، آفتاب صبح، باد، اتاق‌هایی که نباید رو به خیابان باشند…']}
+]},
+
+{id:'style', t:['Style & facade','الطراز والواجهة','سبک و نما'], q:[
+ {id:'style', ty:'check', l:['Style you like','الطراز المفضل','سبک مورد علاقه'], o:[
+  ['mod','Contemporary / modern','معاصر / حديث','معاصر / مدرن'],['mo','Modern with an Omani touch','حديث بلمسة عُمانية','مدرن با حال‌وهوای عمانی'],['om','Traditional Omani','عُماني تقليدي','عمانی سنتی'],
+  ['isl','Islamic / Arabic','إسلامي / عربي','اسلامی / عربی'],['neo','Neo-classic','نيوكلاسيك','نئوکلاسیک'],['min','Minimal','بسيط (مينيمال)','مینیمال'],
+  ['ns','Not sure – show me options','غير متأكد – أروني خيارات','مطمئن نیستم – گزینه نشانم دهید']]},
+ {id:'facmat', ty:'check', l:['Facade materials','مواد الواجهة','مصالح نما'], o:[
+  ['pnt','Paint / plaster','دهان / لياسة','رنگ / اندود'],['stn','Natural stone','حجر طبيعي','سنگ طبیعی'],['grc','GRC ornaments','زخارف GRC','تزئینات GRC'],
+  ['alu','Aluminium / HPL cladding','تكسية ألمنيوم / HPL','کلدینگ آلومینیوم / HPL'],['gl','Large glass areas','مساحات زجاجية واسعة','سطوح بزرگ شیشه'],['wd','Wood / wood-look','خشب / مظهر خشبي','چوب / طرح چوب'],['mar','Marble','رخام','مرمر']]},
+ {id:'colors', ty:'text', l:['Preferred colours','الألوان المفضلة','رنگ‌های مورد علاقه'], p:['e.g. white and beige with dark wood','مثال: أبيض وبيج مع خشب داكن','مثلاً سفید و بژ با چوب تیره']},
+ {id:'windows', ty:'radio', l:['Windows','النوافذ','پنجره‌ها'], o:[
+  ['lg','Large glazing','نوافذ كبيرة','پنجره‌های بزرگ'],['md','Medium','متوسطة','متوسط'],['sm','Small – more privacy','صغيرة – خصوصية أكثر','کوچک – حریم بیشتر']]},
+ {id:'refs', ty:'area', l:['Houses or images you like','منازل أو صور تعجبكم','خانه‌ها یا تصاویری که می‌پسندید'], p:['Instagram / Pinterest links, or send photos on WhatsApp','روابط إنستغرام / بنترست، أو أرسلوا الصور عبر الواتساب','لینک اینستاگرام / پینترست، یا عکس‌ها را در واتس‌اپ بفرستید']},
+ {id:'dislike', ty:'area', l:['What you do NOT like','ما الذي لا تحبونه','چه چیزهایی را دوست ندارید']}
+]},
+
+{id:'quality', t:['Materials & quality','المواد ومستوى التشطيب','مصالح و سطح کیفیت'], q:[
+ {id:'finish', ty:'radio', l:['Finishing level','مستوى التشطيب','سطح نازک‌کاری'], o:[
+  ['eco','Economy','اقتصادي','اقتصادی'],['std','Standard','قياسي','استاندارد'],['hi','High-end','ممتاز','ممتاز'],['lux','Luxury','فاخر','لوکس']]},
+ {id:'floor', ty:'check', l:['Floor finishes','تشطيب الأرضيات','کفپوش'], o:[
+  ['por','Porcelain / ceramic','بورسلان / سيراميك','پرسلان / سرامیک'],['mar','Marble','رخام','مرمر'],['gra','Granite','جرانيت','گرانیت'],['wd','Wood / parquet','خشب / باركيه','چوب / پارکت']]},
+ {id:'ac', ty:'radio', l:['Air conditioning','التكييف','تهویه مطبوع'], o:[
+  ['spl','Split units','مكيفات سبليت','اسپلیت دیواری'],['duct','Concealed ducted units','مكيفات مخفية (دكت)','داکت اسپلیت (توکار)'],['vrf','Central / VRF','مركزي / VRF','مرکزی / VRF'],NS]},
+ {id:'smart', ty:'radio', l:['Smart home','المنزل الذكي','خانه هوشمند'], o:[
+  ['full','Full system','نظام كامل','سیستم کامل'],['bas','Basic (lighting, CCTV, intercom)','أساسي (إنارة، كاميرات، إنتركم)','پایه (روشنایی، دوربین، آیفون)'],N]},
+ {id:'solar', ty:'radio', l:['Solar panels','الألواح الشمسية','پنل خورشیدی'], o:[Y,['fut','Prepare for the future','تجهيز للمستقبل','پیش‌بینی برای آینده'],N]},
+ {id:'insul', ty:'radio', l:['Heat insulation of walls and roof','العزل الحراري للجدران والسطح','عایق حرارتی دیوار و بام'], o:[
+  ['imp','Very important (lower electricity bills)','مهم جداً (فاتورة كهرباء أقل)','خیلی مهم (قبض برق کمتر)'],['std','Standard is enough','العادي يكفي','معمولی کافی است']]},
+ {id:'matnote', ty:'area', l:['Brands or materials you prefer','علامات تجارية أو مواد تفضلونها','برند یا مصالح ترجیحی']}
+]},
+
+{id:'budget', t:['Budget & timing','الميزانية والجدول الزمني','بودجه و زمان‌بندی'], h:['An approximate figure is enough. It helps us design a house that can really be built.','يكفي رقم تقريبي؛ فهو يساعدنا على تصميم منزل قابل للتنفيذ فعلاً.','یک رقم تقریبی کافی است؛ کمک می‌کند خانه‌ای طراحی کنیم که واقعاً قابل ساخت باشد.'], q:[
+ {id:'budget', ty:'radio', l:['Approximate construction budget (OMR)','الميزانية التقريبية للبناء (ريال عُماني)','بودجه تقریبی ساخت (ریال عمان)'], o:[
+  ['a','Under 60,000','أقل من 60,000','کمتر از 60,000'],['b','60,000 – 100,000','60,000 – 100,000','60,000 – 100,000'],['c','100,000 – 150,000','100,000 – 150,000','100,000 – 150,000'],
+  ['d','150,000 – 250,000','150,000 – 250,000','150,000 – 250,000'],['e','Over 250,000','أكثر من 250,000','بیش از 250,000'],['nd','Not decided yet','لم تُحدد بعد','هنوز مشخص نیست']]},
+ {id:'binc', ty:'check', l:['The budget should cover','الميزانية تشمل','بودجه شامل'], o:[
+  ['str','Structure & finishing','الهيكل والتشطيب','سفت‌کاری و نازک‌کاری'],['int','Interior & furniture','الديكور الداخلي والأثاث','دکوراسیون داخلی و مبلمان'],
+  ['land','Landscape & pool','تنسيق الحدائق والمسبح','محوطه‌سازی و استخر'],['wall','Boundary wall & external works','السور والأعمال الخارجية','دیوار محوطه و کارهای بیرونی']]},
+ {id:'fund', ty:'radio', l:['Funding','التمويل','تأمین مالی'], o:[
+  ['own','Own funds','تمويل ذاتي','سرمایه شخصی'],['loan','Bank / housing loan','قرض بنكي أو إسكاني','وام بانکی / مسکن'],['mix','Mixed','مختلط','ترکیبی'],['na','Prefer not to say','أفضّل عدم الإجابة','ترجیح می‌دهم نگویم']]},
+ {id:'dstart', ty:'radio', l:['When do you want to start the design?','متى تريدون البدء بالتصميم؟','طراحی از چه زمانی شروع شود؟'], o:[
+  ['now','Immediately','فوراً','فوراً'],['1m','Within a month','خلال شهر','ظرف یک ماه'],['3m','In 1–3 months','خلال 1–3 أشهر','۱ تا ۳ ماه دیگر'],['lat','Later','لاحقاً','بعداً']]},
+ {id:'cstart', ty:'text', l:['Target date to start construction','الموعد المستهدف لبدء البناء','زمان مورد نظر برای شروع ساخت']},
+ {id:'movein', ty:'text', l:['Target date to move in','الموعد المستهدف للسكن','زمان مورد نظر برای سکونت']},
+ {id:'contr', ty:'radio', l:['Contractor','المقاول','پیمانکار'], o:[
+  ['y','Already chosen','تم اختياره','انتخاب شده'],['no','Not yet','ليس بعد','هنوز نه'],['rec','I need your recommendation','أحتاج إلى توصيتكم','به معرفی شما نیاز دارم']]}
+]},
+
+{id:'docs', t:['Documents you have','المستندات المتوفرة','مدارک موجود'], h:['Just tick what you have. You can send photos or PDFs on WhatsApp afterwards.','ضعوا علامة على المتوفر فقط، ويمكنكم إرسال الصور أو ملفات PDF عبر الواتساب لاحقاً.','فقط موارد موجود را تیک بزنید؛ بعداً عکس یا PDF را در واتس‌اپ بفرستید.'], q:[
+ {id:'docs', ty:'check', l:['Available documents','المستندات المتوفرة','مدارک موجود'], o:[
+  ['kr','Krooki (site sketch)','الكروكي','کروکی'],['mu','Ownership deed (Mulkiya)','سند الملكية','سند مالکیت'],['perm','Previous building permit','رخصة بناء سابقة','پروانه ساخت قبلی'],
+  ['dwg','Drawings of the existing building','مخططات المبنى القائم','نقشه‌های ساختمان موجود'],['topo','Topographic survey','مسح طبوغرافي','نقشه‌برداری (توپوگرافی)'],['soil','Soil test report','تقرير فحص التربة','گزارش آزمایش خاک'],
+  ['ph','Photos of the site','صور للموقع','عکس‌های زمین'],['old','A previous design by another office','تصميم سابق من مكتب آخر','طرح قبلی از دفتر دیگر'],['none','Nothing yet','لا شيء حتى الآن','هنوز هیچ‌کدام']]}
+]},
+
+{id:'services', t:['Services you need from us','الخدمات المطلوبة','خدمات مورد نیاز'], q:[
+ {id:'serv', ty:'check', l:['Tick all that apply','اختاروا كل ما ينطبق','همه موارد لازم را انتخاب کنید'], o:[
+  ['visit','Site visit & measurement','زيارة الموقع والقياس','بازدید و برداشت محل'],['con','Concept design (2–3 options)','التصميم المبدئي (2–3 خيارات)','طرح اولیه (۲ تا ۳ گزینه)'],
+  ['3d','3D exterior views','مناظر خارجية ثلاثية الأبعاد','تصاویر سه‌بعدی نما'],['int','Interior design & 3D','التصميم الداخلي وثلاثي الأبعاد','طراحی داخلی و سه‌بعدی'],
+  ['arch','Architectural working drawings','المخططات المعمارية التنفيذية','نقشه‌های اجرایی معماری'],['str','Structural design','التصميم الإنشائي','طراحی سازه'],
+  ['mep','Electrical, plumbing & AC drawings','مخططات الكهرباء والصحي والتكييف','نقشه‌های برق، آب و فاضلاب و تهویه'],['mun','Municipality permit drawings & approval','مخططات وإجراءات رخصة البلدية','نقشه‌ها و پیگیری مجوز شهرداری'],
+  ['boq','Bill of quantities & cost estimate','جدول الكميات وتقدير التكلفة','متره و برآورد هزینه'],['ten','Tender & choosing a contractor','المناقصة واختيار المقاول','مناقصه و انتخاب پیمانکار'],
+  ['sup','Site supervision during construction','الإشراف على التنفيذ','نظارت بر اجرا'],['land','Landscape design','تصميم الحدائق','طراحی محوطه'],['bank','Drawings for a bank loan','مخططات للبنك (القرض)','نقشه‌های بانکی برای وام'],
+  ['ns','Not sure – please advise','غير متأكد – أرجو النصيحة','مطمئن نیستم – راهنمایی کنید']]},
+ {id:'meet', ty:'radio', l:['Where would you like the first meeting?','أين تفضلون الاجتماع الأول؟','جلسه اول کجا باشد؟'], o:[
+  ['off','At your office','في مكتبكم','در دفتر شما'],['site','On the plot','في موقع الأرض','در محل زمین'],['on','Online video call','مكالمة فيديو عبر الإنترنت','تماس تصویری آنلاین']]},
+ {id:'notes', ty:'area', l:['Anything else we should know?','هل هناك شيء آخر تودون إخبارنا به؟','نکته دیگری که باید بدانیم؟']}
+]}
+];
+
+/* ---------- state ---------- */
+const KEY='atd-brief-v1', $=s=>document.querySelector(s);
+const qs=new URLSearchParams(location.search);
+const WA=(qs.get('wa')||OFFICE_WHATSAPP||'').replace(/\D/g,'');
+let A={}, lang='en';
+function store(k,v){try{ if(v===undefined) return localStorage.getItem(k); localStorage.setItem(k,v);}catch(e){return null}}
+try{A=JSON.parse(store(KEY)||'{}')||{}}catch(e){A={}}
+(function(){const q=qs.get('lang'), s=store(KEY+'-lang'), n=(navigator.language||'en').slice(0,2).toLowerCase();
+  lang=[q,s,n].find(x=>x in LI)||'en';})();
+const tr=a=>a?(a[LI[lang]]??a[0]):'';
+const optL=o=>o[1+LI[lang]];
+function save(){store(KEY,JSON.stringify(A));counts();}
+function el(tag,attrs,kids){const e=document.createElement(tag);for(const k in (attrs||{})){if(k==='class')e.className=attrs[k];else e.setAttribute(k,attrs[k]);}
+  [].concat(kids||[]).forEach(c=>e.append(c));return e;}
+function answered(q){const v=A[q.id];if(v==null)return false;if(typeof v==='string')return v.trim()!=='';if(Array.isArray(v))return v.length>0;
+  return Object.values(v).some(n=>n>0);}
+
+/* ---------- render ---------- */
+function renderQ(q){
+  const box=el('div',{class:'q'});
+  const lab=el(q.ty==='text'||q.ty==='num'||q.ty==='area'?'label':'div',{class:'ql'},tr(q.l));
+  if(q.ty==='text'||q.ty==='num'||q.ty==='area'){
+    const inp=el(q.ty==='area'?'textarea':'input',{id:'f-'+q.id,dir:'auto'});
+    if(q.ty!=='area'){inp.type='text';inp.setAttribute('inputmode',q.ty==='num'?'decimal':(q.im||'text'));if(q.im==='tel'||q.im==='email'||q.im==='url')inp.dir='ltr';}
+    if(q.p)inp.placeholder=tr(q.p);
+    inp.value=A[q.id]||'';
+    inp.addEventListener('input',()=>{if(inp.value.trim())A[q.id]=inp.value;else delete A[q.id];save();});
+    lab.setAttribute('for','f-'+q.id);box.append(lab);
+    if(q.unit){box.append(el('div',{class:'unit'},[inp,el('span',{},U[lang][q.unit])]));}else box.append(inp);
+  }else if(q.ty==='radio'||q.ty==='check'){
+    box.append(lab);const chips=el('div',{class:'chips',role:'group'});
+    q.o.forEach(o=>{
+      const on=q.ty==='radio'?A[q.id]===o[0]:(A[q.id]||[]).includes(o[0]);
+      const b=el('button',{type:'button',class:'chip'+(q.ty==='radio'?' r':''),'aria-pressed':String(on)},optL(o));
+      b.addEventListener('click',()=>{
+        if(q.ty==='radio'){const was=A[q.id]===o[0];chips.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed','false'));
+          if(was)delete A[q.id];else{A[q.id]=o[0];b.setAttribute('aria-pressed','true');}}
+        else{const arr=A[q.id]||[];const i=arr.indexOf(o[0]);if(i<0)arr.push(o[0]);else arr.splice(i,1);
+          if(arr.length)A[q.id]=arr;else delete A[q.id];b.setAttribute('aria-pressed',String(i<0));}
+        save();});
+      chips.append(b);});
+    box.append(chips);
+  }else if(q.ty==='spaces'){
+    box.append(lab);const grid=el('div',{class:'sp'});
+    q.o.forEach(o=>{
+      const row=el('div',{class:'sprow'}),name=el('button',{type:'button',class:'spname'},optL(o)),out=el('output',{},'0');
+      const minus=el('button',{type:'button','aria-label':'−'},'−'),plus=el('button',{type:'button','aria-label':'+'},'+');
+      const get=()=>(A[q.id]||{})[o[0]]||0;
+      const set=n=>{n=Math.max(0,Math.min(30,n));const m=A[q.id]||{};if(n)m[o[0]]=n;else delete m[o[0]];
+        if(Object.keys(m).length)A[q.id]=m;else delete A[q.id];paint();save();};
+      const paint=()=>{const n=get();out.textContent=n;out.className=n?'':'zero';row.classList.toggle('on',n>0);};
+      name.addEventListener('click',()=>set(get()?0:1));minus.addEventListener('click',()=>set(get()-1));plus.addEventListener('click',()=>set(get()+1));
+      row.append(name,el('div',{class:'step'},[minus,out,plus]));paint();grid.append(row);});
+    box.append(grid);
+  }
+  return box;
+}
+function render(){
+  const L=U[lang];document.documentElement.lang=lang;document.documentElement.dir=lang==='en'?'ltr':'rtl';
+  document.title='Al Tariq Design – '+L.title;
+  $('#by').textContent=L.by;$('#title').textContent=L.title;$('#intro').textContent=L.intro;$('#priv').textContent=L.priv;
+  $('#sendT').textContent=L.sendT;$('#sendH').textContent=L.sendH;$('#bWa').textContent=L.wa;$('#bShare').textContent=L.share;
+  $('#bCopy').textContent=L.copy;$('#bPrint').textContent=L.print;$('#pvT').textContent=L.pv;$('#bClear').textContent=L.clear;
+  $('#bDock').textContent=L.dock;$('#offT').textContent=L.off;$('#imp').placeholder=L.impPh;$('#bImp').textContent=L.imp;
+  document.querySelectorAll('.langs button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.lang===lang)));
+  $('#bShare').style.display=navigator.share?'':'none';
+  const f=$('#form');f.innerHTML='';
+  S.forEach((sec,i)=>{const card=el('section',{class:'card',id:'s-'+sec.id});
+    card.append(el('h2',{},[el('span',{class:'num'},String(i+1)),el('span',{},tr(sec.t)),el('span',{class:'cnt','data-sec':sec.id})]));
+    if(sec.h)card.append(el('p',{class:'hint'+(sec.hp?' sonly':'')},tr(sec.h)));if(sec.hp)card.append(el('p',{class:'hint ponly'},tr(sec.hp)));
+    sec.q.forEach(q=>card.append(renderQ(q)));f.append(card);});
+  counts();if($('#pv').open)$('#preview').value=buildText();
+}
+function counts(){let n=0,t=0;
+  S.forEach(sec=>{const a=sec.q.filter(answered).length;n+=a;t+=sec.q.length;
+    const c=document.querySelector('[data-sec="'+sec.id+'"]');if(c){c.textContent=a+' / '+sec.q.length;c.classList.toggle('done',a>0);}});
+  $('#fill').style.width=(t?100*n/t:0)+'%';$('#prog').textContent=U[lang].prog.replace('{n}',n).replace('{t}',t);
+  if($('#pv').open)$('#preview').value=buildText();}
+
+/* ---------- output ---------- */
+function b64e(s){const b=new TextEncoder().encode(s);let x='';b.forEach(c=>x+=String.fromCharCode(c));return btoa(x);}
+function b64d(s){const x=atob(s);const b=new Uint8Array(x.length);for(let i=0;i<x.length;i++)b[i]=x.charCodeAt(i);return new TextDecoder().decode(b);}
+function fmt(q){const v=A[q.id];if(!answered(q))return '';
+  if(q.ty==='radio'){const o=q.o.find(o=>o[0]===v);return o?optL(o):'';}
+  if(q.ty==='check')return q.o.filter(o=>v.includes(o[0])).map(optL).join(lang==='en'?', ':'، ');
+  if(q.ty==='spaces')return q.o.filter(o=>v[o[0]]>0).map(o=>optL(o)+' ×'+v[o[0]]).join(lang==='en'?', ':'، ');
+  if(q.ty==='num')return String(v).trim()+(q.unit?' '+U[lang][q.unit]:'');
+  return String(v).trim();}
+function buildText(){const L=U[lang];
+  const d=new Date(),ds=d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+  let out='*'+L.outTitle+'*\n'+L.date+': '+ds+'\n';
+  S.forEach((sec,i)=>{const lines=[];sec.q.forEach(q=>{const v=fmt(q);if(v)lines.push('• '+tr(q.l).replace(/[?؟:]\s*$/,'')+': '+v);});
+    if(lines.length)out+='\n*'+(i+1)+'. '+tr(sec.t)+'*\n'+lines.join('\n')+'\n';});
+  out+='\n'+L.code+'\nATD1:'+b64e(JSON.stringify({v:1,l:lang,a:A}));
+  return out;}
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove('show'),3800);}
+async function copyText(txt){
+  try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(txt);return true;}}catch(e){}
+  try{const ta=el('textarea',{style:'position:fixed;top:0;left:0;opacity:0'});ta.value=txt;document.body.append(ta);ta.focus();ta.select();
+    const ok=document.execCommand('copy');ta.remove();return ok;}catch(e){return false;}}
+function ready(){if((A.name||'').trim()||(A.phone||'').trim())return true;
+  if(confirm(U[lang].noName))return true;const n=$('#f-name');n.scrollIntoView({block:'center'});n.focus();return false;}
+function showPreview(){$('#pv').open=true;$('#preview').value=buildText();}
+
+document.querySelectorAll('.langs button').forEach(b=>b.addEventListener('click',()=>{lang=b.dataset.lang;store(KEY+'-lang',lang);render();}));
+$('#bDock').addEventListener('click',()=>$('#send').scrollIntoView({behavior:'smooth',block:'start'}));
+$('#pv').addEventListener('toggle',()=>{if($('#pv').open)$('#preview').value=buildText();});
+$('#bCopy').addEventListener('click',async()=>{const ok=await copyText(buildText());toast(ok?U[lang].copied:U[lang].copyFail);if(!ok)showPreview();});
+$('#bPrint').addEventListener('click',()=>window.print());
+$('#bShare').addEventListener('click',async()=>{if(!ready())return;try{await navigator.share({title:U[lang].outTitle,text:buildText()});}
+  catch(e){if(e&&e.name!=='AbortError'){const ok=await copyText(buildText());toast(ok?U[lang].copied:U[lang].copyFail);if(!ok)showPreview();}}});
+$('#bWa').addEventListener('click',async()=>{if(!ready())return;const txt=buildText();const ok=await copyText(txt);
+  let url='https://wa.me/'+WA+'?text='+encodeURIComponent(txt);
+  if(url.length>6000&&navigator.share){try{await navigator.share({title:U[lang].outTitle,text:txt});return;}catch(e){if(e&&e.name==='AbortError')return;}}
+  if(url.length>6000){url='https://wa.me/'+WA+'?text='+encodeURIComponent(U[lang].waShort+'\n');toast(ok?U[lang].copied:U[lang].copyFail);if(!ok){showPreview();return;}
+    setTimeout(()=>{location.href=url;},1400);}
+  else location.href=url;});
+$('#bClear').addEventListener('click',()=>{if(confirm(U[lang].clearQ)){A={};save();render();window.scrollTo(0,0);}});
+$('#bImp').addEventListener('click',()=>{const m=$('#imp').value.match(/ATD1:\s*([A-Za-z0-9+\/]+={0,2})/);
+  try{if(!m)throw 0;const o=JSON.parse(b64d(m[1]));if(!o||typeof o.a!=='object')throw 0;A=o.a;save();render();toast(U[lang].impOk);window.scrollTo(0,0);}
+  catch(e){toast(U[lang].impNo);}});
+render();
+</script>
+</body>
+</html>
